@@ -1,0 +1,14 @@
+{
+  "sample_file": "artifacts/modern_training_data/wgan_gp_modern/filtered_strict/filtered_tokens.npy",
+  "count": 847,
+  "unique_rate": 1.0,
+  "empty_rate": 0.0,
+  "valid_structure_rate": 1.0,
+  "training_memorization_rate": 0.0,
+  "bigram_diversity": 0.035676810073452254,
+  "mean_length": 38.12987012987013,
+  "median_length": 35.0,
+  "cnn_mean_malicious_probability": 0.76025390625,
+  "cnn_malicious_detection_rate": 0.846517119244392,
+  "cnn_threshold": 0.44677734375
+}

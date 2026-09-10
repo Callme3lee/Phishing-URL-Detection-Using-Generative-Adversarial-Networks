@@ -1,0 +1,276 @@
+{
+  "cohort_kind": "primary",
+  "conditions": {
+    "gan_10pct": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a",
+          "verified_sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763",
+          "verified_sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014",
+          "verified_sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014"
+        }
+      ],
+      "display_name": "Weighted HYB-MS +10% MS-HardGAN-C",
+      "metrics": {
+        "accuracy": 0.9812,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9796003564455998,
+            0.9826764253333563
+          ],
+          "false_positive_rate": [
+            0.009008323706236578,
+            0.011334248703113479
+          ],
+          "precision": [
+            0.78895614486967,
+            0.8285226782311286
+          ],
+          "recall": [
+            0.7955921871962695,
+            0.8347934125885759
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 276,
+          "fp": 288,
+          "tn": 28212,
+          "tp": 1224
+        },
+        "f1": 0.8127490039840638,
+        "false_negative_rate": 0.184,
+        "false_positive_rate": 0.010105263157894737,
+        "per_10000": {
+          "detected_phishing": 408.0,
+          "false_alerts": 96.0,
+          "missed_phishing": 92.0,
+          "total_alerts": 504.0
+        },
+        "pr_auc": 0.8726571889584444,
+        "precision": 0.8095238095238095,
+        "recall": 0.816,
+        "roc_auc": 0.9681843859649123
+      },
+      "threshold": 0.9890950322151184
+    },
+    "real_only": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5",
+          "verified_sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8",
+          "verified_sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5",
+          "verified_sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+        }
+      ],
+      "display_name": "Weighted HYB-MS real-only",
+      "metrics": {
+        "accuracy": 0.9785333333333334,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9768309747033046,
+            0.9801131565808943
+          ],
+          "false_positive_rate": [
+            0.011399121729192729,
+            0.013995401316636829
+          ],
+          "precision": [
+            0.7502011666003298,
+            0.791625353536051
+          ],
+          "recall": [
+            0.7900564384846795,
+            0.8296897418945144
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 284,
+          "fp": 360,
+          "tn": 28140,
+          "tp": 1216
+        },
+        "f1": 0.7906371911573472,
+        "false_negative_rate": 0.18933333333333333,
+        "false_positive_rate": 0.01263157894736842,
+        "per_10000": {
+          "detected_phishing": 405.3333333333333,
+          "false_alerts": 120.0,
+          "missed_phishing": 94.66666666666666,
+          "total_alerts": 525.3333333333333
+        },
+        "pr_auc": 0.8428827647323789,
+        "precision": 0.7715736040609137,
+        "recall": 0.8106666666666666,
+        "roc_auc": 0.965814432748538
+      },
+      "threshold": 0.9879557490348816
+    }
+  },
+  "dataset": {
+    "legitimate_rows": 28500,
+    "path": "data/external/2026-08-22-final-confirmation-5pct/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 1500,
+    "rows": 30000,
+    "sha256": "79e3b1e60f46c3a63c31ba3f4a1b82afb5e93aa2388f8cffdfbc32befcafa84e"
+  },
+  "deltas_gan_10pct_minus_real_only": {
+    "accuracy": 0.002666666666666595,
+    "f1": 0.022111812826716593,
+    "false_negative_rate": -0.005333333333333329,
+    "false_positive_rate": -0.002526315789473684,
+    "pr_auc": 0.029774424226065466,
+    "precision": 0.03795020546289585,
+    "recall": 0.005333333333333301,
+    "roc_auc": 0.002369953216374343
+  },
+  "device": "cuda",
+  "evaluated_at_utc": "2026-08-22T09:28:13.549771+00:00",
+  "evaluation_name": "Final 30K low-prevalence confirmation",
+  "limitations": [
+    "Tranco rank membership is a legitimate-domain proxy, not manual page-level adjudication.",
+    "Root-domain legitimate URLs underrepresent deep legitimate paths, parameters, and redirects.",
+    "The 5.00% prevalence is a declared deployment simulation, not a measurement of one person's browsing history.",
+    "PhishTank and the limited OpenPhish feed do not cover every campaign, language, or region.",
+    "Source families have appeared in earlier project work, although every URL, hostname, and encoded identity here is unseen."
+  ],
+  "paired_exact_comparison": {
+    "all_rows": {
+      "discordant_rows": 400,
+      "real_only_correct_gan_wrong": 160,
+      "real_only_wrong_gan_correct": 240,
+      "two_sided_exact_mcnemar_p_value": 7.426568076372559e-05
+    },
+    "legitimate_rows": {
+      "discordant_rows": 278,
+      "real_only_correct_gan_wrong": 103,
+      "real_only_wrong_gan_correct": 175,
+      "two_sided_exact_mcnemar_p_value": 1.8630662066969336e-05
+    },
+    "phishing_rows": {
+      "discordant_rows": 122,
+      "real_only_correct_gan_wrong": 57,
+      "real_only_wrong_gan_correct": 65,
+      "two_sided_exact_mcnemar_p_value": 0.5264163099662322
+    }
+  },
+  "paired_stratified_bootstrap": {
+    "deltas_are_gan_10pct_minus_real_only": true,
+    "metrics": {
+      "accuracy": {
+        "confidence_interval_95": [
+          0.0014000000000000679,
+          0.003966666666666674
+        ],
+        "mean_delta": 0.0026608,
+        "probability_delta_above_zero": 1.0,
+        "probability_delta_below_zero": 0.0
+      },
+      "f1": {
+        "confidence_interval_95": [
+          0.010506170417282754,
+          0.03413436473126391
+        ],
+        "mean_delta": 0.022081917985774177,
+        "probability_delta_above_zero": 1.0,
+        "probability_delta_below_zero": 0.0
+      },
+      "false_negative_rate": {
+        "confidence_interval_95": [
+          -0.01999999999999999,
+          0.008666666666666684
+        ],
+        "mean_delta": -0.0054603333333333335,
+        "probability_delta_above_zero": 0.216,
+        "probability_delta_below_zero": 0.752
+      },
+      "false_positive_rate": {
+        "confidence_interval_95": [
+          -0.0036500000000000005,
+          -0.0014035087719298234
+        ],
+        "mean_delta": -0.002513456140350877,
+        "probability_delta_above_zero": 0.0,
+        "probability_delta_below_zero": 1.0
+      },
+      "pr_auc": {
+        "confidence_interval_95": [
+          0.022333117733081418,
+          0.03694643470064648
+        ],
+        "mean_delta": 0.029766745157436648,
+        "probability_delta_above_zero": 1.0,
+        "probability_delta_below_zero": 0.0
+      },
+      "precision": {
+        "confidence_interval_95": [
+          0.02111343434511275,
+          0.05492239100243437
+        ],
+        "mean_delta": 0.037754516604071905,
+        "probability_delta_above_zero": 1.0,
+        "probability_delta_below_zero": 0.0
+      },
+      "recall": {
+        "confidence_interval_95": [
+          -0.008666666666666604,
+          0.019999999999999907
+        ],
+        "mean_delta": 0.005460333333333329,
+        "probability_delta_above_zero": 0.752,
+        "probability_delta_below_zero": 0.216
+      },
+      "roc_auc": {
+        "confidence_interval_95": [
+          0.0002335230994151144,
+          0.00465084181286552
+        ],
+        "mean_delta": 0.0023653696725146212,
+        "probability_delta_above_zero": 0.9875,
+        "probability_delta_below_zero": 0.0125
+      }
+    },
+    "replicates": 2000,
+    "seed": 20260822,
+    "stratified_by_label": true
+  },
+  "practical_gate_passed": {
+    "gan_10pct": true,
+    "real_only": true
+  },
+  "predictions_sha256": "667dd228389c4e8c915fc279e43e5d8be4cbeb73ddd422c2a94ed5036a42c146",
+  "project_version": 3,
+  "protocol": "artifacts/final_confirmation_protocol_2026-08-22/manifest.json",
+  "protocol_sha256": "775bb61f2b5ff0dcea353552762af4686117954e17c27fa1caa18d3f41da6ce7",
+  "selection_locked_before_inference": true,
+  "thresholds_unchanged": true,
+  "verdict": {
+    "explanation": "Recall, F1 and ROC-AUC improved without a higher FPR.",
+    "heading": "PRIMARY AUGMENTATION RULE PASSED",
+    "passed": true
+  }
+}

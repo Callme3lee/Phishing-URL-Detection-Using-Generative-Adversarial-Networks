@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "6bd4b47038bbd5786650c6192041980d1c814097c90a417bfdb8c59ff21a2671"
+    },
+    {
+      "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "baf6347dd7e95292b4be9f54c0b242ba2ecfb79a19b5d6b4992583a4cfd01f87"
+    },
+    {
+      "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "c252cfb978513ff08e344dca6d2d7b1d1978325d61e8f62a099289d451aa5458"
+    }
+  ],
+  "condition": "Real",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.7,
+      "confusion_matrix": {
+        "fn": 118,
+        "fp": 2,
+        "tn": 198,
+        "tp": 82
+      },
+      "f1": 0.5774647887323944,
+      "false_negative_rate": 0.59,
+      "false_positive_rate": 0.01,
+      "pr_auc": 0.930022831494969,
+      "precision": 0.9761904761904762,
+      "recall": 0.41,
+      "roc_auc": 0.9095125
+    },
+    "external_10k": {
+      "accuracy": 0.6679,
+      "confusion_matrix": {
+        "fn": 3261,
+        "fp": 60,
+        "tn": 4940,
+        "tp": 1739
+      },
+      "f1": 0.5115458155611119,
+      "false_negative_rate": 0.6522,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.9129463549262449,
+      "precision": 0.9666481378543635,
+      "recall": 0.3478,
+      "roc_auc": 0.89011098
+    },
+    "external_30k": {
+      "accuracy": 0.815,
+      "confusion_matrix": {
+        "fn": 5339,
+        "fp": 211,
+        "tn": 20768,
+        "tp": 3682
+      },
+      "f1": 0.5702338547312994,
+      "false_negative_rate": 0.5918412592838931,
+      "false_positive_rate": 0.01005767672434339,
+      "pr_auc": 0.8390280891031869,
+      "precision": 0.9458001541227845,
+      "recall": 0.40815874071610686,
+      "roc_auc": 0.8827344481743478
+    },
+    "internal_test": {
+      "accuracy": 0.9385524792297223,
+      "confusion_matrix": {
+        "fn": 3015,
+        "fp": 10,
+        "tn": 38898,
+        "tp": 7306
+      },
+      "f1": 0.828485570108295,
+      "false_negative_rate": 0.29212285631237284,
+      "false_positive_rate": 0.00025701655186594015,
+      "pr_auc": 0.9891149136971861,
+      "precision": 0.9986331328594861,
+      "recall": 0.7078771436876272,
+      "roc_auc": 0.9941604088784957
+    }
+  },
+  "format": "neural",
+  "id": "experiments__multisource__baselines__v1__rnn",
+  "model": "RNN",
+  "root": "artifacts/experiments/multisource_baselines_v1/rnn",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "Ordinary MS",
+  "threshold": 0.99169921875,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.99169921875,
+    "validation_f1": 0.5774647887323944,
+    "validation_fpr": 0.01,
+    "validation_precision": 0.9761904761904762,
+    "validation_recall": 0.41
+  }
+}

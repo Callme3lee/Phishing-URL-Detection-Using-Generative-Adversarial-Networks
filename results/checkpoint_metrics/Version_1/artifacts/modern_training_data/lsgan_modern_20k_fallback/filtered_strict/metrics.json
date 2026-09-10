@@ -1,0 +1,14 @@
+{
+  "sample_file": "artifacts/modern_training_data/lsgan_modern/filtered_strict/filtered_tokens.npy",
+  "count": 781,
+  "unique_rate": 1.0,
+  "empty_rate": 0.0,
+  "valid_structure_rate": 1.0,
+  "training_memorization_rate": 0.0,
+  "bigram_diversity": 0.04151681273787493,
+  "mean_length": 37.6696542893726,
+  "median_length": 32.0,
+  "cnn_mean_malicious_probability": 0.8115234375,
+  "cnn_malicious_detection_rate": 0.9359795134443022,
+  "cnn_threshold": 0.44677734375
+}

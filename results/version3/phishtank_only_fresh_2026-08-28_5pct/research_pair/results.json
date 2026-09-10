@@ -1,0 +1,177 @@
+{
+  "augmentation_verdict": {
+    "explanation": "The +10% model improved recall, F1 and ROC-AUC without increasing FPR on this new cohort.",
+    "heading": "AUGMENTATION BENEFIT SUPPORTED",
+    "rule": "gan_10pct must exceed real_only on recall, F1 and ROC-AUC without a higher FPR",
+    "supported": true
+  },
+  "conditions": {
+    "gan_10pct": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a",
+          "verified_sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763",
+          "verified_sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014",
+          "verified_sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014"
+        }
+      ],
+      "display_name": "Weighted HYB-MS +10% MS-HardGAN-C",
+      "metrics": {
+        "accuracy": 0.9845,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9818861281043236,
+            0.9867417774744909
+          ],
+          "false_positive_rate": [
+            0.008472688038918345,
+            0.012554752253156129
+          ],
+          "precision": [
+            0.7841885135392376,
+            0.8490232114766053
+          ],
+          "recall": [
+            0.8551509101576845,
+            0.9109630990059973
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 57,
+          "fp": 98,
+          "tn": 9402,
+          "tp": 443
+        },
+        "f1": 0.851104707012488,
+        "false_negative_rate": 0.114,
+        "false_positive_rate": 0.01031578947368421,
+        "per_10000": {
+          "detected_phishing": 443.0,
+          "false_alerts": 98.0,
+          "missed_phishing": 57.0,
+          "total_alerts": 541.0
+        },
+        "pr_auc": 0.9110952469210793,
+        "precision": 0.8188539741219963,
+        "recall": 0.886,
+        "roc_auc": 0.9729754736842106
+      },
+      "practical_gate_passed": true,
+      "threshold": 0.9890950322151184
+    },
+    "real_only": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5",
+          "verified_sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8",
+          "verified_sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5",
+          "verified_sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+        }
+      ],
+      "display_name": "Weighted HYB-MS real-only",
+      "metrics": {
+        "accuracy": 0.98,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.977066073239287,
+            0.9825652883248633
+          ],
+          "false_positive_rate": [
+            0.011440447566351179,
+            0.016110670574163904
+          ],
+          "precision": [
+            0.7320705604147135,
+            0.8018878993787313
+          ],
+          "recall": [
+            0.8246703326752246,
+            0.885870639554304
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 71,
+          "fp": 129,
+          "tn": 9371,
+          "tp": 429
+        },
+        "f1": 0.8109640831758034,
+        "false_negative_rate": 0.142,
+        "false_positive_rate": 0.013578947368421053,
+        "per_10000": {
+          "detected_phishing": 429.0,
+          "false_alerts": 129.0,
+          "missed_phishing": 71.0,
+          "total_alerts": 558.0
+        },
+        "pr_auc": 0.8723928827774743,
+        "precision": 0.7688172043010753,
+        "recall": 0.858,
+        "roc_auc": 0.9721768421052631
+      },
+      "practical_gate_passed": true,
+      "threshold": 0.9879557490348816
+    }
+  },
+  "dataset": {
+    "legitimate_rows": 9500,
+    "overlap": {
+      "encoded_rows": 0,
+      "hostnames": 0,
+      "urls": 0
+    },
+    "path": "data/external/2026-08-28-phishtank-only-raw-5pct-v1/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 500,
+    "rows": 10000,
+    "sha256": "b331bd254ec9141e72b24489f0a0bba89951c4d410a211caf9c2d8f7924501dd"
+  },
+  "deltas_gan_minus_real": {
+    "accuracy": 0.0045000000000000595,
+    "f1": 0.0401406238366846,
+    "false_negative_rate": -0.027999999999999983,
+    "false_positive_rate": -0.003263157894736843,
+    "pr_auc": 0.03870236414360506,
+    "precision": 0.05003676982092109,
+    "recall": 0.028000000000000025,
+    "roc_auc": 0.0007986315789474396
+  },
+  "evaluated_at_utc": "2026-08-28T17:29:05.614982+00:00",
+  "evaluation_type": "one-shot prospective real-only versus 10% GAN comparison",
+  "limitations": [
+    "Tranco rank membership is a legitimate-domain proxy, not manual page-level adjudication.",
+    "Root-domain legitimate URLs underrepresent deep legitimate paths, parameters, and redirects.",
+    "The 5.00% prevalence is a declared deployment simulation, not a measurement of one person's browsing history.",
+    "PhishTank does not cover every phishing campaign, language, or region.",
+    "Source families have appeared in earlier project work, although every URL, hostname, and encoded identity here is unseen."
+  ],
+  "manifest": "artifacts/final_candidate_2026-08-22/manifest.json",
+  "manifest_sha256": "187b4d92601b524089cb51636ac790c1990fbeac980913ad6e4f2cd0c76ca96e",
+  "one_shot_contract_honored": true,
+  "predictions_sha256": "150b10ccb3c0123edd47d87bcd815f2cbf71f6e0a9cc8098c30aa7f9d18ab7b7",
+  "project_version": 3
+}

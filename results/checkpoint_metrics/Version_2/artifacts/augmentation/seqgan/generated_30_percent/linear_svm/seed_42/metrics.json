@@ -1,0 +1,38 @@
+{
+  "accuracy": 0.9099518172625067,
+  "condition": "generated_30_percent",
+  "confusion_matrix": {
+    "fn": 21610,
+    "fp": 1097,
+    "tn": 107130,
+    "tp": 122328
+  },
+  "device": "CPU",
+  "f1": 0.9150705220991685,
+  "false_positive_rate": 0.01013610282092269,
+  "generated_training_rows": 881066,
+  "generator": "seqgan",
+  "inference_urls_per_second": 5812158.344256626,
+  "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+  "mixed_precision": false,
+  "model": "linear_svm",
+  "model_size_bytes": 1845,
+  "pr_auc": 0.97690512707164,
+  "precision": 0.9911120113429208,
+  "project_version": 2,
+  "real_training_rows": 2055821,
+  "recall": 0.8498659144909614,
+  "roc_auc": 0.9617798467279712,
+  "seed": 42,
+  "test_inference_seconds": 0.04338577599992277,
+  "threshold": 0.5666089879707172,
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.5666089879707172,
+    "validation_f1": 0.9087472303088369,
+    "validation_fpr": 0.009993232782994818,
+    "validation_precision": 0.991300277616373,
+    "validation_recall": 0.8388868021171249
+  },
+  "training_time_seconds": 51.74832645999777
+}

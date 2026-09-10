@@ -1,0 +1,32 @@
+{
+  "accuracy": 0.8650955230633187,
+  "best_epoch": 7,
+  "confusion_matrix": {
+    "fn": 6538,
+    "fp": 22,
+    "tn": 38302,
+    "tp": 3765
+  },
+  "data_report_sha256": "7fe548358fe49b3cb761ff5040a64c1756dc0794a5417535224115c5c9da948b",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "f1": 0.5344215755855216,
+  "false_negative_rate": 0.6345724546248666,
+  "false_positive_rate": 0.000574052812858783,
+  "model": "lexical_mlp_verifier",
+  "pr_auc": 0.967318885973113,
+  "precision": 0.9941906522313176,
+  "recall": 0.36542754537513344,
+  "roc_auc": 0.9864577419622248,
+  "seed": 43,
+  "selection_score": 0.9598950055941404,
+  "target_group_proportions": {
+    "0": 0.35,
+    "1": 0.15,
+    "2": 0.3,
+    "3": 0.15,
+    "4": 0.05
+  },
+  "threshold": 0.9941574335098267,
+  "training_rows": 367184,
+  "training_seconds": 26.264612572998885
+}

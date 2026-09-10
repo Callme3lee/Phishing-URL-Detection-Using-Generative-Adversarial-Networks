@@ -1,0 +1,136 @@
+{
+  "always_legitimate_accuracy": 0.95,
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a",
+      "verified_sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a"
+    },
+    {
+      "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763",
+      "verified_sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763"
+    },
+    {
+      "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014",
+      "verified_sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014"
+    }
+  ],
+  "claims": {
+    "next_step": [
+      "Package only this frozen model for a shadow-mode browser pilot; log decisions without blocking users.",
+      "Measure latency and manually review false alerts and missed phish before choosing any production action threshold."
+    ],
+    "not_supported": [
+      "Production-ready status: latency, memory, privacy, browser integration, monitoring, and live alert adjudication remain untested.",
+      "Universal phishing coverage: two phishing feeds and a Tranco legitimate proxy cannot represent the whole web."
+    ],
+    "supported": [
+      "The selected model transfers to a new identity-disjoint cohort at 5.00% phishing prevalence.",
+      "The result used no retraining, threshold tuning, checkpoint selection, or comparison against the other 105 models."
+    ]
+  },
+  "comparison_interpretation": "On the final cohort, recall changed from 87.05% to 89.90% and FPR from 0.96% to 1.19%. Precision changed from 97.49% to 79.91%; much of that movement is expected when phishing prevalence changes from 30.07% to 5.00%.",
+  "confidence_intervals_95": {
+    "accuracy": [
+      0.9817972694023462,
+      0.9853169741205838
+    ],
+    "false_positive_rate": [
+      0.01044888004936368,
+      0.013537925976589243
+    ],
+    "precision": [
+      0.7746981494840719,
+      0.8214883165083149
+    ],
+    "recall": [
+      0.8787702573809262,
+      0.9161759893476009
+    ]
+  },
+  "dataset": {
+    "legitimate_rows": 19000,
+    "overlap": {
+      "encoded_rows": 0,
+      "hostnames": 0,
+      "urls": 0
+    },
+    "path": "data/external/2026-08-13-browser-prevalence-5pct/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 1000,
+    "rows": 20000,
+    "sha256": "4a4e5c5a0e7321319f0bc1e62f16017a730eda25283722e1087b56a97a856242"
+  },
+  "evaluated_at_utc": "2026-08-13T17:32:17.180812+00:00",
+  "methodological_status": "one-shot 5% phishing prevalence sensitivity test; never training, calibration, threshold selection, or model selection; model, checkpoints, ensemble, calibration, and threshold frozen before inference",
+  "metrics": {
+    "accuracy": 0.98365,
+    "balanced_accuracy": 0.9435526315789473,
+    "confusion_matrix": {
+      "fn": 101,
+      "fp": 226,
+      "tn": 18774,
+      "tp": 899
+    },
+    "f1": 0.8461176470588235,
+    "false_negative_rate": 0.101,
+    "false_positive_rate": 0.011894736842105263,
+    "matthews_correlation_coefficient": 0.8391357328384552,
+    "negative_predictive_value": 0.9946490066225165,
+    "pr_auc": 0.9122274176577695,
+    "precision": 0.7991111111111111,
+    "recall": 0.899,
+    "roc_auc": 0.9712647894736841,
+    "specificity": 0.9881052631578947
+  },
+  "model_display": "Weighted HYB-MS +10% MS-HardGAN-C (seeds 42/43/44)",
+  "model_id": "experiments__fair__hybrid__gan__v1__gan__10pct__hyb__ms",
+  "operational": {
+    "detected_phish_per_10000": 449.5,
+    "false_alerts_per_10000": 113.0,
+    "missed_phish_per_10000": 50.5,
+    "total_alerts_per_10000": 562.5
+  },
+  "predeclared_confirmation_guardrails": {
+    "maximum_fpr": 0.02,
+    "minimum_recall": 0.8
+  },
+  "predictions_sha256": "7d2339a2231f0dd8430f70a361523d6c9ddb3b7144f858597a58affb85b1ff6c",
+  "prior_external_reference": {
+    "accuracy": 0.9543333333333334,
+    "confusion_matrix": {
+      "fn": 1168,
+      "fp": 202,
+      "tn": 20777,
+      "tp": 7853
+    },
+    "f1": 0.9197704380416959,
+    "false_negative_rate": 0.12947566788604367,
+    "false_positive_rate": 0.009628676295342963,
+    "pr_auc": 0.9638325168885225,
+    "precision": 0.9749224084419615,
+    "recall": 0.8705243321139563,
+    "roc_auc": 0.9699488763524531
+  },
+  "project_version": 3,
+  "source_limitations": [
+    "Tranco rank membership is a legitimate-domain proxy, not manual page-level adjudication.",
+    "Root-domain legitimate URLs underrepresent deep legitimate paths, parameters, and redirects.",
+    "The 5.00% prevalence is a declared deployment simulation, not a measurement of one person's browsing history.",
+    "PhishTank and the limited OpenPhish feed do not cover every campaign, language, or region.",
+    "Source families have appeared in earlier project work, although every URL, hostname, and encoded identity here is unseen."
+  ],
+  "threshold": 0.9890950322151184,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "verdict": {
+    "color": "#1C9A8B",
+    "heading": "OFFLINE CANDIDATE CONFIRMED",
+    "status": "confirmed_offline_candidate",
+    "text": "The locked model retained at least 80% phishing recall with no more than 2% false-positive rate on a completely identity-disjoint, low-prevalence cohort."
+  }
+}

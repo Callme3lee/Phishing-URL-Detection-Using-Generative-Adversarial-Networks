@@ -1,0 +1,356 @@
+{
+  "dataset": "../URLs_New.csv",
+  "encoded_duplicate_rows": 3893,
+  "encoded_label_conflicts": 0,
+  "encoded_unique_rows": 446272,
+  "hostnames_present_in_both_labels": 52,
+  "https_scheme_only_classifier": {
+    "accuracy": 0.9855186431641731,
+    "confusion_matrix": {
+      "fn": 6483,
+      "fp": 36,
+      "tn": 345702,
+      "tp": 97944
+    },
+    "false_positive_rate": 0.00010412508894018014,
+    "precision": 0.9996325780771586,
+    "recall": 0.9379183544485622,
+    "rule": "predict legitimate for HTTPS and phishing otherwise"
+  },
+  "invalid_reasons": {
+    "control_character": 2,
+    "invalid_hostname": 3,
+    "invalid_idna_hostname": 4,
+    "invalid_port": 1,
+    "url_parse_error": 1
+  },
+  "invalid_rows": 11,
+  "label_counts": {
+    "legitimate": 345738,
+    "phishing": 104438
+  },
+  "label_fractions": {
+    "legitimate": 0.7680062908729031,
+    "phishing": 0.23199370912709696
+  },
+  "label_runs": [
+    {
+      "label": 0,
+      "start": 1,
+      "stop": 345738
+    },
+    {
+      "label": 1,
+      "start": 345739,
+      "stop": 450176
+    }
+  ],
+  "metadata_limitations": [
+    "No source column: independent-source diversity cannot be verified.",
+    "No collection date: temporal diversity and chronological splitting cannot be verified.",
+    "Rows are sorted in two contiguous label blocks and must be shuffled/group-split before training."
+  ],
+  "normalized_duplicate_rows": 135,
+  "normalized_label_conflicts": 0,
+  "normalized_unique_urls": 450030,
+  "overlap_with_version_2_master": {
+    "encoded_label_conflicts": 0,
+    "encoded_rows": 0,
+    "exact_label_conflicts": 0,
+    "exact_rows": 0,
+    "exact_unique_urls": 0,
+    "hostname_rows": 157311,
+    "scheme_insensitive_exact_rows": 24443,
+    "scheme_insensitive_label_conflicts": 817,
+    "scheme_insensitive_unique_urls": 24366,
+    "unique_hostnames": 29305
+  },
+  "profiles": {
+    "0": {
+      "feature_means": {
+        "ampersand_count": 0.07573075592517853,
+        "at_count": 0.0006247505079954863,
+        "character_entropy": 4.316852569580078,
+        "colon_count": 1.0090646743774414,
+        "digit_count": 3.2758185863494873,
+        "digit_ratio": 0.04815719276666641,
+        "dot_count": 2.652282953262329,
+        "dot_count_host": 2.28375244140625,
+        "double_dot_count": 0.0007201985572464764,
+        "double_slash_count": 1.0000693798065186,
+        "equals_count": 0.20914103090763092,
+        "estimated_subdomains": 1.28375244140625,
+        "hostname_length": 19.616310119628906,
+        "https": 0.9998958706855774,
+        "hyphen_count": 1.4615055322647095,
+        "ip_hostname": 0.0,
+        "letter_count": 44.700775146484375,
+        "path_length": 27.578908920288086,
+        "percent_count": 0.07312184572219849,
+        "query_delimiters": 0.2831074297428131,
+        "query_length": 3.148271322250366,
+        "question_count": 0.13345076143741608,
+        "slash_count": 4.297907829284668,
+        "special_count": 10.501599311828613,
+        "suspicious_token_count": 0.006782592739909887,
+        "underscore_count": 0.4675910770893097,
+        "unique_character_count": 24.194664001464844,
+        "url_length": 58.47819519042969
+      },
+      "https_rate": 0.9998958749110598,
+      "ip_hostname_rate": 0.0,
+      "label": "legitimate",
+      "longer_than_127_rate": 0.018606574920893855,
+      "query_present_rate": 0.132941707304375,
+      "root_or_empty_path_rate": 0.14958725971689546,
+      "rows": 345738,
+      "rows_per_unique_hostname": 3.106082113017698,
+      "scheme_marker_rate": 1.0,
+      "suspicious_token_present_rate": 0.006209904609849076,
+      "top_10_hostname_share": 0.14526896088945965,
+      "top_1_hostname_share": 0.03664046185261672,
+      "top_hostnames": [
+        {
+          "hostname": "www.en.wikipedia.org",
+          "rows": 12668
+        },
+        {
+          "hostname": "www.youtube.com",
+          "rows": 8618
+        },
+        {
+          "hostname": "www.facebook.com",
+          "rows": 7737
+        },
+        {
+          "hostname": "www.amazon.com",
+          "rows": 4619
+        },
+        {
+          "hostname": "www.imdb.com",
+          "rows": 3471
+        },
+        {
+          "hostname": "www.linkedin.com",
+          "rows": 3427
+        },
+        {
+          "hostname": "www.myspace.com",
+          "rows": 2922
+        },
+        {
+          "hostname": "www.mylife.com",
+          "rows": 2822
+        },
+        {
+          "hostname": "www.manta.com",
+          "rows": 2075
+        },
+        {
+          "hostname": "www.absoluteastronomy.com",
+          "rows": 1866
+        },
+        {
+          "hostname": "www.wn.com",
+          "rows": 1860
+        },
+        {
+          "hostname": "www.pipl.com",
+          "rows": 1663
+        },
+        {
+          "hostname": "www.answers.com",
+          "rows": 1654
+        },
+        {
+          "hostname": "www.spoke.com",
+          "rows": 1126
+        },
+        {
+          "hostname": "www.people.famouswhy.com",
+          "rows": 1080
+        },
+        {
+          "hostname": "www.twitter.com",
+          "rows": 1056
+        },
+        {
+          "hostname": "www.genforum.genealogy.com",
+          "rows": 1028
+        },
+        {
+          "hostname": "www.music.yahoo.com",
+          "rows": 1012
+        },
+        {
+          "hostname": "www.123people.com",
+          "rows": 983
+        },
+        {
+          "hostname": "www.spokeo.com",
+          "rows": 934
+        }
+      ],
+      "unique_hostnames": 111310,
+      "url_length_quantiles": {
+        "0": 15.0,
+        "0.25": 42.0,
+        "0.5": 53.0,
+        "0.75": 70.0,
+        "0.9": 91.0,
+        "0.95": 106.0,
+        "0.99": 142.0,
+        "1": 651.0
+      }
+    },
+    "1": {
+      "feature_means": {
+        "ampersand_count": 0.2777155339717865,
+        "at_count": 0.028057876974344254,
+        "character_entropy": 4.288480758666992,
+        "colon_count": 1.036781668663025,
+        "digit_count": 7.234067916870117,
+        "digit_ratio": 0.08118978887796402,
+        "dot_count": 2.514024257659912,
+        "dot_count_host": 1.5811140537261963,
+        "double_dot_count": 0.026640620082616806,
+        "double_slash_count": 1.0194298028945923,
+        "equals_count": 0.419977605342865,
+        "estimated_subdomains": 0.5827133059501648,
+        "hostname_length": 18.151521682739258,
+        "https": 0.06208164617419243,
+        "hyphen_count": 0.558112382888794,
+        "ip_hostname": 0.03786377236247063,
+        "letter_count": 47.57594299316406,
+        "path_length": 26.988574981689453,
+        "percent_count": 0.14592011272907257,
+        "query_delimiters": 0.6523600220680237,
+        "query_length": 12.701035499572754,
+        "question_count": 0.21546152234077454,
+        "slash_count": 4.927834987640381,
+        "special_count": 10.482356071472168,
+        "suspicious_token_count": 0.25117066502571106,
+        "underscore_count": 0.26044031977653503,
+        "unique_character_count": 24.624387741088867,
+        "url_length": 65.29236602783203
+      },
+      "https_rate": 0.062081645551437845,
+      "ip_hostname_rate": 0.037863770863857046,
+      "label": "phishing",
+      "longer_than_127_rate": 0.08212435481245271,
+      "query_present_rate": 0.18745152115832112,
+      "root_or_empty_path_rate": 0.08414490505329082,
+      "rows": 104427,
+      "rows_per_unique_hostname": 1.8739367620141407,
+      "scheme_marker_rate": 1.0,
+      "suspicious_token_present_rate": 0.16569469581621613,
+      "top_10_hostname_share": 0.024256178957549293,
+      "top_1_hostname_share": 0.009403698277265457,
+      "top_hostnames": [
+        {
+          "hostname": "sites.google.com",
+          "rows": 982
+        },
+        {
+          "hostname": "webmail.mhcable.com",
+          "rows": 378
+        },
+        {
+          "hostname": "twitter.com",
+          "rows": 216
+        },
+        {
+          "hostname": "bit.ly",
+          "rows": 174
+        },
+        {
+          "hostname": "living4u.80port.net",
+          "rows": 148
+        },
+        {
+          "hostname": "kf25zx.com",
+          "rows": 143
+        },
+        {
+          "hostname": "cndoubleegret.com",
+          "rows": 132
+        },
+        {
+          "hostname": "drive.google.com",
+          "rows": 131
+        },
+        {
+          "hostname": "www.kf25zx.com",
+          "rows": 122
+        },
+        {
+          "hostname": "goo.gl",
+          "rows": 107
+        },
+        {
+          "hostname": "bjcurio.com",
+          "rows": 104
+        },
+        {
+          "hostname": "tinyurl.com",
+          "rows": 102
+        },
+        {
+          "hostname": "http",
+          "rows": 102
+        },
+        {
+          "hostname": "dedivan.ru",
+          "rows": 101
+        },
+        {
+          "hostname": "veganvet.net",
+          "rows": 100
+        },
+        {
+          "hostname": "dl.downf468.com",
+          "rows": 99
+        },
+        {
+          "hostname": "docs.google.com",
+          "rows": 96
+        },
+        {
+          "hostname": "buydesignerjewelleryuk.com",
+          "rows": 94
+        },
+        {
+          "hostname": "fra1.ib.adnxs.com",
+          "rows": 91
+        },
+        {
+          "hostname": "stsgroupbd.com",
+          "rows": 89
+        }
+      ],
+      "unique_hostnames": 55726,
+      "url_length_quantiles": {
+        "0": 12.0,
+        "0.25": 35.0,
+        "0.5": 50.0,
+        "0.75": 73.0,
+        "0.9": 114.0,
+        "0.95": 161.0,
+        "0.99": 260.0,
+        "1": 2314.0
+      }
+    }
+  },
+  "raw_duplicate_rows": 0,
+  "raw_label_conflicts": 0,
+  "raw_unique_urls": 450176,
+  "rows": 450176,
+  "rows_on_cross_label_hostnames": 10720,
+  "schema": [
+    "url",
+    "label"
+  ],
+  "sha256": "18067bad500580a7def376c5a4438c9886adda5eb739fc209fdda4c6309966a7",
+  "unique_hostnames": 166984,
+  "valid_rows": 450165
+}

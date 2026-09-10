@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# Daily at 14:15 Africa/Tripoli local time. Append-only collection; no evaluation.
+15 14 * * * <REPOSITORY_PATH>/Version_1/scripts/collect_prospective_snapshot.sh >> <REPOSITORY_PATH>/Version_1/artifacts/prospective_evaluation/collector.log 2>&1

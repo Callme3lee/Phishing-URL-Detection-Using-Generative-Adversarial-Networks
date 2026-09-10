@@ -1,0 +1,20 @@
+{
+  "exact_url_intersection": 367184,
+  "extra_urls_in_gan_condition": 40409,
+  "gan_condition_rows": 407594,
+  "gan_manifest_unique_urls": 407593,
+  "real_cross_class_exact_url_overlap": 0,
+  "real_manifest_unique_urls": 367184,
+  "real_only_rows": 367184,
+  "real_rows_identical_and_in_same_order": true,
+  "real_rows_in_gan_condition": 367184,
+  "real_urls_missing_from_gan_condition": 0,
+  "real_vs_synthetic_phishing_length_bucket_overlap_coefficient": 0.735147164896937,
+  "synthetic_exact_url_overlap_with_real": 1,
+  "synthetic_hostname_overlap_with_any_real": 5,
+  "synthetic_hostname_overlap_with_real_legitimate": 5,
+  "synthetic_hostname_overlap_with_real_phishing": 0,
+  "synthetic_rows_in_gan_condition": 40410,
+  "synthetic_unique_hostnames": 40008,
+  "unique_url_jaccard": 0.9008594357606731
+}

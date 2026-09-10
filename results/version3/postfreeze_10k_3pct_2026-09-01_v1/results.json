@@ -1,0 +1,679 @@
+{
+  "browser_native_parity": {
+    "candidate_binary_disagreements": 0,
+    "maximum_absolute_score_difference": 0.0010971426963806152
+  },
+  "checkpoints_changed": false,
+  "conditions": {
+    "browser_candidate": {
+      "display_name": "Browser ONNX candidate",
+      "metrics": {
+        "accuracy": 0.988,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9856706937299375,
+            0.989954523860282
+          ],
+          "false_positive_rate": [
+            0.0055340017352323335,
+            0.00887693638799717
+          ],
+          "precision": [
+            0.7362222287147031,
+            0.8265565950928431
+          ],
+          "recall": [
+            0.7797738592974309,
+            0.8652993995025323
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 52,
+          "fp": 68,
+          "tn": 9632,
+          "tp": 248
+        },
+        "f1": 0.8051948051948052,
+        "false_negative_rate": 0.17333333333333334,
+        "false_positive_rate": 0.0070103092783505155,
+        "fpr_wilson_95": [
+          0.0055340017352323335,
+          0.00887693638799717
+        ],
+        "per_10000": {
+          "detected_phishing": 248.0,
+          "false_alerts": 68.0,
+          "missed_phishing": 52.0,
+          "total_alerts": 316.0
+        },
+        "pr_auc": 0.8710252686361772,
+        "precision": 0.7848101265822784,
+        "recall": 0.8266666666666667,
+        "recall_wilson_95": [
+          0.7797738592974309,
+          0.8652993995025323
+        ],
+        "roc_auc": 0.966078350515464
+      },
+      "threshold": 0.9880644679069519,
+      "verified_models": [
+        {
+          "filename": "hyb_gan10_seed42.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 42,
+          "sha256": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914"
+        },
+        {
+          "filename": "hyb_gan10_seed43.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 43,
+          "sha256": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87"
+        },
+        {
+          "filename": "hyb_gan10_seed44.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 44,
+          "sha256": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3"
+        }
+      ]
+    },
+    "extension_v0_5_1": {
+      "display_name": "Installed extension v0.5.1 threshold",
+      "metrics": {
+        "accuracy": 0.9891,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9868688476233592,
+            0.9909555251704448
+          ],
+          "false_positive_rate": [
+            0.002855608712008535,
+            0.005372211080751893
+          ],
+          "precision": [
+            0.8106875385186731,
+            0.894522073154731
+          ],
+          "recall": [
+            0.7120967390716028,
+            0.8079112960834695
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 71,
+          "fp": 38,
+          "tn": 9662,
+          "tp": 229
+        },
+        "f1": 0.8077601410934744,
+        "false_negative_rate": 0.23666666666666666,
+        "false_positive_rate": 0.003917525773195876,
+        "fpr_wilson_95": [
+          0.002855608712008535,
+          0.005372211080751893
+        ],
+        "per_10000": {
+          "detected_phishing": 229.0,
+          "false_alerts": 38.0,
+          "missed_phishing": 71.0,
+          "total_alerts": 267.0
+        },
+        "pr_auc": 0.8710252686361772,
+        "precision": 0.8576779026217228,
+        "recall": 0.7633333333333333,
+        "recall_wilson_95": [
+          0.7120967390716028,
+          0.8079112960834695
+        ],
+        "roc_auc": 0.966078350515464
+      },
+      "threshold": 0.9953077435493469,
+      "verified_models": [
+        {
+          "filename": "hyb_gan10_seed42.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 42,
+          "sha256": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914"
+        },
+        {
+          "filename": "hyb_gan10_seed43.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 43,
+          "sha256": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87"
+        },
+        {
+          "filename": "hyb_gan10_seed44.onnx",
+          "provider": "CPUExecutionProvider",
+          "seed": 44,
+          "sha256": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3"
+        }
+      ]
+    },
+    "gan_10pct": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064",
+          "verified_sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8",
+          "verified_sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9",
+          "verified_sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9"
+        }
+      ],
+      "display_name": "Updated HYB-MS +10% MS-HardGAN-C",
+      "metrics": {
+        "accuracy": 0.988,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9856706937299375,
+            0.989954523860282
+          ],
+          "false_positive_rate": [
+            0.0055340017352323335,
+            0.00887693638799717
+          ],
+          "precision": [
+            0.7362222287147031,
+            0.8265565950928431
+          ],
+          "recall": [
+            0.7797738592974309,
+            0.8652993995025323
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 52,
+          "fp": 68,
+          "tn": 9632,
+          "tp": 248
+        },
+        "f1": 0.8051948051948052,
+        "false_negative_rate": 0.17333333333333334,
+        "false_positive_rate": 0.0070103092783505155,
+        "fpr_wilson_95": [
+          0.0055340017352323335,
+          0.00887693638799717
+        ],
+        "per_10000": {
+          "detected_phishing": 248.0,
+          "false_alerts": 68.0,
+          "missed_phishing": 52.0,
+          "total_alerts": 316.0
+        },
+        "pr_auc": 0.8710501609466929,
+        "precision": 0.7848101265822784,
+        "recall": 0.8266666666666667,
+        "recall_wilson_95": [
+          0.7797738592974309,
+          0.8652993995025323
+        ],
+        "roc_auc": 0.9660756013745705
+      },
+      "threshold": 0.9880269169807434
+    },
+    "real_only": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "c14dc5b77fc537dc96471653d2eb9bc6d340d581996eed7614860370deecb690",
+          "verified_sha256": "c14dc5b77fc537dc96471653d2eb9bc6d340d581996eed7614860370deecb690"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "f422883c97dbeeced053096405ed3a7d855bceef93aa75e8515029c92ad1a8a2",
+          "verified_sha256": "f422883c97dbeeced053096405ed3a7d855bceef93aa75e8515029c92ad1a8a2"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "956b9c896a687ce0c75310a15efe59b5109cc3c545344d40c7729430563b6dc2",
+          "verified_sha256": "956b9c896a687ce0c75310a15efe59b5109cc3c545344d40c7729430563b6dc2"
+        }
+      ],
+      "display_name": "Updated HYB-MS real-only",
+      "metrics": {
+        "accuracy": 0.9871,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9846937960235127,
+            0.989132112763774
+          ],
+          "false_positive_rate": [
+            0.005898773655595275,
+            0.009336580245030104
+          ],
+          "precision": [
+            0.7219511241871457,
+            0.8143655788930668
+          ],
+          "recall": [
+            0.7617962081751881,
+            0.8503651496655933
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 57,
+          "fp": 72,
+          "tn": 9628,
+          "tp": 243
+        },
+        "f1": 0.7902439024390244,
+        "false_negative_rate": 0.19,
+        "false_positive_rate": 0.007422680412371134,
+        "fpr_wilson_95": [
+          0.005898773655595275,
+          0.009336580245030104
+        ],
+        "per_10000": {
+          "detected_phishing": 243.0,
+          "false_alerts": 72.0,
+          "missed_phishing": 57.0,
+          "total_alerts": 315.0
+        },
+        "pr_auc": 0.852743388941359,
+        "precision": 0.7714285714285715,
+        "recall": 0.81,
+        "recall_wilson_95": [
+          0.7617962081751881,
+          0.8503651496655933
+        ],
+        "roc_auc": 0.9649766323024055
+      },
+      "threshold": 0.9887463450431824
+    }
+  },
+  "dataset": {
+    "identity_contract": {
+      "identity_source_count": 82,
+      "identity_sources": [
+        {
+          "path": "data/processed/master.sqlite",
+          "sha256": "4df31c2e06cd502bbb659e6b0c4ec72010237f6c1512016728a535ba10502bd7"
+        },
+        {
+          "path": "data/calibration/2026-08-11-post-hybrid/calibration_urls.csv",
+          "sha256": "08b8e50e0909eee142daaac9abdf98a70c8c769d49b8e6b1a0ddc7e1d07ba4cd"
+        },
+        {
+          "path": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+          "sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c"
+        },
+        {
+          "path": "data/deployment/2026-08-15-confirmation/confirmation_urls.csv",
+          "sha256": "91fb0abf6d8665cab117551fcceb6dce224f524b702f0e381ce900ea68f84a63"
+        },
+        {
+          "path": "data/deployment/2026-08-15-precision/calibration_urls.csv",
+          "sha256": "cafa46839a0919a13f880d0bcbe480c20aae943a4d9e9a7fa014ab95b6f73394"
+        },
+        {
+          "path": "data/development/benign_coverage_2026-08-11/audit/test.csv",
+          "sha256": "22e419bd5bb935d26f05755626d95c84f6b41af2023df0dab466b00a6e1b4794"
+        },
+        {
+          "path": "data/development/benign_coverage_2026-08-11/audit/train.csv",
+          "sha256": "6298753f61e4b82174b5e4348b6e8e389c81f4d72442caed5cd6688d73000e24"
+        },
+        {
+          "path": "data/development/benign_coverage_2026-08-11/audit/validation.csv",
+          "sha256": "348d1777923f84a1a11c813dfbc1e37ec88e0115199fc83945e736d6ccbbe5ab"
+        },
+        {
+          "path": "data/development/benign_coverage_2026-08-11/benign_candidates.csv",
+          "sha256": "3c04291c2d396fd14e96b12cf9c9fa2533ca33ea98cc264b49f36da5c1d0bc56"
+        },
+        {
+          "path": "data/development/deployment_recovery_2026-08-15/benign_candidates.csv",
+          "sha256": "de6d23f44c81c22bdf5a1f0d4dfe9f3abfad2bbeb0803569af0abe5378bda5e4"
+        },
+        {
+          "path": "data/development/dns_secondary_v1/development_urls.csv",
+          "sha256": "5f44206de707a408fd3d855544d3e92c8f3248d5e41a4097fd766f5d01df4d5e"
+        },
+        {
+          "path": "data/development/dns_secondary_v1/dns_secondary_review.csv",
+          "sha256": "3fc38427ceabd2a4bb1a59fb9bc0fb939f1d299c4a96e64afa10d71f8a7014e5"
+        },
+        {
+          "path": "data/development/dns_secondary_v1/primary_scored.csv",
+          "sha256": "198a5bc3c632f2a38292338302f2a59789c34de1d921a4c22a2e2dc02d4d9436"
+        },
+        {
+          "path": "data/evaluation/two_stage_url_cascade_v1/evaluation_urls.csv",
+          "sha256": "4784a39d17629faf8ace4f5da8fad051e2e15b9cb259f2abde6f960a471aa50d"
+        },
+        {
+          "path": "data/experiments/deployment_recovery_v1/gan_10pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/deployment_recovery_v1/gan_10pct/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/deployment_recovery_v1/gan_10pct/processed/train_manifest.csv",
+          "sha256": "71a2583853851cc592b02daa8ff4b36486d1d0dac1995f9c414210b799171130"
+        },
+        {
+          "path": "data/experiments/deployment_recovery_v1/gan_10pct/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_10pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_10pct/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_10pct/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_20pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_20pct/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_20pct/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_30pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_30pct/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_30pct/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_40pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_40pct/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/gan_40pct/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/real_only/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/real_only/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/fair_hybrid_gan_v1/real_only/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/hybrid_cnn_coral_v1/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/hybrid_cnn_coral_v1/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/hybrid_cnn_coral_v1/processed/train_manifest.csv",
+          "sha256": "d2b6d645a8c6baf367946e05ec604d51c99a6c1dc06c33ac0c3ce7c68d02aaf2"
+        },
+        {
+          "path": "data/experiments/hybrid_cnn_coral_v1/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/legitimate_coverage_v1/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/legitimate_coverage_v1/processed/train_manifest.csv",
+          "sha256": "d968131a4f40938e424c4c893a8e4a131c7b4ab9f79a12f3150e8297e8967caf"
+        },
+        {
+          "path": "data/experiments/legitimate_coverage_v1/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_10/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_10/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_20/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_20/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_30/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_30/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_40/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/ms_hardgan_augmentation_v2/pct_40/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/gan_10pct/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/gan_10pct/processed/test_manifest.csv",
+          "sha256": "5f7662beb063d6baa39fa0b021b10b0874c40d30f52f785499442bd133a749e5"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/gan_10pct/processed/train_manifest.csv",
+          "sha256": "df5e7f538a6919afea943969d7d65e2bc48f09e1c6db727e17f71ca9a55730ab"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/gan_10pct/processed/validation_manifest.csv",
+          "sha256": "bcd18093d05bd0342299400b5df9bd195d0a970140f40a5b53d05245bde37f1c"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/real_only/processed/domain_validation_manifest.csv",
+          "sha256": "c4c808c53ec20eaa63f8dc732c1c059bf1b4e20ebd5423296828ede205d9b4a0"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/real_only/processed/test_manifest.csv",
+          "sha256": "5f7662beb063d6baa39fa0b021b10b0874c40d30f52f785499442bd133a749e5"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/real_only/processed/train_manifest.csv",
+          "sha256": "bf6be0738fd5c26e4f43240fdf9d72a91000e3dd730588eac90ba9c2c35899a2"
+        },
+        {
+          "path": "data/experiments/recent_update_gan10_v1/real_only/processed/validation_manifest.csv",
+          "sha256": "bcd18093d05bd0342299400b5df9bd195d0a970140f40a5b53d05245bde37f1c"
+        },
+        {
+          "path": "data/experiments/urls_new_structure_balanced_v1/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/experiments/urls_new_structure_balanced_v1/processed/train_manifest.csv",
+          "sha256": "12e54442c923f36e5bdf398c287bcba060a4927f6a2d7a6c6b8657127f540011"
+        },
+        {
+          "path": "data/experiments/urls_new_structure_balanced_v1/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/external/2026-08-11/external_urls.csv",
+          "sha256": "304d809a72b63b76c80ad0e2e326f5be7df38ada5211a23b773c2b7d87eb89fa"
+        },
+        {
+          "path": "data/external/2026-08-11-openphish-tranco/external_urls.csv",
+          "sha256": "c31791b5d93722d66b306b12ff7c7857909539191036e25c5931f7b7be120793"
+        },
+        {
+          "path": "data/external/2026-08-12-large-frozen/external_urls.csv",
+          "sha256": "fdc040874608908c6f6f89523a219e044e3977f449c66d4966d48c76ed98c1b8"
+        },
+        {
+          "path": "data/external/2026-08-13-browser-prevalence-5pct/external_urls.csv",
+          "sha256": "4a4e5c5a0e7321319f0bc1e62f16017a730eda25283722e1087b56a97a856242"
+        },
+        {
+          "path": "data/external/2026-08-13-browser-prevalence-final/external_urls.csv",
+          "sha256": "fb96f656cb8c7d6eb26dd28faaff09b786f93cddd580643e48827829b18db1fe"
+        },
+        {
+          "path": "data/external/2026-08-13-imbalanced-30k/external_urls.csv",
+          "sha256": "da61d5976f0db1c59a07101a565a077bb6997d7c8ce87cc2a7e8bf5688e84095"
+        },
+        {
+          "path": "data/external/2026-08-20-long-url-raw/evaluation_urls.csv",
+          "sha256": "e92d5af2f6f4eaf6f33b7b79abfac9e3dd65ed58efc5f38a4ef50166d9d1b88a"
+        },
+        {
+          "path": "data/external/2026-08-22-final-confirmation-5pct/external_urls.csv",
+          "sha256": "79e3b1e60f46c3a63c31ba3f4a1b82afb5e93aa2388f8cffdfbc32befcafa84e"
+        },
+        {
+          "path": "data/external/2026-08-22-final-long-url-stress/evaluation_urls.csv",
+          "sha256": "63b9db2a61c072c6b86419e5af11374e9c3e6329f50bda478b6936f86416ac0d"
+        },
+        {
+          "path": "data/external/2026-08-22-prospective-2pct/external_urls.csv",
+          "sha256": "efa7b15e3b41727002bfb0a36c9de9685495424769b14081b2063156dffffc9c"
+        },
+        {
+          "path": "data/external/2026-08-24-accuracy-feedback-pretest/external_urls.csv",
+          "sha256": "6801eb222c49779fb431f4c45e98e85ac984ae8a6bbd65f1c5c29abdc52cb812"
+        },
+        {
+          "path": "data/external/2026-08-24-accuracy-feedback-pretest-10pct/external_urls.csv",
+          "sha256": "cec7f6b43b3ebcbd12e345833489f603071459a551e997da749390e69d1a4ffe"
+        },
+        {
+          "path": "data/external/2026-08-28-fresh-raw-5pct/external_urls.csv",
+          "sha256": "fb174d1e7b7aec9b7b780eecb549985420648a52492f1fbad4e7688e6bf752e4"
+        },
+        {
+          "path": "data/external/2026-08-28-phishtank-only-raw-5pct-v1/external_urls.csv",
+          "sha256": "b331bd254ec9141e72b24489f0a0bba89951c4d410a211caf9c2d8f7924501dd"
+        },
+        {
+          "path": "data/processed/test_manifest.csv",
+          "sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18"
+        },
+        {
+          "path": "data/processed/train_manifest.csv",
+          "sha256": "306a05a294369ab7e56f8511ecaa2674138092452c3990ac5ff1ab340f9f4d0b"
+        },
+        {
+          "path": "data/processed/validation_manifest.csv",
+          "sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617"
+        },
+        {
+          "path": "data/updates/recent_observed_update_2026-08-01_to_2026-08-15_v1/recent_legitimate.csv",
+          "sha256": "c38c685b8f8928a1238bbad59a879f02d4e4d765b4fe3eb1104cc0e436303265"
+        },
+        {
+          "path": "data/updates/recent_observed_update_2026-08-01_to_2026-08-15_v1/recent_phishing.csv",
+          "sha256": "7c807bb7dcacab9d7ae5f3eda2941e2f1e87cb957f9dceca4854f24872e07091"
+        },
+        {
+          "path": "data/updates/recent_observed_update_2026-08-01_to_2026-08-15_v1/updated_samples.csv",
+          "sha256": "1faed436ccbc12eebc37855335d9ad0260fd9d3206d0fee49d93b45762977e9c"
+        },
+        {
+          "path": "Final Evaluation Dataset/all_urls.csv",
+          "sha256": "271e3d35fb069b844ac5c2ba030382ccaff498e10c5a66f2846b40098b2afbc4"
+        },
+        {
+          "path": "Final Evaluation Dataset/frozen_final_test.csv",
+          "sha256": "042d0219305911be2488872f47d890c24db81d5bb48e8fbb1fd1d0056da3eb45"
+        },
+        {
+          "path": "Final Evaluation Dataset/policy_development.csv",
+          "sha256": "01c8ed4a47d8f19bec987714bb30015a4f7aab12d115c6a04f85dec03d698324"
+        }
+      ],
+      "prior_project_encoded_input_overlap": 0,
+      "prior_project_hostname_overlap": 0,
+      "prior_project_url_overlap": 0,
+      "registered_domains_unique_within_cohort": true
+    },
+    "legitimate_rows": 9700,
+    "path": "data/evaluation/postfreeze_10k_3pct_2026-09-01/evaluation_urls.csv",
+    "phishing_prevalence": 0.03,
+    "phishing_rows": 300,
+    "rows": 10000,
+    "sha256": "d5621a79f5b0257a2a4cdf2f56bed8550df328c4f13f6e535a91a78e4785db43"
+  },
+  "device": "cuda",
+  "evaluated_at_utc": "2026-09-01T16:35:24.059234+00:00",
+  "evaluation": "post-freeze identity-disjoint 10K evaluation at 3% phishing prevalence",
+  "limitations": [
+    "Tranco membership supplies a legitimate-domain proxy rather than manual page-level labels.",
+    "Legitimate rows are root-domain URLs, so difficult deep legitimate paths are underrepresented.",
+    "PhishTank verified-online membership supplies phishing labels at source-snapshot time; live URLs were not opened.",
+    "The three-percent phishing prevalence is a declared browser-like simulation, not measured population prevalence.",
+    "The cached source snapshots were collected on the same date as the original final evaluation; identities are new, but the source date is not later.",
+    "This post-freeze evaluation does not replace the original one-shot 6K final evaluation.",
+    "The manually tested 100 phishing URLs were not available as a URL list and therefore could not be checked for overlap."
+  ],
+  "paired_real_vs_gan": {
+    "all_rows": {
+      "discordant_rows": 79,
+      "real_only_correct_gan_wrong": 35,
+      "real_only_wrong_gan_correct": 44,
+      "two_sided_exact_mcnemar_p_value": 0.3681876338306311
+    },
+    "legitimate_rows": {
+      "discordant_rows": 60,
+      "real_only_correct_gan_wrong": 28,
+      "real_only_wrong_gan_correct": 32,
+      "two_sided_exact_mcnemar_p_value": 0.6988834276200058
+    },
+    "phishing_rows": {
+      "discordant_rows": 19,
+      "real_only_correct_gan_wrong": 7,
+      "real_only_wrong_gan_correct": 12,
+      "two_sided_exact_mcnemar_p_value": 0.359283447265625
+    }
+  },
+  "policy_manifest": "artifacts/final_browser_policy_v0_5_2_2026-09-01/manifest.json",
+  "policy_manifest_sha256": "524789922c77cb8ed7841beb580d00ea9419228d9bc424d6bdeee400970e601e",
+  "predictions_sha256": "1dcea0d8b6494660a4f62ae9edee0c7b8a4e0bc69d6b60c53b20be00d50f84c8",
+  "project_version": 3,
+  "thresholds_changed": false
+}

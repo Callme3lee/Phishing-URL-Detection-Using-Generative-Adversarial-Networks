@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or its experimental results, please cite this graduation project."
+title: "Phishing URL Classification Using Generative Adversarial Networks"
+type: software
+authors:
+  - family-names: Alganbour
+    given-names: Ali AbdulMajid
+version: 3.0.0
+date-released: 2026-09-10
+institution: University of Tripoli, Faculty of Engineering, Department of Computer Engineering

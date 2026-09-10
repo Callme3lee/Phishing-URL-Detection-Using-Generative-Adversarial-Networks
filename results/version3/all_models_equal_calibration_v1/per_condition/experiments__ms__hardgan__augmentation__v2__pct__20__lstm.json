@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "0e4c7f08dae47475bb2b159643a94ac735ab4f32bc3af62f6dbf7b72444d6d78"
+    },
+    {
+      "path": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "bdf761440fbf2b24c2c9ce9c8e75b7aab8efacceea24bba22fd9dd0c034cb0fb"
+    },
+    {
+      "path": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "e878420f355eec4dce6f9506310165daa05db2d3848b9a97e0ba12eb1cef1566"
+    }
+  ],
+  "condition": "+20%",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.8425,
+      "confusion_matrix": {
+        "fn": 61,
+        "fp": 2,
+        "tn": 198,
+        "tp": 139
+      },
+      "f1": 0.8152492668621701,
+      "false_negative_rate": 0.305,
+      "false_positive_rate": 0.01,
+      "pr_auc": 0.9512299491031859,
+      "precision": 0.9858156028368794,
+      "recall": 0.695,
+      "roc_auc": 0.9315249999999999
+    },
+    "external_10k": {
+      "accuracy": 0.8333,
+      "confusion_matrix": {
+        "fn": 1589,
+        "fp": 78,
+        "tn": 4922,
+        "tp": 3411
+      },
+      "f1": 0.803628224761456,
+      "false_negative_rate": 0.3178,
+      "false_positive_rate": 0.0156,
+      "pr_auc": 0.9368725037638765,
+      "precision": 0.9776440240756664,
+      "recall": 0.6822,
+      "roc_auc": 0.9058221599999999
+    },
+    "external_30k": {
+      "accuracy": 0.9133666666666667,
+      "confusion_matrix": {
+        "fn": 2345,
+        "fp": 254,
+        "tn": 20725,
+        "tp": 6676
+      },
+      "f1": 0.8370635069901573,
+      "false_negative_rate": 0.25994900787052433,
+      "false_positive_rate": 0.012107345440678773,
+      "pr_auc": 0.9116181213223858,
+      "precision": 0.9633477633477634,
+      "recall": 0.7400509921294757,
+      "roc_auc": 0.916611262895858
+    },
+    "internal_test": {
+      "accuracy": 0.9678644701293952,
+      "confusion_matrix": {
+        "fn": 1571,
+        "fp": 11,
+        "tn": 38897,
+        "tp": 8750
+      },
+      "f1": 0.917094644167278,
+      "false_negative_rate": 0.15221393275845363,
+      "false_positive_rate": 0.0002827182070525342,
+      "pr_auc": 0.9928762147553764,
+      "precision": 0.9987444355667161,
+      "recall": 0.8477860672415464,
+      "roc_auc": 0.9966647974840558
+    }
+  },
+  "format": "neural",
+  "id": "experiments__ms__hardgan__augmentation__v2__pct__20__lstm",
+  "model": "LSTM",
+  "root": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "MS-HardGAN-C baselines",
+  "threshold": 0.9866536259651184,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.9866536259651184,
+    "validation_f1": 0.81524926686217,
+    "validation_fpr": 0.01,
+    "validation_precision": 0.9858156028368794,
+    "validation_recall": 0.695
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "condition": "hybrid_original_v1",
+  "dataset": "data/external/2026-08-12-large-frozen/external_urls.csv",
+  "dataset_sha256": "fdc040874608908c6f6f89523a219e044e3977f449c66d4966d48c76ed98c1b8",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "display_name": "HYB-ORIG",
+  "legitimate_rows": 5000,
+  "metrics": {
+    "accuracy": {
+      "mean": 0.48560000000000003,
+      "standard_deviation": 0.002858321185591296,
+      "values": [
+        0.4823,
+        0.4873,
+        0.4872
+      ]
+    },
+    "f1": {
+      "mean": 0.6502560184930927,
+      "standard_deviation": 0.002338955891260371,
+      "values": [
+        0.647751241750017,
+        0.6523832124211811,
+        0.6506336013080801
+      ]
+    },
+    "false_negative_rate": {
+      "mean": 0.0436,
+      "standard_deviation": 0.005242136968832463,
+      "values": [
+        0.048,
+        0.0378,
+        0.045
+      ]
+    },
+    "false_positive_rate": {
+      "mean": 0.9852,
+      "standard_deviation": 0.003984971769034265,
+      "values": [
+        0.9874,
+        0.9876,
+        0.9806
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.7103518999737425,
+      "standard_deviation": 0.012783861548136634,
+      "values": [
+        0.6996735734219667,
+        0.7068645620955969,
+        0.724517564403664
+      ]
+    },
+    "precision": {
+      "mean": 0.4925823469667831,
+      "standard_deviation": 0.0014807694089639793,
+      "values": [
+        0.4908734660204187,
+        0.49348651143707045,
+        0.4933870634428601
+      ]
+    },
+    "recall": {
+      "mean": 0.9564,
+      "standard_deviation": 0.0052421369688325165,
+      "values": [
+        0.952,
+        0.9622,
+        0.955
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.7265987800000001,
+      "standard_deviation": 0.023444887557358806,
+      "values": [
+        0.7003778,
+        0.73387764,
+        0.7455409
+      ]
+    }
+  },
+  "per_run": [
+    {
+      "checkpoint": "artifacts/experiments/hybrid_original_v1/seed_42/checkpoint.pt",
+      "checkpoint_sha256": "71c530dc19e08bfb6ccaff29cc31e4e825bde8e7db2088d8f8044016ac3d4b8d",
+      "metrics": {
+        "accuracy": 0.4823,
+        "confusion_matrix": {
+          "fn": 240,
+          "fp": 4937,
+          "tn": 63,
+          "tp": 4760
+        },
+        "f1": 0.647751241750017,
+        "false_negative_rate": 0.048,
+        "false_positive_rate": 0.9874,
+        "pr_auc": 0.6996735734219667,
+        "precision": 0.4908734660204187,
+        "recall": 0.952,
+        "roc_auc": 0.7003778
+      },
+      "seed": 42,
+      "threshold": 0.400390625
+    },
+    {
+      "checkpoint": "artifacts/experiments/hybrid_original_v1/seed_43/checkpoint.pt",
+      "checkpoint_sha256": "3631bc1982e7385dd3947fb0c754cc13f8dd056a2a50954a0136b8a1eb1292a5",
+      "metrics": {
+        "accuracy": 0.4873,
+        "confusion_matrix": {
+          "fn": 189,
+          "fp": 4938,
+          "tn": 62,
+          "tp": 4811
+        },
+        "f1": 0.6523832124211811,
+        "false_negative_rate": 0.0378,
+        "false_positive_rate": 0.9876,
+        "pr_auc": 0.7068645620955969,
+        "precision": 0.49348651143707045,
+        "recall": 0.9622,
+        "roc_auc": 0.73387764
+      },
+      "seed": 43,
+      "threshold": 0.66845703125
+    },
+    {
+      "checkpoint": "artifacts/experiments/hybrid_original_v1/seed_44/checkpoint.pt",
+      "checkpoint_sha256": "e8d9671d53904cfadbe381b0b9664374da860dc6028648de1d4948024bf4332e",
+      "metrics": {
+        "accuracy": 0.4872,
+        "confusion_matrix": {
+          "fn": 225,
+          "fp": 4903,
+          "tn": 97,
+          "tp": 4775
+        },
+        "f1": 0.6506336013080801,
+        "false_negative_rate": 0.045,
+        "false_positive_rate": 0.9806,
+        "pr_auc": 0.724517564403664,
+        "precision": 0.4933870634428601,
+        "recall": 0.955,
+        "roc_auc": 0.7455409
+      },
+      "seed": 44,
+      "threshold": 0.69873046875
+    }
+  ],
+  "phishing_rows": 5000,
+  "project_version": 3,
+  "rows": 10000,
+  "threshold_policy": "unchanged original-validation threshold per seed; no external calibration"
+}

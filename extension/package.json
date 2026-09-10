@@ -1,0 +1,17 @@
+{
+  "name": "phishing-url-guard-user-pilot-extension",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Explainable Manifest V3 research extension for the frozen HYB-MS+10% URL model.",
+  "scripts": {
+    "test:preprocessing": "node tests/preprocessing.test.cjs && node tests/explanations.test.cjs",
+    "test:policy": "node tests/browser_policy.test.cjs && node tests/catalog.test.cjs && node tests/service_pages.test.cjs && node tests/user_labels.test.cjs && node tests/localization.test.cjs",
+    "test:inference": "node tests/inference.test.cjs",
+    "test:pilot": "node tests/pilot_store.test.cjs && node tests/reliability.test.cjs",
+    "test:syntax": "node --check background.js && node --check localization.js && node --check pilot_store.js && node --check pilot/pilot.js && node --check popup/popup.js && node --check warning/warning.js && node --check demo/demo.js && node --check content/advisory.js",
+    "test": "npm run test:preprocessing && npm run test:policy && npm run test:inference && npm run test:pilot && npm run test:syntax"
+  },
+  "devDependencies": {
+    "onnxruntime-web": "1.22.0"
+  }
+}

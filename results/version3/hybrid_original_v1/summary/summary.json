@@ -1,0 +1,191 @@
+{
+  "condition": "hybrid_original_v1",
+  "coral": false,
+  "display_name": "HYB-ORIG",
+  "external_10k": {
+    "accuracy": {
+      "mean": 0.48560000000000003,
+      "standard_deviation": 0.002858321185591296,
+      "values": [
+        0.4823,
+        0.4873,
+        0.4872
+      ]
+    },
+    "f1": {
+      "mean": 0.6502560184930927,
+      "standard_deviation": 0.002338955891260371,
+      "values": [
+        0.647751241750017,
+        0.6523832124211811,
+        0.6506336013080801
+      ]
+    },
+    "false_negative_rate": {
+      "mean": 0.0436,
+      "standard_deviation": 0.005242136968832463,
+      "values": [
+        0.048,
+        0.0378,
+        0.045
+      ]
+    },
+    "false_positive_rate": {
+      "mean": 0.9852,
+      "standard_deviation": 0.003984971769034265,
+      "values": [
+        0.9874,
+        0.9876,
+        0.9806
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.7103518999737425,
+      "standard_deviation": 0.012783861548136634,
+      "values": [
+        0.6996735734219667,
+        0.7068645620955969,
+        0.724517564403664
+      ]
+    },
+    "precision": {
+      "mean": 0.4925823469667831,
+      "standard_deviation": 0.0014807694089639793,
+      "values": [
+        0.4908734660204187,
+        0.49348651143707045,
+        0.4933870634428601
+      ]
+    },
+    "recall": {
+      "mean": 0.9564,
+      "standard_deviation": 0.0052421369688325165,
+      "values": [
+        0.952,
+        0.9622,
+        0.955
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.7265987800000001,
+      "standard_deviation": 0.023444887557358806,
+      "values": [
+        0.7003778,
+        0.73387764,
+        0.7455409
+      ]
+    }
+  },
+  "external_10k_multisource_hyb_reference": {
+    "accuracy": {
+      "mean": 0.9177,
+      "standard_deviation": 0.0
+    },
+    "f1": {
+      "mean": 0.9119503584037659,
+      "standard_deviation": 0.0
+    },
+    "false_negative_rate": {
+      "mean": 0.1476,
+      "standard_deviation": 0.0
+    },
+    "false_positive_rate": {
+      "mean": 0.017,
+      "standard_deviation": 0.0
+    },
+    "pr_auc": {
+      "mean": 0.9749413042300098,
+      "standard_deviation": 0.0
+    },
+    "precision": {
+      "mean": 0.9804462847941109,
+      "standard_deviation": 0.0
+    },
+    "recall": {
+      "mean": 0.8524,
+      "standard_deviation": 0.0
+    },
+    "roc_auc": {
+      "mean": 0.9663143599999999,
+      "standard_deviation": 0.0
+    }
+  },
+  "gan_rows": 0,
+  "internal_original_test": {
+    "accuracy": {
+      "mean": 0.9910689498737194,
+      "standard_deviation": 0.0003283797667495117,
+      "values": [
+        0.9908793597269901,
+        0.9908793597269901,
+        0.9914481301671779
+      ]
+    },
+    "f1": {
+      "mean": 0.9784945888573681,
+      "standard_deviation": 0.0007846616702524972,
+      "values": [
+        0.9780686758169296,
+        0.978014983107281,
+        0.9794001076478935
+      ]
+    },
+    "false_negative_rate": {
+      "mean": 0.030875561153634986,
+      "standard_deviation": 0.001301116628135754,
+      "values": [
+        0.02993895940315861,
+        0.032361205309563025,
+        0.030326518748183314
+      ]
+    },
+    "false_positive_rate": {
+      "mean": 0.003109900277577876,
+      "standard_deviation": 0.00043236876326875503,
+      "values": [
+        0.0035982317261231624,
+        0.002955690346458312,
+        0.002775778760152154
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.9952108092669905,
+      "standard_deviation": 0.0002260114385947326,
+      "values": [
+        0.9951989495773484,
+        0.994990961165154,
+        0.9954425170584689
+      ]
+    },
+    "precision": {
+      "mean": 0.9880498576354092,
+      "standard_deviation": 0.0016325111018115602,
+      "values": [
+        0.9862096138691884,
+        0.9886161156206692,
+        0.9893238434163701
+      ]
+    },
+    "recall": {
+      "mean": 0.969124438846365,
+      "standard_deviation": 0.0013011166281357465,
+      "values": [
+        0.9700610405968414,
+        0.967638794690437,
+        0.9696734812518167
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.9979856561206492,
+      "standard_deviation": 0.00021865033397472648,
+      "values": [
+        0.9978795101025959,
+        0.9978403412880981,
+        0.9982371169712534
+      ]
+    }
+  },
+  "outside_rows": 0,
+  "project_version": 3,
+  "training_rows": 358619
+}

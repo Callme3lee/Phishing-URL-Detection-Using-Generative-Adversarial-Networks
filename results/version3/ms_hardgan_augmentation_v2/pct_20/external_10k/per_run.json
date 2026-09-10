@@ -1,0 +1,347 @@
+[
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "a78785bb159dc22c2eff05a061d57d72179f99f15c3739f58aa948df60056d5a",
+    "metrics": {
+      "accuracy": 0.4976,
+      "confusion_matrix": {
+        "fn": 181,
+        "fp": 4843,
+        "tn": 157,
+        "tp": 4819
+      },
+      "f1": 0.6573455190287819,
+      "false_negative_rate": 0.0362,
+      "false_positive_rate": 0.9686,
+      "pr_auc": 0.7693479046419154,
+      "precision": 0.4987580211136411,
+      "recall": 0.9638,
+      "roc_auc": 0.74444716
+    },
+    "model": "cnn",
+    "seed": 42,
+    "threshold": 0.599609375
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "1b783f19f8c75ac75641fe581c06a109542595532ac052077f587a65f395eb3b",
+    "metrics": {
+      "accuracy": 0.4903,
+      "confusion_matrix": {
+        "fn": 188,
+        "fp": 4909,
+        "tn": 91,
+        "tp": 4812
+      },
+      "f1": 0.653759934787039,
+      "false_negative_rate": 0.0376,
+      "false_positive_rate": 0.9818,
+      "pr_auc": 0.7407076220793748,
+      "precision": 0.495010801357885,
+      "recall": 0.9624,
+      "roc_auc": 0.70903106
+    },
+    "model": "cnn",
+    "seed": 43,
+    "threshold": 0.60107421875
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "629fbf144bef7d5ec72d290b2c167a816e27d4135f5d9906453770d13173f5d0",
+    "metrics": {
+      "accuracy": 0.5,
+      "confusion_matrix": {
+        "fn": 184,
+        "fp": 4816,
+        "tn": 184,
+        "tp": 4816
+      },
+      "f1": 0.6582832148715145,
+      "false_negative_rate": 0.0368,
+      "false_positive_rate": 0.9632,
+      "pr_auc": 0.7767566276168031,
+      "precision": 0.5,
+      "recall": 0.9632,
+      "roc_auc": 0.7507052
+    },
+    "model": "cnn",
+    "seed": 44,
+    "threshold": 0.6337890625
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "0e4c7f08dae47475bb2b159643a94ac735ab4f32bc3af62f6dbf7b72444d6d78",
+    "metrics": {
+      "accuracy": 0.5334,
+      "confusion_matrix": {
+        "fn": 194,
+        "fp": 4472,
+        "tn": 528,
+        "tp": 4806
+      },
+      "f1": 0.6732035299061493,
+      "false_negative_rate": 0.0388,
+      "false_positive_rate": 0.8944,
+      "pr_auc": 0.9303953026073498,
+      "precision": 0.5179995688726019,
+      "recall": 0.9612,
+      "roc_auc": 0.90200008
+    },
+    "model": "lstm",
+    "seed": 42,
+    "threshold": 0.71240234375
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "bdf761440fbf2b24c2c9ce9c8e75b7aab8efacceea24bba22fd9dd0c034cb0fb",
+    "metrics": {
+      "accuracy": 0.5087,
+      "confusion_matrix": {
+        "fn": 174,
+        "fp": 4739,
+        "tn": 261,
+        "tp": 4826
+      },
+      "f1": 0.6626845176793683,
+      "false_negative_rate": 0.0348,
+      "false_positive_rate": 0.9478,
+      "pr_auc": 0.9404588119026476,
+      "precision": 0.5045478306325144,
+      "recall": 0.9652,
+      "roc_auc": 0.91239998
+    },
+    "model": "lstm",
+    "seed": 43,
+    "threshold": 0.59716796875
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "e878420f355eec4dce6f9506310165daa05db2d3848b9a97e0ba12eb1cef1566",
+    "metrics": {
+      "accuracy": 0.5092,
+      "confusion_matrix": {
+        "fn": 233,
+        "fp": 4675,
+        "tn": 325,
+        "tp": 4767
+      },
+      "f1": 0.6601578728707935,
+      "false_negative_rate": 0.0466,
+      "false_positive_rate": 0.935,
+      "pr_auc": 0.9137451560795304,
+      "precision": 0.5048718491844948,
+      "recall": 0.9534,
+      "roc_auc": 0.87559502
+    },
+    "model": "lstm",
+    "seed": 44,
+    "threshold": 0.8046875
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/rnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "071524cf02f1d105b5fd2579a8e9dd90054e2728a3b137f9a4fc65993caac788",
+    "metrics": {
+      "accuracy": 0.4903,
+      "confusion_matrix": {
+        "fn": 209,
+        "fp": 4888,
+        "tn": 112,
+        "tp": 4791
+      },
+      "f1": 0.6527692622113223,
+      "false_negative_rate": 0.0418,
+      "false_positive_rate": 0.9776,
+      "pr_auc": 0.8289626750195132,
+      "precision": 0.49498915177187724,
+      "recall": 0.9582,
+      "roc_auc": 0.8029138
+    },
+    "model": "rnn",
+    "seed": 42,
+    "threshold": 0.7138671875
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/rnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "cce51977ed004c479102e5e8d211ed9abf65ee92bde07e8c3fe0703e6a591c0a",
+    "metrics": {
+      "accuracy": 0.4811,
+      "confusion_matrix": {
+        "fn": 189,
+        "fp": 5000,
+        "tn": 0,
+        "tp": 4811
+      },
+      "f1": 0.6496522854635068,
+      "false_negative_rate": 0.0378,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.77990838119712,
+      "precision": 0.4903679543369687,
+      "recall": 0.9622,
+      "roc_auc": 0.7272538
+    },
+    "model": "rnn",
+    "seed": 43,
+    "threshold": 0.5810546875
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/rnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "198709c25391b329c5ccc87bda93d3e86a2af747d69431b6613c1a1ecff6a8a8",
+    "metrics": {
+      "accuracy": 0.4814,
+      "confusion_matrix": {
+        "fn": 186,
+        "fp": 5000,
+        "tn": 0,
+        "tp": 4814
+      },
+      "f1": 0.6499257459160254,
+      "false_negative_rate": 0.0372,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.8185213486011998,
+      "precision": 0.49052374159364176,
+      "recall": 0.9628,
+      "roc_auc": 0.79671208
+    },
+    "model": "rnn",
+    "seed": 44,
+    "threshold": 0.6806640625
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "72c12ac4fc6deca9c122be1397560d2043d7dae77b868c582cb77b3b5cfbb8b8",
+    "metrics": {
+      "accuracy": 0.4113,
+      "confusion_matrix": {
+        "fn": 1733,
+        "fp": 4154,
+        "tn": 846,
+        "tp": 3267
+      },
+      "f1": 0.5260446018839063,
+      "false_negative_rate": 0.3466,
+      "false_positive_rate": 0.8308,
+      "pr_auc": 0.6973322698328436,
+      "precision": 0.44023716480258723,
+      "recall": 0.6534,
+      "roc_auc": 0.55924134
+    },
+    "model": "random_forest",
+    "seed": 42,
+    "threshold": 0.7930472109501173
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "cbcd95faf430cf3af5793e5c4d4accc42f107da833ede15d439dcefdd3433ebf",
+    "metrics": {
+      "accuracy": 0.4096,
+      "confusion_matrix": {
+        "fn": 1747,
+        "fp": 4157,
+        "tn": 843,
+        "tp": 3253
+      },
+      "f1": 0.5242546333601934,
+      "false_negative_rate": 0.3494,
+      "false_positive_rate": 0.8314,
+      "pr_auc": 0.696183438047669,
+      "precision": 0.43900134952766534,
+      "recall": 0.6506,
+      "roc_auc": 0.55889714
+    },
+    "model": "random_forest",
+    "seed": 43,
+    "threshold": 0.7962749229494993
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "e40ef7777e8b7a353d872087ee21b15cfb2a5969d825a054ba59f21b2b8f44c5",
+    "metrics": {
+      "accuracy": 0.4196,
+      "confusion_matrix": {
+        "fn": 1755,
+        "fp": 4049,
+        "tn": 951,
+        "tp": 3245
+      },
+      "f1": 0.5278997885147226,
+      "false_negative_rate": 0.351,
+      "false_positive_rate": 0.8098,
+      "pr_auc": 0.6973325273479144,
+      "precision": 0.44488620784206195,
+      "recall": 0.649,
+      "roc_auc": 0.55991108
+    },
+    "model": "random_forest",
+    "seed": 44,
+    "threshold": 0.7997743795246177
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "b975cdf7504dad08c3abf4ab3861b4eaef7651fb8324547b3617555812845668",
+    "metrics": {
+      "accuracy": 0.2099,
+      "confusion_matrix": {
+        "fn": 4192,
+        "fp": 3709,
+        "tn": 1291,
+        "tp": 808
+      },
+      "f1": 0.1698014080067248,
+      "false_negative_rate": 0.8384,
+      "false_positive_rate": 0.7418,
+      "pr_auc": 0.3495676084582833,
+      "precision": 0.17887978746955943,
+      "recall": 0.1616,
+      "roc_auc": 0.14593982
+    },
+    "model": "linear_svm",
+    "seed": 42,
+    "threshold": 0.6167087182545852
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "3af62a08c783e53e07f6918920b3b1f2eeadd398679186f2b3f760743a4022b1",
+    "metrics": {
+      "accuracy": 0.2099,
+      "confusion_matrix": {
+        "fn": 4192,
+        "fp": 3709,
+        "tn": 1291,
+        "tp": 808
+      },
+      "f1": 0.1698014080067248,
+      "false_negative_rate": 0.8384,
+      "false_positive_rate": 0.7418,
+      "pr_auc": 0.3495676084582833,
+      "precision": 0.17887978746955943,
+      "recall": 0.1616,
+      "roc_auc": 0.14593982
+    },
+    "model": "linear_svm",
+    "seed": 43,
+    "threshold": 0.6167087182545852
+  },
+  {
+    "checkpoint": "artifacts/experiments/ms_hardgan_augmentation_v2/pct_20/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "7fa451678d2ada11260b5010f0b6dd7b5c7399f3eabaffbeeb9eaeea47274382",
+    "metrics": {
+      "accuracy": 0.2099,
+      "confusion_matrix": {
+        "fn": 4192,
+        "fp": 3709,
+        "tn": 1291,
+        "tp": 808
+      },
+      "f1": 0.1698014080067248,
+      "false_negative_rate": 0.8384,
+      "false_positive_rate": 0.7418,
+      "pr_auc": 0.3495676084582833,
+      "precision": 0.17887978746955943,
+      "recall": 0.1616,
+      "roc_auc": 0.14593982
+    },
+    "model": "linear_svm",
+    "seed": 44,
+    "threshold": 0.6167087182545852
+  }
+]

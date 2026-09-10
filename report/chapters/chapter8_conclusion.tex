@@ -1,0 +1,226 @@
+\chapter{Conclusion}
+\label{chap:conclusion}
+
+\section{Project Overview}
+
+This project investigated whether GAN-generated phishing URLs can improve a
+URL-based phishing detector and whether the selected detector can be used in a
+working browser extension. The work began with real-only classifiers, continued
+with several URL generators and controlled augmentation experiments, and ended
+with external evaluation and browser implementation.
+
+The final classification approach, HYB-MS, combines a character-level CNN with
+35 lexical URL features. The character branch learns local patterns in the URL
+text, while the lexical branch represents measurements such as length, digit
+and symbol ratios, subdomain structure, path depth, and query structure. The
+model was trained as a three-seed ensemble on the registered multi-source real
+training data. A matching model was then trained with an additional 10\%
+filtered MS-HardGAN-C phishing URLs. Keeping the architecture, real rows,
+evaluation data, and calibration procedure fixed allowed the effect of GAN
+augmentation to be measured fairly.
+
+The selected model was exported to ONNX and integrated into a Chromium browser
+extension. The extension performs local inference, presents several warning
+levels, supports English and Arabic, and allows the user to continue or permit
+an exact hostname. Reliability controls reduce repeated counting, and
+user-evaluation data remain local unless a participant chooses to export them.
+
+\section{Answers to the Research Questions}
+
+\subsection{RQ1: Performance of real-only classifiers}
+
+The real-only experiments showed that URL phishing can be detected effectively
+when the training and test distributions are similar. The CNN and LSTM reached
+internal F1-scores above 97\%. However, the external evaluations separated the
+models more clearly. Some models retained a very low FPR by classifying few
+URLs as phishing, but consequently missed most phishing samples. This showed
+that accuracy or FPR alone is not sufficient for model selection.
+
+Under equal calibration, LSTM-MS was the strongest ordinary neural baseline.
+HYB-MS real-only achieved a better overall external balance because it combined
+learned character patterns with full-URL lexical structure. On the primary
+30K low-prevalence evaluation, real-only HYB-MS achieved 79.06\% F1 and
+81.07\% recall, compared with 74.93\% F1 and 75.20\% recall for LSTM-MS.
+
+\subsection{RQ2: Quality of generated phishing URLs}
+
+The GAN experiments showed that uniqueness alone does not establish quality.
+A generator can produce many different strings that are invalid, structurally
+abnormal, repetitive in pattern, or easy to distinguish from real phishing
+URLs. Generated pools were therefore evaluated using validity, uniqueness,
+real-data overlap, lexical realism, diversity, source discrimination, and
+their ability to challenge frozen classifiers.
+
+SeqGAN was the strongest of the initial text generators, while MS-HardGAN-C
+provided the final filtered augmentation pool. The accepted pool contained no
+exact overlap with the permitted real training URLs. The generator did not
+predict future zero-day attacks; instead, it recombined patterns learned from
+the available phishing training data to provide additional difficult examples.
+
+A later matched-input experiment retrained SeqGAN on the exact same 84,280
+phishing rows used by MS-HardGAN-C. This improved SeqGAN's downstream HYB-MS
+result, showing that generator input data mattered. MS-HardGAN-C still achieved
+the stronger recall, F1, and FNR balance on the frozen 10K and 30K comparisons.
+Its selection is therefore supported by a direct input-controlled comparison,
+not only by the earlier studies in which the generators used different
+phishing pools.
+
+\subsection{RQ3: Effect of GAN augmentation}
+
+GAN augmentation did not improve every model, ratio, or metric. Random
+augmentation and higher synthetic percentages frequently reduced performance
+on the unchanged real test data. These results are important because they show
+that simply increasing the quantity of generated URLs is not a reliable method
+of improving detection.
+
+The clearest benefit came from the controlled 10\% MS-HardGAN-C condition. On
+the primary 30K external dataset, HYB-MS+10\% achieved 98.12\% accuracy,
+80.95\% precision, 81.60\% recall, 81.27\% F1, 96.82\% ROC-AUC, and 87.27\%
+PR-AUC. It also reduced FPR from 1.26\% to 1.01\% and FNR from 18.93\% to
+18.40\% relative to real-only HYB-MS. The paired F1 improvement was supported
+by the reported confidence interval and McNemar comparison, although the
+recall change alone was not statistically significant.
+
+The result answers the research question positively but conditionally:
+carefully filtered and limited GAN augmentation can improve the balance of URL
+phishing detection under the evaluated conditions. The experiments do not show
+that augmentation always improves performance.
+
+The matched-generator experiment also showed why the generator choice matters.
+On the balanced external 10K set, matched SeqGAN reached 91.59\% F1 and
+14.36\% FNR, while MS-HardGAN-C reached 92.67\% F1 and 12.48\% FNR at the
+same 1.36\% FPR. Both generators had received the same real phishing training
+identities and both supplied exactly 40,410 synthetic rows to HYB-MS.
+
+\subsection{RQ4: Generalisation to different and imbalanced sources}
+
+The selected 10\% model improved F1 and reduced both FPR and FNR relative to
+its real-only control on several frozen low-prevalence external datasets. These
+included the PhishTank 10K set, the final labelled 6K set, the post-freeze 10K
+set, and the primary 30K set. The final labelled 6K evaluation contained only
+5\% phishing and produced 98.23\% accuracy, 84.15\% precision, 79.67\% recall,
+81.85\% F1, 0.79\% FPR, and 20.33\% FNR for HYB-MS+10\%.
+
+The external scores were lower than the strongest internal scores. This is
+evidence of distribution shift rather than a contradiction: later URLs came
+from different sources and contained structures that were less represented in
+training. The long-URL test also showed a trade-off, where augmentation found
+additional phishing URLs but introduced additional false warnings. Therefore,
+the model generalises usefully across the tested sets, but it does not remove
+distribution shift.
+
+\subsection{RQ5: Browser implementation}
+
+The selected ensemble was successfully deployed as a local browser-extension
+prototype. Preprocessing parity, ONNX numerical parity, navigation handling,
+localisation, consent, deduplication, policy, and browser smoke tests were
+completed. The extension separates the raw model score from the action shown
+to the user, allowing moderate evidence to produce a non-blocking notice while
+reserving navigation interruption for the strictest tier.
+
+The browser study also showed why extension policy must be evaluated separately
+from classifier quality. Blanket trust for Google Workspace suppressed warnings
+for phishing hosted in user-controlled documents. Replacing it with a capped,
+non-blocking policy recovered 24 detections on the controlled snapshot and
+reduced FNR from 21.33\% to 13.33\% without changing the measured FPR. User
+feedback further identified false warnings on login pages, long service URLs,
+technical sites, Google services, and AI services. The extension satisfies the
+project implementation objective as a research prototype, but it is not
+presented as a certified production security product.
+
+\section{Achievement of the Project Objectives}
+
+\begin{table}[htbp]
+\centering
+\caption{Final status of the objectives defined in Chapter~1.}
+\label{tab:conclusion-objectives}
+\small
+\begin{tabular}{@{}p{0.11\textwidth}p{0.64\textwidth}p{0.14\textwidth}@{}}
+\toprule
+Objective & Evidence completed in the project & Status \\
+\midrule
+O1 & Label cleaning, canonicalisation, class counts, length analysis, duplicate removal, and identity-disjoint splits. & Achieved \\
+O2 & RF, SVM, CNN, RNN, LSTM, and hybrid real-only classifiers trained and evaluated. & Achieved \\
+O3 & URL GAN variants trained only with the permitted phishing training data. & Achieved \\
+O4 & Validity, uniqueness, overlap, realism, diversity, source, and challenge analyses completed. & Achieved \\
+O5 & Real-only and fixed-ratio augmented conditions compared with controlled rows, seeds, and test sets. & Achieved \\
+O6 & Internal, source-held-out, later, low-prevalence, PhishTank, long-URL, and GAN-challenge tests completed. & Achieved \\
+O7 & Selected ensemble exported to ONNX and implemented in a locally evaluated browser extension. & Achieved \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All seven objectives were completed within the research scope. Achievement of
+the deployment objective means that a functioning browser prototype was built
+and evaluated. It does not mean that the system has completed the security,
+privacy, device-compatibility, and maintenance work required for unrestricted
+public deployment.
+
+\section{Main Findings}
+
+The main findings of the project are as follows:
+
+\begin{itemize}
+\item Internal random-split performance can overestimate performance on URLs
+from later or different sources.
+
+\item Combining character learning and lexical structure gave the hybrid a
+better external balance than the ordinary baselines under equal calibration.
+
+\item Generated URL quality must be evaluated separately from downstream
+classifier performance. High uniqueness does not guarantee realistic or useful
+augmentation.
+
+\item Large or unfiltered synthetic additions were often harmful. The best
+evidence supported a limited, filtered 10\% augmentation condition.
+
+\item The benefit of the selected GAN augmentation was repeated on several
+low-prevalence frozen datasets, but its size varied by dataset.
+
+\item Thresholds control the FPR--FNR trade-off. Lower FNR can be obtained by
+accepting more false warnings, but no threshold removes distribution overlap.
+
+\item Browser policy can either expose or hide model detections. Trusted
+platforms must not silently override strong model evidence on user-controlled
+content.
+
+\item User feedback is valuable for finding usability problems, but formal
+accuracy metrics require labelled evaluation data rather than incomplete
+self-reported outcomes.
+\end{itemize}
+
+\section{Limitations}
+
+The detector uses URL text and lexical structure only. It does not inspect the
+page DOM, visual design, certificate chain, DNS history, domain age, network
+behaviour, or reputation feeds. A convincing phishing URL can therefore be
+missed, while a long or unusual legitimate URL can receive a warning.
+
+The evaluation datasets cannot represent every future campaign, language,
+country, hosting platform, or browsing pattern. Labels from public feeds can
+also contain delays or errors. Although repeated seeds and frozen comparisons
+improve reproducibility, the GAN and classifier findings remain specific to
+the implemented models and available data.
+
+The browser user evaluation was useful for interface and false-warning
+analysis, but it was not a fully supervised clinical-style study. Not every
+visited URL received an independently verified label, devices and browsing
+patterns differed, and some participants deliberately tested phishing. Its
+counts must therefore remain separate from the formal model metrics.
+
+\section{Final Conclusion}
+
+The project provides a valid experimental answer to its main question. GAN
+augmentation can improve phishing URL detection when generated samples are
+filtered, limited, and compared fairly with a matching real-only model. The
+10\% MS-HardGAN-C augmented hybrid produced the strongest and most consistent
+external balance in this study. At the same time, the negative augmentation
+results and remaining FNR show that synthetic data is not a replacement for
+diverse real data.
+
+The completed browser extension demonstrates that the research model can run
+locally and support real-time URL warnings. Its tiered decisions, reviewed
+service rules, and user controls make it suitable for graduation-project
+demonstration and further supervised testing. Continued data collection and
+multi-signal verification would be required before treating it as a
+production-ready phishing defence.

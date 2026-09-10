@@ -1,0 +1,134 @@
+{
+  "condition": "generated_10_percent",
+  "generator": "relgan",
+  "models": {
+    "cnn": {
+      "improved_all_metrics": false,
+      "metrics": {
+        "accuracy": {
+          "delta": -0.001844030694188259,
+          "real_only": 0.9641425257272024,
+          "relgan_10_percent": 0.9622984950330141
+        },
+        "f1": {
+          "delta": -0.0017301501897201144,
+          "real_only": 0.9678147336048067,
+          "relgan_10_percent": 0.9660845834150866
+        },
+        "precision": {
+          "delta": 0.0005370107023427995,
+          "real_only": 0.9923283551584695,
+          "relgan_10_percent": 0.9928653658608123
+        },
+        "recall": {
+          "delta": -0.0037724575859050535,
+          "real_only": 0.9444830413094527,
+          "relgan_10_percent": 0.9407105837235477
+        },
+        "roc_auc": {
+          "delta": -7.332639739421332e-05,
+          "real_only": 0.9961564183885466,
+          "relgan_10_percent": 0.9960830919911524
+        }
+      },
+      "seed": 42
+    },
+    "linear_svm": {
+      "improved_all_metrics": false,
+      "metrics": {
+        "accuracy": {
+          "delta": -0.00519897686038906,
+          "real_only": 0.9313148137132433,
+          "relgan_10_percent": 0.9261158368528543
+        },
+        "f1": {
+          "delta": -0.005113184100440371,
+          "real_only": 0.9364758006543139,
+          "relgan_10_percent": 0.9313626165538735
+        },
+        "precision": {
+          "delta": -0.00046947963453825015,
+          "real_only": 0.991857917553646,
+          "relgan_10_percent": 0.9913884379191078
+        },
+        "recall": {
+          "delta": -0.008760716419569547,
+          "real_only": 0.8869513262654755,
+          "relgan_10_percent": 0.8781906098459059
+        },
+        "roc_auc": {
+          "delta": -0.00027121151538844757,
+          "real_only": 0.9636611952020299,
+          "relgan_10_percent": 0.9633899836866414
+        }
+      },
+      "seed": 42
+    },
+    "lstm": {
+      "improved_all_metrics": false,
+      "metrics": {
+        "accuracy": {
+          "delta": -0.0004917415184502172,
+          "real_only": 0.965566196736264,
+          "relgan_10_percent": 0.9650744552178138
+        },
+        "f1": {
+          "delta": -0.0004712003242960394,
+          "real_only": 0.9691272208809925,
+          "relgan_10_percent": 0.9686560205566964
+        },
+        "precision": {
+          "delta": 0.0005251105785294419,
+          "real_only": 0.9925061720303249,
+          "relgan_10_percent": 0.9930312826088543
+        },
+        "recall": {
+          "delta": -0.0013755922688934996,
+          "real_only": 0.9468243271408523,
+          "relgan_10_percent": 0.9454487348719588
+        },
+        "roc_auc": {
+          "delta": 0.00012265285707002693,
+          "real_only": 0.9964708236036053,
+          "relgan_10_percent": 0.9965934764606753
+        }
+      },
+      "seed": 42
+    },
+    "random_forest": {
+      "improved_all_metrics": false,
+      "metrics": {
+        "accuracy": {
+          "delta": -0.0005195011202981936,
+          "real_only": 0.9506315309420419,
+          "relgan_10_percent": 0.9501120298217437
+        },
+        "f1": {
+          "delta": -0.0005034361364755213,
+          "real_only": 0.955154414492952,
+          "relgan_10_percent": 0.9546509783564765
+        },
+        "precision": {
+          "delta": 0.0002205302413434973,
+          "real_only": 0.9918823274152881,
+          "relgan_10_percent": 0.9921028576566316
+        },
+        "recall": {
+          "delta": -0.0011254845836402572,
+          "real_only": 0.921049340688352,
+          "relgan_10_percent": 0.9199238561047117
+        },
+        "roc_auc": {
+          "delta": -0.00027866684756006066,
+          "real_only": 0.9879565219317155,
+          "relgan_10_percent": 0.9876778550841554
+        }
+      },
+      "seed": 42
+    }
+  },
+  "project_version": 2,
+  "promoted_to_confirmation": false,
+  "promotion_rule": "strictly improve all five requested metrics",
+  "screening_seed": 42
+}

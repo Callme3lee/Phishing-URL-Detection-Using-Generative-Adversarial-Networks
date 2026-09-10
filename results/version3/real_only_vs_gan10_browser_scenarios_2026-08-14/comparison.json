@@ -1,0 +1,166 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5",
+      "verified_sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8",
+      "verified_sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5",
+      "verified_sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+    }
+  ],
+  "conclusion": {
+    "heading": "+10% GAN WINS BOTH DEPLOYMENT-SCENARIO F1 COMPARISONS",
+    "points": [
+      "Use F1, recall, FPR, and ROC-AUC together; precision changes substantially with phishing prevalence.",
+      "Any gain belongs to the complete +10% training condition, not automatically to GAN novelty alone.",
+      "The next honest test would require a new untouched temporal cohort; do not tune either threshold on these two datasets."
+    ],
+    "text": "The low-dose GAN-augmented weighted hybrid is compared against its real-only counterpart with the same architecture family, seed ensemble, external datasets, and equal-calibration protocol. Thresholds remain the separately frozen values selected before these scenarios."
+  },
+  "gan_10pct_model": "experiments__fair__hybrid__gan__v1__gan__10pct__hyb__ms",
+  "gan_10pct_threshold": 0.9890950322151184,
+  "project_version": 3,
+  "real_only_model": "experiments__hybrid__cnn__coral__v1",
+  "real_only_threshold": 0.9879557490348816,
+  "real_only_threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "scenarios": {
+    "browser_0_99pct": {
+      "dataset": "data/external/2026-08-13-browser-prevalence-final/external_urls.csv",
+      "dataset_sha256": "fb96f656cb8c7d6eb26dd28faaff09b786f93cddd580643e48827829b18db1fe",
+      "gan_10pct": {
+        "metrics": {
+          "accuracy": 0.9886138613861386,
+          "balanced_accuracy": 0.95366,
+          "confusion_matrix": {
+            "fn": 41,
+            "fp": 534,
+            "tn": 49466,
+            "tp": 459
+          },
+          "f1": 0.6148693904889484,
+          "false_negative_rate": 0.082,
+          "false_positive_rate": 0.01068,
+          "matthews_correlation_coefficient": 0.6470272314449032,
+          "negative_predictive_value": 0.9991718342860606,
+          "pr_auc": 0.8437665775891474,
+          "precision": 0.4622356495468278,
+          "recall": 0.918,
+          "roc_auc": 0.9762394400000001,
+          "specificity": 0.98932
+        },
+        "operational": {
+          "detected_phish_per_10000": 90.89108910891089,
+          "false_alerts_per_10000": 105.74257425742574,
+          "missed_phish_per_10000": 8.118811881188119
+        }
+      },
+      "label": "0.99% phishing",
+      "legitimate_rows": 50000,
+      "phishing_prevalence": 0.009900990099009901,
+      "phishing_rows": 500,
+      "real_only": {
+        "metrics": {
+          "accuracy": 0.985029702970297,
+          "balanced_accuracy": 0.94987,
+          "confusion_matrix": {
+            "fn": 43,
+            "fp": 713,
+            "tn": 49287,
+            "tp": 457
+          },
+          "f1": 0.5473053892215569,
+          "false_negative_rate": 0.086,
+          "false_positive_rate": 0.01426,
+          "matthews_correlation_coefficient": 0.5921592861323568,
+          "negative_predictive_value": 0.999128319481046,
+          "pr_auc": 0.8034077634794878,
+          "precision": 0.3905982905982906,
+          "recall": 0.914,
+          "roc_auc": 0.98028992,
+          "specificity": 0.98574
+        },
+        "operational": {
+          "detected_phish_per_10000": 90.4950495049505,
+          "false_alerts_per_10000": 141.1881188118812,
+          "missed_phish_per_10000": 8.514851485148515
+        }
+      },
+      "rows": 50500
+    },
+    "browser_5pct": {
+      "dataset": "data/external/2026-08-13-browser-prevalence-5pct/external_urls.csv",
+      "dataset_sha256": "4a4e5c5a0e7321319f0bc1e62f16017a730eda25283722e1087b56a97a856242",
+      "gan_10pct": {
+        "metrics": {
+          "accuracy": 0.98365,
+          "balanced_accuracy": 0.9435526315789473,
+          "confusion_matrix": {
+            "fn": 101,
+            "fp": 226,
+            "tn": 18774,
+            "tp": 899
+          },
+          "f1": 0.8461176470588235,
+          "false_negative_rate": 0.101,
+          "false_positive_rate": 0.011894736842105263,
+          "matthews_correlation_coefficient": 0.8391357328384552,
+          "negative_predictive_value": 0.9946490066225165,
+          "pr_auc": 0.9122274176577695,
+          "precision": 0.7991111111111111,
+          "recall": 0.899,
+          "roc_auc": 0.9712647894736841,
+          "specificity": 0.9881052631578947
+        },
+        "operational": {
+          "detected_phish_per_10000": 449.5,
+          "false_alerts_per_10000": 113.0,
+          "missed_phish_per_10000": 50.5
+        }
+      },
+      "label": "5.00% phishing",
+      "legitimate_rows": 19000,
+      "phishing_prevalence": 0.05,
+      "phishing_rows": 1000,
+      "real_only": {
+        "metrics": {
+          "accuracy": 0.9803,
+          "balanced_accuracy": 0.9308947368421052,
+          "confusion_matrix": {
+            "fn": 124,
+            "fp": 270,
+            "tn": 18730,
+            "tp": 876
+          },
+          "f1": 0.8164026095060578,
+          "false_negative_rate": 0.124,
+          "false_positive_rate": 0.014210526315789474,
+          "matthews_correlation_coefficient": 0.8081350169280688,
+          "negative_predictive_value": 0.993423146281956,
+          "pr_auc": 0.8839520992262703,
+          "precision": 0.7643979057591623,
+          "recall": 0.876,
+          "roc_auc": 0.9729005,
+          "specificity": 0.9857894736842105
+        },
+        "operational": {
+          "detected_phish_per_10000": 438.0,
+          "false_alerts_per_10000": 135.0,
+          "missed_phish_per_10000": 62.0
+        }
+      },
+      "rows": 20000
+    }
+  },
+  "status": "retrospective controlled comparison on previously evaluated deployment cohorts"
+}

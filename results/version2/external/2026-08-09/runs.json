@@ -1,0 +1,110 @@
+[
+  {
+    "accuracy": 0.336,
+    "confusion_matrix": {
+      "fn": 219,
+      "fp": 113,
+      "tn": 137,
+      "tp": 31
+    },
+    "f1": 0.15736040609137056,
+    "false_positive_rate": 0.452,
+    "family": "Real-only LSTM",
+    "pr_auc": 0.3656921856245713,
+    "precision": 0.2152777777777778,
+    "recall": 0.124,
+    "roc_auc": 0.22509600000000002,
+    "seed": 42,
+    "threshold": 0.67138671875
+  },
+  {
+    "accuracy": 0.624,
+    "confusion_matrix": {
+      "fn": 45,
+      "fp": 143,
+      "tn": 107,
+      "tp": 205
+    },
+    "f1": 0.68561872909699,
+    "false_positive_rate": 0.572,
+    "family": "Real-only LSTM",
+    "pr_auc": 0.7207026161854877,
+    "precision": 0.5890804597701149,
+    "recall": 0.82,
+    "roc_auc": 0.726672,
+    "seed": 43,
+    "threshold": 0.693359375
+  },
+  {
+    "accuracy": 0.214,
+    "confusion_matrix": {
+      "fn": 211,
+      "fp": 182,
+      "tn": 68,
+      "tp": 39
+    },
+    "f1": 0.16560509554140126,
+    "false_positive_rate": 0.728,
+    "family": "Real-only LSTM",
+    "pr_auc": 0.33888013380157744,
+    "precision": 0.17647058823529413,
+    "recall": 0.156,
+    "roc_auc": 0.14947999999999997,
+    "seed": 44,
+    "threshold": 0.7978515625
+  },
+  {
+    "accuracy": 0.266,
+    "confusion_matrix": {
+      "fn": 226,
+      "fp": 141,
+      "tn": 109,
+      "tp": 24
+    },
+    "f1": 0.11566265060240964,
+    "false_positive_rate": 0.564,
+    "family": "SeqGAN 10% LSTM",
+    "pr_auc": 0.34800102716004616,
+    "precision": 0.14545454545454545,
+    "recall": 0.096,
+    "roc_auc": 0.17332000000000003,
+    "seed": 42,
+    "threshold": 0.7841796875
+  },
+  {
+    "accuracy": 0.446,
+    "confusion_matrix": {
+      "fn": 50,
+      "fp": 227,
+      "tn": 23,
+      "tp": 200
+    },
+    "f1": 0.5908419497784343,
+    "false_positive_rate": 0.908,
+    "family": "SeqGAN 10% LSTM",
+    "pr_auc": 0.476339775719654,
+    "precision": 0.468384074941452,
+    "recall": 0.8,
+    "roc_auc": 0.387712,
+    "seed": 43,
+    "threshold": 0.71533203125
+  },
+  {
+    "accuracy": 0.364,
+    "confusion_matrix": {
+      "fn": 119,
+      "fp": 199,
+      "tn": 51,
+      "tp": 131
+    },
+    "f1": 0.4517241379310345,
+    "false_positive_rate": 0.796,
+    "family": "SeqGAN 10% LSTM",
+    "pr_auc": 0.4366586754992493,
+    "precision": 0.396969696969697,
+    "recall": 0.524,
+    "roc_auc": 0.34864799999999996,
+    "seed": 44,
+    "threshold": 0.67724609375
+  }
+]

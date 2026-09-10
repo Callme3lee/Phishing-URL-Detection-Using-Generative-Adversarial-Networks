@@ -1,0 +1,324 @@
+{
+  "passed": true,
+  "version": "0.6.0",
+  "method": "Real Chrome + local HTTP response fixtures; no destination requests sent",
+  "cases": [
+    {
+      "case": "service page",
+      "url": "https://www.google.com/search?q=login+password&token=test",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://accounts.google.com/o/oauth2/v2/auth?client_id=sample&state=test",
+      "full_tier": "caution",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://docs.google.com/",
+      "full_tier": "secondary_review",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://drive.google.com/",
+      "full_tier": "secondary_review",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://sites.google.com/",
+      "full_tier": "caution",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://chatgpt.com/",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://chatgpt.com/c/local-test?model=sample",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://auth.openai.com/log-in?state=test",
+      "full_tier": "caution",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://auth0.openai.com/authorize?state=test",
+      "full_tier": "secondary_review",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?state=test",
+      "full_tier": "caution",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.facebook.com/login/?next=%2Fhome.php",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.youtube.com/watch?v=local-fixture",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.apple.com/shop/buy-iphone?model=test",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.instagram.com/accounts/login/?next=%2Fdirect%2F",
+      "full_tier": "secondary_review",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://x.com/home?lang=en",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.linkedin.com/login?fromSignIn=true",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.amazon.com/ap/signin?openid.return_to=test",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://github.com/login?return_to=%2Fsettings",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.bing.com/search?q=account+login",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://en.wikipedia.org/wiki/Phishing",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://web.whatsapp.com/?lang=en",
+      "full_tier": "secondary_review",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://login.yahoo.com/?done=test",
+      "full_tier": "block",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://www.reddit.com/login/?dest=%2F",
+      "full_tier": "allow",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "service page",
+      "url": "https://accounts.google.com/login?state=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "full_tier": "unknown",
+      "effective_tier": "allow",
+      "banner": false,
+      "badge": ""
+    },
+    {
+      "case": "shared service content",
+      "url": "https://docs.google.com/document/d/local-test/edit?tab=t.0",
+      "full_tier": "warning",
+      "effective_tier": "caution",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://docs.google.com/forms/d/e/local-test/viewform?usp=sharing",
+      "full_tier": "secondary_review",
+      "effective_tier": "secondary_review",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://docs.google.com/presentation/d/e/local-test/pub",
+      "full_tier": "warning",
+      "effective_tier": "caution",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://docs.google.com/drawings/d/local-test/edit",
+      "full_tier": "secondary_review",
+      "effective_tier": "secondary_review",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://drive.google.com/drive/folders/local-test?usp=drive_link",
+      "full_tier": "caution",
+      "effective_tier": "secondary_review",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://drive.google.com/file/d/local-test/view?usp=sharing",
+      "full_tier": "caution",
+      "effective_tier": "secondary_review",
+      "banner": true
+    },
+    {
+      "case": "shared service content",
+      "url": "https://sites.google.com/view/local-test",
+      "full_tier": "warning",
+      "effective_tier": "caution",
+      "banner": true
+    },
+    {
+      "case": "excluded host passive",
+      "banner": true,
+      "tier": "block"
+    },
+    {
+      "case": "SPA shared path excluded",
+      "tier": "secondary_review",
+      "service_rule": null
+    },
+    {
+      "case": "login redirects to excluded host",
+      "warning_page": true,
+      "tier": "block",
+      "explanation": {
+        "title": "Signals found in this URL",
+        "signals": [
+          "Suspicious words: verify, account, wallet",
+          "The URL uses an explicit port number"
+        ]
+      },
+      "direct_allow": {
+        "permanentAllowLabel": "Always allow accounts.example.com",
+        "continueLabel": "Continue once (do not allow)",
+        "visible": true,
+        "hasAdvancedMenu": false,
+        "hasDialog": false
+      },
+      "after_allow": "trusted"
+    }
+  ],
+  "intercepted_requests": 73,
+  "summary": {
+    "participantId": "4df5d852-f4ce-4157-8389-2060229a4f4f",
+    "extensionVersion": "0.6.0",
+    "schemaVersion": 6,
+    "createdAt": "2026-09-07T20:38:07.401Z",
+    "measurementStartedAt": "2026-09-07T20:38:07.401Z",
+    "lastUpdatedAt": "2026-09-07T20:38:16.025Z",
+    "uniqueAutomaticUrls": 36,
+    "automaticInferenceExecutions": 37,
+    "manualScans": 1,
+    "totalModelExecutions": 38,
+    "duplicateAssessmentsSuppressed": 2,
+    "feedbackReports": 1,
+    "falseAlarmReports": 1,
+    "feedbackSubmissions": 1,
+    "feedbackRecordsEvicted": 0,
+    "navigationInterrupts": 1,
+    "untrackedAssessments": 0,
+    "advisoryDisplays": 8,
+    "servicePageDecisions": 27,
+    "modelViewEvaluations": 65,
+    "missedPhishingReports": 0,
+    "inferenceErrors": 1,
+    "averageInferenceMilliseconds": 13.576315789581521,
+    "decisionCounts": {
+      "trusted": 0,
+      "allow": 27,
+      "ip_local": 0,
+      "secondary_review": 5,
+      "ip_review": 0,
+      "caution": 3,
+      "warning": 0,
+      "block": 1,
+      "unknown": 0
+    },
+    "duplicateEventCounts": {
+      "navigation": 1,
+      "history_state": 0,
+      "fragment": 0,
+      "advisory_recovery": 1,
+      "policy_change": 0,
+      "unknown": 0
+    },
+    "legacyTelemetryPresent": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "feature_means": {
+    "external": {
+      "legitimate": {
+        "dot_count_host": 1.065000057220459,
+        "estimated_subdomains": 0.06499999761581421,
+        "hostname_length": 13.3100004196167,
+        "path_length": 1.0,
+        "slash_count": 1.0,
+        "url_length": 14.3100004196167
+      },
+      "phishing": {
+        "dot_count_host": 2.049999952316284,
+        "estimated_subdomains": 1.0499999523162842,
+        "hostname_length": 24.920000076293945,
+        "path_length": 4.380000114440918,
+        "slash_count": 1.1399999856948853,
+        "url_length": 30.350000381469727
+      }
+    },
+    "internal": {
+      "test": {
+        "legitimate": {
+          "dot_count_host": 2.200627088546753,
+          "estimated_subdomains": 1.200627088546753,
+          "hostname_length": 18.654878616333008,
+          "path_length": 23.3239688873291,
+          "slash_count": 2.077387571334839,
+          "url_length": 47.72450256347656
+        },
+        "phishing": {
+          "dot_count_host": 1.5884119272232056,
+          "estimated_subdomains": 0.5889933109283447,
+          "hostname_length": 18.30762481689453,
+          "path_length": 25.809999465942383,
+          "slash_count": 2.854471445083618,
+          "url_length": 61.84972381591797
+        }
+      },
+      "train": {
+        "legitimate": {
+          "dot_count_host": 2.2799127101898193,
+          "estimated_subdomains": 1.2799128293991089,
+          "hostname_length": 19.5665225982666,
+          "path_length": 28.12363052368164,
+          "slash_count": 2.3286473751068115,
+          "url_length": 50.6588134765625
+        },
+        "phishing": {
+          "dot_count_host": 1.5770807266235352,
+          "estimated_subdomains": 0.5787956714630127,
+          "hostname_length": 18.05828285217285,
+          "path_length": 26.11925506591797,
+          "slash_count": 2.887106418609619,
+          "url_length": 55.739501953125
+        }
+      }
+    }
+  },
+  "observations": [
+    "External legitimate examples are root proxies and are much shorter than internal legitimate URLs.",
+    "The internal hostname-dot relationship reverses externally: internal legitimate URLs have more dots than phishing, while current external phishing URLs have more dots than legitimate roots.",
+    "This shift can explain high external false-positive rates and traditional-model ROC-AUC below 0.5."
+  ],
+  "project_version": 3
+}

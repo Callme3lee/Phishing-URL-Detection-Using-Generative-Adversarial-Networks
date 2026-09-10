@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Potential phishing URL · Phishing URL Guard</title>
+  <link rel="stylesheet" href="warning.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="Phishing URL Guard">
+      <span class="brand-mark" aria-hidden="true">PG</span>
+      <span><strong>Phishing URL Guard</strong><small>On-device URL protection</small></span>
+    </div>
+    <div class="topbar-actions"><button class="language-toggle" data-language-toggle type="button">العربية</button><span class="local-pill"><span></span>Processed locally</span></div>
+  </header>
+
+  <main>
+    <section class="warning-card" aria-labelledby="warning-title">
+      <div class="warning-rail"></div>
+      <div class="hero">
+        <div class="shield" aria-hidden="true"><span>!</span></div>
+        <div class="hero-copy">
+          <p class="eyebrow">NAVIGATION PAUSED</p>
+          <h1 id="warning-title">This URL may be dangerous</h1>
+          <p>The local detector placed this destination at its highest <strong id="tier">risk</strong> level. Going back is the safest choice.</p>
+        </div>
+      </div>
+
+      <div class="recommendation">
+        <span class="recommendation-icon" aria-hidden="true">✓</span>
+        <div><strong>Recommended action</strong><p>Return to the previous page unless you recognize and intentionally entered this exact destination.</p></div>
+      </div>
+
+      <div class="site-card">
+        <div class="site-heading"><span>Destination under review</span><span class="risk-pill">Very high risk</span></div>
+        <strong id="host">Unknown host</strong>
+        <small id="url"></small>
+        <div class="score-row"><span>URL risk score</span><strong id="score">—</strong></div>
+      </div>
+
+      <div class="signals-card">
+        <strong>Signals found in this URL</strong>
+        <ul id="signals"></ul>
+        <p>These signals are diagnostic clues from model inputs, not proof that the website is phishing.</p>
+      </div>
+
+      <div class="actions">
+        <button id="back" class="primary">Go back to safety</button>
+        <button id="continue" class="secondary">Continue once (do not allow)</button>
+      </div>
+
+      <div class="permanent-allow">
+        <div>
+          <strong>Know and trust this website?</strong>
+          <p><span>Only this exact website name will be allowed:</span> <bdi id="trust-note-hostname" dir="ltr">this website</bdi>. <span>You can remove it later. If local feedback is on, this also saves the warning as incorrect.</span></p>
+        </div>
+        <button id="trust" class="trust" type="button"><span>Always allow</span> <bdi id="trust-hostname" dir="ltr">this website</bdi></button>
+      </div>
+
+      <div class="limitations">
+        <strong>What this warning means</strong>
+        <p>The detector found a strong pattern in the URL text. It does not inspect the page itself, so this warning is not proof of phishing.</p>
+        <button id="report-false-alarm" class="report-button hidden" type="button">Report this as a false alarm</button>
+        <p id="report-status" class="report-status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Local URL protection · Only the highest-risk URLs pause navigation</footer>
+  <script src="../localization.js"></script>
+  <script src="warning.js"></script>
+</body>
+</html>

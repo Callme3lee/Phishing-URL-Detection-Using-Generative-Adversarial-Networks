@@ -1,0 +1,262 @@
+{
+  "augmentation": {
+    "fraction_definition": "generated rows divided by final augmented training rows",
+    "generated_fractions": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "same_real_training_rows": true,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "baseline_models": {
+    "cnn": {
+      "batch_size": 1024,
+      "channels_per_kernel": 128,
+      "dropout": 0.5,
+      "embedding_dim": 48,
+      "kernel_sizes": [
+        3,
+        4,
+        5
+      ]
+    },
+    "linear_svm": {
+      "C": 1.0,
+      "max_iter": 20000
+    },
+    "lstm": {
+      "batch_size": 512,
+      "dropout": 0.4,
+      "embedding_dim": 48,
+      "hidden_dim": 96,
+      "layers": 1
+    },
+    "random_forest": {
+      "max_depth": 32,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "n_estimators": 300
+    },
+    "rnn": {
+      "batch_size": 512,
+      "dropout": 0.4,
+      "embedding_dim": 48,
+      "hidden_dim": 96,
+      "layers": 1,
+      "nonlinearity": "tanh"
+    }
+  },
+  "data": {
+    "allowed_schemes": [
+      "http",
+      "https"
+    ],
+    "canonicalization": "scheme-free host/path/query/fragment; user-info removed",
+    "label_column": "label",
+    "label_mapping": {
+      "legitimate": 0,
+      "phishing": 1
+    },
+    "master_csv": "../URLs_New.csv",
+    "master_sha256": "18067bad500580a7def376c5a4438c9886adda5eb739fc209fdda4c6309966a7",
+    "maximum_encoded_length": 128,
+    "maximum_raw_url_length": 4096,
+    "maximum_vocabulary_size": 192,
+    "split_fractions": {
+      "test": 0.1,
+      "train": 0.8,
+      "validation": 0.1
+    },
+    "split_hash": "blake2b-64-seed-42",
+    "split_unit": "canonical_hostname",
+    "url_column": "url",
+    "version_2_conflict_database": "../Version_2/data/processed/master.sqlite"
+  },
+  "generators": {
+    "ms_hardgan": {
+      "adversarial_epochs": 4,
+      "adversarial_steps_per_epoch": 250,
+      "category_weight": 0.25,
+      "challenge_interval": 4,
+      "challenge_models": [
+        "cnn",
+        "lstm",
+        "rnn"
+      ],
+      "challenge_seed": 42,
+      "challenge_start_epoch": 2,
+      "challenge_weight": 0.05,
+      "condition_dim": 24,
+      "discriminator_channels": 128,
+      "discriminator_dropout": 0.3,
+      "discriminator_kernel_sizes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "discriminator_learning_rate": 0.0001,
+      "display_name": "MS-HardGAN",
+      "diversity_weight": 0.02,
+      "feature_matching_weight": 0.5,
+      "generation_budget": 500000,
+      "generator_dropout": 0.2,
+      "generator_layers": 2,
+      "generator_learning_rate": 5e-05,
+      "held_out_challenge_fraction": 0.2,
+      "latent_dim": 64,
+      "maximum_source_weight": 8.0,
+      "mle_epochs": 5,
+      "mle_regularization_weight": 0.5,
+      "pattern_count": 8,
+      "source_count": 3,
+      "source_sampling_exponent": 0.35,
+      "training_rows": 84280
+    },
+    "ms_hardgan_v2": {
+      "adversarial_epochs": 4,
+      "adversarial_steps_per_epoch": 250,
+      "challenge_interval": 4,
+      "challenge_models": [
+        "cnn",
+        "lstm",
+        "rnn"
+      ],
+      "challenge_seed": 42,
+      "challenge_start_epoch": 3,
+      "challenge_weight": 0.05,
+      "condition_dim": 24,
+      "discriminator_channels": 128,
+      "discriminator_dropout": 0.3,
+      "discriminator_kernel_sizes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "discriminator_learning_rate": 0.0001,
+      "display_name": "MS-HardGAN-C",
+      "diversity_weight": 0.02,
+      "feature_matching_weight": 0.5,
+      "generation_budget": 630000,
+      "generator_dropout": 0.2,
+      "generator_layers": 2,
+      "generator_learning_rate": 5e-05,
+      "held_out_challenge_fraction": 0.2,
+      "latent_dim": 64,
+      "maximum_pattern_weight": 4.0,
+      "maximum_source_weight": 8.0,
+      "mle_epochs": 5,
+      "mle_regularization_weight": 0.5,
+      "pattern_count": 8,
+      "pattern_sampling_exponent": 0.5,
+      "pattern_weight": 1.0,
+      "source_count": 3,
+      "source_sampling_exponent": 0.35,
+      "source_weight": 0.1,
+      "training_rows": 84280
+    },
+    "relgan": {
+      "adversarial_steps_per_epoch": 150,
+      "attention_heads": 4,
+      "discriminator_channels": 128,
+      "discriminator_kernel_sizes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "discriminator_learning_rate": 0.0002,
+      "discriminator_representations": 3,
+      "diversity_weight": 0.02,
+      "feature_matching_weight": 0.5,
+      "generator_learning_rate": 0.0001,
+      "latent_dim": 64,
+      "memory_size": 128,
+      "memory_slots": 4,
+      "mle_regularization_weight": 1.0,
+      "mle_steps_per_epoch": 400
+    },
+    "seqgan": {
+      "adversarial_steps_per_epoch": 100,
+      "discriminator_channels": 128,
+      "discriminator_kernel_sizes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "discriminator_learning_rate": 0.0001,
+      "generator_learning_rate": 5e-05,
+      "mle_regularization_weight": 0.2,
+      "rollout_count": 2,
+      "rollout_stride": 16
+    },
+    "shared": {
+      "adversarial_epochs": 3,
+      "batch_size": 64,
+      "embedding_dim": 64,
+      "generation_budget": 500000,
+      "hidden_dim": 128,
+      "maximum_length": 128,
+      "mle_epochs": 5,
+      "quality_sample_count": 5000,
+      "temperature": 0.8,
+      "training_rows": 84280
+    },
+    "urlgan": {
+      "adversarial_epochs": 4,
+      "adversarial_steps_per_epoch": 150,
+      "discriminator_channels": 128,
+      "discriminator_display_name": "Char-CNN-D",
+      "discriminator_dropout": 0.3,
+      "discriminator_kernel_sizes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "discriminator_learning_rate": 0.0001,
+      "display_name": "URL-GAN",
+      "diversity_weight": 0.02,
+      "feature_matching_weight": 0.5,
+      "generator_display_name": "2L-LSTM-G",
+      "generator_dropout": 0.2,
+      "generator_layers": 2,
+      "generator_learning_rate": 5e-05,
+      "mle_epochs": 5,
+      "mle_regularization_weight": 0.5
+    }
+  },
+  "matched_generator_experiment": {
+    "name": "seqgan_ms_matched_v1",
+    "other_seqgan_hyperparameters_unchanged": true,
+    "purpose": "architecture comparison with MS-HardGAN-C using identical phishing training rows",
+    "source_corpus": "data/experiments/ms_hardgan_v1",
+    "source_train_tokens_sha256": "98ea59b0acf1852273aa1949d2d8bcce10525afc41ad10eaa6c1190a0b1a2d61",
+    "training_rows": 84280
+  },
+  "neural_training": {
+    "cuda_required": true,
+    "early_stopping_patience": 2,
+    "epochs": 8,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.001,
+    "mixed_precision": true,
+    "weight_decay": 0.0001
+  },
+  "project_version": 3,
+  "seed": 42,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "threshold_policy": "maximum validation F1 subject to validation FPR <= 1 percent"
+}

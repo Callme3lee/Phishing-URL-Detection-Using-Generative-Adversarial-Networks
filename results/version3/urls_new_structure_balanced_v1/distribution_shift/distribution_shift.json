@@ -1,0 +1,539 @@
+{
+  "external": {
+    "topdomain_phishtank": {
+      "classes": {
+        "legitimate": {
+          "feature_means": {
+            "balanced_train": {
+              "dot_count_host": 2.2836992740631104,
+              "estimated_subdomains": 1.2836992740631104,
+              "hostname_length": 20.298280715942383,
+              "path_length": 19.684282302856445,
+              "query_length": 6.409209728240967,
+              "url_length": 46.64332962036133
+            },
+            "external": {
+              "dot_count_host": 1.1399999856948853,
+              "estimated_subdomains": 0.14000000059604645,
+              "hostname_length": 14.607999801635742,
+              "path_length": 1.0,
+              "query_length": 0.0,
+              "url_length": 15.607999801635742
+            },
+            "original_train": {
+              "dot_count_host": 2.2874820232391357,
+              "estimated_subdomains": 1.2874819040298462,
+              "hostname_length": 19.62424659729004,
+              "path_length": 28.18226432800293,
+              "query_length": 2.7716352939605713,
+              "url_length": 50.688270568847656
+            }
+          },
+          "lexical_source_classifier_auc": {
+            "balanced_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9906805120167188,
+              "standard_deviation": 0.003548228204820699,
+              "values": [
+                0.9853709508881923,
+                0.9947753396029257,
+                0.9925548589341693,
+                0.9871995820271683,
+                0.992228317659352,
+                0.9905956112852665,
+                0.9840647857889236,
+                0.9882445141065832,
+                0.9868077324973877,
+                0.991901776384535,
+                0.987330198537095,
+                0.9899425287356322,
+                0.994514106583072,
+                0.9926201671891327,
+                0.990987460815047,
+                0.9943834900731452,
+                0.992816091954023,
+                0.9977795193312435,
+                0.9875914315569488,
+                0.991901776384535
+              ]
+            },
+            "original_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9944487983281087,
+              "standard_deviation": 0.003059709078105759,
+              "values": [
+                0.998171368861024,
+                0.9971264367816092,
+                0.9954284221525601,
+                0.9948406478578892,
+                0.9915752351097179,
+                0.990073145245559,
+                0.990073145245559,
+                0.9927507836990596,
+                0.9960815047021944,
+                0.9888975966562173,
+                0.9952978056426333,
+                0.9951671891327063,
+                0.994644723092999,
+                0.9947753396029257,
+                0.9969958202716823,
+                0.9967345872518286,
+                0.9979101358411704,
+                0.9991509926854755,
+                0.9894200626959248,
+                0.9938610240334378
+              ]
+            }
+          },
+          "mean_absolute_standardized_mean_difference_27_features": {
+            "balanced_train_to_external": 0.77333003282547,
+            "delta_balanced_minus_original": -0.008558213710784912,
+            "original_train_to_external": 0.7818882465362549
+          },
+          "structure_total_variation_distance": {
+            "balanced_train_to_external": 0.75,
+            "original_train_to_external": 0.8643523878437047
+          }
+        },
+        "phishing": {
+          "feature_means": {
+            "balanced_train": {
+              "dot_count_host": 1.5770807266235352,
+              "estimated_subdomains": 0.5787956714630127,
+              "hostname_length": 18.05828285217285,
+              "path_length": 26.11925506591797,
+              "query_length": 11.192157745361328,
+              "url_length": 55.739501953125
+            },
+            "external": {
+              "dot_count_host": 1.871999979019165,
+              "estimated_subdomains": 0.871999979019165,
+              "hostname_length": 25.780000686645508,
+              "path_length": 6.492000102996826,
+              "query_length": 2.436000108718872,
+              "url_length": 34.900001525878906
+            },
+            "original_train": {
+              "dot_count_host": 1.5770807266235352,
+              "estimated_subdomains": 0.5787956714630127,
+              "hostname_length": 18.05828285217285,
+              "path_length": 26.11925506591797,
+              "query_length": 11.192157745361328,
+              "url_length": 55.739501953125
+            }
+          },
+          "lexical_source_classifier_auc": {
+            "balanced_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9066810344827585,
+              "standard_deviation": 0.0220761924529766,
+              "values": [
+                0.896551724137931,
+                0.920846394984326,
+                0.9131400208986415,
+                0.9350835945663531,
+                0.9075888192267503,
+                0.9113113897596656,
+                0.9262669801462905,
+                0.8760449320794149,
+                0.9070010449320794,
+                0.8765673981191222,
+                0.9331243469174504,
+                0.9258098223615465,
+                0.8517502612330199,
+                0.8960292580982236,
+                0.8961598746081504,
+                0.9100052246603971,
+                0.9247648902821317,
+                0.9033437826541276,
+                0.8870167189132706,
+                0.93521421107628
+              ]
+            },
+            "original_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9066810344827585,
+              "standard_deviation": 0.0220761924529766,
+              "values": [
+                0.896551724137931,
+                0.920846394984326,
+                0.9131400208986415,
+                0.9350835945663531,
+                0.9075888192267503,
+                0.9113113897596656,
+                0.9262669801462905,
+                0.8760449320794149,
+                0.9070010449320794,
+                0.8765673981191222,
+                0.9331243469174504,
+                0.9258098223615465,
+                0.8517502612330199,
+                0.8960292580982236,
+                0.8961598746081504,
+                0.9100052246603971,
+                0.9247648902821317,
+                0.9033437826541276,
+                0.8870167189132706,
+                0.93521421107628
+              ]
+            }
+          },
+          "mean_absolute_standardized_mean_difference_27_features": {
+            "balanced_train_to_external": 0.3207671642303467,
+            "delta_balanced_minus_original": 0.0,
+            "original_train_to_external": 0.3207671642303467
+          },
+          "structure_total_variation_distance": {
+            "balanced_train_to_external": 0.6243605492647685,
+            "original_train_to_external": 0.6243605492647685
+          }
+        }
+      },
+      "structures": {
+        "legitimate": {
+          "deep": {
+            "proportion": 0.0,
+            "rows": 0
+          },
+          "query": {
+            "proportion": 0.0,
+            "rows": 0
+          },
+          "root": {
+            "proportion": 1.0,
+            "rows": 250
+          },
+          "shallow": {
+            "proportion": 0.0,
+            "rows": 0
+          }
+        },
+        "phishing": {
+          "deep": {
+            "proportion": 0.108,
+            "rows": 27
+          },
+          "query": {
+            "proportion": 0.032,
+            "rows": 8
+          },
+          "root": {
+            "proportion": 0.7,
+            "rows": 175
+          },
+          "shallow": {
+            "proportion": 0.16,
+            "rows": 40
+          }
+        }
+      }
+    },
+    "tranco_openphish": {
+      "classes": {
+        "legitimate": {
+          "feature_means": {
+            "balanced_train": {
+              "dot_count_host": 2.2836992740631104,
+              "estimated_subdomains": 1.2836992740631104,
+              "hostname_length": 20.298280715942383,
+              "path_length": 19.684282302856445,
+              "query_length": 6.409209728240967,
+              "url_length": 46.64332962036133
+            },
+            "external": {
+              "dot_count_host": 1.065000057220459,
+              "estimated_subdomains": 0.06499999761581421,
+              "hostname_length": 13.3100004196167,
+              "path_length": 1.0,
+              "query_length": 0.0,
+              "url_length": 14.3100004196167
+            },
+            "original_train": {
+              "dot_count_host": 2.2874820232391357,
+              "estimated_subdomains": 1.2874819040298462,
+              "hostname_length": 19.62424659729004,
+              "path_length": 28.18226432800293,
+              "query_length": 2.7716352939605713,
+              "url_length": 50.688270568847656
+            }
+          },
+          "lexical_source_classifier_auc": {
+            "balanced_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9951938775510204,
+              "standard_deviation": 0.0034146018666348535,
+              "values": [
+                0.993061224489796,
+                0.9991836734693877,
+                0.9938775510204081,
+                0.9969387755102042,
+                0.9955102040816326,
+                0.9916326530612245,
+                0.9965306122448979,
+                0.9985714285714287,
+                0.9975510204081632,
+                0.9871428571428572,
+                0.9979591836734695,
+                0.9951020408163265,
+                0.9946938775510205,
+                0.9889795918367347,
+                0.9979591836734694,
+                0.996734693877551,
+                0.9989795918367348,
+                0.9924489795918368,
+                0.9987755102040816,
+                0.9922448979591837
+              ]
+            },
+            "original_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9971938775510205,
+              "standard_deviation": 0.0019404707383130534,
+              "values": [
+                0.9995918367346939,
+                0.9991836734693877,
+                0.996734693877551,
+                0.9989795918367347,
+                0.9987755102040816,
+                0.9932653061224489,
+                0.9946938775510205,
+                0.9987755102040816,
+                0.9983673469387755,
+                0.9953061224489796,
+                0.9985714285714286,
+                0.9963265306122449,
+                0.9955102040816326,
+                0.9948979591836734,
+                0.9965306122448979,
+                0.9967346938775511,
+                1.0,
+                0.9971428571428571,
+                0.9991836734693879,
+                0.9953061224489795
+              ]
+            }
+          },
+          "mean_absolute_standardized_mean_difference_27_features": {
+            "balanced_train_to_external": 0.7954484224319458,
+            "delta_balanced_minus_original": -0.008558154106140137,
+            "original_train_to_external": 0.8040065765380859
+          },
+          "structure_total_variation_distance": {
+            "balanced_train_to_external": 0.75,
+            "original_train_to_external": 0.8643523878437047
+          }
+        },
+        "phishing": {
+          "feature_means": {
+            "balanced_train": {
+              "dot_count_host": 1.5770807266235352,
+              "estimated_subdomains": 0.5787956714630127,
+              "hostname_length": 18.05828285217285,
+              "path_length": 26.11925506591797,
+              "query_length": 11.192157745361328,
+              "url_length": 55.739501953125
+            },
+            "external": {
+              "dot_count_host": 2.049999952316284,
+              "estimated_subdomains": 1.0499999523162842,
+              "hostname_length": 24.920000076293945,
+              "path_length": 4.380000114440918,
+              "query_length": 1.0099999904632568,
+              "url_length": 30.350000381469727
+            },
+            "original_train": {
+              "dot_count_host": 1.5770807266235352,
+              "estimated_subdomains": 0.5787956714630127,
+              "hostname_length": 18.05828285217285,
+              "path_length": 26.11925506591797,
+              "query_length": 11.192157745361328,
+              "url_length": 55.739501953125
+            }
+          },
+          "lexical_source_classifier_auc": {
+            "balanced_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9342448979591838,
+              "standard_deviation": 0.017393139965858367,
+              "values": [
+                0.9314285714285713,
+                0.9140816326530612,
+                0.9534693877551021,
+                0.9406122448979592,
+                0.9473469387755102,
+                0.9173469387755101,
+                0.9142857142857144,
+                0.919795918367347,
+                0.9265306122448979,
+                0.9502040816326531,
+                0.9404081632653061,
+                0.9002040816326531,
+                0.9504081632653061,
+                0.9573469387755102,
+                0.9222448979591839,
+                0.9520408163265306,
+                0.9361224489795918,
+                0.910408163265306,
+                0.9487755102040816,
+                0.9518367346938775
+              ]
+            },
+            "original_train_vs_external": {
+              "interpretation": "0.5 means lexically indistinguishable sources; 1.0 means perfectly separable sources",
+              "mean": 0.9342448979591838,
+              "standard_deviation": 0.017393139965858367,
+              "values": [
+                0.9314285714285713,
+                0.9140816326530612,
+                0.9534693877551021,
+                0.9406122448979592,
+                0.9473469387755102,
+                0.9173469387755101,
+                0.9142857142857144,
+                0.919795918367347,
+                0.9265306122448979,
+                0.9502040816326531,
+                0.9404081632653061,
+                0.9002040816326531,
+                0.9504081632653061,
+                0.9573469387755102,
+                0.9222448979591839,
+                0.9520408163265306,
+                0.9361224489795918,
+                0.910408163265306,
+                0.9487755102040816,
+                0.9518367346938775
+              ]
+            }
+          },
+          "mean_absolute_standardized_mean_difference_27_features": {
+            "balanced_train_to_external": 0.347610205411911,
+            "delta_balanced_minus_original": 0.0,
+            "original_train_to_external": 0.347610205411911
+          },
+          "structure_total_variation_distance": {
+            "balanced_train_to_external": 0.7343605492647685,
+            "original_train_to_external": 0.7343605492647685
+          }
+        }
+      },
+      "structures": {
+        "legitimate": {
+          "deep": {
+            "proportion": 0.0,
+            "rows": 0
+          },
+          "query": {
+            "proportion": 0.0,
+            "rows": 0
+          },
+          "root": {
+            "proportion": 1.0,
+            "rows": 200
+          },
+          "shallow": {
+            "proportion": 0.0,
+            "rows": 0
+          }
+        },
+        "phishing": {
+          "deep": {
+            "proportion": 0.055,
+            "rows": 11
+          },
+          "query": {
+            "proportion": 0.04,
+            "rows": 8
+          },
+          "root": {
+            "proportion": 0.81,
+            "rows": 162
+          },
+          "shallow": {
+            "proportion": 0.095,
+            "rows": 19
+          }
+        }
+      }
+    }
+  },
+  "protocol": "lexical and structural shift; source classifier repeated holdout; no model-score tuning",
+  "structures": {
+    "balanced_train": {
+      "legitimate": {
+        "deep": {
+          "proportion": 0.25,
+          "rows": 29882
+        },
+        "query": {
+          "proportion": 0.25,
+          "rows": 29882
+        },
+        "root": {
+          "proportion": 0.25,
+          "rows": 29882
+        },
+        "shallow": {
+          "proportion": 0.25,
+          "rows": 29882
+        }
+      },
+      "phishing": {
+        "deep": {
+          "proportion": 0.5105389265254989,
+          "rows": 41976
+        },
+        "query": {
+          "proportion": 0.18206254028874105,
+          "rows": 14969
+        },
+        "root": {
+          "proportion": 0.07563945073523151,
+          "rows": 6219
+        },
+        "shallow": {
+          "proportion": 0.23175908245052845,
+          "rows": 19055
+        }
+      }
+    },
+    "original_train": {
+      "legitimate": {
+        "deep": {
+          "proportion": 0.5851555716353112,
+          "rows": 161737
+        },
+        "query": {
+          "proportion": 0.10811143270622287,
+          "rows": 29882
+        },
+        "root": {
+          "proportion": 0.13564761215629523,
+          "rows": 37493
+        },
+        "shallow": {
+          "proportion": 0.17108538350217076,
+          "rows": 47288
+        }
+      },
+      "phishing": {
+        "deep": {
+          "proportion": 0.5105389265254989,
+          "rows": 41976
+        },
+        "query": {
+          "proportion": 0.18206254028874105,
+          "rows": 14969
+        },
+        "root": {
+          "proportion": 0.07563945073523151,
+          "rows": 6219
+        },
+        "shallow": {
+          "proportion": 0.23175908245052845,
+          "rows": 19055
+        }
+      }
+    }
+  }
+}

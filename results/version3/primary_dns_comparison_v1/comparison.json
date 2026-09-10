@@ -1,0 +1,335 @@
+{
+  "dns_model": {
+    "path": "artifacts/experiments/dns_secondary_v1/frozen_dns_secondary.json",
+    "sha256": "522e2a5217b5c4039571fa2ce294bb86d62368c5361081fc1cd66e21ccefc0ce"
+  },
+  "evaluations": {
+    "development_holdout": {
+      "gan": {
+        "additional_dns_fp": 7,
+        "additional_dns_tp": 30,
+        "combined_dns": {
+          "accuracy": 0.9398176291793313,
+          "confusion_matrix": {
+            "fn": 180,
+            "fp": 18,
+            "tn": 2328,
+            "tp": 764
+          },
+          "f1": 0.8852838933951332,
+          "false_negative_rate": 0.1906779661016949,
+          "false_positive_rate": 0.0076726342710997444,
+          "pr_auc": 0.9595624502773112,
+          "precision": 0.9769820971867008,
+          "recall": 0.809322033898305,
+          "roc_auc": 0.9665694944153047
+        },
+        "legitimate_rows": 2346,
+        "phishing_rows": 944,
+        "primary": {
+          "accuracy": 0.9328267477203648,
+          "confusion_matrix": {
+            "fn": 210,
+            "fp": 11,
+            "tn": 2335,
+            "tp": 734
+          },
+          "f1": 0.8691533451746596,
+          "false_negative_rate": 0.22245762711864406,
+          "false_positive_rate": 0.004688832054560955,
+          "pr_auc": 0.9590529500505367,
+          "precision": 0.9852348993288591,
+          "recall": 0.777542372881356,
+          "roc_auc": 0.9663599780369035
+        },
+        "routed": {
+          "dns_pr_auc": 0.6533425941002896,
+          "dns_roc_auc": 0.7681917211328977,
+          "escalated": 37,
+          "escalated_legitimate": 7,
+          "escalated_phishing": 30,
+          "legitimate": 153,
+          "phishing": 75,
+          "rows": 228
+        },
+        "rows": 3290
+      },
+      "real": {
+        "additional_dns_fp": 7,
+        "additional_dns_tp": 40,
+        "combined_dns": {
+          "accuracy": 0.9258358662613981,
+          "confusion_matrix": {
+            "fn": 227,
+            "fp": 17,
+            "tn": 2329,
+            "tp": 717
+          },
+          "f1": 0.8545887961859356,
+          "false_negative_rate": 0.24046610169491525,
+          "false_positive_rate": 0.007246376811594203,
+          "pr_auc": 0.9586961295183235,
+          "precision": 0.9768392370572208,
+          "recall": 0.7595338983050848,
+          "roc_auc": 0.9706309061944602
+        },
+        "legitimate_rows": 2346,
+        "phishing_rows": 944,
+        "primary": {
+          "accuracy": 0.9158054711246201,
+          "confusion_matrix": {
+            "fn": 267,
+            "fp": 10,
+            "tn": 2336,
+            "tp": 677
+          },
+          "f1": 0.8301655426118946,
+          "false_negative_rate": 0.2828389830508475,
+          "false_positive_rate": 0.004262574595055414,
+          "pr_auc": 0.9580928695819861,
+          "precision": 0.9854439592430859,
+          "recall": 0.7171610169491526,
+          "roc_auc": 0.9703827828109873
+        },
+        "routed": {
+          "dns_pr_auc": 0.6920555559952118,
+          "dns_roc_auc": 0.7632340485601354,
+          "escalated": 47,
+          "escalated_legitimate": 7,
+          "escalated_phishing": 40,
+          "legitimate": 161,
+          "phishing": 88,
+          "rows": 249
+        },
+        "rows": 3290
+      }
+    },
+    "diagnostic_20k": {
+      "gan": {
+        "additional_dns_fp": 53,
+        "additional_dns_tp": 81,
+        "combined_dns": {
+          "accuracy": 0.9769,
+          "confusion_matrix": {
+            "fn": 322,
+            "fp": 140,
+            "tn": 17860,
+            "tp": 1678
+          },
+          "f1": 0.8789942378208486,
+          "false_negative_rate": 0.161,
+          "false_positive_rate": 0.0077777777777777776,
+          "pr_auc": 0.9313799027929381,
+          "precision": 0.922992299229923,
+          "recall": 0.839,
+          "roc_auc": 0.9756186944444444
+        },
+        "legitimate_rows": 18000,
+        "phishing_rows": 2000,
+        "primary": {
+          "accuracy": 0.9755,
+          "confusion_matrix": {
+            "fn": 403,
+            "fp": 87,
+            "tn": 17913,
+            "tp": 1597
+          },
+          "f1": 0.8669923995656895,
+          "false_negative_rate": 0.2015,
+          "false_positive_rate": 0.004833333333333334,
+          "pr_auc": 0.9288345831836456,
+          "precision": 0.9483372921615202,
+          "recall": 0.7985,
+          "roc_auc": 0.975235
+        },
+        "routed": {
+          "dns_pr_auc": 0.6981299234214622,
+          "dns_roc_auc": 0.8760098039215686,
+          "escalated": 134,
+          "escalated_legitimate": 53,
+          "escalated_phishing": 81,
+          "legitimate": 816,
+          "phishing": 125,
+          "rows": 941
+        },
+        "rows": 20000
+      },
+      "real": {
+        "additional_dns_fp": 43,
+        "additional_dns_tp": 101,
+        "combined_dns": {
+          "accuracy": 0.9702,
+          "confusion_matrix": {
+            "fn": 436,
+            "fp": 160,
+            "tn": 17840,
+            "tp": 1564
+          },
+          "f1": 0.8399570354457573,
+          "false_negative_rate": 0.218,
+          "false_positive_rate": 0.008888888888888889,
+          "pr_auc": 0.9156342710290165,
+          "precision": 0.9071925754060325,
+          "recall": 0.782,
+          "roc_auc": 0.9770267916666667
+        },
+        "legitimate_rows": 18000,
+        "phishing_rows": 2000,
+        "primary": {
+          "accuracy": 0.9673,
+          "confusion_matrix": {
+            "fn": 537,
+            "fp": 117,
+            "tn": 17883,
+            "tp": 1463
+          },
+          "f1": 0.8173184357541899,
+          "false_negative_rate": 0.2685,
+          "false_positive_rate": 0.0065,
+          "pr_auc": 0.9135110894629157,
+          "precision": 0.9259493670886076,
+          "recall": 0.7315,
+          "roc_auc": 0.976704625
+        },
+        "routed": {
+          "dns_pr_auc": 0.7210635546714919,
+          "dns_roc_auc": 0.8646599819059106,
+          "escalated": 144,
+          "escalated_legitimate": 43,
+          "escalated_phishing": 101,
+          "legitimate": 829,
+          "phishing": 160,
+          "rows": 989
+        },
+        "rows": 20000
+      }
+    }
+  },
+  "experiment": "primary_dns_comparison_v1",
+  "fairness_contract": {
+    "dns_overlap_cache_reused": true,
+    "gan_real_training_rows": 367184,
+    "gan_synthetic_rows": 40410,
+    "real_training_rows": 367184,
+    "same_calibration_dataset": true,
+    "same_development_and_20k_url_identities": true,
+    "same_dns_features": [
+      "host_a_count",
+      "host_a_minimum_ttl",
+      "host_a_nxdomain",
+      "host_a_timeout",
+      "host_aaaa_count",
+      "host_aaaa_minimum_ttl",
+      "host_aaaa_nxdomain",
+      "host_aaaa_timeout",
+      "host_cname_count",
+      "host_cname_minimum_ttl",
+      "host_cname_nxdomain",
+      "host_cname_timeout",
+      "domain_mx_count",
+      "domain_mx_minimum_ttl",
+      "domain_mx_nxdomain",
+      "domain_mx_timeout",
+      "domain_ns_count",
+      "domain_ns_minimum_ttl",
+      "domain_ns_nxdomain",
+      "domain_ns_timeout",
+      "dns_address_exists",
+      "dns_mail_exists",
+      "dns_nameserver_exists",
+      "dns_total_timeouts",
+      "dns_total_nxdomain"
+    ],
+    "same_dns_models": [
+      {
+        "path": "artifacts/experiments/dns_secondary_v1/seed_42.joblib",
+        "seed": 42,
+        "sha256": "11f2bb267c52fbe98e7553b2016343912433031c0b7ee1bdd16335feb047bc9a"
+      },
+      {
+        "path": "artifacts/experiments/dns_secondary_v1/seed_43.joblib",
+        "seed": 43,
+        "sha256": "1d37a923f448303e5aa20cabed1f48899081afbd054ab71b36aa02e7931d4c15"
+      },
+      {
+        "path": "artifacts/experiments/dns_secondary_v1/seed_44.joblib",
+        "seed": 44,
+        "sha256": "4e3f18f6893b8350fcffc71e8701b6c251cdc95d42611fdf56d02c967fa68433"
+      }
+    ],
+    "same_dns_threshold": 0.5040881453440683,
+    "same_dns_training_rows": 607,
+    "same_primary_architecture": true,
+    "same_primary_seeds": [
+      42,
+      43,
+      44
+    ],
+    "same_primary_threshold_rule": "maximize recall under 0.50% calibration FPR cap"
+  },
+  "gan_effect": {
+    "development_holdout": {
+      "with_dns": {
+        "accuracy": 0.013981762917933183,
+        "f1": 0.030695097209197608,
+        "false_negative_rate": -0.049788135593220345,
+        "false_positive_rate": 0.00042625745950554145,
+        "pr_auc": 0.0008663207589877375,
+        "precision": 0.00014286012948006022,
+        "recall": 0.04978813559322026,
+        "roc_auc": -0.004061411779155533
+      },
+      "without_dns": {
+        "accuracy": 0.017021276595744705,
+        "f1": 0.03898780256276502,
+        "false_negative_rate": -0.06038135593220342,
+        "false_positive_rate": 0.00042625745950554145,
+        "pr_auc": 0.0009600804685505615,
+        "precision": -0.0002090599142268168,
+        "recall": 0.060381355932203395,
+        "roc_auc": -0.004022804774083788
+      }
+    },
+    "diagnostic_20k": {
+      "with_dns": {
+        "accuracy": 0.006700000000000039,
+        "f1": 0.03903720237509134,
+        "false_negative_rate": -0.056999999999999995,
+        "false_positive_rate": -0.0011111111111111113,
+        "pr_auc": 0.01574563176392163,
+        "precision": 0.0157997238238905,
+        "recall": 0.05699999999999994,
+        "roc_auc": -0.0014080972222223487
+      },
+      "without_dns": {
+        "accuracy": 0.008199999999999985,
+        "f1": 0.04967396381149958,
+        "false_negative_rate": -0.067,
+        "false_positive_rate": -0.0016666666666666661,
+        "pr_auc": 0.015323493720729942,
+        "precision": 0.02238792507291254,
+        "recall": 0.06699999999999995,
+        "roc_auc": -0.00146962500000003
+      }
+    }
+  },
+  "limitations": [
+    "The DNS verifier was originally trained on GAN-primary routed development rows; keeping it fixed ensures identical DNS training but may favor that routing distribution.",
+    "Exclusive real-only routed domains required later DNS queries; overlapping domains reuse identical cached observations.",
+    "The 20K cohort is diagnostic because labels were viewed previously.",
+    "DNS is mutable and same-snapshot development holdout is not temporal confirmation."
+  ],
+  "policies": {
+    "gan": {
+      "path": "artifacts/deployment_candidates/conservative_hyb_gan10_v1/policy.json",
+      "sha256": "c101c71f7be94f7a79afa40f60864805858e8a7c86fc5d6c1a3e30b3163662e6"
+    },
+    "real": {
+      "path": "artifacts/deployment_candidates/conservative_hyb_real_v1/policy.json",
+      "sha256": "bcecd556e7c84be772b203b5af2582a03193766e37e5ff03a7262e97723ffff4"
+    }
+  },
+  "project_version": 3,
+  "status": "CONTROLLED COMPARISON COMPLETE",
+  "verdict": "With the same frozen DNS verifier, GAN augmentation improves seven of eight registered 20K metrics: recall by 5.70 points, F1 by 3.90, PR-AUC by 1.57, FPR by 0.111, and FNR by 5.70; ROC-AUC is 0.14 points lower. The GAN contribution therefore remains beneficial after DNS fusion under this controlled diagnostic protocol, but it does not improve every metric."
+}

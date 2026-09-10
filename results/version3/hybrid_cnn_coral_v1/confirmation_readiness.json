@@ -1,0 +1,12 @@
+{
+  "calibration_frozen_at_utc": "2026-08-11T14:50:04.421156+00:00",
+  "checks": {
+    "enough_phishtank_rows_verified_after_calibration": false,
+    "openphish_hash_changed": false,
+    "tranco_hash_changed": false
+  },
+  "instruction": "Download fresh official OpenPhish, Tranco, and PhishTank files into a new raw directory, then rerun this check. Do not evaluate confirmation labels unless ready is true.",
+  "minimum_required": 100,
+  "phishtank_rows_verified_after_calibration": 0,
+  "ready": false
+}

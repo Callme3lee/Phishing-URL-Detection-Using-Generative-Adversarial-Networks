@@ -1,0 +1,303 @@
+{
+  "conditions": {
+    "cnn_ms": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/cnn/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "df2bce02f9da59664f937f18d84a453703edf03bb7dfd73bfc577e04e3a76551"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/cnn/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "a68cd9c431c6f12b0c6c8a10c3a7b5404065323b3578ea50016f1e9a7f880ffa"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/cnn/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "2bb1756f48907128f0fce50a5efa0451ca260ef4dbeaa37eb13bb17a8f4a96d6"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9531,
+        "confusion_matrix": {
+          "fn": 1311,
+          "fp": 96,
+          "tn": 28404,
+          "tp": 189
+        },
+        "f1": 0.21176470588235294,
+        "false_negative_rate": 0.874,
+        "false_positive_rate": 0.003368421052631579,
+        "pr_auc": 0.31811121241578877,
+        "precision": 0.6631578947368421,
+        "recall": 0.126,
+        "roc_auc": 0.7995119766081871
+      },
+      "model": "CNN",
+      "threshold": 0.9991862177848816,
+      "threshold_source": "artifacts/results/all_models_equal_calibration_v1/per_condition/experiments__multisource__baselines__v1__cnn.json",
+      "training_condition": "real_only_multisource"
+    },
+    "hyb_ms_gan_10pct": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a",
+          "verified_sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763",
+          "verified_sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763"
+        },
+        {
+          "path": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014",
+          "verified_sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9812,
+        "confusion_matrix": {
+          "fn": 276,
+          "fp": 288,
+          "tn": 28212,
+          "tp": 1224
+        },
+        "f1": 0.8127490039840638,
+        "false_negative_rate": 0.184,
+        "false_positive_rate": 0.010105263157894737,
+        "pr_auc": 0.8726571889584444,
+        "precision": 0.8095238095238095,
+        "recall": 0.816,
+        "roc_auc": 0.9681843859649123
+      },
+      "model": "HYB-MS",
+      "threshold": 0.9890950322151184,
+      "threshold_source": "artifacts/final_confirmation_protocol_2026-08-22/manifest.json",
+      "training_condition": "multisource_plus_10pct_ms_hardgan_c"
+    },
+    "hyb_ms_real_only": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5",
+          "verified_sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8",
+          "verified_sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+        },
+        {
+          "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5",
+          "verified_sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9785333333333334,
+        "confusion_matrix": {
+          "fn": 284,
+          "fp": 360,
+          "tn": 28140,
+          "tp": 1216
+        },
+        "f1": 0.7906371911573472,
+        "false_negative_rate": 0.18933333333333333,
+        "false_positive_rate": 0.01263157894736842,
+        "pr_auc": 0.8428827647323789,
+        "precision": 0.7715736040609137,
+        "recall": 0.8106666666666666,
+        "roc_auc": 0.965814432748538
+      },
+      "model": "HYB-MS",
+      "threshold": 0.9879557490348816,
+      "threshold_source": "artifacts/final_confirmation_protocol_2026-08-22/manifest.json",
+      "training_condition": "real_only_multisource"
+    },
+    "lstm_ms": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/lstm/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "a0bfa90b58ee65df41b6feb8e529a6d0f40020a78473b66f07156e5bb4641b09"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/lstm/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "d9cd5f39bd4962f54eb8bc41f4ccf934647829ec855fe1bfc57242bbaf8711dd"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/lstm/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "9a5d691ae4956eb08e20fa80f2d3fbbd9095c9a4e841cdbc91fd3660d51d9743"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9748333333333333,
+        "confusion_matrix": {
+          "fn": 372,
+          "fp": 383,
+          "tn": 28117,
+          "tp": 1128
+        },
+        "f1": 0.7492527399535038,
+        "false_negative_rate": 0.248,
+        "false_positive_rate": 0.013438596491228071,
+        "pr_auc": 0.8169705686204902,
+        "precision": 0.7465254798146923,
+        "recall": 0.752,
+        "roc_auc": 0.9261122222222222
+      },
+      "model": "LSTM",
+      "threshold": 0.9851887822151184,
+      "threshold_source": "artifacts/results/all_models_equal_calibration_v1/per_condition/experiments__multisource__baselines__v1__lstm.json",
+      "training_condition": "real_only_multisource"
+    },
+    "rf_ms": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/random_forest/seed_42/model.joblib",
+          "seed": 42,
+          "sha256": "18ebe9b3bddf61c3c9b37cab6dd3e33748d6c2026027a69b6c8166e9ef64ed75"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/random_forest/seed_43/model.joblib",
+          "seed": 43,
+          "sha256": "1035110b352d86663c63ae5a328dfeff1dc64ad98904af62d0283d9b0624146e"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/random_forest/seed_44/model.joblib",
+          "seed": 44,
+          "sha256": "27cd074fddf452228e74a5d14a7f720ffe92229273daf03780ef583d79925e13"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9513,
+        "confusion_matrix": {
+          "fn": 1119,
+          "fp": 342,
+          "tn": 28158,
+          "tp": 381
+        },
+        "f1": 0.3427800269905533,
+        "false_negative_rate": 0.746,
+        "false_positive_rate": 0.012,
+        "pr_auc": 0.30706754683638887,
+        "precision": 0.5269709543568465,
+        "recall": 0.254,
+        "roc_auc": 0.5356219883040936
+      },
+      "model": "RF",
+      "threshold": 0.9772389531135559,
+      "threshold_source": "artifacts/results/all_models_equal_calibration_v1/per_condition/experiments__multisource__baselines__v1__random__forest.json",
+      "training_condition": "real_only_multisource"
+    },
+    "rnn_ms": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "6bd4b47038bbd5786650c6192041980d1c814097c90a417bfdb8c59ff21a2671"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "baf6347dd7e95292b4be9f54c0b242ba2ecfb79a19b5d6b4992583a4cfd01f87"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/rnn/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "c252cfb978513ff08e344dca6d2d7b1d1978325d61e8f62a099289d451aa5458"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9615666666666667,
+        "confusion_matrix": {
+          "fn": 861,
+          "fp": 292,
+          "tn": 28208,
+          "tp": 639
+        },
+        "f1": 0.5257095845331139,
+        "false_negative_rate": 0.574,
+        "false_positive_rate": 0.01024561403508772,
+        "pr_auc": 0.585296225917666,
+        "precision": 0.686358754027927,
+        "recall": 0.426,
+        "roc_auc": 0.8846353918128655
+      },
+      "model": "RNN",
+      "threshold": 0.99169921875,
+      "threshold_source": "artifacts/results/all_models_equal_calibration_v1/per_condition/experiments__multisource__baselines__v1__rnn.json",
+      "training_condition": "real_only_multisource"
+    },
+    "svm_ms": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/linear_svm/seed_42/model.joblib",
+          "seed": 42,
+          "sha256": "b9466a28359c9ae675bb8199e05bd229f530f1c6475c08e1ac07bb2f11a957a1"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/linear_svm/seed_43/model.joblib",
+          "seed": 43,
+          "sha256": "a54e8c2386198c1d01d38367e614d8e63bcf50642c89cf18f350df0c0242fda8"
+        },
+        {
+          "path": "artifacts/experiments/multisource_baselines_v1/linear_svm/seed_44/model.joblib",
+          "seed": 44,
+          "sha256": "8b8763fea60ccfddfbc277537a93dd195cc1f61cc5c2f6a9d764cd0b5dcdd60c"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9433333333333334,
+        "confusion_matrix": {
+          "fn": 1385,
+          "fp": 315,
+          "tn": 28185,
+          "tp": 115
+        },
+        "f1": 0.11917098445595854,
+        "false_negative_rate": 0.9233333333333333,
+        "false_positive_rate": 0.011052631578947368,
+        "pr_auc": 0.08280708443603463,
+        "precision": 0.26744186046511625,
+        "recall": 0.07666666666666666,
+        "roc_auc": 0.281112514619883
+      },
+      "model": "SVM",
+      "threshold": 1.0469194650650024,
+      "threshold_source": "artifacts/results/all_models_equal_calibration_v1/per_condition/experiments__multisource__baselines__v1__linear__svm.json",
+      "training_condition": "real_only_multisource"
+    }
+  },
+  "dataset": {
+    "legitimate_rows": 28500,
+    "path": "data/external/2026-08-22-final-confirmation-5pct/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 1500,
+    "rows": 30000,
+    "sha256": "79e3b1e60f46c3a63c31ba3f4a1b82afb5e93aa2388f8cffdfbc32befcafa84e"
+  },
+  "device": "cuda",
+  "evaluated_at_utc": "2026-09-02T20:05:36.399753+00:00",
+  "evaluation_name": "All frozen MS classifiers on final 30K low-prevalence confirmation set",
+  "predictions_sha256": "4def4c6467725b578ff9b616e5b21accd312f0c32ed20c184c3020c2e5929f10",
+  "project_version": 3,
+  "protocol": {
+    "ensemble": "mean score across frozen seeds 42, 43 and 44",
+    "models_retrained": false,
+    "report_updated": false,
+    "thresholds": "registered equal-calibration thresholds",
+    "thresholds_changed": false
+  }
+}

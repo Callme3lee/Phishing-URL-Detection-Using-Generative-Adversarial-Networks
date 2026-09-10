@@ -1,0 +1,990 @@
+{
+  "completed_runs": 60,
+  "coverage_fraction": 0.5555555555555556,
+  "optional_confirmation_runs": {
+    "completed": 16,
+    "total": 64
+  },
+  "pending_runs": 48,
+  "project_version": 2,
+  "protocol": "seed 42 screening, then seeds 43/44 confirmation for selected conditions",
+  "runs": [
+    {
+      "artifact": "artifacts/baselines/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/baselines/cnn/seed_43/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/baselines/cnn/seed_44/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/baselines/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/baselines/lstm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/baselines/lstm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/baselines/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/baselines/random_forest/seed_43/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/baselines/random_forest/seed_44/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/baselines/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/baselines/linear_svm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/baselines/linear_svm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 0,
+      "generator": null,
+      "kind": "real_only",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/cnn/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/cnn/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/lstm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/lstm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/random_forest/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/random_forest/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/linear_svm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_10_percent/linear_svm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_20_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_30_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/gumbel_lsgan/generated_40_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "gumbel_lsgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_43/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_44/metrics.json",
+      "complete": true,
+      "dose": 10,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_20_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 20,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_30_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 30,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/cnn/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/cnn/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/cnn/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "cnn",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/lstm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/lstm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/lstm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "lstm",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/random_forest/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/random_forest/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/random_forest/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "random_forest",
+      "seed": 44
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/linear_svm/seed_42/metrics.json",
+      "complete": true,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 42
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/linear_svm/seed_43/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 43
+    },
+    {
+      "artifact": "artifacts/augmentation/seqgan/generated_40_percent/linear_svm/seed_44/metrics.json",
+      "complete": false,
+      "dose": 40,
+      "generator": "seqgan",
+      "kind": "augmented",
+      "model": "linear_svm",
+      "seed": 44
+    }
+  ],
+  "screening_runs": {
+    "completed": 32,
+    "total": 32
+  },
+  "total_runs": 108
+}

@@ -1,0 +1,1970 @@
+[
+  {
+    "checkpoint": "artifacts/baselines/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "683a6517e386994c0d042e63ddbeb69a59fee0b3cf00d2776176f5e6dc4af024",
+    "common_real_only_threshold": 0.62548828125,
+    "common_threshold_metrics": {
+      "accuracy": 0.594,
+      "confusion_matrix": {
+        "fn": 167,
+        "fp": 36,
+        "tn": 214,
+        "tp": 83
+      },
+      "f1": 0.44986449864498645,
+      "false_negative_rate": 0.6679999999999999,
+      "false_positive_rate": 0.144,
+      "pr_auc": 0.6720607756108333,
+      "precision": 0.6974789915966386,
+      "recall": 0.332,
+      "roc_auc": 0.572248
+    },
+    "condition": "real_only",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.594,
+      "confusion_matrix": {
+        "fn": 167,
+        "fp": 36,
+        "tn": 214,
+        "tp": 83
+      },
+      "f1": 0.44986449864498645,
+      "false_negative_rate": 0.6679999999999999,
+      "false_positive_rate": 0.144,
+      "pr_auc": 0.6720607756108333,
+      "precision": 0.6974789915966386,
+      "recall": 0.332,
+      "roc_auc": 0.572248
+    },
+    "native_validation_threshold": 0.62548828125,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "f3856983b611f189f951ebbda0d34a41a8f9cc7c2e0cb73c52598016cf306b05",
+    "common_real_only_threshold": 0.62548828125,
+    "common_threshold_metrics": {
+      "accuracy": 0.644,
+      "confusion_matrix": {
+        "fn": 168,
+        "fp": 10,
+        "tn": 240,
+        "tp": 82
+      },
+      "f1": 0.47953216374269003,
+      "false_negative_rate": 0.6719999999999999,
+      "false_positive_rate": 0.04,
+      "pr_auc": 0.6809931369654844,
+      "precision": 0.8913043478260869,
+      "recall": 0.328,
+      "roc_auc": 0.576328
+    },
+    "condition": "random_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.65,
+      "confusion_matrix": {
+        "fn": 172,
+        "fp": 3,
+        "tn": 247,
+        "tp": 78
+      },
+      "f1": 0.47129909365558914,
+      "false_negative_rate": 0.688,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6809931369654844,
+      "precision": 0.9629629629629629,
+      "recall": 0.312,
+      "roc_auc": 0.576328
+    },
+    "native_validation_threshold": 0.7109375,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "89a17beb95c0b9ca7c0401834d866aaf653b0199620e83e408a444d4259a0d3f",
+    "common_real_only_threshold": 0.62548828125,
+    "common_threshold_metrics": {
+      "accuracy": 0.522,
+      "confusion_matrix": {
+        "fn": 147,
+        "fp": 92,
+        "tn": 158,
+        "tp": 103
+      },
+      "f1": 0.46292134831460674,
+      "false_negative_rate": 0.5880000000000001,
+      "false_positive_rate": 0.368,
+      "pr_auc": 0.6737591976035782,
+      "precision": 0.5282051282051282,
+      "recall": 0.412,
+      "roc_auc": 0.5668559999999999
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.604,
+      "confusion_matrix": {
+        "fn": 160,
+        "fp": 38,
+        "tn": 212,
+        "tp": 90
+      },
+      "f1": 0.47619047619047616,
+      "false_negative_rate": 0.64,
+      "false_positive_rate": 0.152,
+      "pr_auc": 0.6737591976035782,
+      "precision": 0.703125,
+      "recall": 0.36,
+      "roc_auc": 0.5668559999999999
+    },
+    "native_validation_threshold": 0.7666015625,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "eec8ad5ca789b189f2cddb7d4d6b7688d752a6e32ee69293022c3a73b19f975a",
+    "common_real_only_threshold": 0.62548828125,
+    "common_threshold_metrics": {
+      "accuracy": 0.484,
+      "confusion_matrix": {
+        "fn": 135,
+        "fp": 123,
+        "tn": 127,
+        "tp": 115
+      },
+      "f1": 0.4713114754098361,
+      "false_negative_rate": 0.54,
+      "false_positive_rate": 0.492,
+      "pr_auc": 0.6579213396618205,
+      "precision": 0.4831932773109244,
+      "recall": 0.46,
+      "roc_auc": 0.5458480000000001
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.556,
+      "confusion_matrix": {
+        "fn": 161,
+        "fp": 61,
+        "tn": 189,
+        "tp": 89
+      },
+      "f1": 0.445,
+      "false_negative_rate": 0.644,
+      "false_positive_rate": 0.244,
+      "pr_auc": 0.6579213396618205,
+      "precision": 0.5933333333333334,
+      "recall": 0.356,
+      "roc_auc": 0.5458480000000001
+    },
+    "native_validation_threshold": 0.78125,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/baselines/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "5097e44f682b69ac9e34f36ccbd1e1900db7724655fbb09349a6c46a23a4a522",
+    "common_real_only_threshold": 0.60107421875,
+    "common_threshold_metrics": {
+      "accuracy": 0.518,
+      "confusion_matrix": {
+        "fn": 149,
+        "fp": 92,
+        "tn": 158,
+        "tp": 101
+      },
+      "f1": 0.45598194130925507,
+      "false_negative_rate": 0.596,
+      "false_positive_rate": 0.368,
+      "pr_auc": 0.6598115083269576,
+      "precision": 0.5233160621761658,
+      "recall": 0.404,
+      "roc_auc": 0.535512
+    },
+    "condition": "real_only",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.518,
+      "confusion_matrix": {
+        "fn": 149,
+        "fp": 92,
+        "tn": 158,
+        "tp": 101
+      },
+      "f1": 0.45598194130925507,
+      "false_negative_rate": 0.596,
+      "false_positive_rate": 0.368,
+      "pr_auc": 0.6598115083269576,
+      "precision": 0.5233160621761658,
+      "recall": 0.404,
+      "roc_auc": 0.535512
+    },
+    "native_validation_threshold": 0.60107421875,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "ff0b5aa486ca08120469e914552dc73692e2a5b292753f035afae1c06349552d",
+    "common_real_only_threshold": 0.60107421875,
+    "common_threshold_metrics": {
+      "accuracy": 0.55,
+      "confusion_matrix": {
+        "fn": 149,
+        "fp": 76,
+        "tn": 174,
+        "tp": 101
+      },
+      "f1": 0.47306791569086654,
+      "false_negative_rate": 0.596,
+      "false_positive_rate": 0.304,
+      "pr_auc": 0.6807075337933575,
+      "precision": 0.5706214689265536,
+      "recall": 0.404,
+      "roc_auc": 0.576544
+    },
+    "condition": "random_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.584,
+      "confusion_matrix": {
+        "fn": 159,
+        "fp": 49,
+        "tn": 201,
+        "tp": 91
+      },
+      "f1": 0.4666666666666667,
+      "false_negative_rate": 0.636,
+      "false_positive_rate": 0.196,
+      "pr_auc": 0.6807075337933575,
+      "precision": 0.65,
+      "recall": 0.364,
+      "roc_auc": 0.576544
+    },
+    "native_validation_threshold": 0.6884765625,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "08265233b1d2130b8579c5d68a5534ca923c1b1882ca7a9089f33e1cc5c3ab33",
+    "common_real_only_threshold": 0.60107421875,
+    "common_threshold_metrics": {
+      "accuracy": 0.608,
+      "confusion_matrix": {
+        "fn": 162,
+        "fp": 34,
+        "tn": 216,
+        "tp": 88
+      },
+      "f1": 0.4731182795698925,
+      "false_negative_rate": 0.648,
+      "false_positive_rate": 0.136,
+      "pr_auc": 0.6856485384687097,
+      "precision": 0.7213114754098361,
+      "recall": 0.352,
+      "roc_auc": 0.59224
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.632,
+      "confusion_matrix": {
+        "fn": 172,
+        "fp": 12,
+        "tn": 238,
+        "tp": 78
+      },
+      "f1": 0.4588235294117647,
+      "false_negative_rate": 0.688,
+      "false_positive_rate": 0.048,
+      "pr_auc": 0.6856485384687097,
+      "precision": 0.8666666666666667,
+      "recall": 0.312,
+      "roc_auc": 0.59224
+    },
+    "native_validation_threshold": 0.72900390625,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "0e46fab7983f8d4e6211811624588f14c4f1bcb2551018595809e61db1ae024d",
+    "common_real_only_threshold": 0.60107421875,
+    "common_threshold_metrics": {
+      "accuracy": 0.49,
+      "confusion_matrix": {
+        "fn": 97,
+        "fp": 158,
+        "tn": 92,
+        "tp": 153
+      },
+      "f1": 0.5454545454545454,
+      "false_negative_rate": 0.388,
+      "false_positive_rate": 0.632,
+      "pr_auc": 0.6748447414233801,
+      "precision": 0.4919614147909968,
+      "recall": 0.612,
+      "roc_auc": 0.564728
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.52,
+      "confusion_matrix": {
+        "fn": 128,
+        "fp": 112,
+        "tn": 138,
+        "tp": 122
+      },
+      "f1": 0.5041322314049587,
+      "false_negative_rate": 0.512,
+      "false_positive_rate": 0.448,
+      "pr_auc": 0.6748447414233801,
+      "precision": 0.5213675213675214,
+      "recall": 0.488,
+      "roc_auc": 0.564728
+    },
+    "native_validation_threshold": 0.79833984375,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/baselines/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "909e25f9cacbeeaee30205123bc2e75bc523b98f68ba2c4fae4c50db3beed572",
+    "common_real_only_threshold": 0.650390625,
+    "common_threshold_metrics": {
+      "accuracy": 0.652,
+      "confusion_matrix": {
+        "fn": 171,
+        "fp": 3,
+        "tn": 247,
+        "tp": 79
+      },
+      "f1": 0.4759036144578313,
+      "false_negative_rate": 0.6839999999999999,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6875739436745514,
+      "precision": 0.9634146341463414,
+      "recall": 0.316,
+      "roc_auc": 0.5809279999999999
+    },
+    "condition": "real_only",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.652,
+      "confusion_matrix": {
+        "fn": 171,
+        "fp": 3,
+        "tn": 247,
+        "tp": 79
+      },
+      "f1": 0.4759036144578313,
+      "false_negative_rate": 0.6839999999999999,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6875739436745514,
+      "precision": 0.9634146341463414,
+      "recall": 0.316,
+      "roc_auc": 0.5809279999999999
+    },
+    "native_validation_threshold": 0.650390625,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "8dbce93a180d5e7331dc877b8de2422877faea10a5b49a7c0e4ab1970e9f967e",
+    "common_real_only_threshold": 0.650390625,
+    "common_threshold_metrics": {
+      "accuracy": 0.63,
+      "confusion_matrix": {
+        "fn": 163,
+        "fp": 22,
+        "tn": 228,
+        "tp": 87
+      },
+      "f1": 0.48467966573816157,
+      "false_negative_rate": 0.652,
+      "false_positive_rate": 0.088,
+      "pr_auc": 0.685449451685376,
+      "precision": 0.7981651376146789,
+      "recall": 0.348,
+      "roc_auc": 0.576296
+    },
+    "condition": "random_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.612,
+      "confusion_matrix": {
+        "fn": 154,
+        "fp": 40,
+        "tn": 210,
+        "tp": 96
+      },
+      "f1": 0.49740932642487046,
+      "false_negative_rate": 0.616,
+      "false_positive_rate": 0.16,
+      "pr_auc": 0.685449451685376,
+      "precision": 0.7058823529411765,
+      "recall": 0.384,
+      "roc_auc": 0.576296
+    },
+    "native_validation_threshold": 0.57861328125,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "399c7fab30599611294d8030ab107adb1b63397fe75deff093ff68cf3abe1990",
+    "common_real_only_threshold": 0.650390625,
+    "common_threshold_metrics": {
+      "accuracy": 0.646,
+      "confusion_matrix": {
+        "fn": 174,
+        "fp": 3,
+        "tn": 247,
+        "tp": 76
+      },
+      "f1": 0.46200607902735563,
+      "false_negative_rate": 0.696,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6882401940195636,
+      "precision": 0.9620253164556962,
+      "recall": 0.304,
+      "roc_auc": 0.581952
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.646,
+      "confusion_matrix": {
+        "fn": 174,
+        "fp": 3,
+        "tn": 247,
+        "tp": 76
+      },
+      "f1": 0.46200607902735563,
+      "false_negative_rate": 0.696,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6882401940195636,
+      "precision": 0.9620253164556962,
+      "recall": 0.304,
+      "roc_auc": 0.581952
+    },
+    "native_validation_threshold": 0.66357421875,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "6ba43b5daf4fd7167117fc4525c35d4dc9639aa98d6f053e4856b3d4c851371d",
+    "common_real_only_threshold": 0.650390625,
+    "common_threshold_metrics": {
+      "accuracy": 0.65,
+      "confusion_matrix": {
+        "fn": 172,
+        "fp": 3,
+        "tn": 247,
+        "tp": 78
+      },
+      "f1": 0.47129909365558914,
+      "false_negative_rate": 0.688,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.6835350797700704,
+      "precision": 0.9629629629629629,
+      "recall": 0.312,
+      "roc_auc": 0.576568
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "cnn",
+    "native_metrics": {
+      "accuracy": 0.64,
+      "confusion_matrix": {
+        "fn": 178,
+        "fp": 2,
+        "tn": 248,
+        "tp": 72
+      },
+      "f1": 0.4444444444444444,
+      "false_negative_rate": 0.712,
+      "false_positive_rate": 0.008,
+      "pr_auc": 0.6835350797700704,
+      "precision": 0.972972972972973,
+      "recall": 0.288,
+      "roc_auc": 0.576568
+    },
+    "native_validation_threshold": 0.736328125,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/baselines/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "de0ef069b17507a5bf5563ede28f8a3a69b789993d651a1fe6ce6b233555549a",
+    "common_real_only_threshold": 0.67138671875,
+    "common_threshold_metrics": {
+      "accuracy": 0.512,
+      "confusion_matrix": {
+        "fn": 144,
+        "fp": 100,
+        "tn": 150,
+        "tp": 106
+      },
+      "f1": 0.4649122807017544,
+      "false_negative_rate": 0.5760000000000001,
+      "false_positive_rate": 0.4,
+      "pr_auc": 0.664419832146284,
+      "precision": 0.5145631067961165,
+      "recall": 0.424,
+      "roc_auc": 0.545736
+    },
+    "condition": "real_only",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.512,
+      "confusion_matrix": {
+        "fn": 144,
+        "fp": 100,
+        "tn": 150,
+        "tp": 106
+      },
+      "f1": 0.4649122807017544,
+      "false_negative_rate": 0.5760000000000001,
+      "false_positive_rate": 0.4,
+      "pr_auc": 0.664419832146284,
+      "precision": 0.5145631067961165,
+      "recall": 0.424,
+      "roc_auc": 0.545736
+    },
+    "native_validation_threshold": 0.67138671875,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "e9b7cda7f97a2e55fae24c0c27b560b1c39aa3de88e0892182143f1063895b25",
+    "common_real_only_threshold": 0.67138671875,
+    "common_threshold_metrics": {
+      "accuracy": 0.478,
+      "confusion_matrix": {
+        "fn": 103,
+        "fp": 158,
+        "tn": 92,
+        "tp": 147
+      },
+      "f1": 0.5297297297297298,
+      "false_negative_rate": 0.41200000000000003,
+      "false_positive_rate": 0.632,
+      "pr_auc": 0.6418145196924584,
+      "precision": 0.4819672131147541,
+      "recall": 0.588,
+      "roc_auc": 0.51488
+    },
+    "condition": "random_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.488,
+      "confusion_matrix": {
+        "fn": 131,
+        "fp": 125,
+        "tn": 125,
+        "tp": 119
+      },
+      "f1": 0.4817813765182186,
+      "false_negative_rate": 0.524,
+      "false_positive_rate": 0.5,
+      "pr_auc": 0.6418145196924584,
+      "precision": 0.48770491803278687,
+      "recall": 0.476,
+      "roc_auc": 0.51488
+    },
+    "native_validation_threshold": 0.7841796875,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "1cac103f29c7597309ec3b7fef113cc3a1a083157fc77277f9b5e0a597fbe6da",
+    "common_real_only_threshold": 0.67138671875,
+    "common_threshold_metrics": {
+      "accuracy": 0.446,
+      "confusion_matrix": {
+        "fn": 88,
+        "fp": 189,
+        "tn": 61,
+        "tp": 162
+      },
+      "f1": 0.5391014975041597,
+      "false_negative_rate": 0.352,
+      "false_positive_rate": 0.756,
+      "pr_auc": 0.6477708271148191,
+      "precision": 0.46153846153846156,
+      "recall": 0.648,
+      "roc_auc": 0.513392
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.47,
+      "confusion_matrix": {
+        "fn": 126,
+        "fp": 139,
+        "tn": 111,
+        "tp": 124
+      },
+      "f1": 0.4834307992202729,
+      "false_negative_rate": 0.504,
+      "false_positive_rate": 0.556,
+      "pr_auc": 0.6477708271148191,
+      "precision": 0.4714828897338403,
+      "recall": 0.496,
+      "roc_auc": 0.513392
+    },
+    "native_validation_threshold": 0.81396484375,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "3762635b14a96ed79c7f3a5ceac8a9374eac14e95735ffc9895c8239f4291dc2",
+    "common_real_only_threshold": 0.67138671875,
+    "common_threshold_metrics": {
+      "accuracy": 0.57,
+      "confusion_matrix": {
+        "fn": 164,
+        "fp": 51,
+        "tn": 199,
+        "tp": 86
+      },
+      "f1": 0.4444444444444444,
+      "false_negative_rate": 0.656,
+      "false_positive_rate": 0.204,
+      "pr_auc": 0.6272871634306714,
+      "precision": 0.6277372262773723,
+      "recall": 0.344,
+      "roc_auc": 0.545576
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.57,
+      "confusion_matrix": {
+        "fn": 195,
+        "fp": 20,
+        "tn": 230,
+        "tp": 55
+      },
+      "f1": 0.3384615384615385,
+      "false_negative_rate": 0.78,
+      "false_positive_rate": 0.08,
+      "pr_auc": 0.6272871634306714,
+      "precision": 0.7333333333333333,
+      "recall": 0.22,
+      "roc_auc": 0.545576
+    },
+    "native_validation_threshold": 0.8154296875,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/baselines/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "9ab7db369c32822634a286c34c4c5476bc32f7a2c50596540e62279e3646abe3",
+    "common_real_only_threshold": 0.693359375,
+    "common_threshold_metrics": {
+      "accuracy": 0.53,
+      "confusion_matrix": {
+        "fn": 121,
+        "fp": 114,
+        "tn": 136,
+        "tp": 129
+      },
+      "f1": 0.5233265720081136,
+      "false_negative_rate": 0.484,
+      "false_positive_rate": 0.456,
+      "pr_auc": 0.6147037706818553,
+      "precision": 0.5308641975308642,
+      "recall": 0.516,
+      "roc_auc": 0.57036
+    },
+    "condition": "real_only",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.53,
+      "confusion_matrix": {
+        "fn": 121,
+        "fp": 114,
+        "tn": 136,
+        "tp": 129
+      },
+      "f1": 0.5233265720081136,
+      "false_negative_rate": 0.484,
+      "false_positive_rate": 0.456,
+      "pr_auc": 0.6147037706818553,
+      "precision": 0.5308641975308642,
+      "recall": 0.516,
+      "roc_auc": 0.57036
+    },
+    "native_validation_threshold": 0.693359375,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "0ec95faf3dc6c2ec8ef1f6cc15a6df42bc695319f4e5b470bcd1aa9ffce1271e",
+    "common_real_only_threshold": 0.693359375,
+    "common_threshold_metrics": {
+      "accuracy": 0.474,
+      "confusion_matrix": {
+        "fn": 46,
+        "fp": 217,
+        "tn": 33,
+        "tp": 204
+      },
+      "f1": 0.6080476900149031,
+      "false_negative_rate": 0.18400000000000005,
+      "false_positive_rate": 0.868,
+      "pr_auc": 0.6260826083230684,
+      "precision": 0.4845605700712589,
+      "recall": 0.816,
+      "roc_auc": 0.5520240000000001
+    },
+    "condition": "random_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.48,
+      "confusion_matrix": {
+        "fn": 48,
+        "fp": 212,
+        "tn": 38,
+        "tp": 202
+      },
+      "f1": 0.608433734939759,
+      "false_negative_rate": 0.19199999999999995,
+      "false_positive_rate": 0.848,
+      "pr_auc": 0.6260826083230684,
+      "precision": 0.48792270531400966,
+      "recall": 0.808,
+      "roc_auc": 0.5520240000000001
+    },
+    "native_validation_threshold": 0.71533203125,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "90737bd3fe631a27f6402dce1bcb1678eca46b7a6f67af17e550ca10021b2981",
+    "common_real_only_threshold": 0.693359375,
+    "common_threshold_metrics": {
+      "accuracy": 0.438,
+      "confusion_matrix": {
+        "fn": 107,
+        "fp": 174,
+        "tn": 76,
+        "tp": 143
+      },
+      "f1": 0.5044091710758377,
+      "false_negative_rate": 0.42800000000000005,
+      "false_positive_rate": 0.696,
+      "pr_auc": 0.5814795809947585,
+      "precision": 0.45110410094637227,
+      "recall": 0.572,
+      "roc_auc": 0.446456
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.426,
+      "confusion_matrix": {
+        "fn": 120,
+        "fp": 167,
+        "tn": 83,
+        "tp": 130
+      },
+      "f1": 0.4753199268738574,
+      "false_negative_rate": 0.48,
+      "false_positive_rate": 0.668,
+      "pr_auc": 0.5814795809947585,
+      "precision": 0.4377104377104377,
+      "recall": 0.52,
+      "roc_auc": 0.446456
+    },
+    "native_validation_threshold": 0.748046875,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "9d834d2f1807fd643ee39f1c2cc4b44028579c8b723e3d6e79574d6041b1210b",
+    "common_real_only_threshold": 0.693359375,
+    "common_threshold_metrics": {
+      "accuracy": 0.546,
+      "confusion_matrix": {
+        "fn": 123,
+        "fp": 104,
+        "tn": 146,
+        "tp": 127
+      },
+      "f1": 0.5280665280665281,
+      "false_negative_rate": 0.492,
+      "false_positive_rate": 0.416,
+      "pr_auc": 0.6525311087634953,
+      "precision": 0.5497835497835498,
+      "recall": 0.508,
+      "roc_auc": 0.555088
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.588,
+      "confusion_matrix": {
+        "fn": 153,
+        "fp": 53,
+        "tn": 197,
+        "tp": 97
+      },
+      "f1": 0.485,
+      "false_negative_rate": 0.612,
+      "false_positive_rate": 0.212,
+      "pr_auc": 0.6525311087634953,
+      "precision": 0.6466666666666666,
+      "recall": 0.388,
+      "roc_auc": 0.555088
+    },
+    "native_validation_threshold": 0.80712890625,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/baselines/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "8b772ab70643e082c0a2f4055c4609deaf7b9845fc4b4192bf6921f943def836",
+    "common_real_only_threshold": 0.7978515625,
+    "common_threshold_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 132,
+        "fp": 146,
+        "tn": 104,
+        "tp": 118
+      },
+      "f1": 0.4591439688715953,
+      "false_negative_rate": 0.528,
+      "false_positive_rate": 0.584,
+      "pr_auc": 0.6491054418019087,
+      "precision": 0.44696969696969696,
+      "recall": 0.472,
+      "roc_auc": 0.4912639999999999
+    },
+    "condition": "real_only",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 132,
+        "fp": 146,
+        "tn": 104,
+        "tp": 118
+      },
+      "f1": 0.4591439688715953,
+      "false_negative_rate": 0.528,
+      "false_positive_rate": 0.584,
+      "pr_auc": 0.6491054418019087,
+      "precision": 0.44696969696969696,
+      "recall": 0.472,
+      "roc_auc": 0.4912639999999999
+    },
+    "native_validation_threshold": 0.7978515625,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "c154b82fd74174e8b95d0d1e94419eff8dc044413ed8e987a1464f1476b18569",
+    "common_real_only_threshold": 0.7978515625,
+    "common_threshold_metrics": {
+      "accuracy": 0.438,
+      "confusion_matrix": {
+        "fn": 117,
+        "fp": 164,
+        "tn": 86,
+        "tp": 133
+      },
+      "f1": 0.48628884826325414,
+      "false_negative_rate": 0.46799999999999997,
+      "false_positive_rate": 0.656,
+      "pr_auc": 0.5570784309478123,
+      "precision": 0.4478114478114478,
+      "recall": 0.532,
+      "roc_auc": 0.4635760000000001
+    },
+    "condition": "random_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.44,
+      "confusion_matrix": {
+        "fn": 94,
+        "fp": 186,
+        "tn": 64,
+        "tp": 156
+      },
+      "f1": 0.527027027027027,
+      "false_negative_rate": 0.376,
+      "false_positive_rate": 0.744,
+      "pr_auc": 0.5570784309478123,
+      "precision": 0.45614035087719296,
+      "recall": 0.624,
+      "roc_auc": 0.4635760000000001
+    },
+    "native_validation_threshold": 0.67724609375,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "fd55f5c782f4219c3a9b5eb921fe0204627ad7aea6c0983ca46ee60417c49942",
+    "common_real_only_threshold": 0.7978515625,
+    "common_threshold_metrics": {
+      "accuracy": 0.466,
+      "confusion_matrix": {
+        "fn": 106,
+        "fp": 161,
+        "tn": 89,
+        "tp": 144
+      },
+      "f1": 0.518918918918919,
+      "false_negative_rate": 0.42400000000000004,
+      "false_positive_rate": 0.644,
+      "pr_auc": 0.6682641874320898,
+      "precision": 0.4721311475409836,
+      "recall": 0.576,
+      "roc_auc": 0.5509999999999999
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.478,
+      "confusion_matrix": {
+        "fn": 110,
+        "fp": 151,
+        "tn": 99,
+        "tp": 140
+      },
+      "f1": 0.5175600739371534,
+      "false_negative_rate": 0.43999999999999995,
+      "false_positive_rate": 0.604,
+      "pr_auc": 0.6682641874320898,
+      "precision": 0.48109965635738833,
+      "recall": 0.56,
+      "roc_auc": 0.5509999999999999
+    },
+    "native_validation_threshold": 0.81494140625,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "bb30839587713d08fa6fb0ef8b386c2f4b8e4411eed63d4f1ec458ff5c33fa31",
+    "common_real_only_threshold": 0.7978515625,
+    "common_threshold_metrics": {
+      "accuracy": 0.546,
+      "confusion_matrix": {
+        "fn": 195,
+        "fp": 32,
+        "tn": 218,
+        "tp": 55
+      },
+      "f1": 0.3264094955489614,
+      "false_negative_rate": 0.78,
+      "false_positive_rate": 0.128,
+      "pr_auc": 0.60006381224499,
+      "precision": 0.632183908045977,
+      "recall": 0.22,
+      "roc_auc": 0.5429440000000001
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "lstm",
+    "native_metrics": {
+      "accuracy": 0.55,
+      "confusion_matrix": {
+        "fn": 210,
+        "fp": 15,
+        "tn": 235,
+        "tp": 40
+      },
+      "f1": 0.26229508196721313,
+      "false_negative_rate": 0.84,
+      "false_positive_rate": 0.06,
+      "pr_auc": 0.60006381224499,
+      "precision": 0.7272727272727273,
+      "recall": 0.16,
+      "roc_auc": 0.5429440000000001
+    },
+    "native_validation_threshold": 0.87646484375,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/baselines/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "8dfae79202ddd29dd1ec46e3125961e5b286ea29c2da6670fb690f88ecaf6f0c",
+    "common_real_only_threshold": 0.6213048240347264,
+    "common_threshold_metrics": {
+      "accuracy": 0.538,
+      "confusion_matrix": {
+        "fn": 231,
+        "fp": 0,
+        "tn": 250,
+        "tp": 19
+      },
+      "f1": 0.1412639405204461,
+      "false_negative_rate": 0.924,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.5905348530694656,
+      "precision": 1.0,
+      "recall": 0.076,
+      "roc_auc": 0.418816
+    },
+    "condition": "real_only",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.538,
+      "confusion_matrix": {
+        "fn": 231,
+        "fp": 0,
+        "tn": 250,
+        "tp": 19
+      },
+      "f1": 0.1412639405204461,
+      "false_negative_rate": 0.924,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.5905348530694656,
+      "precision": 1.0,
+      "recall": 0.076,
+      "roc_auc": 0.418816
+    },
+    "native_validation_threshold": 0.6213048240347264,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "1cc94a493f134c2473175b152c75f298cbc16e9ba07beede24b7ab40942e03c0",
+    "common_real_only_threshold": 0.6213048240347264,
+    "common_threshold_metrics": {
+      "accuracy": 0.55,
+      "confusion_matrix": {
+        "fn": 219,
+        "fp": 6,
+        "tn": 244,
+        "tp": 31
+      },
+      "f1": 0.21602787456445993,
+      "false_negative_rate": 0.876,
+      "false_positive_rate": 0.024,
+      "pr_auc": 0.5613290972521771,
+      "precision": 0.8378378378378378,
+      "recall": 0.124,
+      "roc_auc": 0.40260799999999997
+    },
+    "condition": "random_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.53,
+      "confusion_matrix": {
+        "fn": 234,
+        "fp": 1,
+        "tn": 249,
+        "tp": 16
+      },
+      "f1": 0.1198501872659176,
+      "false_negative_rate": 0.9359999999999999,
+      "false_positive_rate": 0.004,
+      "pr_auc": 0.5613290972521771,
+      "precision": 0.9411764705882353,
+      "recall": 0.064,
+      "roc_auc": 0.40260799999999997
+    },
+    "native_validation_threshold": 0.6667094339688584,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "89952d3449534596263b0241c11d791c00cd510cba2a42adb60a0377fc03ace4",
+    "common_real_only_threshold": 0.6213048240347264,
+    "common_threshold_metrics": {
+      "accuracy": 0.532,
+      "confusion_matrix": {
+        "fn": 220,
+        "fp": 14,
+        "tn": 236,
+        "tp": 30
+      },
+      "f1": 0.20408163265306123,
+      "false_negative_rate": 0.88,
+      "false_positive_rate": 0.056,
+      "pr_auc": 0.5195070666174955,
+      "precision": 0.6818181818181818,
+      "recall": 0.12,
+      "roc_auc": 0.37350400000000006
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.522,
+      "confusion_matrix": {
+        "fn": 239,
+        "fp": 0,
+        "tn": 250,
+        "tp": 11
+      },
+      "f1": 0.0842911877394636,
+      "false_negative_rate": 0.956,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.5195070666174955,
+      "precision": 1.0,
+      "recall": 0.044,
+      "roc_auc": 0.37350400000000006
+    },
+    "native_validation_threshold": 0.6954001932085875,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "d67d412ccde48c842722e0d7579672efc5fd695ff1c69dfa3ebe503576981b06",
+    "common_real_only_threshold": 0.6213048240347264,
+    "common_threshold_metrics": {
+      "accuracy": 0.41,
+      "confusion_matrix": {
+        "fn": 208,
+        "fp": 87,
+        "tn": 163,
+        "tp": 42
+      },
+      "f1": 0.22163588390501318,
+      "false_negative_rate": 0.832,
+      "false_positive_rate": 0.348,
+      "pr_auc": 0.42437608736880184,
+      "precision": 0.32558139534883723,
+      "recall": 0.168,
+      "roc_auc": 0.288848
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.504,
+      "confusion_matrix": {
+        "fn": 248,
+        "fp": 0,
+        "tn": 250,
+        "tp": 2
+      },
+      "f1": 0.015873015873015872,
+      "false_negative_rate": 0.992,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.42437608736880184,
+      "precision": 1.0,
+      "recall": 0.008,
+      "roc_auc": 0.288848
+    },
+    "native_validation_threshold": 0.7853433850915886,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/baselines/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "b86e1a75eebf4d5fa68088e18271f1842443c73238b83cae9257b4c4a435258f",
+    "common_real_only_threshold": 0.6199675660188906,
+    "common_threshold_metrics": {
+      "accuracy": 0.544,
+      "confusion_matrix": {
+        "fn": 228,
+        "fp": 0,
+        "tn": 250,
+        "tp": 22
+      },
+      "f1": 0.16176470588235295,
+      "false_negative_rate": 0.912,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.6076164303576187,
+      "precision": 1.0,
+      "recall": 0.088,
+      "roc_auc": 0.429088
+    },
+    "condition": "real_only",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.544,
+      "confusion_matrix": {
+        "fn": 228,
+        "fp": 0,
+        "tn": 250,
+        "tp": 22
+      },
+      "f1": 0.16176470588235295,
+      "false_negative_rate": 0.912,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.6076164303576187,
+      "precision": 1.0,
+      "recall": 0.088,
+      "roc_auc": 0.429088
+    },
+    "native_validation_threshold": 0.6199675660188906,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "faac235a60ad8413596b61b46dc100620bdf9310466e8f0bb13eb7384145f375",
+    "common_real_only_threshold": 0.6199675660188906,
+    "common_threshold_metrics": {
+      "accuracy": 0.54,
+      "confusion_matrix": {
+        "fn": 222,
+        "fp": 8,
+        "tn": 242,
+        "tp": 28
+      },
+      "f1": 0.1958041958041958,
+      "false_negative_rate": 0.888,
+      "false_positive_rate": 0.032,
+      "pr_auc": 0.55074947092254,
+      "precision": 0.7777777777777778,
+      "recall": 0.112,
+      "roc_auc": 0.40289600000000003
+    },
+    "condition": "random_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.532,
+      "confusion_matrix": {
+        "fn": 234,
+        "fp": 0,
+        "tn": 250,
+        "tp": 16
+      },
+      "f1": 0.12030075187969924,
+      "false_negative_rate": 0.9359999999999999,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.55074947092254,
+      "precision": 1.0,
+      "recall": 0.064,
+      "roc_auc": 0.40289600000000003
+    },
+    "native_validation_threshold": 0.664859214463354,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "83f385b86adfbaa93e5ae92666ab6071dba6b8a8f76b0167f612ce8ed6e3c538",
+    "common_real_only_threshold": 0.6199675660188906,
+    "common_threshold_metrics": {
+      "accuracy": 0.548,
+      "confusion_matrix": {
+        "fn": 217,
+        "fp": 9,
+        "tn": 241,
+        "tp": 33
+      },
+      "f1": 0.22602739726027396,
+      "false_negative_rate": 0.868,
+      "false_positive_rate": 0.036,
+      "pr_auc": 0.5465010294713724,
+      "precision": 0.7857142857142857,
+      "recall": 0.132,
+      "roc_auc": 0.3997600000000001
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.514,
+      "confusion_matrix": {
+        "fn": 243,
+        "fp": 0,
+        "tn": 250,
+        "tp": 7
+      },
+      "f1": 0.054474708171206226,
+      "false_negative_rate": 0.972,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.5465010294713724,
+      "precision": 1.0,
+      "recall": 0.028,
+      "roc_auc": 0.3997600000000001
+    },
+    "native_validation_threshold": 0.6953016323478736,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "3402a9a29107a1aaf84ff3378359055ac91f87613e1a4d4d789bddac68234fbf",
+    "common_real_only_threshold": 0.6199675660188906,
+    "common_threshold_metrics": {
+      "accuracy": 0.51,
+      "confusion_matrix": {
+        "fn": 214,
+        "fp": 31,
+        "tn": 219,
+        "tp": 36
+      },
+      "f1": 0.22712933753943218,
+      "false_negative_rate": 0.856,
+      "false_positive_rate": 0.124,
+      "pr_auc": 0.4867194466068102,
+      "precision": 0.5373134328358209,
+      "recall": 0.144,
+      "roc_auc": 0.33736
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.506,
+      "confusion_matrix": {
+        "fn": 247,
+        "fp": 0,
+        "tn": 250,
+        "tp": 3
+      },
+      "f1": 0.023715415019762844,
+      "false_negative_rate": 0.988,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.4867194466068102,
+      "precision": 1.0,
+      "recall": 0.012,
+      "roc_auc": 0.33736
+    },
+    "native_validation_threshold": 0.7866208628619444,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/baselines/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "3c110a9f1011e68317cfd479f11b575f82c47c17d55b65ed1be8dfe78dc31614",
+    "common_real_only_threshold": 0.6201451202916628,
+    "common_threshold_metrics": {
+      "accuracy": 0.54,
+      "confusion_matrix": {
+        "fn": 228,
+        "fp": 2,
+        "tn": 248,
+        "tp": 22
+      },
+      "f1": 0.16058394160583941,
+      "false_negative_rate": 0.912,
+      "false_positive_rate": 0.008,
+      "pr_auc": 0.5872503137486921,
+      "precision": 0.9166666666666666,
+      "recall": 0.088,
+      "roc_auc": 0.427088
+    },
+    "condition": "real_only",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.54,
+      "confusion_matrix": {
+        "fn": 228,
+        "fp": 2,
+        "tn": 248,
+        "tp": 22
+      },
+      "f1": 0.16058394160583941,
+      "false_negative_rate": 0.912,
+      "false_positive_rate": 0.008,
+      "pr_auc": 0.5872503137486921,
+      "precision": 0.9166666666666666,
+      "recall": 0.088,
+      "roc_auc": 0.427088
+    },
+    "native_validation_threshold": 0.6201451202916628,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "eafe1300d44fe935074287ddf1d2da7671f73f066ac6eec97199aa8f7ea17464",
+    "common_real_only_threshold": 0.6201451202916628,
+    "common_threshold_metrics": {
+      "accuracy": 0.544,
+      "confusion_matrix": {
+        "fn": 217,
+        "fp": 11,
+        "tn": 239,
+        "tp": 33
+      },
+      "f1": 0.22448979591836735,
+      "false_negative_rate": 0.868,
+      "false_positive_rate": 0.044,
+      "pr_auc": 0.5393261011066508,
+      "precision": 0.75,
+      "recall": 0.132,
+      "roc_auc": 0.387344
+    },
+    "condition": "random_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.532,
+      "confusion_matrix": {
+        "fn": 230,
+        "fp": 4,
+        "tn": 246,
+        "tp": 20
+      },
+      "f1": 0.145985401459854,
+      "false_negative_rate": 0.92,
+      "false_positive_rate": 0.016,
+      "pr_auc": 0.5393261011066508,
+      "precision": 0.8333333333333334,
+      "recall": 0.08,
+      "roc_auc": 0.387344
+    },
+    "native_validation_threshold": 0.6653740471927662,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "8800d7aefd720ce88b4cf53638de4959f8814c48519ef7d334d46757b9f9cb69",
+    "common_real_only_threshold": 0.6201451202916628,
+    "common_threshold_metrics": {
+      "accuracy": 0.548,
+      "confusion_matrix": {
+        "fn": 223,
+        "fp": 3,
+        "tn": 247,
+        "tp": 27
+      },
+      "f1": 0.19285714285714287,
+      "false_negative_rate": 0.892,
+      "false_positive_rate": 0.012,
+      "pr_auc": 0.5662013505943198,
+      "precision": 0.9,
+      "recall": 0.108,
+      "roc_auc": 0.403408
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.518,
+      "confusion_matrix": {
+        "fn": 241,
+        "fp": 0,
+        "tn": 250,
+        "tp": 9
+      },
+      "f1": 0.0694980694980695,
+      "false_negative_rate": 0.964,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.5662013505943198,
+      "precision": 1.0,
+      "recall": 0.036,
+      "roc_auc": 0.403408
+    },
+    "native_validation_threshold": 0.6940969473513047,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "7e159db24c51ea1b1c2e41c68a28d7f52c16671e7ba46b5f8b86b08433c7a225",
+    "common_real_only_threshold": 0.6201451202916628,
+    "common_threshold_metrics": {
+      "accuracy": 0.452,
+      "confusion_matrix": {
+        "fn": 212,
+        "fp": 62,
+        "tn": 188,
+        "tp": 38
+      },
+      "f1": 0.21714285714285714,
+      "false_negative_rate": 0.848,
+      "false_positive_rate": 0.248,
+      "pr_auc": 0.45774915147119366,
+      "precision": 0.38,
+      "recall": 0.152,
+      "roc_auc": 0.315504
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "random_forest",
+    "native_metrics": {
+      "accuracy": 0.508,
+      "confusion_matrix": {
+        "fn": 246,
+        "fp": 0,
+        "tn": 250,
+        "tp": 4
+      },
+      "f1": 0.031496062992125984,
+      "false_negative_rate": 0.984,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.45774915147119366,
+      "precision": 1.0,
+      "recall": 0.016,
+      "roc_auc": 0.315504
+    },
+    "native_validation_threshold": 0.7861567360325635,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/baselines/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "83915a5e9848444fbd5c2ddfca9e0cfc418508dbb88ed00fdd5d0d61d9290556",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "condition": "real_only",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "native_validation_threshold": 0.5389078927166804,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "283303bb788508da91806e6d82985d829cf3b286d72c67a2f5acb071542e15af",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.458,
+      "confusion_matrix": {
+        "fn": 21,
+        "fp": 250,
+        "tn": 0,
+        "tp": 229
+      },
+      "f1": 0.6282578875171467,
+      "false_negative_rate": 0.08399999999999996,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4780793319415449,
+      "recall": 0.916,
+      "roc_auc": 0.350688
+    },
+    "condition": "random_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.456,
+      "confusion_matrix": {
+        "fn": 22,
+        "fp": 250,
+        "tn": 0,
+        "tp": 228
+      },
+      "f1": 0.6263736263736264,
+      "false_negative_rate": 0.08799999999999997,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4769874476987448,
+      "recall": 0.912,
+      "roc_auc": 0.350688
+    },
+    "native_validation_threshold": 0.5495522234463799,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "15facbc55024b32e1573c378f16093035b5a83e1d401579efb997719c7594463",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "native_validation_threshold": 0.5777934839817133,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "e504d760ec78689bf3bb294c99ead8c53918f1518851fbc8b418ce985f414191",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.44,
+      "confusion_matrix": {
+        "fn": 30,
+        "fp": 250,
+        "tn": 0,
+        "tp": 220
+      },
+      "f1": 0.6111111111111112,
+      "false_negative_rate": 0.12,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46808510638297873,
+      "recall": 0.88,
+      "roc_auc": 0.302944
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.434,
+      "confusion_matrix": {
+        "fn": 33,
+        "fp": 250,
+        "tn": 0,
+        "tp": 217
+      },
+      "f1": 0.6052998605299861,
+      "false_negative_rate": 0.132,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46466809421841543,
+      "recall": 0.868,
+      "roc_auc": 0.302944
+    },
+    "native_validation_threshold": 0.621391098025095,
+    "seed": 42
+  },
+  {
+    "checkpoint": "artifacts/baselines/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "feb68d1f66ff1d233ba49d4be338768732ad044c290b17f9d8ac6bd5dc6b7de4",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "condition": "real_only",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "native_validation_threshold": 0.5389078927166804,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "6895d6eaa316dc71759eb6e8ddfa7c916367e3c96cd6a12d827d6ed5a68d1922",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.458,
+      "confusion_matrix": {
+        "fn": 21,
+        "fp": 250,
+        "tn": 0,
+        "tp": 229
+      },
+      "f1": 0.6282578875171467,
+      "false_negative_rate": 0.08399999999999996,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4780793319415449,
+      "recall": 0.916,
+      "roc_auc": 0.350688
+    },
+    "condition": "random_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.456,
+      "confusion_matrix": {
+        "fn": 22,
+        "fp": 250,
+        "tn": 0,
+        "tp": 228
+      },
+      "f1": 0.6263736263736264,
+      "false_negative_rate": 0.08799999999999997,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4769874476987448,
+      "recall": 0.912,
+      "roc_auc": 0.350688
+    },
+    "native_validation_threshold": 0.5495522234463799,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "ef3e78bb1c30c77e9dd403758af92508acb0a7cfc51f5eef30bef9fea7f50c2a",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "native_validation_threshold": 0.5777934839817133,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "d6055cf33817fa5993c380664bbe0c2433960a2d064aaf7b682086c684c38084",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.44,
+      "confusion_matrix": {
+        "fn": 30,
+        "fp": 250,
+        "tn": 0,
+        "tp": 220
+      },
+      "f1": 0.6111111111111112,
+      "false_negative_rate": 0.12,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46808510638297873,
+      "recall": 0.88,
+      "roc_auc": 0.302944
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.434,
+      "confusion_matrix": {
+        "fn": 33,
+        "fp": 250,
+        "tn": 0,
+        "tp": 217
+      },
+      "f1": 0.6052998605299861,
+      "false_negative_rate": 0.132,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46466809421841543,
+      "recall": 0.868,
+      "roc_auc": 0.302944
+    },
+    "native_validation_threshold": 0.621391098025095,
+    "seed": 43
+  },
+  {
+    "checkpoint": "artifacts/baselines/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "3f177d1fa4403ccd8b6f0d5f94abb06d32e05f553ea039b6103920e251f08fb3",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "condition": "real_only",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.444,
+      "confusion_matrix": {
+        "fn": 28,
+        "fp": 250,
+        "tn": 0,
+        "tp": 222
+      },
+      "f1": 0.6149584487534626,
+      "false_negative_rate": 0.11199999999999999,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5424830570664734,
+      "precision": 0.4703389830508475,
+      "recall": 0.888,
+      "roc_auc": 0.37025600000000003
+    },
+    "native_validation_threshold": 0.5389078927166804,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/generated_10_percent/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "3e095e8bede2b05056b19ed6e354c27469ca1970ffd01b7e7506cd4dc2cbb447",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.458,
+      "confusion_matrix": {
+        "fn": 21,
+        "fp": 250,
+        "tn": 0,
+        "tp": 229
+      },
+      "f1": 0.6282578875171467,
+      "false_negative_rate": 0.08399999999999996,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4780793319415449,
+      "recall": 0.916,
+      "roc_auc": 0.350688
+    },
+    "condition": "random_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.456,
+      "confusion_matrix": {
+        "fn": 22,
+        "fp": 250,
+        "tn": 0,
+        "tp": 228
+      },
+      "f1": 0.6263736263736264,
+      "false_negative_rate": 0.08799999999999997,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5154808431491857,
+      "precision": 0.4769874476987448,
+      "recall": 0.912,
+      "roc_auc": 0.350688
+    },
+    "native_validation_threshold": 0.5495522234463799,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_filtered_10_percent/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "2cfe11a07b21e6703dfec979d1163ef8ca5656b6e2815650e743583789b28786",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "condition": "realism_filtered_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.464,
+      "confusion_matrix": {
+        "fn": 18,
+        "fp": 250,
+        "tn": 0,
+        "tp": 232
+      },
+      "f1": 0.6338797814207651,
+      "false_negative_rate": 0.07199999999999995,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.5211658443217967,
+      "precision": 0.48132780082987553,
+      "recall": 0.928,
+      "roc_auc": 0.344832
+    },
+    "native_validation_threshold": 0.5777934839817133,
+    "seed": 44
+  },
+  {
+    "checkpoint": "artifacts/augmentation/seqgan/realism_challenging_10_percent/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "a2c5443814f9b072147b49dd15d7a1f5f8f10e6158302004591de08a07d7192d",
+    "common_real_only_threshold": 0.5389078927166804,
+    "common_threshold_metrics": {
+      "accuracy": 0.44,
+      "confusion_matrix": {
+        "fn": 30,
+        "fp": 250,
+        "tn": 0,
+        "tp": 220
+      },
+      "f1": 0.6111111111111112,
+      "false_negative_rate": 0.12,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46808510638297873,
+      "recall": 0.88,
+      "roc_auc": 0.302944
+    },
+    "condition": "realism_challenging_10_percent",
+    "model": "linear_svm",
+    "native_metrics": {
+      "accuracy": 0.434,
+      "confusion_matrix": {
+        "fn": 33,
+        "fp": 250,
+        "tn": 0,
+        "tp": 217
+      },
+      "f1": 0.6052998605299861,
+      "false_negative_rate": 0.132,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.48342543512603026,
+      "precision": 0.46466809421841543,
+      "recall": 0.868,
+      "roc_auc": 0.302944
+    },
+    "native_validation_threshold": 0.621391098025095,
+    "seed": 44
+  }
+]

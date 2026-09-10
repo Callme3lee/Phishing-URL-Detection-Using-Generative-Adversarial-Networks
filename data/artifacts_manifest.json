@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "id": "urls_dataset_2m",
+      "description": "Frozen Version 1 and Version 2 real URL dataset",
+      "sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+      "size_bytes": 136203062,
+      "required_paths": [
+        "Version_1/Data sets/urls_dataset2M.csv",
+        "Version_2/data/raw/urls_dataset2M.csv"
+      ],
+      "download_url": null,
+      "redistribution_status": "Confirm source licence before publishing"
+    },
+    {
+      "id": "urls_new_v3",
+      "description": "Frozen Version 3 real URL dataset",
+      "sha256": "18067bad500580a7def376c5a4438c9886adda5eb739fc209fdda4c6309966a7",
+      "size_bytes": 32312601,
+      "required_paths": ["URLs_New.csv"],
+      "download_url": null,
+      "redistribution_status": "Confirm component-source licences before publishing"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.onnx binary
+*.wasm binary
+*.npz binary
+*.xlsx binary
+extension/vendor/* binary

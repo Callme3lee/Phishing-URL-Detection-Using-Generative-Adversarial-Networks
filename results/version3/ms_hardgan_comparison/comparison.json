@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    "MS-HardGAN v1",
+    "MS-HardGAN-C"
+  ],
+  "limitation": "source agreement is dominated by URLs_New; source-classifier AUC shows residual synthetic shift",
+  "metrics": {
+    "at_least_one_challenge": [
+      0.51965,
+      0.5283
+    ],
+    "cluster_coverage": [
+      0.92,
+      0.9
+    ],
+    "majority_challenge": [
+      0.06625,
+      0.0995
+    ],
+    "pattern_agreement": [
+      0.28953999703542666,
+      0.7221934749424336
+    ],
+    "source_agreement": [
+      0.9811673577669922,
+      0.9685357429303252
+    ],
+    "strict_acceptance": [
+      0.526214,
+      0.4908063492063492
+    ]
+  },
+  "selection": "MS-HardGAN-C is preferred because categorical control and challenge improve without overlap or collapse"
+}

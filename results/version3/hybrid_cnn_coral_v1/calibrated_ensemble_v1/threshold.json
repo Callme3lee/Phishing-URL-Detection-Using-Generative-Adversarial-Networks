@@ -1,0 +1,99 @@
+{
+  "calibration_dataset": "data/calibration/2026-08-11-post-hybrid/calibration_urls.csv",
+  "calibration_dataset_sha256": "08b8e50e0909eee142daaac9abdf98a70c8c769d49b8e6b1a0ddc7e1d07ba4cd",
+  "calibration_metrics_resubstitution": {
+    "accuracy": 0.9425,
+    "confusion_matrix": {
+      "fn": 21,
+      "fp": 2,
+      "tn": 198,
+      "tp": 179
+    },
+    "f1": 0.9396325459317585,
+    "false_negative_rate": 0.105,
+    "false_positive_rate": 0.01,
+    "pr_auc": 0.9769074090752662,
+    "precision": 0.988950276243094,
+    "recall": 0.895,
+    "roc_auc": 0.9745250000000001
+  },
+  "calibration_metrics_warning": "optimistic because the same calibration labels selected the threshold; not a test result",
+  "calibration_rows": 400,
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+    }
+  ],
+  "condition": "hybrid_cnn_coral_v1",
+  "confirmation_status": "pending a genuinely later, untouched snapshot after source feeds advance",
+  "deployment_candidate": "three-seed mean-score ensemble",
+  "external_exploratory": {
+    "topdomains_phishtank": {
+      "dataset": "data/external/2026-08-11/external_urls.csv",
+      "dataset_sha256": "304d809a72b63b76c80ad0e2e326f5be7df38ada5211a23b773c2b7d87eb89fa",
+      "metrics": {
+        "accuracy": 0.926,
+        "confusion_matrix": {
+          "fn": 35,
+          "fp": 2,
+          "tn": 248,
+          "tp": 215
+        },
+        "f1": 0.9207708779443254,
+        "false_negative_rate": 0.14,
+        "false_positive_rate": 0.008,
+        "pr_auc": 0.982054895273565,
+        "precision": 0.9907834101382489,
+        "recall": 0.86,
+        "roc_auc": 0.974592
+      },
+      "rows": 500,
+      "status": "exploratory because this external set informed hybrid design; not threshold selection"
+    },
+    "tranco_openphish": {
+      "dataset": "data/external/2026-08-11-openphish-tranco/external_urls.csv",
+      "dataset_sha256": "c31791b5d93722d66b306b12ff7c7857909539191036e25c5931f7b7be120793",
+      "metrics": {
+        "accuracy": 0.8875,
+        "confusion_matrix": {
+          "fn": 41,
+          "fp": 4,
+          "tn": 196,
+          "tp": 159
+        },
+        "f1": 0.8760330578512396,
+        "false_negative_rate": 0.205,
+        "false_positive_rate": 0.02,
+        "pr_auc": 0.9566734366129276,
+        "precision": 0.9754601226993865,
+        "recall": 0.795,
+        "roc_auc": 0.932375
+      },
+      "rows": 400,
+      "status": "exploratory because this external set informed hybrid design; not threshold selection"
+    }
+  },
+  "policy": "maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "project_version": 3,
+  "threshold": 0.9879557490348816,
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.9879557490348816,
+    "validation_f1": 0.9396325459317585,
+    "validation_fpr": 0.01,
+    "validation_precision": 0.988950276243094,
+    "validation_recall": 0.895
+  }
+}

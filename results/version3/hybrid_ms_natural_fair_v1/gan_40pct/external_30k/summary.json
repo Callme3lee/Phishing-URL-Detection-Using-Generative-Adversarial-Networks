@@ -1,0 +1,355 @@
+{
+  "collection_report": {
+    "class_count_selection": {
+      "maximum_phishing_fraction": 0.4,
+      "method": "uniform seeded integer draw before model evaluation",
+      "minimum_phishing_fraction": 0.25,
+      "seed": 20260813,
+      "selected_legitimate_rows": 20979,
+      "selected_phishing_prevalence": 0.3007,
+      "selected_phishing_rows": 9021,
+      "total": 30000
+    },
+    "dataset": "data/external/2026-08-13-imbalanced-30k/external_urls.csv",
+    "dataset_sha256": "da61d5976f0db1c59a07101a565a077bb6997d7c8ce87cc2a7e8bf5688e84095",
+    "filter_counters": {
+      "OpenPhish current community feed::candidates": 300,
+      "OpenPhish current community feed::prior_project_identity": 12,
+      "OpenPhish current community feed::snapshot_duplicate": 2,
+      "PhishTank verified-online::candidates": 19336,
+      "PhishTank verified-online::invalid::raw_url_too_long": 1,
+      "PhishTank verified-online::prior_project_identity": 9220,
+      "PhishTank verified-online::snapshot_duplicate": 1380,
+      "Tranco current root proxy::candidates": 21126,
+      "Tranco current root proxy::current_phishing_hostname": 1,
+      "Tranco current root proxy::prior_project_identity": 147
+    },
+    "frozen_at_utc": "2026-08-13T13:12:38.311338+00:00",
+    "legitimate_rows": 20979,
+    "limitations": [
+      "Tranco membership is a legitimate proxy, not a manual page-level safety adjudication.",
+      "Legitimate examples are root domains while phishing examples often contain paths and queries.",
+      "The seeded 30.07% phishing prevalence is an experimental stress-test prevalence, not measured browser prevalence.",
+      "PhishTank and the limited OpenPhish Community feed do not represent every campaign, language, or region.",
+      "The snapshot is temporally later than training, but source reuse and proxy labels still limit deployment claims."
+    ],
+    "measured_overlap": {
+      "encoded_rows": 0,
+      "hostnames": 0,
+      "urls": 0
+    },
+    "overlap_contract": "zero URL, hostname, or 128-token identity overlap with training, development, calibration, and all prior external identities",
+    "phishing_rows": 9021,
+    "project_version": 3,
+    "purpose": "frozen imbalanced external evaluation only; never training, calibration, threshold, or model selection",
+    "rows": 30000,
+    "source_counts": {
+      "OpenPhish current community feed": 286,
+      "PhishTank verified-online": 8735,
+      "Tranco current root proxy": 20979
+    },
+    "sources": {
+      "openphish": {
+        "feed_rows": 300,
+        "path": "data/external/2026-08-13-imbalanced-30k/raw/openphish_feed.txt",
+        "reference": "https://openphish.com/phishing_feeds.html",
+        "sha256": "424a13206a52a1840c90e584fce153015b96ccf4bfa599d6340e15a0ad300bf6"
+      },
+      "phishtank": {
+        "path": "data/external/2026-08-13-imbalanced-30k/raw/phishtank_online_valid.csv.gz",
+        "reference": "https://phishtank.org/developer_info.php",
+        "selected_verification_time_range": {
+          "earliest": "2019-06-15T05:04:48+00:00",
+          "latest": "2026-08-13T11:22:29+00:00"
+        },
+        "sha256": "0c8b2932d286b05d78c13774227451ce2b403b13cefb20ad230fd7b6a87b451e",
+        "verified_online_feed_rows": 71614
+      },
+      "tranco": {
+        "list_rows": 1000000,
+        "path": "data/external/2026-08-13-imbalanced-30k/raw/tranco_top1m.csv.zip",
+        "reference": "https://tranco-list.eu/",
+        "sha256": "3c54ba6c5c569fee50e16127492c0914bf247cb10c68673cb45a6db77250e839"
+      }
+    },
+    "unique_encoded_rows": 30000,
+    "unique_hostnames": 30000,
+    "unique_urls": 30000
+  },
+  "condition": "hybrid_ms_natural_gan_40pct_v1",
+  "dataset": "data/external/2026-08-13-imbalanced-30k/external_urls.csv",
+  "dataset_sha256": "da61d5976f0db1c59a07101a565a077bb6997d7c8ce87cc2a7e8bf5688e84095",
+  "evaluation_status": "exploratory because these frozen sets informed the hybrid design; a later untouched snapshot is required for confirmation",
+  "legitimate_rows": 20979,
+  "original_threshold": {
+    "accuracy": {
+      "mean": 0.34886666666666666,
+      "standard_deviation": 0.01708186172523358,
+      "values": [
+        0.36856666666666665,
+        0.33816666666666667,
+        0.33986666666666665
+      ]
+    },
+    "f1": {
+      "mean": 0.4707844390918144,
+      "standard_deviation": 0.008701911507128238,
+      "values": [
+        0.4806579849211789,
+        0.46423271000296823,
+        0.4674626223512961
+      ]
+    },
+    "false_negative_rate": {
+      "mean": 0.037061670916010786,
+      "standard_deviation": 0.009104309753514417,
+      "values": [
+        0.02826737612238111,
+        0.04644717880501053,
+        0.03647045782064073
+      ]
+    },
+    "false_positive_rate": {
+      "mean": 0.9151850262961374,
+      "standard_deviation": 0.021142341745375843,
+      "values": [
+        0.8907955574622242,
+        0.9264502597835931,
+        0.928309261642595
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.7817956253212319,
+      "standard_deviation": 0.024993696260223172,
+      "values": [
+        0.7805538856636294,
+        0.7574459442006578,
+        0.8073870460994084
+      ]
+    },
+    "precision": {
+      "mean": 0.31156123851704787,
+      "standard_deviation": 0.006759525340556829,
+      "values": [
+        0.31929773439207404,
+        0.3067979171124902,
+        0.30858806404657935
+      ]
+    },
+    "recall": {
+      "mean": 0.9629383290839892,
+      "standard_deviation": 0.009104309753514415,
+      "values": [
+        0.9717326238776189,
+        0.9535528211949895,
+        0.9635295421793593
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.8614142195785028,
+      "standard_deviation": 0.02146597885650382,
+      "values": [
+        0.877838084282307,
+        0.8371249507117666,
+        0.8692796237414351
+      ]
+    }
+  },
+  "per_seed": [
+    {
+      "checkpoint_sha256": "9b0bae5217f5b3a061ab4b90fb0a5ee33fa177d3e18899061732d1747931f0e2",
+      "original_threshold": {
+        "accuracy": 0.36856666666666665,
+        "confusion_matrix": {
+          "fn": 255,
+          "fp": 18688,
+          "tn": 2291,
+          "tp": 8766
+        },
+        "f1": 0.4806579849211789,
+        "false_negative_rate": 0.02826737612238111,
+        "false_positive_rate": 0.8907955574622242,
+        "pr_auc": 0.7805538856636294,
+        "precision": 0.31929773439207404,
+        "recall": 0.9717326238776189,
+        "roc_auc": 0.877838084282307
+      },
+      "original_validation_threshold": 0.450439453125,
+      "robust": {
+        "accuracy": 0.7690333333333333,
+        "confusion_matrix": {
+          "fn": 6727,
+          "fp": 202,
+          "tn": 20777,
+          "tp": 2294
+        },
+        "f1": 0.398367630459321,
+        "false_negative_rate": 0.7457044673539519,
+        "false_positive_rate": 0.009628676295342963,
+        "pr_auc": 0.7805538856636294,
+        "precision": 0.9190705128205128,
+        "recall": 0.2542955326460481,
+        "roc_auc": 0.877838084282307
+      },
+      "robust_threshold": 0.99951171875,
+      "seed": 42
+    },
+    {
+      "checkpoint_sha256": "72a7b6ad007a45fa91446f31bdec7b1474229b4eae76d885885e7573844a3fa8",
+      "original_threshold": {
+        "accuracy": 0.33816666666666667,
+        "confusion_matrix": {
+          "fn": 419,
+          "fp": 19436,
+          "tn": 1543,
+          "tp": 8602
+        },
+        "f1": 0.46423271000296823,
+        "false_negative_rate": 0.04644717880501053,
+        "false_positive_rate": 0.9264502597835931,
+        "pr_auc": 0.7574459442006578,
+        "precision": 0.3067979171124902,
+        "recall": 0.9535528211949895,
+        "roc_auc": 0.8371249507117666
+      },
+      "original_validation_threshold": 0.318115234375,
+      "robust": {
+        "accuracy": 0.8074333333333333,
+        "confusion_matrix": {
+          "fn": 5110,
+          "fp": 667,
+          "tn": 20312,
+          "tp": 3911
+        },
+        "f1": 0.575189352158247,
+        "false_negative_rate": 0.566456047001441,
+        "false_positive_rate": 0.03179369846036513,
+        "pr_auc": 0.7574459442006578,
+        "precision": 0.8543031891655745,
+        "recall": 0.4335439529985589,
+        "roc_auc": 0.8371249507117666
+      },
+      "robust_threshold": 0.99560546875,
+      "seed": 43
+    },
+    {
+      "checkpoint_sha256": "4eef2b7166682c2ae0ca8b4c680bad223dd932f4b90a84068494949b04827966",
+      "original_threshold": {
+        "accuracy": 0.33986666666666665,
+        "confusion_matrix": {
+          "fn": 329,
+          "fp": 19475,
+          "tn": 1504,
+          "tp": 8692
+        },
+        "f1": 0.4674626223512961,
+        "false_negative_rate": 0.03647045782064073,
+        "false_positive_rate": 0.928309261642595,
+        "pr_auc": 0.8073870460994084,
+        "precision": 0.30858806404657935,
+        "recall": 0.9635295421793593,
+        "roc_auc": 0.8692796237414351
+      },
+      "original_validation_threshold": 0.42431640625,
+      "robust": {
+        "accuracy": 0.753,
+        "confusion_matrix": {
+          "fn": 7373,
+          "fp": 37,
+          "tn": 20942,
+          "tp": 1648
+        },
+        "f1": 0.30786474873902486,
+        "false_negative_rate": 0.8173151535306507,
+        "false_positive_rate": 0.001763668430335097,
+        "pr_auc": 0.8073870460994084,
+        "precision": 0.9780415430267062,
+        "recall": 0.1826848464693493,
+        "roc_auc": 0.8692796237414351
+      },
+      "robust_threshold": 0.9990234375,
+      "seed": 44
+    }
+  ],
+  "phishing_rows": 9021,
+  "project_version": 3,
+  "robust": {
+    "accuracy": {
+      "mean": 0.7764888888888889,
+      "standard_deviation": 0.027972056161925708,
+      "values": [
+        0.7690333333333333,
+        0.8074333333333333,
+        0.753
+      ]
+    },
+    "f1": {
+      "mean": 0.4271405771188643,
+      "standard_deviation": 0.13596515267860285,
+      "values": [
+        0.398367630459321,
+        0.575189352158247,
+        0.30786474873902486
+      ]
+    },
+    "false_negative_rate": {
+      "mean": 0.7098252226286812,
+      "standard_deviation": 0.1292209850747944,
+      "values": [
+        0.7457044673539519,
+        0.566456047001441,
+        0.8173151535306507
+      ]
+    },
+    "false_positive_rate": {
+      "mean": 0.014395347728681063,
+      "standard_deviation": 0.015572139972276692,
+      "values": [
+        0.009628676295342963,
+        0.03179369846036513,
+        0.001763668430335097
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.7817956253212319,
+      "standard_deviation": 0.024993696260223172,
+      "values": [
+        0.7805538856636294,
+        0.7574459442006578,
+        0.8073870460994084
+      ]
+    },
+    "precision": {
+      "mean": 0.9171384150042646,
+      "standard_deviation": 0.06189179917843985,
+      "values": [
+        0.9190705128205128,
+        0.8543031891655745,
+        0.9780415430267062
+      ]
+    },
+    "recall": {
+      "mean": 0.2901747773713188,
+      "standard_deviation": 0.12922098507479438,
+      "values": [
+        0.2542955326460481,
+        0.4335439529985589,
+        0.1826848464693493
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.8614142195785028,
+      "standard_deviation": 0.02146597885650382,
+      "values": [
+        0.877838084282307,
+        0.8371249507117666,
+        0.8692796237414351
+      ]
+    }
+  },
+  "rows": 30000,
+  "threshold_policies": {
+    "original_threshold": "frozen 1%-FPR threshold from original validation only; diagnostic, not selected on external data",
+    "robust": "max of frozen 1%-FPR thresholds from original and cross-source domain validation"
+  }
+}

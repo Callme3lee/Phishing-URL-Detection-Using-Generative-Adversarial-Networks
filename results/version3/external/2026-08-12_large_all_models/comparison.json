@@ -1,0 +1,283 @@
+{
+  "comparability_note": "Real-only baselines use their frozen internal thresholds and report mean \u00b1 sample SD across seeds 42/43/44. HYB is the frozen calibrated three-seed ensemble and therefore has one result rather than a seed SD.",
+  "dataset": "data/external/2026-08-12-large-frozen/external_urls.csv",
+  "dataset_sha256": "fdc040874608908c6f6f89523a219e044e3977f449c66d4966d48c76ed98c1b8",
+  "legitimate_rows": 5000,
+  "models": {
+    "cnn": {
+      "display": "CNN",
+      "mean_confusion_matrix": {
+        "fn": 197.66666666666666,
+        "fp": 4981.666666666667,
+        "tn": 18.333333333333332,
+        "tp": 4802.333333333333
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4820666666666667,
+          "standard_deviation": 0.002409010862020629
+        },
+        "f1": {
+          "mean": 0.649657524369678,
+          "standard_deviation": 0.003116089958609979
+        },
+        "false_negative_rate": {
+          "mean": 0.03953333333333334,
+          "standard_deviation": 0.008658714300248815
+        },
+        "false_positive_rate": {
+          "mean": 0.9963333333333333,
+          "standard_deviation": 0.003859188170241674
+        },
+        "pr_auc": {
+          "mean": 0.5976260844574146,
+          "standard_deviation": 0.020188765226488187
+        },
+        "precision": {
+          "mean": 0.49082987932517647,
+          "standard_deviation": 0.0012939460495428373
+        },
+        "recall": {
+          "mean": 0.9604666666666667,
+          "standard_deviation": 0.008658714300248806
+        },
+        "roc_auc": {
+          "mean": 0.5729747266666666,
+          "standard_deviation": 0.03554270256153486
+        }
+      },
+      "runs": 3,
+      "threshold": "unchanged internal-validation threshold per seed"
+    },
+    "hybrid": {
+      "display": "HYB",
+      "mean_confusion_matrix": {
+        "fn": 738,
+        "fp": 85,
+        "tn": 4915,
+        "tp": 4262
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9177,
+          "standard_deviation": 0.0
+        },
+        "f1": {
+          "mean": 0.9119503584037659,
+          "standard_deviation": 0.0
+        },
+        "false_negative_rate": {
+          "mean": 0.1476,
+          "standard_deviation": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.017,
+          "standard_deviation": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.9749413042300098,
+          "standard_deviation": 0.0
+        },
+        "precision": {
+          "mean": 0.9804462847941109,
+          "standard_deviation": 0.0
+        },
+        "recall": {
+          "mean": 0.8524,
+          "standard_deviation": 0.0
+        },
+        "roc_auc": {
+          "mean": 0.9663143599999999,
+          "standard_deviation": 0.0
+        }
+      },
+      "note": "frozen three-seed mean-score ensemble; not three independent runs",
+      "runs": 1,
+      "threshold": 0.9879557490348816
+    },
+    "linear_svm": {
+      "display": "SVM",
+      "mean_confusion_matrix": {
+        "fn": 4179.0,
+        "fp": 2352.0,
+        "tn": 2648.0,
+        "tp": 821.0
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.3469,
+          "standard_deviation": 0.0
+        },
+        "f1": {
+          "mean": 0.20090542028630862,
+          "standard_deviation": 3.3993498887762956e-17
+        },
+        "false_negative_rate": {
+          "mean": 0.8358,
+          "standard_deviation": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.4704,
+          "standard_deviation": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.42804272967295726,
+          "standard_deviation": 0.0
+        },
+        "precision": {
+          "mean": 0.25874566656161363,
+          "standard_deviation": 0.0
+        },
+        "recall": {
+          "mean": 0.1642,
+          "standard_deviation": 0.0
+        },
+        "roc_auc": {
+          "mean": 0.23423018000000004,
+          "standard_deviation": 3.3993498887762956e-17
+        }
+      },
+      "runs": 3,
+      "threshold": "unchanged internal-validation threshold per seed"
+    },
+    "lstm": {
+      "display": "LSTM",
+      "mean_confusion_matrix": {
+        "fn": 286.3333333333333,
+        "fp": 4922.333333333333,
+        "tn": 77.66666666666667,
+        "tp": 4713.666666666667
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.47913333333333336,
+          "standard_deviation": 0.01409302427917207
+        },
+        "f1": {
+          "mean": 0.6439405671694192,
+          "standard_deviation": 0.015736864348818536
+        },
+        "false_negative_rate": {
+          "mean": 0.05726666666666667,
+          "standard_deviation": 0.03908776449649345
+        },
+        "false_positive_rate": {
+          "mean": 0.9844666666666667,
+          "standard_deviation": 0.014011899704655814
+        },
+        "pr_auc": {
+          "mean": 0.867430738020429,
+          "standard_deviation": 0.046437797633482714
+        },
+        "precision": {
+          "mean": 0.4890457161127307,
+          "standard_deviation": 0.007694595587790454
+        },
+        "recall": {
+          "mean": 0.9427333333333333,
+          "standard_deviation": 0.03908776449649346
+        },
+        "roc_auc": {
+          "mean": 0.8322874066666667,
+          "standard_deviation": 0.06000582786729081
+        }
+      },
+      "runs": 3,
+      "threshold": "unchanged internal-validation threshold per seed"
+    },
+    "random_forest": {
+      "display": "RF",
+      "mean_confusion_matrix": {
+        "fn": 2100.3333333333335,
+        "fp": 4614.333333333333,
+        "tn": 385.6666666666667,
+        "tp": 2899.6666666666665
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.32853333333333334,
+          "standard_deviation": 0.0059197409853247295
+        },
+        "f1": {
+          "mean": 0.4634051559675471,
+          "standard_deviation": 0.0072448898206246325
+        },
+        "false_negative_rate": {
+          "mean": 0.42006666666666664,
+          "standard_deviation": 0.011741095917048505
+        },
+        "false_positive_rate": {
+          "mean": 0.9228666666666667,
+          "standard_deviation": 0.0004163331998932429
+        },
+        "pr_auc": {
+          "mean": 0.4264774603352269,
+          "standard_deviation": 0.001872398605978963
+        },
+        "precision": {
+          "mean": 0.38587686406587757,
+          "standard_deviation": 0.004844013038582938
+        },
+        "recall": {
+          "mean": 0.5799333333333334,
+          "standard_deviation": 0.011741095917048508
+        },
+        "roc_auc": {
+          "mean": 0.24817856666666668,
+          "standard_deviation": 0.0013016748780449562
+        }
+      },
+      "runs": 3,
+      "threshold": "unchanged internal-validation threshold per seed"
+    },
+    "rnn": {
+      "display": "RNN",
+      "mean_confusion_matrix": {
+        "fn": 199.66666666666666,
+        "fp": 4995.666666666667,
+        "tn": 4.333333333333333,
+        "tp": 4800.333333333333
+      },
+      "metrics": {
+        "accuracy": {
+          "mean": 0.48046666666666665,
+          "standard_deviation": 0.00040414518843272327
+        },
+        "f1": {
+          "mean": 0.6488686009976363,
+          "standard_deviation": 0.0006390491563463537
+        },
+        "false_negative_rate": {
+          "mean": 0.039933333333333335,
+          "standard_deviation": 0.0020033305601755646
+        },
+        "false_positive_rate": {
+          "mean": 0.9991333333333333,
+          "standard_deviation": 0.0013316656236958598
+        },
+        "pr_auc": {
+          "mean": 0.8102287934112956,
+          "standard_deviation": 0.020887778249829476
+        },
+        "precision": {
+          "mean": 0.49002973059593824,
+          "standard_deviation": 0.00022062299940325543
+        },
+        "recall": {
+          "mean": 0.9600666666666666,
+          "standard_deviation": 0.002003330560175573
+        },
+        "roc_auc": {
+          "mean": 0.7770617333333334,
+          "standard_deviation": 0.008133611376020611
+        }
+      },
+      "runs": 3,
+      "threshold": "unchanged internal-validation threshold per seed"
+    }
+  },
+  "phishing_rows": 5000,
+  "project_version": 3,
+  "protocol": "all checkpoints and thresholds frozen; no retraining, reselection, or external threshold tuning",
+  "rows": 10000
+}

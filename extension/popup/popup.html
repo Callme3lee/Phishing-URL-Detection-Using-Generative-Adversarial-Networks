@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phishing URL Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-row">
+      <span class="brand-mark" aria-hidden="true"><span>PG</span></span>
+      <div class="brand-copy">
+        <p class="eyebrow">LOCAL WEBSITE CHECK</p>
+        <h1>Phishing URL Guard</h1>
+      </div>
+      <div class="header-tools"><button class="language-toggle" data-language-toggle type="button">العربية</button><span id="release-version" class="version">v0.6.0</span></div>
+    </div>
+    <div class="privacy-status"><span class="privacy-dot"></span>Checks happen privately on this device</div>
+  </header>
+
+  <main>
+    <section class="mode-panel" aria-labelledby="mode-title">
+      <div>
+        <p id="mode-title" class="section-label">How warnings behave</p>
+        <p id="mode-note" class="mode-note">Normal mode pauses only the highest-risk URLs.</p>
+      </div>
+      <label class="select-wrap" for="mode">
+        <span class="sr-only">Navigation mode</span>
+        <select id="mode">
+          <option value="normal">Block high risk</option>
+          <option value="passive">Warnings only</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="destination-card" aria-labelledby="destination-title">
+      <div class="destination-heading">
+        <span class="globe" aria-hidden="true">◎</span>
+        <p id="destination-title">Current website</p>
+      </div>
+      <strong id="host" class="host">Reading current tab…</strong>
+      <p id="url" class="url">Loading current URL…</p>
+    </section>
+
+    <section id="result" class="result neutral" aria-live="polite">
+      <div class="result-icon" aria-hidden="true"><span id="status-glyph">·</span></div>
+      <div class="result-copy">
+        <p class="result-kicker">SITE CHECK</p>
+        <span id="tier">Ready to check</span>
+        <p id="action" class="action">Select Check this page to examine its web address.</p>
+      </div>
+      <div class="score-block">
+        <small>RISK SCORE</small>
+        <strong id="score">—</strong>
+      </div>
+    </section>
+
+    <section id="signals-panel" class="signals-panel hidden" aria-labelledby="signals-title">
+      <strong id="signals-title">Signals found in this URL</strong>
+      <ul id="signals"></ul>
+      <p>These signals are diagnostic clues from model inputs, not proof that the website is phishing.</p>
+    </section>
+
+    <button id="scan" class="primary-button" type="button">
+      <span class="button-icon" aria-hidden="true">⌁</span>
+      <span>Check this page</span>
+    </button>
+
+    <div id="trust-panel" class="trust-panel hidden">
+      <button id="trust" class="allow-button" type="button"><span aria-hidden="true">✓</span><span><span>Always allow</span> <bdi id="trust-hostname" dir="ltr">this website</bdi></span></button>
+      <p><span>Only this exact website name will be allowed:</span> <bdi id="trust-note-hostname" dir="ltr">this website</bdi>. <span>You can remove it later. If local feedback is on, this also saves the warning as incorrect.</span></p>
+    </div>
+    <div class="trust-actions">
+      <button id="untrust" class="text-button danger-text hidden" type="button">Remove this website from my allowed list</button>
+    </div>
+
+    <section class="pilot-feedback" aria-labelledby="pilot-feedback-title">
+      <div class="pilot-heading">
+        <div>
+          <p id="pilot-feedback-title" class="section-label">Was this result correct?</p>
+          <p id="pilot-status" class="pilot-status">Checking feedback settings…</p>
+        </div>
+        <button id="pilot-page" class="pilot-page-button" type="button">Activity</button>
+      </div>
+      <div id="feedback-actions" class="feedback-actions hidden">
+        <button id="false-alarm" type="button">This warning was incorrect</button>
+        <button id="missed-phishing" type="button">This phishing page was missed</button>
+      </div>
+      <p id="feedback-note" class="feedback-note">Feedback is stored on this device only.</p>
+    </section>
+
+    <details class="technical-details">
+      <summary>About this result</summary>
+      <p id="model-tier" class="model-tier">Detailed result information will appear after scanning.</p>
+      <p id="latency" class="meta">HYB-MS + 10% GAN · three-seed local ensemble</p>
+      <p class="score-note">The score ranks URL-text suspicion. It is not a trust percentage or proof that a site is malicious.</p>
+    </details>
+
+    <button id="demo" class="demo-button" type="button">
+      <span>Try the safe URL checker</span><span aria-hidden="true">↗</span>
+    </button>
+  </main>
+
+  <footer>
+    <span>URL text only</span><span class="footer-dot">•</span><span>Optional feedback</span><span class="footer-dot">•</span><span>No automatic upload</span>
+  </footer>
+  <script src="../localization.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

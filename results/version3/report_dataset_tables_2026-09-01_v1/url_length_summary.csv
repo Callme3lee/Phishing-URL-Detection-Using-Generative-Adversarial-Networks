@@ -1,0 +1,19 @@
+key,dataset,class,rows,mean,median,p95,maximum,over_128,over_128_pct
+v3_original_train,Original V3 training,Legitimate,276400,50.68827062228654,46.0,98.0,643,3372,0.01219971056439942
+v3_original_train,Original V3 training,Phishing,82219,55.73950060205062,42.0,142.0,2307,5012,0.06095914569625026
+v3_original_validation,Original V3 validation,Legitimate,29535,52.8985948874217,48.0,105.0,350,623,0.021093617741662435
+v3_original_validation,Original V3 validation,Phishing,9948,54.81755126658625,42.0,133.0,1141,549,0.05518697225572979
+v3_original_test,Original V3 internal test,Legitimate,38908,47.724503958054896,39.0,93.0,423,350,0.008995579315307907
+v3_original_test,Original V3 internal test,Phishing,10321,61.84972386396667,42.0,164.0,1492,772,0.07479895358976843
+multisource_real_train,Multi-source real training,Legitimate,279412,50.65881207678983,45.0,98.0,643,3491,0.012494094741814954
+multisource_real_train,Multi-source real training,Phishing,84280,55.40396298054105,42.0,141.0,2307,5066,0.06010915994304698
+final_real_only_train,Final updated real-only training,Legitimate,281158,50.441417281386265,45.0,98.0,643,3499,0.012444959773508135
+final_real_only_train,Final updated real-only training,Phishing,86026,55.055297235719436,42.0,140.0,2307,5098,0.05926115360472416
+final_gan10_train,Final 10% GAN training,Legitimate,281158,50.441417281386265,45.0,98.0,643,3499,0.012444959773508135
+final_gan10_train,Final 10% GAN training,Phishing,126436,54.22520484672087,40.0,128.0,2307,5139,0.04064506944224746
+policy_development,Browser policy development,Legitimate,3800,19.744473684210526,15.0,52.0,910,25,0.006578947368421052
+policy_development,Browser policy development,Phishing,200,43.185,31.0,109.0,349,7,0.035
+frozen_final_6k,Frozen final 6K evaluation,Legitimate,5700,19.798070175438596,15.0,55.05000000000018,321,43,0.007543859649122807
+frozen_final_6k,Frozen final 6K evaluation,Phishing,300,53.64666666666667,32.5,141.15000000000003,738,19,0.06333333333333334
+postfreeze_10k,Post-freeze 10K evaluation,Legitimate,9700,14.96278350515464,14.0,23.0,41,0,0.0
+postfreeze_10k,Post-freeze 10K evaluation,Phishing,300,72.37333333333333,36.0,239.55000000000058,971,33,0.11

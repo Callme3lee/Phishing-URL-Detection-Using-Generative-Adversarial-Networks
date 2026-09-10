@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercise caution</title>
+  <link rel="stylesheet" href="advisory.css">
+  <link rel="stylesheet" href="../localization.css">
+</head>
+<body class="caution">
+  <article role="alert" aria-live="assertive">
+    <div class="tone-rail"></div>
+    <div class="icon" id="icon" aria-hidden="true">!</div>
+    <div class="copy">
+      <p class="eyebrow"><span id="risk-label">CAUTION ADVISED</span><span class="local">LOCAL CHECK</span></p>
+      <h1 id="headline">Exercise caution on this site</h1>
+      <strong id="host">Current destination</strong>
+      <p>Open the extension to see why this URL received this result.</p>
+      <button id="allow-site" class="allow-site" type="button"><span>Always allow</span> <bdi id="allow-hostname" dir="ltr">this website</bdi></button>
+      <small id="allow-note" class="allow-note"><span>Only this exact website name will be allowed:</span> <bdi id="allow-note-hostname" dir="ltr">this website</bdi></small>
+    </div>
+    <button id="close" type="button" aria-label="Dismiss this caution">×</button>
+    <footer><span>URL check · not proof of phishing</span><strong id="score">Risk score —</strong></footer>
+  </article>
+  <script src="../localization.js"></script>
+  <script src="advisory.js"></script>
+</body>
+</html>

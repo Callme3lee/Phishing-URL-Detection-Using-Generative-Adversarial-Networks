@@ -1,0 +1,6 @@
+tier,legitimate,phishing,total
+allow,8730,106,8836
+secondary_review,675,46,721
+caution,71,66,137
+warning,23,144,167
+block,1,138,139

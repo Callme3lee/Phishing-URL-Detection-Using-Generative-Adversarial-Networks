@@ -1,0 +1,30 @@
+{
+  "collected_at_utc": "2026-08-15T11:12:02.262996+00:00",
+  "elapsed_seconds": 53.01740214500023,
+  "evidence": "live DNS records only",
+  "input": "artifacts/deployment_candidates/conservative_hyb_gan10_v1/validation/20k_tiered_predictions.csv",
+  "input_sha256": "a9f2deda1518d19d7109d0b0e2dee1ecd9a9d825731c99319701ea5dd6e47007",
+  "limitations": [
+    "DNS is mutable and this collection is a timestamped snapshot.",
+    "Resolution failure may reflect blocking or transient network failure rather than maliciousness.",
+    "Availability can become a source shortcut; holdout and later temporal evaluation are required."
+  ],
+  "output": "artifacts/results/dns_secondary_v1/20k_dns_secondary_review.csv",
+  "output_sha256": "8284be20453f63af2b652663e3c505d3fa4fb7880c041eb1b02bbc8dd640c36d",
+  "per_query_timeout_seconds": 4.0,
+  "project_version": 3,
+  "query_types": [
+    "hostname:A",
+    "hostname:AAAA",
+    "hostname:CNAME",
+    "domain:MX",
+    "domain:NS"
+  ],
+  "rows_with_any_nxdomain": 55,
+  "security_scope": "No HTTP connection, page visit, redirect following, TLS handshake, WHOIS/RDAP call, or phishing-content retrieval was performed.",
+  "selected_rows": 941,
+  "tier_filter": "secondary_review",
+  "timeout_queries": 0,
+  "total_queries": 4705,
+  "workers": 40
+}

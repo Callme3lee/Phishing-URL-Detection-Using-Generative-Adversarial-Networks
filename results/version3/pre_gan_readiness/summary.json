@@ -1,0 +1,618 @@
+{
+  "artifact_audit": {
+    "baseline_runs": 15,
+    "checkpoint_hashes_valid": true,
+    "controlled_experiment_runs": 30,
+    "hybrid_runs": 3,
+    "missing": []
+  },
+  "baseline_models": {
+    "cnn": {
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9889225185696778,
+          "standard_deviation": 0.0013266472906106603
+        },
+        "f1": {
+          "mean": 0.9735565329180925,
+          "standard_deviation": 0.003126611081729954
+        },
+        "false_negative_rate": {
+          "mean": 0.027484416884668798,
+          "standard_deviation": 0.0023360968019927176
+        },
+        "false_positive_rate": {
+          "mean": 0.006725266440492102,
+          "standard_deviation": 0.0013544877950701947
+        },
+        "pr_auc": {
+          "mean": 0.9934802528886424,
+          "standard_deviation": 0.001549950515473411
+        },
+        "precision": {
+          "mean": 0.974607262328516,
+          "standard_deviation": 0.005021692526637359
+        },
+        "recall": {
+          "mean": 0.9725155831153313,
+          "standard_deviation": 0.0023360968019926973
+        },
+        "roc_auc": {
+          "mean": 0.997010913605281,
+          "standard_deviation": 0.0008214157881438544
+        }
+      },
+      "real_training_rows": 358619,
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "linear_svm": {
+      "metrics": {
+        "accuracy": {
+          "mean": 0.8974791281561681,
+          "standard_deviation": 0.0
+        },
+        "f1": {
+          "mean": 0.6835141405907067,
+          "standard_deviation": 0.0
+        },
+        "false_negative_rate": {
+          "mean": 0.47195039240383685,
+          "standard_deviation": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.004523491312840547,
+          "standard_deviation": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.8723982621338361,
+          "standard_deviation": 0.0
+        },
+        "precision": {
+          "mean": 0.9687166725915392,
+          "standard_deviation": 1.3597399555105182e-16
+        },
+        "recall": {
+          "mean": 0.5280496075961632,
+          "standard_deviation": 0.0
+        },
+        "roc_auc": {
+          "mean": 0.9297859081756683,
+          "standard_deviation": 0.0
+        }
+      },
+      "real_training_rows": 358619,
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "lstm": {
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9898433849966484,
+          "standard_deviation": 0.00025371216146573137
+        },
+        "f1": {
+          "mean": 0.975627851196378,
+          "standard_deviation": 0.0005668284543728817
+        },
+        "false_negative_rate": {
+          "mean": 0.030391111972354102,
+          "standard_deviation": 0.0012114458762723943
+        },
+        "false_positive_rate": {
+          "mean": 0.004789075083102019,
+          "standard_deviation": 0.0006318287264827213
+        },
+        "pr_auc": {
+          "mean": 0.9930616405202142,
+          "standard_deviation": 0.0011070043337158503
+        },
+        "precision": {
+          "mean": 0.981726344982412,
+          "standard_deviation": 0.0023503825039651624
+        },
+        "recall": {
+          "mean": 0.969608888027646,
+          "standard_deviation": 0.0012114458762724095
+        },
+        "roc_auc": {
+          "mean": 0.9967703782200892,
+          "standard_deviation": 0.00044882208440978296
+        }
+      },
+      "real_training_rows": 358619,
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "random_forest": {
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9495622498933556,
+          "standard_deviation": 0.00010748750984435664
+        },
+        "f1": {
+          "mean": 0.8667084684984653,
+          "standard_deviation": 0.0002186568633035134
+        },
+        "false_negative_rate": {
+          "mean": 0.21784064851597065,
+          "standard_deviation": 0.0006229144954295679
+        },
+        "false_positive_rate": {
+          "mean": 0.006031321750454063,
+          "standard_deviation": 0.0002587243218282697
+        },
+        "pr_auc": {
+          "mean": 0.9330199428194407,
+          "standard_deviation": 0.0005871804802106943
+        },
+        "precision": {
+          "mean": 0.9717533283207014,
+          "standard_deviation": 0.0011584321508850623
+        },
+        "recall": {
+          "mean": 0.7821593514840294,
+          "standard_deviation": 0.0006229144954295579
+        },
+        "roc_auc": {
+          "mean": 0.96269958493624,
+          "standard_deviation": 0.000336582872701356
+        }
+      },
+      "real_training_rows": 358619,
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "rnn": {
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9866271235789202,
+          "standard_deviation": 0.0017267838626711075
+        },
+        "f1": {
+          "mean": 0.9679402969038615,
+          "standard_deviation": 0.004133589521159687
+        },
+        "false_negative_rate": {
+          "mean": 0.03710880728611568,
+          "standard_deviation": 0.004235537834394805
+        },
+        "false_positive_rate": {
+          "mean": 0.007076522394708886,
+          "standard_deviation": 0.001209435164583453
+        },
+        "pr_auc": {
+          "mean": 0.9878899925733192,
+          "standard_deviation": 0.001963708844158454
+        },
+        "precision": {
+          "mean": 0.9730458264084749,
+          "standard_deviation": 0.004564147638190105
+        },
+        "recall": {
+          "mean": 0.9628911927138843,
+          "standard_deviation": 0.004235537834394841
+        },
+        "roc_auc": {
+          "mean": 0.993882826769091,
+          "standard_deviation": 0.0008001806766745254
+        }
+      },
+      "real_training_rows": 358619,
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "calibrated_ensemble": {
+    "external_exploratory": {
+      "topdomains_phishtank": {
+        "dataset": "data/external/2026-08-11/external_urls.csv",
+        "dataset_sha256": "304d809a72b63b76c80ad0e2e326f5be7df38ada5211a23b773c2b7d87eb89fa",
+        "metrics": {
+          "accuracy": 0.926,
+          "confusion_matrix": {
+            "fn": 35,
+            "fp": 2,
+            "tn": 248,
+            "tp": 215
+          },
+          "f1": 0.9207708779443254,
+          "false_negative_rate": 0.14,
+          "false_positive_rate": 0.008,
+          "pr_auc": 0.982054895273565,
+          "precision": 0.9907834101382489,
+          "recall": 0.86,
+          "roc_auc": 0.974592
+        },
+        "rows": 500,
+        "status": "exploratory because this external set informed hybrid design; not threshold selection"
+      },
+      "tranco_openphish": {
+        "dataset": "data/external/2026-08-11-openphish-tranco/external_urls.csv",
+        "dataset_sha256": "c31791b5d93722d66b306b12ff7c7857909539191036e25c5931f7b7be120793",
+        "metrics": {
+          "accuracy": 0.8875,
+          "confusion_matrix": {
+            "fn": 41,
+            "fp": 4,
+            "tn": 196,
+            "tp": 159
+          },
+          "f1": 0.8760330578512396,
+          "false_negative_rate": 0.205,
+          "false_positive_rate": 0.02,
+          "pr_auc": 0.9566734366129276,
+          "precision": 0.9754601226993865,
+          "recall": 0.795,
+          "roc_auc": 0.932375
+        },
+        "rows": 400,
+        "status": "exploratory because this external set informed hybrid design; not threshold selection"
+      }
+    },
+    "policy": "maximum calibration F1 subject to calibration FPR <= 1.00%",
+    "threshold": 0.9879557490348816
+  },
+  "dataset": {
+    "gan_training_contract": "only phishing indices from the Version 3 train split",
+    "master_sha256": "18067bad500580a7def376c5a4438c9886adda5eb739fc209fdda4c6309966a7",
+    "quarantined_records": 1556,
+    "splits": {
+      "test": {
+        "label_0": 38908,
+        "label_1": 10321,
+        "manifest_sha256": "4b89246dc03276cce39ef4d59b2023ad404792137ef20de1859f91e189113d18",
+        "total": 49229,
+        "unique_hostnames": 16600
+      },
+      "train": {
+        "label_0": 276400,
+        "label_1": 82219,
+        "manifest_sha256": "306a05a294369ab7e56f8511ecaa2674138092452c3990ac5ff1ab340f9f4d0b",
+        "total": 358619,
+        "unique_hostnames": 133208
+      },
+      "validation": {
+        "label_0": 29535,
+        "label_1": 9948,
+        "manifest_sha256": "31b882cfaa7da7f8f4fda415d1277c7937eaaf05696b55b9c6cd45b149b91617",
+        "total": 39483,
+        "unique_hostnames": 16540
+      }
+    }
+  },
+  "decision": {
+    "engineering_ready_to_implement_gan": true,
+    "reason": "pipeline and reference models are reproducible, but a genuinely later untouched confirmation snapshot is still unavailable",
+    "scientifically_ready_to_claim_gan_improvement": false
+  },
+  "gates": {
+    "baseline_matrix": {
+      "evidence": "15/15 complete model-seed runs",
+      "status": "pass"
+    },
+    "calibration_separation": {
+      "evidence": "zero measured URL/hostname/encoding overlap",
+      "status": "pass"
+    },
+    "controlled_shift_experiments": {
+      "evidence": "30/30 metrics artifacts",
+      "status": "pass"
+    },
+    "dataset_integrity": {
+      "evidence": "28/28 verification checks pass",
+      "status": "pass"
+    },
+    "external_claim_validity": {
+      "evidence": "current hybrid/calibrated external results informed model design and are exploratory",
+      "status": "caution"
+    },
+    "hybrid_reproducibility": {
+      "evidence": "3/3 checkpoints; frozen hashes valid=True",
+      "status": "pass"
+    },
+    "later_temporal_confirmation": {
+      "evidence": "confirmation readiness=False",
+      "status": "blocked"
+    },
+    "source_shortcut_risk": {
+      "evidence": "original strongest one-feature stump ROC-AUC=0.7696; hybrid mitigates but does not prove invariance",
+      "status": "caution"
+    },
+    "version_3_gan_absence": {
+      "evidence": "no Version 3 generator/trainer or augmentation result exists yet",
+      "status": "pass"
+    }
+  },
+  "progression": {
+    "topdomains_phishtank": {
+      "dataset_sha256": "304d809a72b63b76c80ad0e2e326f5be7df38ada5211a23b773c2b7d87eb89fa",
+      "systems": {
+        "Balanced LSTM": {
+          "accuracy": {
+            "mean": 0.48933333333333334,
+            "standard_deviation": 0.012858201014657285
+          },
+          "f1": {
+            "mean": 0.6531097084388097,
+            "standard_deviation": 0.006266380508249038
+          },
+          "false_positive_rate": {
+            "mean": 0.9826666666666667,
+            "standard_deviation": 0.02343786110832928
+          },
+          "precision": {
+            "mean": 0.49456084346306833,
+            "standard_deviation": 0.006591529735269333
+          },
+          "recall": {
+            "mean": 0.9613333333333333,
+            "standard_deviation": 0.0023094010767585054
+          },
+          "roc_auc": {
+            "mean": 0.8503413333333333,
+            "standard_deviation": 0.028942430397831682
+          }
+        },
+        "Calibrated ensemble": {
+          "accuracy": {
+            "mean": 0.926,
+            "standard_deviation": 0.0
+          },
+          "f1": {
+            "mean": 0.9207708779443254,
+            "standard_deviation": 0.0
+          },
+          "false_positive_rate": {
+            "mean": 0.008,
+            "standard_deviation": 0.0
+          },
+          "precision": {
+            "mean": 0.9907834101382489,
+            "standard_deviation": 0.0
+          },
+          "recall": {
+            "mean": 0.86,
+            "standard_deviation": 0.0
+          },
+          "roc_auc": {
+            "mean": 0.974592,
+            "standard_deviation": 0.0
+          }
+        },
+        "Coverage LSTM": {
+          "accuracy": {
+            "mean": 0.548,
+            "standard_deviation": 0.010392304845413272
+          },
+          "f1": {
+            "mean": 0.6786984263942207,
+            "standard_deviation": 0.004749478469424696
+          },
+          "false_positive_rate": {
+            "mean": 0.8586666666666667,
+            "standard_deviation": 0.022030282189144428
+          },
+          "precision": {
+            "mean": 0.5265218378963546,
+            "standard_deviation": 0.006024978931648217
+          },
+          "recall": {
+            "mean": 0.9546666666666667,
+            "standard_deviation": 0.0023094010767585054
+          },
+          "roc_auc": {
+            "mean": 0.9086613333333333,
+            "standard_deviation": 0.01246433461253881
+          }
+        },
+        "Hybrid original threshold": {
+          "accuracy": {
+            "mean": 0.8726666666666666,
+            "standard_deviation": 0.018475208614068043
+          },
+          "f1": {
+            "mean": 0.8837944649536148,
+            "standard_deviation": 0.014850632518909652
+          },
+          "false_positive_rate": {
+            "mean": 0.2213333333333333,
+            "standard_deviation": 0.03946306289852998
+          },
+          "precision": {
+            "mean": 0.8143332661301238,
+            "standard_deviation": 0.02716158995516298
+          },
+          "recall": {
+            "mean": 0.9666666666666667,
+            "standard_deviation": 0.004618802153517011
+          },
+          "roc_auc": {
+            "mean": 0.9704159999999998,
+            "standard_deviation": 0.0018629696723242231
+          }
+        },
+        "Original LSTM": {
+          "accuracy": {
+            "mean": 0.486,
+            "standard_deviation": 0.0034641016151377583
+          },
+          "f1": {
+            "mean": 0.6509679781137745,
+            "standard_deviation": 0.0019485960124956715
+          },
+          "false_positive_rate": {
+            "mean": 0.9866666666666667,
+            "standard_deviation": 0.014047538337136999
+          },
+          "precision": {
+            "mean": 0.4928124965220972,
+            "standard_deviation": 0.0017133018461187417
+          },
+          "recall": {
+            "mean": 0.9586666666666667,
+            "standard_deviation": 0.009237604307034021
+          },
+          "roc_auc": {
+            "mean": 0.8431386666666666,
+            "standard_deviation": 0.042084837998183286
+          }
+        }
+      },
+      "title": "Top-Domain / PhishTank (500)"
+    },
+    "tranco_openphish": {
+      "dataset_sha256": "c31791b5d93722d66b306b12ff7c7857909539191036e25c5931f7b7be120793",
+      "systems": {
+        "Balanced LSTM": {
+          "accuracy": {
+            "mean": 0.455,
+            "standard_deviation": 0.006614378277661482
+          },
+          "f1": {
+            "mean": 0.6237036761828797,
+            "standard_deviation": 0.0046744512671584625
+          },
+          "false_positive_rate": {
+            "mean": 0.9933333333333333,
+            "standard_deviation": 0.00763762615825974
+          },
+          "precision": {
+            "mean": 0.476273927353921,
+            "standard_deviation": 0.0034927035402791155
+          },
+          "recall": {
+            "mean": 0.9033333333333333,
+            "standard_deviation": 0.00763762615825974
+          },
+          "roc_auc": {
+            "mean": 0.5952375,
+            "standard_deviation": 0.08800695018718695
+          }
+        },
+        "Calibrated ensemble": {
+          "accuracy": {
+            "mean": 0.8875,
+            "standard_deviation": 0.0
+          },
+          "f1": {
+            "mean": 0.8760330578512396,
+            "standard_deviation": 0.0
+          },
+          "false_positive_rate": {
+            "mean": 0.02,
+            "standard_deviation": 0.0
+          },
+          "precision": {
+            "mean": 0.9754601226993865,
+            "standard_deviation": 0.0
+          },
+          "recall": {
+            "mean": 0.795,
+            "standard_deviation": 0.0
+          },
+          "roc_auc": {
+            "mean": 0.932375,
+            "standard_deviation": 0.0
+          }
+        },
+        "Coverage LSTM": {
+          "accuracy": {
+            "mean": 0.5075,
+            "standard_deviation": 0.021794494717703356
+          },
+          "f1": {
+            "mean": 0.6460033092114437,
+            "standard_deviation": 0.00961362733441467
+          },
+          "false_positive_rate": {
+            "mean": 0.8833333333333334,
+            "standard_deviation": 0.045368858629387374
+          },
+          "precision": {
+            "mean": 0.5044240707437281,
+            "standard_deviation": 0.01218185855882361
+          },
+          "recall": {
+            "mean": 0.8983333333333333,
+            "standard_deviation": 0.0028867513459481316
+          },
+          "roc_auc": {
+            "mean": 0.8369125,
+            "standard_deviation": 0.012397385056938465
+          }
+        },
+        "Hybrid original threshold": {
+          "accuracy": {
+            "mean": 0.8300000000000001,
+            "standard_deviation": 0.03132491021535417
+          },
+          "f1": {
+            "mean": 0.8436128604786691,
+            "standard_deviation": 0.023774733284359622
+          },
+          "false_positive_rate": {
+            "mean": 0.25333333333333335,
+            "standard_deviation": 0.06825198409814423
+          },
+          "precision": {
+            "mean": 0.784791709843249,
+            "standard_deviation": 0.045685224369566735
+          },
+          "recall": {
+            "mean": 0.9133333333333334,
+            "standard_deviation": 0.00763762615825974
+          },
+          "roc_auc": {
+            "mean": 0.9275791666666667,
+            "standard_deviation": 0.0064236663661286645
+          }
+        },
+        "Original LSTM": {
+          "accuracy": {
+            "mean": 0.43166666666666664,
+            "standard_deviation": 0.03608439182435161
+          },
+          "f1": {
+            "mean": 0.5987653098570098,
+            "standard_deviation": 0.04096360381375067
+          },
+          "false_positive_rate": {
+            "mean": 0.9883333333333333,
+            "standard_deviation": 0.016072751268321604
+          },
+          "precision": {
+            "mean": 0.46201538845504037,
+            "standard_deviation": 0.02248980326863526
+          },
+          "recall": {
+            "mean": 0.8516666666666667,
+            "standard_deviation": 0.08808140174482543
+          },
+          "roc_auc": {
+            "mean": 0.6857000000000001,
+            "standard_deviation": 0.08741226762445878
+          }
+        }
+      },
+      "title": "Tranco / OpenPhish (400)"
+    }
+  },
+  "project_version": 3,
+  "scope": "complete evaluation before Version 3 GAN implementation"
+}

@@ -1,0 +1,26 @@
+condition,origin,class,length_bucket,count,percentage_within_group
+Real-only,Real,Legitimate,1-30,57516,0.2045682498808499
+Real-only,Real,Legitimate,31-60,149107,0.5303316996137403
+Real-only,Real,Legitimate,61-100,61977,0.22043477333029826
+Real-only,Real,Legitimate,101-128,9059,0.03222031740160337
+Real-only,Real,Legitimate,>128,3499,0.012444959773508135
+Real-only,Real,Phishing,1-30,26525,0.3083370143909981
+Real-only,Real,Phishing,31-60,35033,0.40723734684862717
+Real-only,Real,Phishing,61-100,16227,0.18862901913375027
+Real-only,Real,Phishing,101-128,3143,0.03653546602190036
+Real-only,Real,Phishing,>128,5098,0.05926115360472416
+GAN condition,Synthetic,Phishing,1-30,17333,0.4289284830487503
+GAN condition,Synthetic,Phishing,31-60,10011,0.24773570898292502
+GAN condition,Synthetic,Phishing,61-100,5719,0.14152437515466468
+GAN condition,Synthetic,Phishing,101-128,7306,0.1807968324672111
+GAN condition,Synthetic,Phishing,>128,41,0.0010146003464488987
+GAN condition,All,Legitimate,1-30,57516,0.2045682498808499
+GAN condition,All,Legitimate,31-60,149107,0.5303316996137403
+GAN condition,All,Legitimate,61-100,61977,0.22043477333029826
+GAN condition,All,Legitimate,101-128,9059,0.03222031740160337
+GAN condition,All,Legitimate,>128,3499,0.012444959773508135
+GAN condition,All,Phishing,1-30,43858,0.3468790534341485
+GAN condition,All,Phishing,31-60,45044,0.3562592932392673
+GAN condition,All,Phishing,61-100,21946,0.1735739820937075
+GAN condition,All,Phishing,101-128,10449,0.08264260179062925
+GAN condition,All,Phishing,>128,5139,0.04064506944224746

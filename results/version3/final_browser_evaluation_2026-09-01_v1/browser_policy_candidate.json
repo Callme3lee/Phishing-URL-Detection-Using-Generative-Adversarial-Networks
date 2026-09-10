@@ -1,0 +1,54 @@
+{
+  "development_dataset": "Final Evaluation Dataset/policy_development.csv",
+  "development_dataset_sha256": "01c8ed4a47d8f19bec987714bb30015a4f7aab12d115c6a04f85dec03d698324",
+  "ensemble_rule": "arithmetic mean of FP32 ONNX probabilities from seeds 42/43/44",
+  "guardrails": [
+    "The frozen final-test labels were not read while selecting these thresholds.",
+    "Do not change any threshold, checkpoint, feature, or tier after final-test inference.",
+    "Scores are ranking outputs and are not calibrated probabilities of phishing.",
+    "This URL-only research prototype does not observe page content, redirects, TLS, DNS, or reputation."
+  ],
+  "maximum_characters": 128,
+  "model": "Updated HYB-MS +10% MS-HardGAN-C, three-seed browser ONNX ensemble",
+  "policy_version": "final_browser_policy_v0.5.2",
+  "primary_binary_rule": {
+    "action": "scores at or above this value are warning-or-block",
+    "maximum_policy_development_fpr": 0.005,
+    "threshold": 0.9880644679069519
+  },
+  "project_version": 3,
+  "selection_rule": "maximum development F1 subject to the registered FPR cap",
+  "status": "FROZEN BEFORE FINAL TEST INFERENCE",
+  "tiers": [
+    {
+      "action": "allow normally",
+      "lower_inclusive": null,
+      "name": "allow",
+      "upper_exclusive": 0.9880644679069519
+    },
+    {
+      "action": "request secondary evidence; do not block from URL score alone",
+      "lower_inclusive": 0.9880644679069519,
+      "name": "secondary_review",
+      "upper_exclusive": 0.9880644679069519
+    },
+    {
+      "action": "show passive caution",
+      "lower_inclusive": 0.9880644679069519,
+      "name": "caution",
+      "upper_exclusive": 0.9880644679069519
+    },
+    {
+      "action": "show a strong phishing warning",
+      "lower_inclusive": 0.9880644679069519,
+      "name": "warning",
+      "upper_exclusive": 0.9984094500541687
+    },
+    {
+      "action": "interstitial block with explicit user override",
+      "lower_inclusive": 0.9984094500541687,
+      "name": "block",
+      "upper_exclusive": null
+    }
+  ]
+}

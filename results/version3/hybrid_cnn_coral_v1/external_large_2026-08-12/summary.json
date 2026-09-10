@@ -1,0 +1,82 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+    }
+  ],
+  "condition": "frozen calibrated hybrid three-seed ensemble",
+  "dataset": "data/external/2026-08-12-large-frozen/external_urls.csv",
+  "dataset_sha256": "fdc040874608908c6f6f89523a219e044e3977f449c66d4966d48c76ed98c1b8",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "legitimate_rows": 5000,
+  "limitations": [
+    "Tranco membership is a legitimate proxy, not a manual page-level safety adjudication.",
+    "Legitimate rows are roots while phishing rows often include paths and queries.",
+    "The balanced class prevalence does not represent browser traffic.",
+    "Only PhishTank rows explicitly timestamped after calibration count as temporal confirmation candidates.",
+    "The full result is an identity-disjoint source-transfer test, not a wholly post-calibration temporal test."
+  ],
+  "methodological_status": "identity-disjoint external source-transfer evaluation; model, ensemble, and threshold remained frozen",
+  "metrics": {
+    "accuracy": 0.9177,
+    "confusion_matrix": {
+      "fn": 738,
+      "fp": 85,
+      "tn": 4915,
+      "tp": 4262
+    },
+    "f1": 0.9119503584037659,
+    "false_negative_rate": 0.1476,
+    "false_positive_rate": 0.017,
+    "pr_auc": 0.9749413042300098,
+    "precision": 0.9804462847941109,
+    "recall": 0.8524,
+    "roc_auc": 0.9663143599999999
+  },
+  "per_source": {
+    "OpenPhish current community feed": {
+      "false_negative_rate": 0.3130081300813008,
+      "mean_score": 0.9082934260368347,
+      "recall": 0.6869918699186992,
+      "rows": 246
+    },
+    "PhishTank verified-online": {
+      "false_negative_rate": 0.13904080774084981,
+      "mean_score": 0.9542019367218018,
+      "recall": 0.8609591922591502,
+      "rows": 4754
+    },
+    "Tranco current root proxy": {
+      "false_positive_rate": 0.017,
+      "mean_score": 0.3007950484752655,
+      "rows": 5000,
+      "specificity": 0.983
+    }
+  },
+  "phishing_rows": 5000,
+  "post_calibration_phishing_subset": {
+    "claim": "phishing-only temporal subset; it has no legitimate rows and therefore cannot produce accuracy, precision, F1, ROC-AUC, or FPR",
+    "false_negative_rate": 0.15702479338842978,
+    "mean_score": 0.9253906011581421,
+    "recall": 0.8429752066115702,
+    "rows": 121
+  },
+  "project_version": 3,
+  "rows": 10000,
+  "threshold": 0.9879557490348816,
+  "threshold_policy": "maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_record": "artifacts/results/hybrid_cnn_coral_v1/calibrated_ensemble_v1/threshold.json",
+  "threshold_record_sha256": "e1fc221bf7829448600113898ceec8158a973321048c236a9ad57b0ec2fa0cdd"
+}

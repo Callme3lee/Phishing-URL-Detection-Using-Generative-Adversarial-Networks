@@ -1,0 +1,253 @@
+\chapter{Introduction}
+\label{chapter:introduction}
+
+\section{Project Background}
+
+Phishing is a social-engineering attack in which an attacker imitates a trusted
+service to persuade a user to reveal information such as a password, bank-card
+number, or account code. A phishing attempt may be delivered through email,
+text messages, social media, advertisements, or a compromised website. In many
+cases, the user is directed to a web address that looks believable but leads to
+a fraudulent page.
+
+The URL is useful for early detection because it can be examined before a user
+submits information or downloads content. URL-based detection is also suitable
+for a browser extension because it does not require the complete webpage to be
+downloaded and analysed. Traditional blacklist systems remain useful for known
+threats, but a newly created phishing URL may not yet appear in a blacklist.
+Machine-learning models can instead learn structural and character patterns
+that separate legitimate and phishing URLs \citep{sahingoz2019machine,
+kamran2022conditional}.
+
+The main difficulty is that phishing URLs change over time. Attackers can alter
+domain names, subdomains, paths, query strings, spelling, special characters,
+and hosting services. At the same time, legitimate browsing also contains long
+and complex URLs. A detector that treats every unfamiliar or complicated URL as
+phishing may achieve high phishing recall while producing too many false
+warnings for normal users.
+
+Generative Adversarial Networks offer a possible way to create additional
+training examples. A GAN contains a generator that produces synthetic samples
+and a discriminator that learns to distinguish generated samples from real
+ones. GAN-based phishing research has considered both generation and detection,
+including conditional generation, black-box detector evasion, and comparisons
+of several GAN families \citep{kamran2022conditional,bac2021pwdgan,
+pham2023evaluation}. This project studies whether generated phishing URLs can
+be used defensively as controlled training augmentation.
+
+\section{Problem Statement}
+
+Supervised phishing detectors normally learn from labelled historical data.
+Their reported accuracy can be high when the test data closely resembles the
+training data. However, performance may fall when URLs are collected from a
+different source, when legitimate browsing contains structures that were not
+represented in training, or when phishing campaigns adopt new combinations of
+known patterns.
+
+Simply adding more generated phishing URLs does not guarantee improvement.
+Synthetic samples may be invalid, repetitive, unrealistic, too similar to the
+training data, or limited to a small number of templates. They may also change
+the class balance in a way that increases missed phishing URLs or false warnings.
+The effect of augmentation must therefore be tested under controlled conditions
+where the real training data, validation data, test data, classifier settings,
+and evaluation metrics remain fixed.
+
+The project addresses the following problem:
+
+\begin{quote}
+\emph{How can realistic and varied GAN-generated phishing URLs be used to
+improve URL classification without hiding increases in false positives, false
+negatives, or failures on URLs collected from different sources?}
+\end{quote}
+
+The problem has both a research part and an implementation part. The research
+part compares real-only training with GAN-augmented training. The implementation
+part places the selected model in a browser extension and studies how model
+scores should be shown to users without presenting every uncertain URL as
+confirmed phishing.
+
+\section{Aim}
+
+The aim of this project is to design, implement, and evaluate a phishing URL
+detection system that uses GAN-generated phishing URLs as controlled data
+augmentation, while maintaining a practical balance between phishing detection
+and false warnings on legitimate URLs.
+
+\section{Objectives}
+
+The objectives originate from the approved project proposal and are organised
+into the measurable tasks shown in Table~\ref{tab:introduction-objectives}.
+
+\begin{table}[htbp]
+\centering
+\caption{Project objectives and how each objective is evaluated.}
+\label{tab:introduction-objectives}
+\small
+\begin{tabular}{@{}p{0.07\textwidth}p{0.47\textwidth}p{0.36\textwidth}@{}}
+\toprule
+No. & Objective & Evaluation evidence \\
+\midrule
+O1 & Prepare labelled legitimate and phishing URL data with duplicate and overlap checks. & Dataset counts, class balance, URL-length analysis, and split checks. \\
+O2 & Train traditional and deep-learning real-only classifiers. & RF, SVM, CNN, RNN, LSTM, and hybrid model metrics. \\
+O3 & Train GAN models using phishing URLs from the training data only. & Generator and discriminator training records. \\
+O4 & Measure generated URL quality and diversity. & Validity, uniqueness, overlap, length, structure, and classifier-challenge tests. \\
+O5 & Compare real-only and GAN-augmented training fairly. & Fixed augmentation percentages, identical real rows, fixed test sets, and repeated seeds. \\
+O6 & Test generalisation on URLs not used for training. & Internal, external, low-phishing, long-URL, and generator-challenge evaluations. \\
+O7 & Select and implement a model for real-time use. & ONNX export, browser inference checks, warning policy, and user testing. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Research Questions}
+
+The work is guided by the following research questions:
+
+\begin{description}
+\item[\textbf{RQ1:}] How well do traditional, neural, and hybrid classifiers distinguish
+legitimate and phishing URLs when trained and tested on fixed real data?
+
+\item[\textbf{RQ2:}] Can the selected GANs generate valid, unique, varied, and believable
+phishing-style URLs without copying the real training set?
+
+\item[\textbf{RQ3:}] Does adding fixed percentages of generated phishing URLs improve
+accuracy, precision, recall, F1-score, ROC-AUC, FPR, or FNR compared with the
+matching real-only model?
+
+\item[\textbf{RQ4:}] Do any improvements remain when the models are evaluated on URLs from
+different sources and on test sets where legitimate URLs greatly outnumber
+phishing URLs?
+
+\item[\textbf{RQ5:}] Can the selected model run locally in a browser extension while keeping
+URL processing consistent with the trained model and limiting unnecessary
+navigation blocks?
+\end{description}
+
+\section{Project Approach}
+
+The project follows the stages in Figure~\ref{fig:introduction-workflow}. The
+stages are kept separate so that generated data cannot enter validation or test
+sets and test results cannot be used to change the training procedure.
+
+\begin{figure}[htbp]
+\centering
+\setlength{\fboxsep}{6pt}
+\newcommand{\workflowbox}[1]{\fbox{\parbox{0.78\textwidth}{\centering\small #1}}}
+\workflowbox{Collect, clean, label, and split real URLs}\\[-0.1em]
+$\downarrow$\\[-0.1em]
+\workflowbox{Train real-only baseline and hybrid classifiers}\\[-0.1em]
+$\downarrow$\\[-0.1em]
+\workflowbox{Train URL GANs and check generated URL quality}\\[-0.1em]
+$\downarrow$\\[-0.1em]
+\workflowbox{Create fixed GAN-augmented training conditions}\\[-0.1em]
+$\downarrow$\\[-0.1em]
+\workflowbox{Evaluate real-only and augmented models on unchanged test sets}\\[-0.1em]
+$\downarrow$\\[-0.1em]
+\workflowbox{Export the selected model and test the browser extension}
+\caption{High-level workflow of the project.}
+\label{fig:introduction-workflow}
+\end{figure}
+
+The main classifier input is the URL text itself. Neural models learn from
+characters, while traditional models use lexical measurements such as URL
+length, digit ratio, special-character ratio, subdomain count, path depth, and
+query structure. The final hybrid model combines a character CNN with a fixed
+lexical feature vector. Models are trained with repeated random seeds where
+appropriate, and thresholds are selected using development or calibration data
+rather than final test labels.
+
+The GAN stage uses phishing URLs from the training data only. Generated
+candidates must pass validity, duplication, overlap, structure, and diversity
+checks before they can be added to a classifier training set. Augmented models
+are then compared with real-only controls using accuracy, precision, recall,
+F1-score, ROC-AUC, FPR, and FNR.
+
+\section{Project Scope}
+
+The scope is limited to URL-based phishing detection. This keeps the experiments
+reproducible and allows the selected model to operate locally in a browser.
+
+\subsection{Included in the Project}
+
+\begin{itemize}
+\item collection and cleaning of labelled legitimate and phishing URLs;
+\item traditional, neural, and hybrid URL classifiers;
+\item character-level and lexical URL features;
+\item GAN training and generated URL quality evaluation;
+\item controlled real-only and GAN-augmented comparisons;
+\item internal and external evaluation with complete classification metrics;
+\item threshold analysis for false-positive and false-negative trade-offs; and
+\item a local browser extension with warning and passive review behaviour.
+\end{itemize}
+
+\subsection{Outside the Project Scope}
+
+\begin{itemize}
+\item analysis of email text, attachments, or sender behaviour;
+\item webpage screenshots, visual similarity, or full Document Object Model analysis;
+\item automatic submission of visited URLs to a remote monitoring service;
+\item a claim that generated URLs predict unknown future attack methods;
+\item commercial deployment or certification as a complete security product; and
+\item replacement of browser reputation services, DNS security, or human judgement.
+\end{itemize}
+
+\section{Main Contributions}
+
+The project makes the following contributions:
+
+\begin{itemize}
+\item a controlled comparison of traditional, neural, and hybrid phishing URL
+classifiers using clearly separated training and evaluation data;
+
+\item an evaluation of several GAN approaches that separates generated URL
+quality from their effect on classifier performance;
+
+\item fixed-percentage augmentation experiments that preserve the real training
+rows and use the same evaluation sets for real-only and augmented conditions;
+
+\item an analysis of distribution shift, showing why strong results on an
+internal test may not transfer to URLs collected from other sources;
+
+\item a hybrid model that combines character learning and lexical URL features
+with multi-source training and score calibration; and
+
+\item a working browser extension that performs local inference and separates
+model warnings from automatic navigation blocking.
+\end{itemize}
+
+\section{Report Structure}
+
+The complete report is planned as follows:
+
+\begin{itemize}
+\item \textbf{Chapter 1 -- Introduction} presents the problem, aim, objectives,
+research questions, scope, approach, and contributions.
+
+\item \textbf{Chapter 2 -- Background} explains phishing URLs, URL structure,
+classification models, GANs, augmentation, distribution shift, and evaluation
+metrics.
+
+\item \textbf{Chapter 3 -- Related Work} reviews recent phishing URL detection
+and GAN-based URL generation research and identifies the gap addressed by this
+project.
+
+\item \textbf{Chapter 4 -- Methodology and System Design} describes the data,
+splits, models, GAN designs, quality checks, augmentation rules, and evaluation
+method.
+
+\item \textbf{Chapter 5 -- Implementation} explains the important software
+components, training pipeline, GPU use, stored model files, and reproducibility
+controls.
+
+\item \textbf{Chapter 6 -- Experiments and Results} presents the baseline,
+GAN-quality, augmentation, external, and threshold results with their analysis.
+
+\item \textbf{Chapter 7 -- Browser Extension and User Testing} describes the
+browser implementation, warning modes, local data handling, technical tests,
+and user feedback.
+
+\item \textbf{Chapter 8 -- Conclusion} answers the research questions and
+summarises the main findings and limitations.
+
+\item \textbf{Chapter 9 -- Future Work} presents practical improvements and
+research that could continue after this project.
+\end{itemize}

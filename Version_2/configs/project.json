@@ -1,0 +1,131 @@
+{
+  "project_version": 2,
+  "seed": 42,
+  "seeds": [42, 43, 44],
+  "data": {
+    "master_csv": "data/raw/urls_dataset2M.csv",
+    "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+    "url_column": "url",
+    "label_column": "label",
+    "label_mapping": {
+      "benign": 0,
+      "malicious": 1
+    },
+    "maximum_raw_url_length": 4096,
+    "maximum_encoded_length": 128,
+    "maximum_vocabulary_size": 192,
+    "split_fractions": {
+      "train": 0.8,
+      "validation": 0.1,
+      "test": 0.1
+    },
+    "split_unit": "canonical_hostname",
+    "split_hash": "blake2b-64-seed-42"
+  },
+  "baseline_models": {
+    "cnn": {
+      "embedding_dim": 48,
+      "channels_per_kernel": 128,
+      "kernel_sizes": [3, 4, 5],
+      "dropout": 0.5,
+      "batch_size": 1024
+    },
+    "lstm": {
+      "embedding_dim": 48,
+      "hidden_dim": 96,
+      "layers": 1,
+      "dropout": 0.4,
+      "batch_size": 512
+    },
+    "hybrid_cnn": {
+      "embedding_dim": 48,
+      "channels_per_kernel": 128,
+      "kernel_sizes": [3, 4, 5],
+      "lexical_hidden_dim": 64,
+      "fusion_hidden_dim": 128,
+      "dropout": 0.5,
+      "batch_size": 1024
+    },
+    "random_forest": {
+      "n_estimators": 300,
+      "max_depth": 32,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample"
+    },
+    "linear_svm": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "max_iter": 20000
+    }
+  },
+  "baseline_training": {
+    "epochs": 8,
+    "early_stopping_patience": 2,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "threshold_policy": "maximum validation F1 subject to validation FPR <= 1 percent for all models"
+  },
+  "generators": {
+    "shared": {
+      "embedding_dim": 64,
+      "hidden_dim": 128,
+      "layers": 1,
+      "dropout": 0.2,
+      "pretraining_epochs": 5,
+      "adversarial_epochs": 5,
+      "adversarial_batch_size": 64,
+      "adversarial_steps_per_epoch": 300,
+      "training_sample_cap": 200000,
+      "validation_sample_cap": 20000,
+      "generation_budget": 2000000,
+      "temperature": 0.8
+    },
+    "gumbel_lsgan": {
+      "learning_rate_generator": 0.0001,
+      "learning_rate_discriminator": 0.0001,
+      "language_model_weight": 1.0,
+      "feature_matching_weight": 0.5,
+      "diversity_weight": 0.1
+    },
+    "seqgan": {
+      "learning_rate_generator": 0.00005,
+      "learning_rate_discriminator": 0.0001,
+      "mle_regularization_weight": 0.2,
+      "adversarial_steps_per_epoch": 100,
+      "rollout_count": 2,
+      "rollout_stride": 16
+    },
+    "relgan": {
+      "status": "augmentation_screen_complete_no_promotion",
+      "embedding_dim": 64,
+      "memory_slots": 4,
+      "memory_size": 128,
+      "attention_heads": 4,
+      "latent_dim": 64,
+      "discriminator_representations": 3,
+      "discriminator_channels_per_kernel": 128,
+      "discriminator_kernel_sizes": [2, 3, 4, 5],
+      "dropout": 0.3,
+      "initial_temperature": 0.8,
+      "batch_size": 64,
+      "pretraining_epochs": 3,
+      "pretraining_steps_per_epoch": 400,
+      "adversarial_epochs": 3,
+      "adversarial_steps_per_epoch": 150,
+      "learning_rate_generator": 0.0001,
+      "learning_rate_discriminator": 0.0002,
+      "mle_regularization_weight": 1.0,
+      "feature_matching_weight": 0.5,
+      "diversity_weight": 0.02,
+      "quality_sample_count": 2000
+    }
+  },
+  "augmentation": {
+    "primary_generated_fraction": 0.1,
+    "exploratory_generated_fractions": [0.2, 0.3, 0.4],
+    "fraction_definition": "generated rows divided by final augmented training rows",
+    "same_real_training_rows_for_every_condition": true
+  }
+}

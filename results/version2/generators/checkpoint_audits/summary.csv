@@ -1,0 +1,4 @@
+model,epoch,selection_score,uniqueness,validity,memorization_rate,repeated_template_rate,samples
+gumbel_lsgan,1,0.9995,1.0,1.0,0.0005,0.0,2000
+seqgan,2,0.9995,1.0,1.0,0.0005,0.0,2000
+relgan,3,0.9950022500000001,1.0,0.9955,0.0005,0.0,2000

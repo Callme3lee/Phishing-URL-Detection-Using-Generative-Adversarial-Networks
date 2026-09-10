@@ -1,0 +1,62 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# JavaScript dependencies
+node_modules/
+npm-debug.log*
+
+# LaTeX build products (the named final report PDF is retained)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+report/main.pdf
+
+# Large training artifacts
+*.joblib
+*.npy
+*.npz
+!extension/tests/browser_onnx_calibration_predictions.npz
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.pt
+*.pth
+*.ckpt
+
+# Raw and derived datasets
+URLs_New.csv
+Version_1/Data sets/*.csv
+Version_2/data/raw/*.csv
+**/data/processed/
+**/data/generated/
+**/data/augmented/
+**/data/experiments/
+
+# Row-level or private evaluations
+*predictions.csv
+*false_positives.csv
+*false_negatives.csv
+**/user_exports/
+**/raw_user_feedback/
+
+# Local archives and discarded material
+DIscard/
+*.zip
+*.tar
+*.tar.gz
+*.tar.zst
+.DS_Store
+Thumbs.db

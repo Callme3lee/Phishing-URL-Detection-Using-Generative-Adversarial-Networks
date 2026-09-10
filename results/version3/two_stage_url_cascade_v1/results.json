@@ -1,0 +1,238 @@
+{
+  "auc_contract": "Single-stage AUC uses Stage-1 probabilities. Cascade AUC uses its continuous decision score (immediate=2, routed=verifier probability, non-routed=-1).",
+  "dataset": {
+    "cascade_freeze": "artifacts/experiments/two_stage_url_cascade_v1/calibration/frozen_cascade.json",
+    "cascade_freeze_sha256": "2a885b516f17348c9569064385a86504e5ca9f3d2b34e528110670328d35911c",
+    "dataset": "data/evaluation/two_stage_url_cascade_v1/evaluation_urls.csv",
+    "dataset_name": "two_stage_url_cascade_identity_disjoint_v1",
+    "dataset_sha256": "4784a39d17629faf8ace4f5da8fad051e2e15b9cb259f2abde6f960a471aa50d",
+    "identity_exclusions": {
+      "encoded_inputs": 666297,
+      "hosts": 381532,
+      "registered_domains": 345343,
+      "urls": 667551
+    },
+    "legitimate_rows": 18000,
+    "limitations": [
+      "This is identity-disjoint, not a later temporal snapshot; source files were already locally available.",
+      "PhishTank verified/online membership is the phishing label; URLs were not visited.",
+      "Tranco membership is a legitimate-domain proxy, and legitimate rows are root URLs.",
+      "This URL-only test does not provide HTML, DNS, certificate, reputation, or redirect evidence."
+    ],
+    "locked_at_utc": "2026-08-15T09:46:57.755509+00:00",
+    "one_shot_contract": "No threshold, model, feature, or cohort selection change after inference.",
+    "phishing_prevalence": 0.1,
+    "phishing_rows": 2000,
+    "project_version": 3,
+    "raw_source_hashes": {
+      "phishtank": "7966b25e39425d130f23b981ffef06b6fb17a315b058e805843abfa714906757",
+      "tranco": "3845e51320bc359af2a47d96c6730ac0c6523ab5b5b27895938c35f6f1062260"
+    },
+    "rejections": {
+      "duplicate_phishing_domain": 56,
+      "prior_or_phishing_legitimate_identity": 70587,
+      "prior_phishing_identity": 18315
+    },
+    "rows": 20000,
+    "selection_locked_before_collection": true,
+    "unique_registered_domains": 20000
+  },
+  "evaluation_status": "ONE-SHOT COMPLETE; NO POST-TEST TUNING",
+  "experiment": "two_stage_url_cascade_v1",
+  "limitations": [
+    "This is identity-disjoint, not a later temporal snapshot; source files were already locally available.",
+    "PhishTank verified/online membership is the phishing label; URLs were not visited.",
+    "Tranco membership is a legitimate-domain proxy, and legitimate rows are root URLs.",
+    "This URL-only test does not provide HTML, DNS, certificate, reputation, or redirect evidence."
+  ],
+  "operating_points": [
+    {
+      "cascade": {
+        "accuracy": 0.96815,
+        "confusion_matrix": {
+          "fn": 619,
+          "fp": 18,
+          "tn": 17982,
+          "tp": 1381
+        },
+        "f1": 0.812591938805531,
+        "false_negative_rate": 0.3095,
+        "false_positive_rate": 0.001,
+        "pr_auc": 0.9171857796745283,
+        "precision": 0.9871336669049321,
+        "recall": 0.6905,
+        "roc_auc": 0.9643465277777777
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": 0.023049999999999904,
+        "f1": 0.18759193880553104,
+        "false_negative_rate": -0.23299999999999998,
+        "false_positive_rate": 0.00027777777777777783,
+        "pr_auc": -0.01165299975029832,
+        "precision": 0.0011422875945872324,
+        "recall": 0.23299999999999998,
+        "roc_auc": -0.010888638888888913
+      },
+      "immediate_block_rows": 636,
+      "maximum_fpr": 0.0025,
+      "routed_fraction": 0.14765,
+      "routed_rows": 2953,
+      "single_stage": {
+        "accuracy": 0.9451,
+        "confusion_matrix": {
+          "fn": 1085,
+          "fp": 13,
+          "tn": 17987,
+          "tp": 915
+        },
+        "f1": 0.625,
+        "false_negative_rate": 0.5425,
+        "false_positive_rate": 0.0007222222222222222,
+        "pr_auc": 0.9288387794248266,
+        "precision": 0.9859913793103449,
+        "recall": 0.4575,
+        "roc_auc": 0.9752351666666667
+      },
+      "single_stage_threshold": 0.9998487830162048,
+      "verifier_threshold": 0.9884093403816223
+    },
+    {
+      "cascade": {
+        "accuracy": 0.9748,
+        "confusion_matrix": {
+          "fn": 456,
+          "fp": 48,
+          "tn": 17952,
+          "tp": 1544
+        },
+        "f1": 0.8596881959910914,
+        "false_negative_rate": 0.228,
+        "false_positive_rate": 0.0026666666666666666,
+        "pr_auc": 0.9171857796745283,
+        "precision": 0.9698492462311558,
+        "recall": 0.772,
+        "roc_auc": 0.9643465277777777
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": -0.0007000000000000339,
+        "f1": -0.007304203574598156,
+        "false_negative_rate": 0.026499999999999996,
+        "false_positive_rate": -0.002166666666666667,
+        "pr_auc": -0.01165299975029832,
+        "precision": 0.021511954069635575,
+        "recall": -0.026499999999999968,
+        "roc_auc": -0.010888638888888913
+      },
+      "immediate_block_rows": 636,
+      "maximum_fpr": 0.005,
+      "routed_fraction": 0.14765,
+      "routed_rows": 2953,
+      "single_stage": {
+        "accuracy": 0.9755,
+        "confusion_matrix": {
+          "fn": 403,
+          "fp": 87,
+          "tn": 17913,
+          "tp": 1597
+        },
+        "f1": 0.8669923995656895,
+        "false_negative_rate": 0.2015,
+        "false_positive_rate": 0.004833333333333334,
+        "pr_auc": 0.9288387794248266,
+        "precision": 0.9483372921615202,
+        "recall": 0.7985,
+        "roc_auc": 0.9752351666666667
+      },
+      "single_stage_threshold": 0.9953193664550781,
+      "verifier_threshold": 0.9660128951072693
+    },
+    {
+      "cascade": {
+        "accuracy": 0.97565,
+        "confusion_matrix": {
+          "fn": 320,
+          "fp": 167,
+          "tn": 17833,
+          "tp": 1680
+        },
+        "f1": 0.87340785027294,
+        "false_negative_rate": 0.16,
+        "false_positive_rate": 0.009277777777777777,
+        "pr_auc": 0.9171857796745283,
+        "precision": 0.9095831077422848,
+        "recall": 0.84,
+        "roc_auc": 0.9643465277777777
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": -0.0019000000000000128,
+        "f1": -0.012603827817946,
+        "false_negative_rate": 0.0325,
+        "false_positive_rate": -0.0015000000000000013,
+        "pr_auc": -0.01165299975029832,
+        "precision": 0.009634680718045519,
+        "recall": -0.032500000000000084,
+        "roc_auc": -0.010888638888888913
+      },
+      "immediate_block_rows": 636,
+      "maximum_fpr": 0.01,
+      "routed_fraction": 0.14765,
+      "routed_rows": 2953,
+      "single_stage": {
+        "accuracy": 0.97755,
+        "confusion_matrix": {
+          "fn": 255,
+          "fp": 194,
+          "tn": 17806,
+          "tp": 1745
+        },
+        "f1": 0.886011678090886,
+        "false_negative_rate": 0.1275,
+        "false_positive_rate": 0.010777777777777778,
+        "pr_auc": 0.9288387794248266,
+        "precision": 0.8999484270242393,
+        "recall": 0.8725,
+        "roc_auc": 0.9752351666666667
+      },
+      "single_stage_threshold": 0.9717481732368469,
+      "verifier_threshold": 0.888735830783844
+    }
+  ],
+  "project_version": 3,
+  "stage1": "Updated HYB-MS +10% GAN three-seed ensemble",
+  "stage1_checkpoints": [
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064"
+    },
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8"
+    },
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9"
+    }
+  ],
+  "stage2": "real-only lexical MLP three-seed ensemble",
+  "verdict": "At the strict 0.25% calibration budget, the cascade changed recall by +23.30 points and FNR by -23.30 points; observed FPR changed by +0.028 points. This is evidence for the cascade only at this locked operating point, not proof that it eliminates false negatives.",
+  "verifier_checkpoints": [
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "0886b4edde15ed431763481f656456b37cae86b779fadc9c7e06c34fbefeda53"
+    },
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "dd58a06cd20bfea652217339ca286d5f5d337db5dd47995b7fb7a7ce821148e0"
+    },
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "860b3e070873535c761060936b724a30a4484f4f00f8885cc01710ddd90ca8d8"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "accuracy": 0.9462105669422495,
+  "condition": "ms_hardgan_v2_20pct",
+  "confusion_matrix": {
+    "fn": 2448,
+    "fp": 200,
+    "tn": 38708,
+    "tp": 7873
+  },
+  "device": "CPU",
+  "f1": 0.8560400130477329,
+  "false_negative_rate": 0.23718631915512062,
+  "false_positive_rate": 0.005140331037318803,
+  "generated_fraction": 0.2,
+  "inference_urls_per_second": 191643.4218549075,
+  "master_sha256": "18067bad500580a7def376c5a4438c9886adda5eb739fc209fdda4c6309966a7",
+  "model": "random_forest",
+  "model_size_bytes": 201816427,
+  "pr_auc": 0.933286565735153,
+  "precision": 0.9752260621825839,
+  "project_version": 3,
+  "real_training_rows": 363692,
+  "recall": 0.7628136808448793,
+  "roc_auc": 0.962072787615417,
+  "scheme_removed": true,
+  "seed": 42,
+  "synthetic_training_rows": 90923,
+  "test_inference_seconds": 0.2568781099998887,
+  "threshold": 0.7930472109501173,
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.7930472109501173,
+    "validation_f1": 0.8546989433666908,
+    "validation_fpr": 0.009988149652954123,
+    "validation_precision": 0.9628416677163371,
+    "validation_recall": 0.7683956574185766
+  },
+  "training_rows": 454615,
+  "training_time_seconds": 38.32372160500017
+}

@@ -1,0 +1,101 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6045177967241225,
+      "validation": {
+        "threshold": 0.8408203125,
+        "accuracy": 0.7848664688427299,
+        "precision": 0.983453237410072,
+        "recall": 0.579482831708351,
+        "f1": 0.7292611363030141,
+        "roc_auc": 0.9158711569932942,
+        "pr_auc": 0.9343082590531437,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 992,
+          "tp": 1367
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3576633079512689,
+      "validation": {
+        "threshold": 0.79736328125,
+        "accuracy": 0.8524798643493006,
+        "precision": 0.9865418373317729,
+        "recall": 0.7147096227214922,
+        "f1": 0.8289085545722714,
+        "roc_auc": 0.9608418401040382,
+        "pr_auc": 0.9687393311674981,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 673,
+          "tp": 1686
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2636409820569275,
+      "validation": {
+        "threshold": 0.7822265625,
+        "accuracy": 0.8919033488766427,
+        "precision": 0.9878627968337731,
+        "recall": 0.7935565917761763,
+        "f1": 0.8801128349788434,
+        "roc_auc": 0.975240261202351,
+        "pr_auc": 0.9799152041653919,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 487,
+          "tp": 1872
+        }
+      }
+    }
+  ],
+  "test": {
+    "threshold": 0.7822265625,
+    "accuracy": 0.8489881634211531,
+    "precision": 0.9892933618843683,
+    "recall": 0.7056128293241696,
+    "f1": 0.8237129485179407,
+    "roc_auc": 0.9706924068410115,
+    "pr_auc": 0.9744930019124004,
+    "false_positive_rate": 0.007636502481863307,
+    "confusion_matrix": {
+      "tn": 2599,
+      "fp": 20,
+      "fn": 771,
+      "tp": 1848
+    }
+  },
+  "best_epoch": 3,
+  "augmentation": {
+    "type": "synthetic",
+    "count": 4378,
+    "synthetic_tokens": "artifacts/modern_training_data/lsgan_modern/generated_5000/filtered_strict/filtered_tokens.npy",
+    "train_fraction": 1.0
+  },
+  "initialization": {
+    "checkpoint": "artifacts/robust_augmentation/results_seed44/real_only/cnn/best.pt",
+    "source_epoch": 5,
+    "source_augmentation": {
+      "type": "none",
+      "count": 0,
+      "synthetic_tokens": null,
+      "train_fraction": 1.0
+    }
+  },
+  "threshold_policy": {
+    "method": "maximum validation F1 subject to false-positive-rate constraint",
+    "max_validation_fpr": 0.01
+  }
+}

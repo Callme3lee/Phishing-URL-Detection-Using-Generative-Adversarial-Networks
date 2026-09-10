@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/urls_new_structure_balanced_v1/cnn/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "2a6382e05e6fc6ec267dd5d9435cc8ee05c44addd1a050fda04c9db039916e6c"
+    },
+    {
+      "path": "artifacts/experiments/urls_new_structure_balanced_v1/cnn/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "9483643ce8a9ada04c0cc654d4d9cbc0cdfba51f36014f171185736325393f43"
+    },
+    {
+      "path": "artifacts/experiments/urls_new_structure_balanced_v1/cnn/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "af0f9e6ee504f2f89b7714ab2fbdafdf0d828c4249fbe6db9d0e2ffc3615ce18"
+    }
+  ],
+  "condition": "Real",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.54,
+      "confusion_matrix": {
+        "fn": 182,
+        "fp": 2,
+        "tn": 198,
+        "tp": 18
+      },
+      "f1": 0.16363636363636364,
+      "false_negative_rate": 0.91,
+      "false_positive_rate": 0.01,
+      "pr_auc": 0.6723188461655678,
+      "precision": 0.9,
+      "recall": 0.09,
+      "roc_auc": 0.6067500000000001
+    },
+    "external_10k": {
+      "accuracy": 0.5248,
+      "confusion_matrix": {
+        "fn": 4731,
+        "fp": 21,
+        "tn": 4979,
+        "tp": 269
+      },
+      "f1": 0.10170132325141777,
+      "false_negative_rate": 0.9462,
+      "false_positive_rate": 0.0042,
+      "pr_auc": 0.646419624741871,
+      "precision": 0.9275862068965517,
+      "recall": 0.0538,
+      "roc_auc": 0.61213396
+    },
+    "external_30k": {
+      "accuracy": 0.7222,
+      "confusion_matrix": {
+        "fn": 8253,
+        "fp": 81,
+        "tn": 20898,
+        "tp": 768
+      },
+      "f1": 0.15562310030395138,
+      "false_negative_rate": 0.914865314266711,
+      "false_positive_rate": 0.003861003861003861,
+      "pr_auc": 0.5283724715617835,
+      "precision": 0.9045936395759717,
+      "recall": 0.08513468573328899,
+      "roc_auc": 0.6756477842277644
+    },
+    "internal_test": {
+      "accuracy": 0.8852505636921327,
+      "confusion_matrix": {
+        "fn": 5649,
+        "fp": 0,
+        "tn": 38908,
+        "tp": 4672
+      },
+      "f1": 0.6232241712799307,
+      "false_negative_rate": 0.5473306850111423,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.9929455010838149,
+      "precision": 1.0,
+      "recall": 0.45266931498885765,
+      "roc_auc": 0.9966744981717585
+    }
+  },
+  "format": "neural",
+  "id": "experiments__urls__new__structure__balanced__v1__cnn",
+  "model": "CNN",
+  "root": "artifacts/experiments/urls_new_structure_balanced_v1/cnn",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "Structure-balanced",
+  "threshold": 1.0,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 1.0,
+    "validation_f1": 0.16363636363636364,
+    "validation_fpr": 0.01,
+    "validation_precision": 0.9,
+    "validation_recall": 0.09
+  }
+}

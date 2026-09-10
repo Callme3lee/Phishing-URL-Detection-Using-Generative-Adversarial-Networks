@@ -1,0 +1,214 @@
+{
+  "calibration_dataset": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+  "calibration_dataset_sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c",
+  "confirmation_contract": "model, checkpoint hashes, ensemble rule, preprocessing, and selected threshold are locked before final confirmation",
+  "deployment_gate": {
+    "maximum_fpr": 0.0025,
+    "minimum_recall": 0.8
+  },
+  "deployment_gate_passed": false,
+  "false_positive_analysis": {
+    "by_structure": [
+      {
+        "false_positive_rate": 0.00044885541868236,
+        "false_positives": 9,
+        "group": "root",
+        "mean_score": 0.13669121265411377,
+        "rows": 20051
+      },
+      {
+        "false_positive_rate": 0.18181818181818182,
+        "false_positives": 18,
+        "group": "shallow",
+        "mean_score": 0.4778597950935364,
+        "rows": 99
+      },
+      {
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "group": "deep",
+        "mean_score": 0.29769933223724365,
+        "rows": 300
+      },
+      {
+        "false_positive_rate": 0.15333333333333332,
+        "false_positives": 23,
+        "group": "query",
+        "mean_score": 0.3570656478404999,
+        "rows": 150
+      }
+    ],
+    "flag_counts": {
+      "long_url": 17,
+      "none_of_registered_flags": 26,
+      "punycode": 1,
+      "query_string": 23
+    },
+    "rows": 50
+  },
+  "legitimate_rows": 20600,
+  "model": "Updated real-only HYB-MS (three-seed mean-score ensemble)",
+  "model_id": "recent_update_real_only_v1",
+  "original_threshold": 0.99951171875,
+  "original_threshold_metrics": {
+    "accuracy": 0.944025974025974,
+    "confusion_matrix": {
+      "fn": 1246,
+      "fp": 47,
+      "tn": 20553,
+      "tp": 1254
+    },
+    "f1": 0.65982636148382,
+    "false_negative_rate": 0.4984,
+    "false_positive_rate": 0.0022815533980582526,
+    "pr_auc": 0.9266333604439599,
+    "precision": 0.9638739431206764,
+    "recall": 0.5016,
+    "roc_auc": 0.9809811650485437
+  },
+  "phishing_rows": 2500,
+  "projected_precision": {
+    "0.001": 0.17680864781055824,
+    "0.01": 0.6842806190396008,
+    "0.05": 0.9186537974119919,
+    "0.1": 0.9597440796959873
+  },
+  "retraining_decision": "Gate failed; threshold adjustment alone is insufficient. Retrain with newly collected, structurally diverse legitimate development rows, then recalibrate on a separate unused cohort.",
+  "rows": 23100,
+  "selected_metrics": {
+    "accuracy": 0.945974025974026,
+    "confusion_matrix": {
+      "fn": 1198,
+      "fp": 50,
+      "tn": 20550,
+      "tp": 1302
+    },
+    "f1": 0.67601246105919,
+    "false_negative_rate": 0.4792,
+    "false_positive_rate": 0.0024271844660194173,
+    "pr_auc": 0.9266333604439599,
+    "precision": 0.9630177514792899,
+    "recall": 0.5208,
+    "roc_auc": 0.9809811650485437
+  },
+  "selected_rule": {
+    "f1": 0.67601246105919,
+    "fpr": 0.0024271844660194173,
+    "maximum_fpr": 0.0025,
+    "minimum_recall": 0.8,
+    "precision": 0.9630177514792899,
+    "recall": 0.5208,
+    "threshold": 0.9994111061096191
+  },
+  "selected_threshold": 0.9994111061096191,
+  "tradeoffs": [
+    {
+      "maximum_fpr": 0.001,
+      "metrics": {
+        "accuracy": 0.9264502164502164,
+        "confusion_matrix": {
+          "fn": 1679,
+          "fp": 20,
+          "tn": 20580,
+          "tp": 821
+        },
+        "f1": 0.4914696198742891,
+        "false_negative_rate": 0.6716,
+        "false_positive_rate": 0.000970873786407767,
+        "pr_auc": 0.9266333604439599,
+        "precision": 0.976218787158145,
+        "recall": 0.3284,
+        "roc_auc": 0.9809811650485437
+      },
+      "selection": {
+        "maximum_fpr_constraint": 0.001,
+        "threshold": 0.9998899102210999,
+        "validation_f1": 0.4914696198742892,
+        "validation_fpr": 0.000970873786407767,
+        "validation_precision": 0.976218787158145,
+        "validation_recall": 0.3284
+      }
+    },
+    {
+      "maximum_fpr": 0.0025,
+      "metrics": {
+        "accuracy": 0.945974025974026,
+        "confusion_matrix": {
+          "fn": 1198,
+          "fp": 50,
+          "tn": 20550,
+          "tp": 1302
+        },
+        "f1": 0.67601246105919,
+        "false_negative_rate": 0.4792,
+        "false_positive_rate": 0.0024271844660194173,
+        "pr_auc": 0.9266333604439599,
+        "precision": 0.9630177514792899,
+        "recall": 0.5208,
+        "roc_auc": 0.9809811650485437
+      },
+      "selection": {
+        "maximum_fpr_constraint": 0.0025,
+        "threshold": 0.9994111061096191,
+        "validation_f1": 0.67601246105919,
+        "validation_fpr": 0.0024271844660194173,
+        "validation_precision": 0.9630177514792899,
+        "validation_recall": 0.5208
+      }
+    },
+    {
+      "maximum_fpr": 0.005,
+      "metrics": {
+        "accuracy": 0.9653679653679653,
+        "confusion_matrix": {
+          "fn": 697,
+          "fp": 103,
+          "tn": 20497,
+          "tp": 1803
+        },
+        "f1": 0.8184294144348615,
+        "false_negative_rate": 0.2788,
+        "false_positive_rate": 0.005,
+        "pr_auc": 0.9266333604439599,
+        "precision": 0.9459601259181531,
+        "recall": 0.7212,
+        "roc_auc": 0.9809811650485437
+      },
+      "selection": {
+        "maximum_fpr_constraint": 0.005,
+        "threshold": 0.9960489273071289,
+        "validation_f1": 0.8184294144348615,
+        "validation_fpr": 0.005,
+        "validation_precision": 0.9459601259181531,
+        "validation_recall": 0.7212
+      }
+    },
+    {
+      "maximum_fpr": 0.01,
+      "metrics": {
+        "accuracy": 0.976017316017316,
+        "confusion_matrix": {
+          "fn": 354,
+          "fp": 200,
+          "tn": 20400,
+          "tp": 2146
+        },
+        "f1": 0.8856789104416013,
+        "false_negative_rate": 0.1416,
+        "false_positive_rate": 0.009708737864077669,
+        "pr_auc": 0.9266333604439599,
+        "precision": 0.9147485080988917,
+        "recall": 0.8584,
+        "roc_auc": 0.9809811650485437
+      },
+      "selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9735042452812195,
+        "validation_f1": 0.8856789104416013,
+        "validation_fpr": 0.009708737864077669,
+        "validation_precision": 0.9147485080988917,
+        "validation_recall": 0.8584
+      }
+    }
+  ]
+}

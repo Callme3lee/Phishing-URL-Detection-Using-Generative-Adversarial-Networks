@@ -1,0 +1,211 @@
+{
+  "additional_false_positives": 53,
+  "additional_true_positives": 81,
+  "artifact_hashes": {
+    "dns_evidence": "8284be20453f63af2b652663e3c505d3fa4fb7880c041eb1b02bbc8dd640c36d",
+    "full_predictions": "a9f2deda1518d19d7109d0b0e2dee1ecd9a9d825731c99319701ea5dd6e47007"
+  },
+  "combined": {
+    "accuracy": 0.9769,
+    "confusion_matrix": {
+      "fn": 322,
+      "fp": 140,
+      "tn": 17860,
+      "tp": 1678
+    },
+    "f1": 0.8789942378208486,
+    "false_negative_rate": 0.161,
+    "false_positive_rate": 0.0077777777777777776,
+    "pr_auc": 0.9313799027929381,
+    "precision": 0.922992299229923,
+    "recall": 0.839,
+    "roc_auc": 0.9756186944444444
+  },
+  "dns_collection": {
+    "collected_at_utc": "2026-08-15T11:12:02.262996+00:00",
+    "elapsed_seconds": 53.01740214500023,
+    "evidence": "live DNS records only",
+    "input": "artifacts/deployment_candidates/conservative_hyb_gan10_v1/validation/20k_tiered_predictions.csv",
+    "input_sha256": "a9f2deda1518d19d7109d0b0e2dee1ecd9a9d825731c99319701ea5dd6e47007",
+    "limitations": [
+      "DNS is mutable and this collection is a timestamped snapshot.",
+      "Resolution failure may reflect blocking or transient network failure rather than maliciousness.",
+      "Availability can become a source shortcut; holdout and later temporal evaluation are required."
+    ],
+    "output": "artifacts/results/dns_secondary_v1/20k_dns_secondary_review.csv",
+    "output_sha256": "8284be20453f63af2b652663e3c505d3fa4fb7880c041eb1b02bbc8dd640c36d",
+    "per_query_timeout_seconds": 4.0,
+    "project_version": 3,
+    "query_types": [
+      "hostname:A",
+      "hostname:AAAA",
+      "hostname:CNAME",
+      "domain:MX",
+      "domain:NS"
+    ],
+    "rows_with_any_nxdomain": 55,
+    "security_scope": "No HTTP connection, page visit, redirect following, TLS handshake, WHOIS/RDAP call, or phishing-content retrieval was performed.",
+    "selected_rows": 941,
+    "tier_filter": "secondary_review",
+    "timeout_queries": 0,
+    "total_queries": 4705,
+    "workers": 40
+  },
+  "experiment": "dns_secondary_v1",
+  "feature_importance": [
+    {
+      "feature": "domain_ns_minimum_ttl",
+      "importance": 0.1572494380558622
+    },
+    {
+      "feature": "host_a_minimum_ttl",
+      "importance": 0.08956087521703616
+    },
+    {
+      "feature": "domain_ns_count",
+      "importance": 0.07232027954593837
+    },
+    {
+      "feature": "dns_total_nxdomain",
+      "importance": 0.06789453287844928
+    },
+    {
+      "feature": "host_aaaa_nxdomain",
+      "importance": 0.06697791116594326
+    },
+    {
+      "feature": "host_a_nxdomain",
+      "importance": 0.062480332775799424
+    },
+    {
+      "feature": "dns_nameserver_exists",
+      "importance": 0.06051264693552224
+    },
+    {
+      "feature": "host_cname_nxdomain",
+      "importance": 0.0597428433433324
+    },
+    {
+      "feature": "host_aaaa_minimum_ttl",
+      "importance": 0.055076940562890246
+    },
+    {
+      "feature": "host_aaaa_count",
+      "importance": 0.05403871476324438
+    },
+    {
+      "feature": "domain_mx_minimum_ttl",
+      "importance": 0.04501184219648329
+    },
+    {
+      "feature": "host_cname_minimum_ttl",
+      "importance": 0.03481087440552979
+    },
+    {
+      "feature": "host_a_count",
+      "importance": 0.03408599217349557
+    },
+    {
+      "feature": "domain_mx_count",
+      "importance": 0.03346406630085592
+    },
+    {
+      "feature": "domain_ns_nxdomain",
+      "importance": 0.029510581534147363
+    },
+    {
+      "feature": "domain_mx_nxdomain",
+      "importance": 0.02674240862385771
+    },
+    {
+      "feature": "dns_mail_exists",
+      "importance": 0.01740735767617545
+    },
+    {
+      "feature": "host_cname_count",
+      "importance": 0.01717184223803142
+    },
+    {
+      "feature": "dns_address_exists",
+      "importance": 0.01594051960740542
+    },
+    {
+      "feature": "host_a_timeout",
+      "importance": 0.0
+    },
+    {
+      "feature": "host_aaaa_timeout",
+      "importance": 0.0
+    },
+    {
+      "feature": "host_cname_timeout",
+      "importance": 0.0
+    },
+    {
+      "feature": "domain_mx_timeout",
+      "importance": 0.0
+    },
+    {
+      "feature": "domain_ns_timeout",
+      "importance": 0.0
+    },
+    {
+      "feature": "dns_total_timeouts",
+      "importance": 0.0
+    }
+  ],
+  "frozen_model": "artifacts/experiments/dns_secondary_v1/frozen_dns_secondary.json",
+  "frozen_model_sha256": "522e2a5217b5c4039571fa2ce294bb86d62368c5361081fc1cd66e21ccefc0ce",
+  "limitations": [
+    "The 20K evaluation labels were not used for training, feature choice or threshold selection.",
+    "DNS availability may encode takedown status and source timing rather than stable phishing behavior.",
+    "The holdout is identity-disjoint but drawn from the same source snapshot; temporal confirmation remains required.",
+    "DNS is mutable and this collection is a timestamped snapshot.",
+    "Resolution failure may reflect blocking or transient network failure rather than maliciousness.",
+    "Availability can become a source shortcut; holdout and later temporal evaluation are required."
+  ],
+  "primary_only": {
+    "accuracy": 0.9755,
+    "confusion_matrix": {
+      "fn": 403,
+      "fp": 87,
+      "tn": 17913,
+      "tp": 1597
+    },
+    "f1": 0.8669923995656895,
+    "false_negative_rate": 0.2015,
+    "false_positive_rate": 0.004833333333333334,
+    "pr_auc": 0.9288345831836456,
+    "precision": 0.9483372921615202,
+    "recall": 0.7985,
+    "roc_auc": 0.975235
+  },
+  "project_version": 3,
+  "projected_precision": {
+    "combined": {
+      "0.001": 0.09745615054013242,
+      "0.01": 0.5214418893722809,
+      "0.05": 0.850242089854746,
+      "0.1": 0.922992299229923
+    },
+    "primary": {
+      "0.001": 0.14190510040874357,
+      "0.01": 0.625293657008614,
+      "0.05": 0.896855110445526,
+      "0.1": 0.9483372921615201
+    }
+  },
+  "routed": {
+    "dns_pr_auc": 0.6981299234214622,
+    "dns_roc_auc": 0.8760098039215686,
+    "escalated_legitimate": 53,
+    "escalated_phishing": 81,
+    "escalated_rows": 134,
+    "legitimate_rows": 816,
+    "phishing_rows": 125,
+    "rows": 941,
+    "secondary_threshold": 0.5040881453440683
+  },
+  "status": "LOCKED DIAGNOSTIC EVALUATION COMPLETE",
+  "verdict": "The locked DNS branch recovered 81 additional phishing URLs and added 53 false positives. FNR changed from 20.15% to 16.10%; FPR changed from 0.48% to 0.78%. DNS helps modestly but does not solve the remaining URL-only misses."
+}

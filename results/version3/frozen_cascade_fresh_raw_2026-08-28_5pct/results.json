@@ -1,0 +1,218 @@
+{
+  "dataset": {
+    "legitimate_rows": 9500,
+    "measured_overlap": {
+      "encoded_rows": 0,
+      "hostnames": 0,
+      "urls": 0
+    },
+    "path": "data/external/2026-08-28-fresh-raw-5pct/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 500,
+    "rows": 10000,
+    "sha256": "fb174d1e7b7aec9b7b780eecb549985420648a52492f1fbad4e7688e6bf752e4"
+  },
+  "evaluated_at_utc": "2026-08-28T15:26:10.201852+00:00",
+  "evaluation_status": "ONE-SHOT TEMPORAL TRANSFER; NO POST-TEST TUNING",
+  "experiment": "frozen_cascade_fresh_raw_2026-08-28_5pct",
+  "frozen_cascade": {
+    "frozen_before_snapshot": true,
+    "immediate_threshold": 0.9999728202819824,
+    "path": "artifacts/experiments/two_stage_url_cascade_v1/calibration/frozen_cascade.json",
+    "screening_threshold": 0.6530797481536865,
+    "sha256": "2a885b516f17348c9569064385a86504e5ca9f3d2b34e528110670328d35911c"
+  },
+  "immediate_rows": 94,
+  "limitations": [
+    "The snapshot labels were not used to choose any threshold, but this result must not be used to retune the frozen cascade.",
+    "Both stages remain URL-only and cannot observe page content, redirect chains, DNS, TLS, reputation, or domain age.",
+    "Tranco membership is a legitimate proxy and feed membership supplies the phishing labels."
+  ],
+  "operating_points": [
+    {
+      "cascade": {
+        "accuracy": 0.98,
+        "confusion_matrix": {
+          "fn": 192,
+          "fp": 8,
+          "tn": 9492,
+          "tp": 308
+        },
+        "f1": 0.7549019607843137,
+        "false_negative_rate": 0.384,
+        "false_positive_rate": 0.0008421052631578948,
+        "pr_auc": 0.7446234655486919,
+        "precision": 0.9746835443037974,
+        "recall": 0.616,
+        "roc_auc": 0.8827695789473685
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": 0.01629999999999998,
+        "f1": 0.3229770781552057,
+        "false_negative_rate": -0.33999999999999997,
+        "false_positive_rate": 0.0007368421052631579,
+        "pr_auc": 0.004281040099211708,
+        "precision": -0.018122211091886054,
+        "recall": 0.33999999999999997,
+        "roc_auc": 0.03924989473684237
+      },
+      "maximum_calibration_fpr": 0.0025,
+      "single_stage": {
+        "accuracy": 0.9637,
+        "confusion_matrix": {
+          "fn": 362,
+          "fp": 1,
+          "tn": 9499,
+          "tp": 138
+        },
+        "f1": 0.431924882629108,
+        "false_negative_rate": 0.724,
+        "false_positive_rate": 0.00010526315789473685,
+        "pr_auc": 0.7403424254494801,
+        "precision": 0.9928057553956835,
+        "recall": 0.276,
+        "roc_auc": 0.8435196842105261
+      },
+      "single_stage_threshold": 0.9998487830162048,
+      "verifier_threshold": 0.9884093403816223
+    },
+    {
+      "cascade": {
+        "accuracy": 0.9813,
+        "confusion_matrix": {
+          "fn": 168,
+          "fp": 19,
+          "tn": 9481,
+          "tp": 332
+        },
+        "f1": 0.7802585193889542,
+        "false_negative_rate": 0.336,
+        "false_positive_rate": 0.002,
+        "pr_auc": 0.7446234655486919,
+        "precision": 0.9458689458689459,
+        "recall": 0.664,
+        "roc_auc": 0.8827695789473685
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": 0.005499999999999949,
+        "f1": 0.08050665834677051,
+        "false_negative_rate": -0.09999999999999998,
+        "false_positive_rate": -0.0005263157894736842,
+        "pr_auc": 0.004281040099211708,
+        "precision": 0.02430031841796554,
+        "recall": 0.10000000000000009,
+        "roc_auc": 0.03924989473684237
+      },
+      "maximum_calibration_fpr": 0.005,
+      "single_stage": {
+        "accuracy": 0.9758,
+        "confusion_matrix": {
+          "fn": 218,
+          "fp": 24,
+          "tn": 9476,
+          "tp": 282
+        },
+        "f1": 0.6997518610421837,
+        "false_negative_rate": 0.436,
+        "false_positive_rate": 0.0025263157894736842,
+        "pr_auc": 0.7403424254494801,
+        "precision": 0.9215686274509803,
+        "recall": 0.564,
+        "roc_auc": 0.8435196842105261
+      },
+      "single_stage_threshold": 0.9953193664550781,
+      "verifier_threshold": 0.9660128951072693
+    },
+    {
+      "cascade": {
+        "accuracy": 0.9777,
+        "confusion_matrix": {
+          "fn": 152,
+          "fp": 71,
+          "tn": 9429,
+          "tp": 348
+        },
+        "f1": 0.7573449401523396,
+        "false_negative_rate": 0.304,
+        "false_positive_rate": 0.0074736842105263155,
+        "pr_auc": 0.7446234655486919,
+        "precision": 0.8305489260143198,
+        "recall": 0.696,
+        "roc_auc": 0.8827695789473685
+      },
+      "delta_cascade_minus_single": {
+        "accuracy": 0.0021999999999999797,
+        "f1": 0.017706257899417155,
+        "false_negative_rate": 0.0,
+        "false_positive_rate": -0.002315789473684211,
+        "pr_auc": 0.004281040099211708,
+        "precision": 0.041433279755816455,
+        "recall": 0.0,
+        "roc_auc": 0.03924989473684237
+      },
+      "maximum_calibration_fpr": 0.01,
+      "single_stage": {
+        "accuracy": 0.9755,
+        "confusion_matrix": {
+          "fn": 152,
+          "fp": 93,
+          "tn": 9407,
+          "tp": 348
+        },
+        "f1": 0.7396386822529224,
+        "false_negative_rate": 0.304,
+        "false_positive_rate": 0.009789473684210527,
+        "pr_auc": 0.7403424254494801,
+        "precision": 0.7891156462585034,
+        "recall": 0.696,
+        "roc_auc": 0.8435196842105261
+      },
+      "single_stage_threshold": 0.9717481732368469,
+      "verifier_threshold": 0.888735830783844
+    }
+  ],
+  "predictions_sha256": "fc8cb6fb72364d3771f8305fd9851465c7f52b35716897d0e88faed8053f1a78",
+  "project_version": 3,
+  "routed_fraction": 0.122,
+  "routed_rows": 1220,
+  "stage1": "Updated HYB-MS +10% GAN, three-seed mean",
+  "stage1_checkpoints": [
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064"
+    },
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8"
+    },
+    {
+      "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9"
+    }
+  ],
+  "stage2": "real-only 35-feature lexical MLP, three-seed mean",
+  "stage2_gan_training_rows": 0,
+  "verifier_checkpoints": [
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "0886b4edde15ed431763481f656456b37cae86b779fadc9c7e06c34fbefeda53",
+      "verified_sha256": "0886b4edde15ed431763481f656456b37cae86b779fadc9c7e06c34fbefeda53"
+    },
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "dd58a06cd20bfea652217339ca286d5f5d337db5dd47995b7fb7a7ce821148e0",
+      "verified_sha256": "dd58a06cd20bfea652217339ca286d5f5d337db5dd47995b7fb7a7ce821148e0"
+    },
+    {
+      "path": "artifacts/experiments/two_stage_url_cascade_v1/lexical_verifier/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "860b3e070873535c761060936b724a30a4484f4f00f8885cc01710ddd90ca8d8",
+      "verified_sha256": "860b3e070873535c761060936b724a30a4484f4f00f8885cc01710ddd90ca8d8"
+    }
+  ]
+}

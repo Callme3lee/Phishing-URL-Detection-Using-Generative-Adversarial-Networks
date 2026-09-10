@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/legitimate_coverage_v1/random_forest/seed_42/model.joblib",
+      "seed": 42,
+      "sha256": "97afc5106f1038c7e0cf5986043c453012220c35f85473ab372c9216629f94a5"
+    },
+    {
+      "path": "artifacts/experiments/legitimate_coverage_v1/random_forest/seed_43/model.joblib",
+      "seed": 43,
+      "sha256": "cc4c44b5dcaa0316104cb18afaa426d9e706623733ab1ecae82dd191e155226f"
+    },
+    {
+      "path": "artifacts/experiments/legitimate_coverage_v1/random_forest/seed_44/model.joblib",
+      "seed": 44,
+      "sha256": "bfe78149ae88e7b0940e5c51f84ebb36c5a1ff9799ee7bb78ff11af46c168cac"
+    }
+  ],
+  "condition": "Real + outside legit",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.565,
+      "confusion_matrix": {
+        "fn": 172,
+        "fp": 2,
+        "tn": 198,
+        "tp": 28
+      },
+      "f1": 0.24347826086956523,
+      "false_negative_rate": 0.86,
+      "false_positive_rate": 0.01,
+      "pr_auc": 0.5722216241476467,
+      "precision": 0.9333333333333333,
+      "recall": 0.14,
+      "roc_auc": 0.4712875000000001
+    },
+    "external_10k": {
+      "accuracy": 0.5492,
+      "confusion_matrix": {
+        "fn": 4428,
+        "fp": 80,
+        "tn": 4920,
+        "tp": 572
+      },
+      "f1": 0.2024062278839349,
+      "false_negative_rate": 0.8856,
+      "false_positive_rate": 0.016,
+      "pr_auc": 0.5704959285003999,
+      "precision": 0.8773006134969326,
+      "recall": 0.1144,
+      "roc_auc": 0.46063778
+    },
+    "external_30k": {
+      "accuracy": 0.7180666666666666,
+      "confusion_matrix": {
+        "fn": 8176,
+        "fp": 282,
+        "tn": 20697,
+        "tp": 845
+      },
+      "f1": 0.16653527788726843,
+      "false_negative_rate": 0.9063296752023058,
+      "false_positive_rate": 0.013442013442013442,
+      "pr_auc": 0.3539109683907927,
+      "precision": 0.7497781721384206,
+      "recall": 0.09367032479769427,
+      "roc_auc": 0.39666753815222205
+    },
+    "internal_test": {
+      "accuracy": 0.911109305490666,
+      "confusion_matrix": {
+        "fn": 4374,
+        "fp": 2,
+        "tn": 38906,
+        "tp": 5947
+      },
+      "f1": 0.7310387215734481,
+      "false_negative_rate": 0.423796143784517,
+      "false_positive_rate": 5.1403310373188036e-05,
+      "pr_auc": 0.9334295631318069,
+      "precision": 0.9996638090435367,
+      "recall": 0.576203856215483,
+      "roc_auc": 0.9628918165162895
+    }
+  },
+  "format": "traditional",
+  "id": "experiments__legitimate__coverage__v1__random__forest",
+  "model": "RF",
+  "root": "artifacts/experiments/legitimate_coverage_v1/random_forest",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "Coverage",
+  "threshold": 0.9712855219841003,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.9712855219841003,
+    "validation_f1": 0.24347826086956526,
+    "validation_fpr": 0.01,
+    "validation_precision": 0.9333333333333333,
+    "validation_recall": 0.14
+  }
+}

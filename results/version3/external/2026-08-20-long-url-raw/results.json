@@ -1,0 +1,409 @@
+{
+  "collection": {
+    "commoncrawl_collection": "CC-MAIN-2026-30",
+    "commoncrawl_request_errors": {
+      "adweek.com": "HTTPError: 404",
+      "aibixby.com": "HTTPError: 404",
+      "amazon-adsystem.com": "HTTPError: 404",
+      "amazon.dev": "HTTPError: 404",
+      "appspot.com": "HTTPError: 404",
+      "artfight.net": "HTTPError: 404",
+      "awsdns-01.com": "HTTPError: 404",
+      "awsdns-27.com": "HTTPError: 404",
+      "awsdns-55.com": "HTTPError: 404",
+      "axon.ai": "HTTPError: 404",
+      "behance.net": "HTTPError: 404",
+      "bookmyshow.com": "HTTPError: 404",
+      "cars.com": "HTTPError: 404",
+      "ccgateway.net": "HTTPError: 404",
+      "cdnhwc2.com": "HTTPError: 404",
+      "cloudfunctions.net": "HTTPError: 404",
+      "cootlogix.com": "HTTPError: 404",
+      "ctnsnet.com": "HTTPError: 404",
+      "ctripgslb.net": "HTTPError: 404",
+      "dbankcloud.com": "HTTPError: 404",
+      "dnsv1.com": "HTTPError: 404",
+      "docker.io": "HTTPError: 404",
+      "edgecastdns.net": "HTTPError: 404",
+      "edgekey.net": "HTTPError: 404",
+      "emarsys.net": "HTTPError: 404",
+      "ethz.ch": "HTTPError: 404",
+      "expressapisv2.net": "HTTPError: 404",
+      "fcomet.com": "HTTPError: 404",
+      "flurry.com": "HTTPError: 404",
+      "focus.de": "HTTPError: 404",
+      "geocities.com": "HTTPError: 404",
+      "gitlab.io": "HTTPError: 404",
+      "happymh.com": "HTTPError: 404",
+      "hs-analytics.net": "HTTPError: 404",
+      "instana.io": "HTTPError: 404",
+      "intelbras.com.br": "HTTPError: 404",
+      "isaidub.ceo": "HTTPError: 404",
+      "isnssdk.com": "HTTPError: 404",
+      "jav.guru": "HTTPError: 404",
+      "javwow.com": "HTTPError: 404",
+      "kandji.io": "HTTPError: 404",
+      "lectormangass.net": "HTTPError: 404",
+      "lesechos.fr": "HTTPError: 404",
+      "linkmake.in": "HTTPError: 404",
+      "logicnow.us": "HTTPError: 404",
+      "lovable.app": "HTTPError: 404",
+      "mangafire.to": "HTTPError: 404",
+      "mercadolibre.cl": "HTTPError: 404",
+      "mercadopago.com": "HTTPError: 404",
+      "mileroticos.com": "HTTPError: 404",
+      "mioffice.cn": "HTTPError: 404",
+      "nexthink.cloud": "HTTPError: 404",
+      "nheos.com": "HTTPError: 404",
+      "nic.tv": "HTTPError: 404",
+      "npr.org": "HTTPError: 404",
+      "ns.ph": "HTTPError: 404",
+      "office.net": "HTTPError: 404",
+      "okcdn.ru": "HTTPError: 404",
+      "ooklaserver.net": "HTTPError: 404",
+      "operacdn.com": "HTTPError: 404",
+      "pantheonsite.io": "HTTPError: 404",
+      "phantom.app": "HTTPError: 404",
+      "pik.ru": "HTTPError: 404",
+      "pin.it": "HTTPError: 404",
+      "playfabapi.com": "HTTPError: 404",
+      "playfamily.ru": "HTTPError: 404",
+      "prokerala.com": "HTTPError: 404",
+      "railway.app": "HTTPError: 404",
+      "redditstatic.com": "HTTPError: 404",
+      "redwap.sex": "HTTPError: 404",
+      "rm358.com": "HTTPError: 404",
+      "rncdn7.com": "HTTPError: 404",
+      "sagepub.com": "HTTPError: 404",
+      "samsungosp.com": "HTTPError: 404",
+      "sc-gw.com": "HTTPError: 404",
+      "share-dns.com": "HTTPError: 404",
+      "skipthegames.com": "HTTPError: 404",
+      "splunkcloud.com": "HTTPError: 404",
+      "staticflickr.com": "HTTPError: 404",
+      "stern.de": "HTTPError: 404",
+      "swiftycdn.net": "HTTPError: 404",
+      "t-bank-app.ru": "HTTPError: 404",
+      "t.co": "HTTPError: 404",
+      "tclking.com": "HTTPError: 404",
+      "technoratimedia.com": "HTTPError: 404",
+      "telekom.net": "HTTPError: 404",
+      "ticketmaster.com": "HTTPError: 404",
+      "tiktok-row.net": "HTTPError: 404",
+      "today.com": "HTTPError: 404",
+      "ttvnw.net": "HTTPError: 404",
+      "typekit.net": "HTTPError: 404",
+      "umich.edu": "HTTPError: 404",
+      "uq.edu.au": "HTTPError: 404",
+      "vimeocdn.com": "HTTPError: 404",
+      "vk-portal.net": "HTTPError: 404",
+      "w55c.net": "HTTPError: 404",
+      "webrootcloudav.com": "HTTPError: 404",
+      "windows.net": "HTTPError: 404",
+      "wpsdns.com": "HTTPError: 404",
+      "xn--ngstr-lra8j.com": "HTTPError: 404",
+      "xtracloud.net": "HTTPError: 404",
+      "yandex.net": "HTTPError: 404",
+      "yr.no": "HTTPError: 404",
+      "yximgs.com": "HTTPError: 404",
+      "zoominfo.com": "HTTPError: 404",
+      "zpath.net": "HTTPError: 404"
+    },
+    "dataset": "data/external/2026-08-20-long-url-raw/evaluation_urls.csv",
+    "dataset_sha256": "e92d5af2f6f4eaf6f33b7b79abfac9e3dd65ed58efc5f38a4ef50166d9d1b88a",
+    "filter_counts": {
+      "commoncrawl_request_error": 106,
+      "invalid_phishing": 1,
+      "legitimate_not_complex": 1020,
+      "legitimate_not_long": 15324,
+      "per_domain_cap": 4846,
+      "prior_or_duplicate_legitimate_identity": 30,
+      "prior_or_duplicate_phishing_identity": 18300
+    },
+    "frozen_at_utc": "2026-08-20T09:18:56.648466+00:00",
+    "identity_exclusions": {
+      "encoded_inputs": 705296,
+      "hosts": 418596,
+      "registered_domains": 382337,
+      "source_files": 28,
+      "urls": 706597
+    },
+    "legitimate_length": {
+      "maximum": 646,
+      "mean": 118.54642857142858,
+      "minimum": 80
+    },
+    "legitimate_prior_hostname_overlap_rows": 740,
+    "legitimate_prior_registered_domain_overlap_rows": 1400,
+    "legitimate_registered_domains": 48,
+    "legitimate_rows": 1400,
+    "legitimate_structure": {
+      "deep_path": 886,
+      "query": 514
+    },
+    "limitations": [
+      "PhishTank/OpenPhish feed membership supplies phishing labels; no phishing page was opened.",
+      "Tranco membership plus Common Crawl 200/HTML metadata is a legitimate proxy, not manual page-level adjudication.",
+      "The stress set deliberately over-represents long legitimate paths/queries and is not a population prevalence estimate.",
+      "Legitimate URLs are exact-URL and encoded-input disjoint; familiar host/domain overlap is retained and reported because real users visit new pages on known sites.",
+      "Common Crawl captures predate the 2026-08-20 collection date; the URL identities are new to this project, not necessarily newly created."
+    ],
+    "long_legitimate_definition": "scheme-free canonical URL length >=80 and either query or at least three path segments",
+    "phishing_prevalence": 0.0967741935483871,
+    "phishing_registered_domains": 150,
+    "phishing_rows": 150,
+    "project_version": 3,
+    "purpose": "new raw-source stress test emphasizing long legitimate paths and queries",
+    "raw_sources": {
+      "commoncrawl_collections": {
+        "path": "data/external/2026-08-20-long-url-raw/raw/commoncrawl_collinfo.json",
+        "sha256": "eac053eb9d810c1ca519c99e7fdcf3c24a8042809becbbf6c6854a5795c1d52a"
+      },
+      "openphish": {
+        "path": "data/external/2026-08-20-long-url-raw/raw/openphish_feed.txt",
+        "sha256": "d691336102f935bbbabced5e1efb35978b733a8a1262a4020e26492c97e9cfd5"
+      },
+      "phishtank": {
+        "path": "data/external/2026-08-20-long-url-raw/raw/phishtank_online_valid.csv.gz",
+        "sha256": "ee60d1904c662554243c575879bca8b9174146b8c5a98fd8f93ca08823b126a7"
+      },
+      "tranco": {
+        "path": "data/external/2026-08-20-long-url-raw/raw/tranco_top1m.csv.zip",
+        "sha256": "6435fbac63c65ab945e8c3d07bd6d2623011f33b95fe676455031f6230036645"
+      }
+    },
+    "rows": 1550,
+    "seed": 20260820,
+    "selection_locked_before_model_inference": true
+  },
+  "conditions": {
+    "gan_10pct": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9606451612903226,
+        "confusion_matrix": {
+          "fn": 34,
+          "fp": 27,
+          "tn": 1373,
+          "tp": 116
+        },
+        "f1": 0.7918088737201365,
+        "false_negative_rate": 0.22666666666666666,
+        "false_positive_rate": 0.019285714285714285,
+        "pr_auc": 0.8651436627175347,
+        "precision": 0.8111888111888111,
+        "recall": 0.7733333333333333,
+        "roc_auc": 0.9791642857142857
+      },
+      "subgroups": {
+        "legitimate_100_149": {
+          "false_positive_rate": 0.0211864406779661,
+          "mean_score": 0.04579739645123482,
+          "median_score": 0.0003246168198529631,
+          "rows": 472
+        },
+        "legitimate_150_199": {
+          "false_positive_rate": 0.06666666666666667,
+          "mean_score": 0.2524539828300476,
+          "median_score": 0.004513054620474577,
+          "rows": 120
+        },
+        "legitimate_200_plus": {
+          "false_positive_rate": 0.03773584905660377,
+          "mean_score": 0.24689145386219025,
+          "median_score": 0.008038464933633804,
+          "rows": 106
+        },
+        "legitimate_80_99": {
+          "false_positive_rate": 0.007122507122507123,
+          "mean_score": 0.05287054553627968,
+          "median_score": 0.0010287410113960505,
+          "rows": 702
+        },
+        "legitimate_all": {
+          "false_positive_rate": 0.019285714285714285,
+          "mean_score": 0.08228319138288498,
+          "median_score": 0.0007852475391700864,
+          "rows": 1400
+        },
+        "legitimate_deep_path": {
+          "false_positive_rate": 0.030474040632054177,
+          "mean_score": 0.10606499761343002,
+          "median_score": 0.0010005808435380459,
+          "rows": 886
+        },
+        "legitimate_familiar_domain": {
+          "false_positive_rate": 0.019285714285714285,
+          "mean_score": 0.08228319138288498,
+          "median_score": 0.0007852475391700864,
+          "rows": 1400
+        },
+        "legitimate_query": {
+          "false_positive_rate": 0.0,
+          "mean_score": 0.041289638727903366,
+          "median_score": 0.0005783226806670427,
+          "rows": 514
+        },
+        "phishing_all": {
+          "false_negative_rate": 0.22666666666666668,
+          "mean_score": 0.9237318634986877,
+          "median_score": 0.9996911287307739,
+          "recall": 0.7733333333333333,
+          "rows": 150
+        }
+      },
+      "threshold": 0.9953193664550781,
+      "threshold_policy": "frozen three-seed ensemble threshold chosen earlier at <=0.5% calibration FPR",
+      "title": "Updated HYB-MS (+10% GAN)"
+    },
+    "real_only": {
+      "checkpoints": [
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "c14dc5b77fc537dc96471653d2eb9bc6d340d581996eed7614860370deecb690"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "f422883c97dbeeced053096405ed3a7d855bceef93aa75e8515029c92ad1a8a2"
+        },
+        {
+          "path": "artifacts/experiments/recent_update_gan10_v1/real_only/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "956b9c896a687ce0c75310a15efe59b5109cc3c545344d40c7729430563b6dc2"
+        }
+      ],
+      "metrics": {
+        "accuracy": 0.9567741935483871,
+        "confusion_matrix": {
+          "fn": 41,
+          "fp": 26,
+          "tn": 1374,
+          "tp": 109
+        },
+        "f1": 0.7649122807017544,
+        "false_negative_rate": 0.2733333333333333,
+        "false_positive_rate": 0.018571428571428572,
+        "pr_auc": 0.8821044659636411,
+        "precision": 0.8074074074074075,
+        "recall": 0.7266666666666667,
+        "roc_auc": 0.9810714285714286
+      },
+      "subgroups": {
+        "legitimate_100_149": {
+          "false_positive_rate": 0.0211864406779661,
+          "mean_score": 0.043040815740823746,
+          "median_score": 0.00040498023736290634,
+          "rows": 472
+        },
+        "legitimate_150_199": {
+          "false_positive_rate": 0.06666666666666667,
+          "mean_score": 0.24013064801692963,
+          "median_score": 0.0029990875627845526,
+          "rows": 120
+        },
+        "legitimate_200_plus": {
+          "false_positive_rate": 0.02830188679245283,
+          "mean_score": 0.24100379645824432,
+          "median_score": 0.002644577994942665,
+          "rows": 106
+        },
+        "legitimate_80_99": {
+          "false_positive_rate": 0.007122507122507123,
+          "mean_score": 0.052454691380262375,
+          "median_score": 0.001041453331708908,
+          "rows": 702
+        },
+        "legitimate_all": {
+          "false_positive_rate": 0.018571428571428572,
+          "mean_score": 0.07964324206113815,
+          "median_score": 0.0009283535764552653,
+          "rows": 1400
+        },
+        "legitimate_deep_path": {
+          "false_positive_rate": 0.029345372460496615,
+          "mean_score": 0.10582108050584793,
+          "median_score": 0.0011311182752251625,
+          "rows": 886
+        },
+        "legitimate_familiar_domain": {
+          "false_positive_rate": 0.018571428571428572,
+          "mean_score": 0.07964324206113815,
+          "median_score": 0.0009283535764552653,
+          "rows": 1400
+        },
+        "legitimate_query": {
+          "false_positive_rate": 0.0,
+          "mean_score": 0.03451957926154137,
+          "median_score": 0.000648612855002284,
+          "rows": 514
+        },
+        "phishing_all": {
+          "false_negative_rate": 0.2733333333333333,
+          "mean_score": 0.9245432615280151,
+          "median_score": 0.999606728553772,
+          "recall": 0.7266666666666667,
+          "rows": 150
+        }
+      },
+      "threshold": 0.9960489273071289,
+      "threshold_policy": "frozen three-seed ensemble threshold chosen earlier at <=0.5% calibration FPR",
+      "title": "Updated HYB-MS (real only)"
+    }
+  },
+  "dataset": "data/external/2026-08-20-long-url-raw/evaluation_urls.csv",
+  "dataset_sha256": "e92d5af2f6f4eaf6f33b7b79abfac9e3dd65ed58efc5f38a4ef50166d9d1b88a",
+  "device": "cuda",
+  "experiment": "new raw long-legitimate-URL stress test",
+  "gan_10pct_minus_real_only": {
+    "accuracy": 0.003870967741935516,
+    "f1": 0.026896593018382098,
+    "false_negative_rate": -0.04666666666666666,
+    "false_positive_rate": 0.0007142857142857124,
+    "pr_auc": -0.016960803246106382,
+    "precision": 0.0037814037814036805,
+    "recall": 0.046666666666666634,
+    "roc_auc": -0.001907142857142885
+  },
+  "interpretation_limit": "This intentionally difficult long-URL set is a stress test, not an estimate of normal browser traffic.",
+  "paired_exact_comparison": {
+    "all_rows": {
+      "discordant_rows": 14,
+      "real_only_correct_gan_wrong": 4,
+      "real_only_wrong_gan_correct": 10,
+      "two_sided_exact_mcnemar_p_value": 0.1795654296875
+    },
+    "legitimate_rows": {
+      "discordant_rows": 3,
+      "real_only_correct_gan_wrong": 2,
+      "real_only_wrong_gan_correct": 1,
+      "two_sided_exact_mcnemar_p_value": 1.0
+    },
+    "phishing_rows": {
+      "discordant_rows": 11,
+      "real_only_correct_gan_wrong": 2,
+      "real_only_wrong_gan_correct": 9,
+      "two_sided_exact_mcnemar_p_value": 0.0654296875
+    }
+  },
+  "project_version": 3,
+  "selection_locked_before_inference": true,
+  "thresholds_not_tuned_on_test": true
+}

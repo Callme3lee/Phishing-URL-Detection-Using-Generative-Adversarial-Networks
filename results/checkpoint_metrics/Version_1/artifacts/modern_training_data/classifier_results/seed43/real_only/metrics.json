@@ -1,0 +1,101 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7247709655397453,
+      "validation": {
+        "threshold": 0.86181640625,
+        "accuracy": 0.761551504874947,
+        "precision": 0.98203125,
+        "recall": 0.532852903772785,
+        "f1": 0.6908491343775762,
+        "roc_auc": 0.903652836421839,
+        "pr_auc": 0.9243369605811047,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 1102,
+          "tp": 1257
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.42313792956830837,
+      "validation": {
+        "threshold": 0.818359375,
+        "accuracy": 0.8281051292920729,
+        "precision": 0.9855708908406524,
+        "recall": 0.6659601526070369,
+        "f1": 0.7948393625094865,
+        "roc_auc": 0.9643146906465745,
+        "pr_auc": 0.9699559723349569,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 788,
+          "tp": 1571
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3055403003804085,
+      "validation": {
+        "threshold": 0.8134765625,
+        "accuracy": 0.8798219584569733,
+        "precision": 0.9874863982589771,
+        "recall": 0.7693938109368377,
+        "f1": 0.8649035025017869,
+        "roc_auc": 0.9796143888791153,
+        "pr_auc": 0.9824648147966184,
+        "false_positive_rate": 0.009749894022891056,
+        "confusion_matrix": {
+          "tn": 2336,
+          "fp": 23,
+          "fn": 544,
+          "tp": 1815
+        }
+      }
+    }
+  ],
+  "test": {
+    "threshold": 0.8134765625,
+    "accuracy": 0.8281786941580757,
+    "precision": 0.9925501432664756,
+    "recall": 0.6613211149293623,
+    "f1": 0.7937671860678277,
+    "roc_auc": 0.9745418572329765,
+    "pr_auc": 0.977616349305064,
+    "false_positive_rate": 0.004963726613211149,
+    "confusion_matrix": {
+      "tn": 2606,
+      "fp": 13,
+      "fn": 887,
+      "tp": 1732
+    }
+  },
+  "best_epoch": 3,
+  "augmentation": {
+    "type": "none",
+    "count": 0,
+    "synthetic_tokens": null,
+    "train_fraction": 1.0
+  },
+  "initialization": {
+    "checkpoint": "artifacts/robust_augmentation/results_seed43/real_only/cnn/best.pt",
+    "source_epoch": 5,
+    "source_augmentation": {
+      "type": "none",
+      "count": 0,
+      "synthetic_tokens": null,
+      "train_fraction": 1.0
+    }
+  },
+  "threshold_policy": {
+    "method": "maximum validation F1 subject to false-positive-rate constraint",
+    "max_validation_fpr": 0.01
+  }
+}

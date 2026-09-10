@@ -1,0 +1,50 @@
+{
+  "conclusion": "URL-GAN is stable and usable, clearly better than RelGAN, but the original compact SeqGAN remains the best augmentation generator because it has higher filter yield and closer real-phishing distributions.",
+  "models": {
+    "relgan": {
+      "acceptance_rate": 0.025738,
+      "accepted_rows": 12869,
+      "cluster_coverage": 0.86,
+      "cluster_js": 0.5014144546939397,
+      "label": "RelGAN",
+      "lexical_smd": 0.8338223695755005,
+      "majority_challenge": 0.0008547672701841635,
+      "raw_uniqueness": 0.99388,
+      "raw_validity": 0.81428,
+      "source_auc": 0.9888458943539665
+    },
+    "seqgan": {
+      "acceptance_rate": 0.699374,
+      "accepted_rows": 349687,
+      "cluster_coverage": 0.94,
+      "cluster_js": 0.20593801372963888,
+      "label": "SG",
+      "lexical_smd": 0.11035723239183426,
+      "majority_challenge": 0.10915,
+      "raw_uniqueness": 0.99839,
+      "raw_validity": 0.981712,
+      "source_auc": 0.7356983703703702
+    },
+    "urlgan": {
+      "acceptance_rate": 0.478736,
+      "accepted_rows": 239368,
+      "cluster_coverage": 0.9,
+      "cluster_js": 0.37017451524711276,
+      "label": "URL-GAN",
+      "lexical_smd": 0.3169069290161133,
+      "majority_challenge": 0.05055,
+      "raw_uniqueness": 0.998058,
+      "raw_validity": 0.981544,
+      "source_auc": 0.8816933981481482
+    }
+  },
+  "plain_names": {
+    "Char-CNN-D": "character-CNN discriminator",
+    "D": "discriminator",
+    "G": "generator",
+    "RelGAN": "relational-memory text GAN",
+    "SG": "original one-layer LSTM SeqGAN",
+    "URL-GAN": "new two-layer LSTM + Gumbel-Softmax generator with character-CNN discriminator"
+  },
+  "project_version": 3
+}

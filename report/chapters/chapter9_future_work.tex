@@ -1,0 +1,129 @@
+\chapter{Future Work}
+\label{chap:future-work}
+
+\section{Introduction}
+
+The project completed its proposed experimental and implementation objectives,
+but phishing methods and normal web services continue to change. Future work
+should therefore concentrate on maintaining the detector, reducing avoidable
+warnings, and evaluating the browser extension with broader evidence. The
+following improvements extend the current system without changing the main
+conclusion of this report.
+
+\section{Newer and Broader URL Data}
+
+The highest priority is to collect labelled URLs at different times after the
+current dataset freeze. Later snapshots should contain verified phishing URLs,
+ordinary browsing, long legitimate URLs, login and account pages, Arabic and
+Libyan services, cloud documents, and user-controlled content hosted on trusted
+platforms. Collection time and source should be stored so that later data can
+be used as a true external test rather than mixed into the existing test sets.
+
+When sufficient new data have been reviewed, a later model may be retrained
+using a new training split. The present frozen tests should still be retained
+for historical comparison, while an additional untouched snapshot becomes the
+new final test. This would show whether an improvement transfers across time
+instead of only fitting one evaluation period.
+
+\section{Reducing False Warnings and Missed Phishing}
+
+Future experiments can examine the errors with the highest practical cost.
+Legitimate examples should include difficult login, redirect, documentation,
+search, cloud-storage, and long-query URLs. Difficult phishing examples should
+include compromised services, shared documents, short paths, and URLs whose
+structure resembles a normal service.
+
+Small controlled experiments with class weighting, focal loss, and hard-example
+mining could test whether the score distributions become better separated.
+Thresholds should continue to be chosen on validation data under stated FPR
+constraints. The final test must remain untouched until the choice is frozen.
+This preserves a fair comparison and avoids lowering FNR by simply accepting an
+unusable number of false warnings.
+
+\section{Additional Detection Evidence}
+
+URL-only analysis is fast and privacy-friendly, but it cannot observe every
+property of a website. A later system could combine the current URL model with
+lightweight independent signals, including:
+
+\begin{itemize}
+\item domain and DNS history;
+\item certificate and HTTPS information;
+\item domain reputation and verified phishing feeds;
+\item safe HTML or DOM features collected after explicit permission; and
+\item redirect-chain and final-destination information.
+\end{itemize}
+
+These signals should be added as a secondary review layer rather than presented
+as replacements for the GAN-augmentation experiment. A controlled comparison
+of real-only and GAN-augmented primary models with the same secondary evidence
+would show whether the augmentation benefit remains present.
+
+\section{Further GAN Research}
+
+Future generator work could use newer verified phishing data and compare
+several generator checkpoints over time. Evaluation should retain the existing
+validity, uniqueness, overlap, diversity, realism, and classifier-challenge
+checks. Human review of a small defanged sample could be added with a clear
+review protocol.
+
+The selection rule should be fixed before classifier testing. Generated URLs
+should not be selected because they happen to improve a final test result.
+Experiments may also compare whether augmentation is more valuable when less
+real phishing training data are available. Such work would clarify when
+synthetic data supplies useful coverage and when additional real data is the
+better choice.
+
+\section{Browser Extension Improvements}
+
+The browser prototype can be improved through:
+
+\begin{itemize}
+\item clearer explanations of caution, warning, and block decisions;
+\item broader testing of Arabic localisation and right-to-left layouts;
+\item accessibility checks for colour, keyboard use, and screen readers;
+\item lower memory and initialization cost on older computers;
+\item clearer management and expiry of user-allowed hostnames;
+\item versioned and auditable rules for fixed services and user-controlled
+content; and
+\item safe model and policy updates with rollback support.
+\end{itemize}
+
+Before browser-store publication, the extension would require a dedicated
+security review, permission review, privacy documentation, dependency audit,
+and testing on a wider range of Chromium versions and devices. Public release
+should also provide a clear statement that the extension is an additional
+warning tool and cannot guarantee that a page is safe.
+
+\section{Larger User Evaluation}
+
+A later user study should recruit more participants and use a written test
+procedure. Participants could complete a small set of labelled tasks followed
+by a period of ordinary browsing. This would permit separate measurement of
+task accuracy, warning comprehension, false-warning burden, time to decision,
+and user satisfaction.
+
+Consent should remain explicit, and raw browsing data should remain local by
+default. If labelled feedback is submitted, the user should see exactly what
+will be shared. Repeated paths from the same website should be reported
+separately from unique hostnames so that one service does not dominate the
+study counts.
+
+\section{Long-Term Maintenance}
+
+Phishing detection is not a one-time training task. A future operational
+version would need periodic data-quality checks, source-drift monitoring,
+threshold review, generator evaluation, and model rollback. Metrics should be
+reported by source and time period as well as in aggregate. Sudden changes in
+FPR, FNR, or the score distribution should trigger investigation before a new
+model is released.
+
+\section{Chapter Summary}
+
+The most useful next work is to evaluate later labelled URL snapshots, improve
+coverage of difficult legitimate and phishing cases, and conduct a larger
+supervised browser study. Adding DNS, certificate, reputation, redirect, or
+page evidence may further reduce the limitations of URL-only detection.
+However, every change should preserve the controlled comparison used in this
+project: fixed training conditions, validation-based decisions, untouched test
+sets, and transparent reporting of both improvements and failures.

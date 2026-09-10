@@ -1,0 +1,384 @@
+{
+  "analysis": "Extension v0.5.7 FPR/FNR threshold trade-off",
+  "calibration": {
+    "distinct_operating_thresholds": 22449,
+    "legitimate_rows": 20600,
+    "path": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+    "phishing_rows": 2500,
+    "pr_auc": 0.927051875328687,
+    "predictions": "browser_extension_google_workspace_v0_5_7/tests/browser_onnx_calibration_predictions.npz",
+    "predictions_sha256": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406",
+    "roc_auc": 0.9803314951456309,
+    "rows": 23100,
+    "sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c"
+  },
+  "comparison": {
+    "frozen_10k_confirmation_no_selection": {
+      "change": {
+        "fnr": {
+          "absolute_fraction": -0.09666666666666665,
+          "absolute_percentage_points": -9.666666666666664,
+          "relative_fraction": -0.40845070422535207,
+          "relative_percent": -40.8450704225352
+        },
+        "fpr": {
+          "absolute_fraction": 0.008453608247422681,
+          "absolute_percentage_points": 0.8453608247422681,
+          "relative_fraction": 2.1578947368421053,
+          "relative_percent": 215.78947368421058
+        }
+      },
+      "current": {
+        "accuracy": 0.9891,
+        "f1": 0.8077601410934744,
+        "fn": 71,
+        "fnr": 0.23666666666666666,
+        "fp": 38,
+        "fpr": 0.003917525773195876,
+        "precision": 0.8576779026217228,
+        "recall": 0.7633333333333333,
+        "specificity": 0.9960824742268041,
+        "threshold": 0.9953077435493469,
+        "tn": 9662,
+        "tp": 229
+      },
+      "recommended": {
+        "accuracy": 0.9838,
+        "f1": 0.7610619469026548,
+        "fn": 42,
+        "fnr": 0.14,
+        "fp": 120,
+        "fpr": 0.012371134020618556,
+        "precision": 0.6825396825396826,
+        "recall": 0.86,
+        "specificity": 0.9876288659793815,
+        "threshold": 0.9707667827606201,
+        "tn": 9580,
+        "tp": 258
+      }
+    },
+    "validation": {
+      "change": {
+        "fnr": {
+          "absolute_fraction": -0.08440000000000002,
+          "absolute_percentage_points": -8.440000000000001,
+          "relative_fraction": -0.40812379110251457,
+          "relative_percent": -40.812379110251456
+        },
+        "fpr": {
+          "absolute_fraction": 0.005,
+          "absolute_percentage_points": 0.5,
+          "relative_fraction": 1.0,
+          "relative_percent": 100.0
+        }
+      },
+      "current": {
+        "accuracy": 0.9731601731601731,
+        "f1": 0.8648059310946359,
+        "fn": 517,
+        "fnr": 0.2068,
+        "fp": 103,
+        "fpr": 0.005,
+        "precision": 0.9506232023010547,
+        "recall": 0.7932,
+        "specificity": 0.995,
+        "threshold": 0.9953077435493469,
+        "tn": 20497,
+        "tp": 1983
+      },
+      "recommended": {
+        "accuracy": 0.9778354978354978,
+        "f1": 0.8955102040816327,
+        "fn": 306,
+        "fnr": 0.1224,
+        "fp": 206,
+        "fpr": 0.01,
+        "fpr_constraint": 0.01,
+        "precision": 0.9141666666666667,
+        "recall": 0.8776,
+        "specificity": 0.99,
+        "threshold": 0.9707667827606201,
+        "tn": 20394,
+        "tp": 2194
+      }
+    }
+  },
+  "conclusion": {
+    "further_training_justified": "Yes as a later controlled experiment, because score-tail overlap leaves phishing below every low-FPR threshold. The smallest next experiment is hard-example sampling with the existing BCEWithLogitsLoss pipeline, using difficult real phishing positives and difficult legitimate login/query negatives, followed by calibration on a separate cohort.",
+    "reason": "The 1% validation-FPR point substantially lowers FNR while keeping false positives low. Use it for warning classification, not automatic blocking.",
+    "recommended_threshold": 0.9707667827606201,
+    "recommended_validation_fpr_cap": 0.01,
+    "threshold_tuning_sufficient_for_requested_shift": true
+  },
+  "fpr_constraint_operating_points": [
+    {
+      "accuracy": 0.9731601731601731,
+      "f1": 0.8648059310946358,
+      "fn": 517,
+      "fnr": 0.2068,
+      "fp": 103,
+      "fpr": 0.005,
+      "fpr_constraint": 0.005,
+      "precision": 0.9506232023010547,
+      "recall": 0.7932,
+      "specificity": 0.995,
+      "threshold": 0.9953077435493469,
+      "tn": 20497,
+      "tp": 1983
+    },
+    {
+      "accuracy": 0.9778354978354978,
+      "f1": 0.8955102040816327,
+      "fn": 306,
+      "fnr": 0.1224,
+      "fp": 206,
+      "fpr": 0.01,
+      "fpr_constraint": 0.01,
+      "precision": 0.9141666666666667,
+      "recall": 0.8776,
+      "specificity": 0.99,
+      "threshold": 0.9707667827606201,
+      "tn": 20394,
+      "tp": 2194
+    },
+    {
+      "accuracy": 0.9735064935064935,
+      "f1": 0.8824884792626728,
+      "fn": 202,
+      "fnr": 0.0808,
+      "fp": 410,
+      "fpr": 0.019902912621359223,
+      "fpr_constraint": 0.02,
+      "precision": 0.8485967503692762,
+      "recall": 0.9192,
+      "specificity": 0.9800970873786408,
+      "threshold": 0.8857749104499817,
+      "tn": 20190,
+      "tp": 2298
+    },
+    {
+      "accuracy": 0.9662337662337662,
+      "f1": 0.8566703417861081,
+      "fn": 169,
+      "fnr": 0.0676,
+      "fp": 611,
+      "fpr": 0.029660194174757282,
+      "fpr_constraint": 0.03,
+      "precision": 0.792318150917743,
+      "recall": 0.9324,
+      "specificity": 0.9703398058252427,
+      "threshold": 0.8013669848442078,
+      "tn": 19989,
+      "tp": 2331
+    },
+    {
+      "accuracy": 0.9500865800865801,
+      "f1": 0.8042777117637074,
+      "fn": 131,
+      "fnr": 0.0524,
+      "fp": 1022,
+      "fpr": 0.04961165048543689,
+      "fpr_constraint": 0.05,
+      "precision": 0.6986139781775288,
+      "recall": 0.9476,
+      "specificity": 0.9503883495145631,
+      "threshold": 0.6707517504692078,
+      "tn": 19578,
+      "tp": 2369
+    }
+  ],
+  "identical_results_audit": {
+    "all_three_versions_share_exact_calibration_scores": true,
+    "all_three_versions_share_exact_onnx_files": true,
+    "cache_finding": "No evaluation-cache bug found. The v0.5.7 evaluator reran ONNX inference into a new artifact; the resulting scores match because the hashed ONNX graphs and inputs are identical.",
+    "calibration_prediction_hashes": {
+      "browser_extension_balanced_v0_5_2/tests/browser_onnx_calibration_predictions.npz": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406",
+      "browser_extension_google_workspace_v0_5_7/tests/browser_onnx_calibration_predictions.npz": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406",
+      "browser_extension_user_pilot/tests/browser_onnx_calibration_predictions.npz": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406"
+    },
+    "native_vs_v0_5_2": {
+      "maximum_absolute_score_difference": 0.0010971426963806152,
+      "prediction_disagreements": 0,
+      "predictions_exactly_identical": true,
+      "reason": "Same checkpoints and preprocessing; native CUDA and browser FP32 ONNX scores differ slightly and use separately calibrated thresholds.",
+      "scores_exactly_identical": false
+    },
+    "onnx_model_hashes": {
+      "browser_extension_balanced_v0_5_2/models/hyb_gan10_seed42.onnx": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914",
+      "browser_extension_balanced_v0_5_2/models/hyb_gan10_seed43.onnx": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87",
+      "browser_extension_balanced_v0_5_2/models/hyb_gan10_seed44.onnx": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3",
+      "browser_extension_google_workspace_v0_5_7/models/hyb_gan10_seed42.onnx": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914",
+      "browser_extension_google_workspace_v0_5_7/models/hyb_gan10_seed43.onnx": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87",
+      "browser_extension_google_workspace_v0_5_7/models/hyb_gan10_seed44.onnx": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3",
+      "browser_extension_user_pilot/models/hyb_gan10_seed42.onnx": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914",
+      "browser_extension_user_pilot/models/hyb_gan10_seed43.onnx": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87",
+      "browser_extension_user_pilot/models/hyb_gan10_seed44.onnx": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3"
+    },
+    "test_rows": 10000,
+    "thresholds": {
+      "extension_v0_5_1": 0.9953077435493469,
+      "extension_v0_5_2": 0.9880644679069519,
+      "extension_v0_5_7": 0.9953077435493469,
+      "native_gan": 0.9880269169807434
+    },
+    "v0_5_1_vs_v0_5_7": {
+      "maximum_absolute_score_difference": 0.0,
+      "prediction_disagreements": 0,
+      "predictions_exactly_identical": true,
+      "reason": "The packaged model files and primary threshold are intentionally unchanged; v0.5.7 changes reliability, service policy and UI.",
+      "scores_exactly_identical": true
+    }
+  },
+  "implementation_trace": {
+    "ensemble_score": "arithmetic mean of three FP32 sigmoid outputs (seeds 42/43/44)",
+    "lexical_normalization": "(35 raw PSL-aware lexical features - stored center) / stored scale",
+    "post_processing": [
+      "exact user-allowed hostname can suppress interruption",
+      "reviewed exact service/path rules can suppress URL-text warnings",
+      "valid IP literals are review-only rather than automatically blocked",
+      "passive mode never interrupts; normal mode interrupts only the block tier"
+    ],
+    "primary_threshold_path": "browser_extension_google_workspace_v0_5_7/models/policy.json -> primary_binary_rule.threshold",
+    "query_value_view": "diagnostic only; the full URL score controls the decision",
+    "raw_model_output": "one logit per checkpoint",
+    "score_calibration": "not probability-calibrated; treated as a ranking score",
+    "sigmoid_handling": "sigmoid is embedded once in each exported ONNX graph",
+    "tier_threshold_path": "the same policy.json -> tiers"
+  },
+  "pareto_frontier": {
+    "total_points": 424,
+    "useful_points": [
+      {
+        "accuracy": 0.9366233766233766,
+        "f1": 0.5975810885101704,
+        "fn": 1413,
+        "fnr": 0.5652,
+        "fp": 51,
+        "fpr": 0.0024757281553398056,
+        "precision": 0.9551845342706503,
+        "recall": 0.4348,
+        "specificity": 0.9975242718446602,
+        "threshold": 0.9998490214347839,
+        "tn": 20549,
+        "tp": 1087
+      },
+      {
+        "accuracy": 0.9731601731601731,
+        "f1": 0.8648059310946358,
+        "fn": 517,
+        "fnr": 0.2068,
+        "fp": 103,
+        "fpr": 0.005,
+        "precision": 0.9506232023010547,
+        "recall": 0.7932,
+        "specificity": 0.995,
+        "threshold": 0.9953077435493469,
+        "tn": 20497,
+        "tp": 1983
+      },
+      {
+        "accuracy": 0.9778354978354978,
+        "f1": 0.8955102040816327,
+        "fn": 306,
+        "fnr": 0.1224,
+        "fp": 206,
+        "fpr": 0.01,
+        "precision": 0.9141666666666667,
+        "recall": 0.8776,
+        "specificity": 0.99,
+        "threshold": 0.9707667827606201,
+        "tn": 20394,
+        "tp": 2194
+      },
+      {
+        "accuracy": 0.9735064935064935,
+        "f1": 0.8824884792626728,
+        "fn": 202,
+        "fnr": 0.0808,
+        "fp": 410,
+        "fpr": 0.019902912621359223,
+        "precision": 0.8485967503692762,
+        "recall": 0.9192,
+        "specificity": 0.9800970873786408,
+        "threshold": 0.8857749104499817,
+        "tn": 20190,
+        "tp": 2298
+      },
+      {
+        "accuracy": 0.9662337662337662,
+        "f1": 0.8566703417861081,
+        "fn": 169,
+        "fnr": 0.0676,
+        "fp": 611,
+        "fpr": 0.029660194174757282,
+        "precision": 0.792318150917743,
+        "recall": 0.9324,
+        "specificity": 0.9703398058252427,
+        "threshold": 0.8013669848442078,
+        "tn": 19989,
+        "tp": 2331
+      },
+      {
+        "accuracy": 0.9500865800865801,
+        "f1": 0.8042777117637074,
+        "fn": 131,
+        "fnr": 0.0524,
+        "fp": 1022,
+        "fpr": 0.04961165048543689,
+        "precision": 0.6986139781775288,
+        "recall": 0.9476,
+        "specificity": 0.9503883495145631,
+        "threshold": 0.6707517504692078,
+        "tn": 19578,
+        "tp": 2369
+      },
+      {
+        "accuracy": 0.931991341991342,
+        "f1": 0.7523253980766199,
+        "fn": 114,
+        "fnr": 0.0456,
+        "fp": 1457,
+        "fpr": 0.07072815533980582,
+        "precision": 0.6208691126723913,
+        "recall": 0.9544,
+        "specificity": 0.9292718446601942,
+        "threshold": 0.5750641226768494,
+        "tn": 19143,
+        "tp": 2386
+      }
+    ]
+  },
+  "scientific_contract": {
+    "deployed_policy_modified": false,
+    "models_retrained": false,
+    "selection_objective": "lowest FNR subject to each FPR constraint; ties use lower FPR, higher F1, then higher threshold",
+    "test_set_used_for_selection": false,
+    "threshold_selection_data": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv"
+  },
+  "score_distributions": {
+    "legitimate": {
+      "maximum": 0.9999988675117493,
+      "median": 0.08525129035115242,
+      "minimum": 4.114707189728506e-05,
+      "q01": 0.001835050445515663,
+      "q05": 0.006766843795776367,
+      "q25": 0.029453152790665627,
+      "q75": 0.2338980734348297,
+      "q95": 0.6685742676258087,
+      "q99": 0.9705884331464757,
+      "rows": 20600
+    },
+    "phishing": {
+      "maximum": 1.0,
+      "median": 0.9997064471244812,
+      "minimum": 0.002088437555357814,
+      "q01": 0.06804427541792393,
+      "q05": 0.6527826011180877,
+      "q25": 0.9975221008062363,
+      "q75": 0.9999872148036957,
+      "q95": 0.9999998211860657,
+      "q99": 1.0,
+      "rows": 2500
+    }
+  }
+}

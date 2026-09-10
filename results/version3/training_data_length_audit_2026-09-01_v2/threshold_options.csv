@@ -1,0 +1,5 @@
+option,threshold,development_accuracy,development_precision,development_recall,development_f1,development_fpr,development_fnr,selection_source
+Installed v0.5.1,0.9953077435493469,0.98375,0.9245283018867925,0.735,0.8189415041782729,0.003157894736842105,0.265,Existing installed policy
+Frozen browser candidate,0.9880644679069519,0.98425,0.8959537572254336,0.775,0.8310991957104558,0.004736842105263158,0.225,Frozen policy-development FPR rule
+Development recall 80%,0.9659104347229004,0.98,0.8,0.8,0.8,0.010526315789473684,0.2,Policy-development recall target
+Development recall 85%,0.8907687664031982,0.96375,0.5964912280701754,0.85,0.7010309278350515,0.030263157894736843,0.15,Policy-development recall target

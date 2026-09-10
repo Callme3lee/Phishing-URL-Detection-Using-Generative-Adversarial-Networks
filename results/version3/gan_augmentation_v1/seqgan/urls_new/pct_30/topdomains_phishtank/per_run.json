@@ -1,0 +1,347 @@
+[
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/cnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "0dc23f35217f1266f98543e3bd76345320fe2e2dbbc4461fa077d1c4ce86889d",
+    "metrics": {
+      "accuracy": 0.492,
+      "confusion_matrix": {
+        "fn": 17,
+        "fp": 237,
+        "tn": 13,
+        "tp": 233
+      },
+      "f1": 0.6472222222222223,
+      "false_negative_rate": 0.068,
+      "false_positive_rate": 0.948,
+      "pr_auc": 0.5833357617922206,
+      "precision": 0.4957446808510638,
+      "recall": 0.932,
+      "roc_auc": 0.579216
+    },
+    "model": "cnn",
+    "seed": 42,
+    "threshold": 0.6884765625
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/cnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "8091d8f4b00cad2f0ca85c575d069502a9394d666466b154d1dcf6e3abd77e23",
+    "metrics": {
+      "accuracy": 0.462,
+      "confusion_matrix": {
+        "fn": 23,
+        "fp": 246,
+        "tn": 4,
+        "tp": 227
+      },
+      "f1": 0.627939142461964,
+      "false_negative_rate": 0.092,
+      "false_positive_rate": 0.984,
+      "pr_auc": 0.5653735304206289,
+      "precision": 0.4799154334038055,
+      "recall": 0.908,
+      "roc_auc": 0.53508
+    },
+    "model": "cnn",
+    "seed": 43,
+    "threshold": 0.4921875
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/cnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "06923a388d6fc9738219abbcae2d805a34a42d14e2c5c11eced05b4a8eda3741",
+    "metrics": {
+      "accuracy": 0.484,
+      "confusion_matrix": {
+        "fn": 20,
+        "fp": 238,
+        "tn": 12,
+        "tp": 230
+      },
+      "f1": 0.6406685236768802,
+      "false_negative_rate": 0.08,
+      "false_positive_rate": 0.952,
+      "pr_auc": 0.5437696652922706,
+      "precision": 0.49145299145299143,
+      "recall": 0.92,
+      "roc_auc": 0.526344
+    },
+    "model": "cnn",
+    "seed": 44,
+    "threshold": 0.564453125
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/lstm/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "32a9c1505176bbacc1999bdb7e7c849df560f9f845fc2c154935f8410cd3c2dd",
+    "metrics": {
+      "accuracy": 0.458,
+      "confusion_matrix": {
+        "fn": 36,
+        "fp": 235,
+        "tn": 15,
+        "tp": 214
+      },
+      "f1": 0.6123032904148784,
+      "false_negative_rate": 0.144,
+      "false_positive_rate": 0.94,
+      "pr_auc": 0.7132364450868476,
+      "precision": 0.4766146993318486,
+      "recall": 0.856,
+      "roc_auc": 0.613024
+    },
+    "model": "lstm",
+    "seed": 42,
+    "threshold": 0.83740234375
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/lstm/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "d3af613940437dcdf6c7f201532fb6813e44bdd439848f713299cab118b4c7b8",
+    "metrics": {
+      "accuracy": 0.498,
+      "confusion_matrix": {
+        "fn": 14,
+        "fp": 237,
+        "tn": 13,
+        "tp": 236
+      },
+      "f1": 0.65283540802213,
+      "false_negative_rate": 0.056,
+      "false_positive_rate": 0.948,
+      "pr_auc": 0.752413387284615,
+      "precision": 0.4989429175475687,
+      "recall": 0.944,
+      "roc_auc": 0.6661999999999999
+    },
+    "model": "lstm",
+    "seed": 43,
+    "threshold": 0.7060546875
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/lstm/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "6a4467a022735e31e634a07345430066e5ff9bcd341e52ab40189165fdc0e513",
+    "metrics": {
+      "accuracy": 0.5,
+      "confusion_matrix": {
+        "fn": 11,
+        "fp": 239,
+        "tn": 11,
+        "tp": 239
+      },
+      "f1": 0.6565934065934066,
+      "false_negative_rate": 0.044,
+      "false_positive_rate": 0.956,
+      "pr_auc": 0.6988411223176424,
+      "precision": 0.5,
+      "recall": 0.956,
+      "roc_auc": 0.5923759999999999
+    },
+    "model": "lstm",
+    "seed": 44,
+    "threshold": 0.84521484375
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/rnn/seed_42/checkpoint.pt",
+    "checkpoint_sha256": "ee79cee6eff5627ed9f0df8767397ff4a3b3a124a95e1d9017d5f6141342acd3",
+    "metrics": {
+      "accuracy": 0.484,
+      "confusion_matrix": {
+        "fn": 11,
+        "fp": 247,
+        "tn": 3,
+        "tp": 239
+      },
+      "f1": 0.6494565217391305,
+      "false_negative_rate": 0.044,
+      "false_positive_rate": 0.988,
+      "pr_auc": 0.8772204978918123,
+      "precision": 0.49176954732510286,
+      "recall": 0.956,
+      "roc_auc": 0.851368
+    },
+    "model": "rnn",
+    "seed": 42,
+    "threshold": 0.73828125
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/rnn/seed_43/checkpoint.pt",
+    "checkpoint_sha256": "5bee4c9b6a9993eeeda87e8a632b65659607c6d878a0e188ffec2e95795c903c",
+    "metrics": {
+      "accuracy": 0.48,
+      "confusion_matrix": {
+        "fn": 10,
+        "fp": 250,
+        "tn": 0,
+        "tp": 240
+      },
+      "f1": 0.6486486486486487,
+      "false_negative_rate": 0.04,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.7749359944098047,
+      "precision": 0.4897959183673469,
+      "recall": 0.96,
+      "roc_auc": 0.764984
+    },
+    "model": "rnn",
+    "seed": 43,
+    "threshold": 0.81005859375
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/rnn/seed_44/checkpoint.pt",
+    "checkpoint_sha256": "78522d26636c9f4bee00494c616404ff7d7bce772898f047a83e323780bf16f3",
+    "metrics": {
+      "accuracy": 0.478,
+      "confusion_matrix": {
+        "fn": 11,
+        "fp": 250,
+        "tn": 0,
+        "tp": 239
+      },
+      "f1": 0.6468200270635994,
+      "false_negative_rate": 0.044,
+      "false_positive_rate": 1.0,
+      "pr_auc": 0.7812152199950083,
+      "precision": 0.4887525562372188,
+      "recall": 0.956,
+      "roc_auc": 0.7396
+    },
+    "model": "rnn",
+    "seed": 44,
+    "threshold": 0.69482421875
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/random_forest/seed_42/model.joblib",
+    "checkpoint_sha256": "bfd1acc0757549cb80d16ce2a26720edf6eeaac6616a92d6d6fb25634bf1a16a",
+    "metrics": {
+      "accuracy": 0.246,
+      "confusion_matrix": {
+        "fn": 155,
+        "fp": 222,
+        "tn": 28,
+        "tp": 95
+      },
+      "f1": 0.3350970017636684,
+      "false_negative_rate": 0.62,
+      "false_positive_rate": 0.888,
+      "pr_auc": 0.4306096925025361,
+      "precision": 0.2996845425867508,
+      "recall": 0.38,
+      "roc_auc": 0.21227199999999996
+    },
+    "model": "random_forest",
+    "seed": 42,
+    "threshold": 0.8328012556132223
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/random_forest/seed_43/model.joblib",
+    "checkpoint_sha256": "d34c7a098a3ff59494e713d402d64bc312f746537f9cc367f70c52d33614b1bb",
+    "metrics": {
+      "accuracy": 0.256,
+      "confusion_matrix": {
+        "fn": 152,
+        "fp": 220,
+        "tn": 30,
+        "tp": 98
+      },
+      "f1": 0.34507042253521125,
+      "false_negative_rate": 0.608,
+      "false_positive_rate": 0.88,
+      "pr_auc": 0.4247726784699607,
+      "precision": 0.3081761006289308,
+      "recall": 0.392,
+      "roc_auc": 0.21215999999999996
+    },
+    "model": "random_forest",
+    "seed": 43,
+    "threshold": 0.8378866215965585
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/random_forest/seed_44/model.joblib",
+    "checkpoint_sha256": "6a987fd179d5209ecead369cc5b5f04f83fbb506899470bf806e3f2c1da33a2c",
+    "metrics": {
+      "accuracy": 0.246,
+      "confusion_matrix": {
+        "fn": 155,
+        "fp": 222,
+        "tn": 28,
+        "tp": 95
+      },
+      "f1": 0.3350970017636684,
+      "false_negative_rate": 0.62,
+      "false_positive_rate": 0.888,
+      "pr_auc": 0.43166290568448706,
+      "precision": 0.2996845425867508,
+      "recall": 0.38,
+      "roc_auc": 0.215376
+    },
+    "model": "random_forest",
+    "seed": 44,
+    "threshold": 0.8428377972341707
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/linear_svm/seed_42/model.joblib",
+    "checkpoint_sha256": "0208d54ab9c557d9db4f418aef927d36f32982d4dab2b4f5b041df7283f9f45e",
+    "metrics": {
+      "accuracy": 0.262,
+      "confusion_matrix": {
+        "fn": 192,
+        "fp": 177,
+        "tn": 73,
+        "tp": 58
+      },
+      "f1": 0.23917525773195877,
+      "false_negative_rate": 0.768,
+      "false_positive_rate": 0.708,
+      "pr_auc": 0.4126533311573701,
+      "precision": 0.24680851063829787,
+      "recall": 0.232,
+      "roc_auc": 0.211632
+    },
+    "model": "linear_svm",
+    "seed": 42,
+    "threshold": 0.5993311753050627
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/linear_svm/seed_43/model.joblib",
+    "checkpoint_sha256": "20e4fa90ef816b3b2601ebacaad0a9d01a4356bddfd78d604890d5e0ea3ca151",
+    "metrics": {
+      "accuracy": 0.262,
+      "confusion_matrix": {
+        "fn": 192,
+        "fp": 177,
+        "tn": 73,
+        "tp": 58
+      },
+      "f1": 0.23917525773195877,
+      "false_negative_rate": 0.768,
+      "false_positive_rate": 0.708,
+      "pr_auc": 0.4126533311573701,
+      "precision": 0.24680851063829787,
+      "recall": 0.232,
+      "roc_auc": 0.211632
+    },
+    "model": "linear_svm",
+    "seed": 43,
+    "threshold": 0.5993311753050627
+  },
+  {
+    "checkpoint": "artifacts/experiments/gan_augmentation_v1/seqgan/urls_new/pct_30/linear_svm/seed_44/model.joblib",
+    "checkpoint_sha256": "bbd9b79e931ed7350daa2f8f0a0c414477ab0be0edda64706372e8fec99d1410",
+    "metrics": {
+      "accuracy": 0.262,
+      "confusion_matrix": {
+        "fn": 192,
+        "fp": 177,
+        "tn": 73,
+        "tp": 58
+      },
+      "f1": 0.23917525773195877,
+      "false_negative_rate": 0.768,
+      "false_positive_rate": 0.708,
+      "pr_auc": 0.4126533311573701,
+      "precision": 0.24680851063829787,
+      "recall": 0.232,
+      "roc_auc": 0.211632
+    },
+    "model": "linear_svm",
+    "seed": 44,
+    "threshold": 0.5993311753050627
+  }
+]

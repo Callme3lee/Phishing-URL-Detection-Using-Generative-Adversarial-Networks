@@ -1,0 +1,309 @@
+{
+  "browser_bundle": {
+    "bundle_manifest": "browser_extension_balanced_v0_5_2/models/bundle_manifest.json",
+    "bundle_manifest_sha256": "3c6b930a0e9e0ab5e987631fb78f0e0cfb4b5d715d3ba1e7092681e86e84b56d",
+    "policy": "browser_extension_balanced_v0_5_2/models/policy.json",
+    "policy_sha256": "8026a498d1a09b8ab332c5fdbe45fb9e907ba5558374fafb7808e64705a6de34",
+    "policy_version": "balanced_hyb_gan10_browser_v2",
+    "root": "browser_extension_balanced_v0_5_2",
+    "verified_models": [
+      {
+        "filename": "hyb_gan10_seed42.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 42,
+        "sha256": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914"
+      },
+      {
+        "filename": "hyb_gan10_seed43.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 43,
+        "sha256": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87"
+      },
+      {
+        "filename": "hyb_gan10_seed44.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 44,
+        "sha256": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3"
+      }
+    ]
+  },
+  "conclusion": "v0.5.2 raises recall and lowers FNR relative to v0.5.1 on identical scores, at the expected cost of more false warnings. The later cohort remains harder, so the extension is an academic prototype rather than production-certified.",
+  "datasets": {
+    "final_6k_5pct": {
+      "cached_score_maximum_absolute_difference": 0.0,
+      "legitimate_rows": 5700,
+      "metrics": {
+        "accuracy": 0.9823333333333333,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9786781896025213,
+            0.9853712510262637
+          ],
+          "false_positive_rate": [
+            0.0059056320557123645,
+            0.010546693889563198
+          ],
+          "precision": [
+            0.7945604921760092,
+            0.8794216394975554
+          ],
+          "recall": [
+            0.7475056887150938,
+            0.8383261483583421
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 61,
+          "fp": 45,
+          "tn": 5655,
+          "tp": 239
+        },
+        "f1": 0.8184931506849316,
+        "false_negative_rate": 0.20333333333333334,
+        "false_positive_rate": 0.007894736842105263,
+        "per_10000": {
+          "detected_phishing": 398.33333333333337,
+          "false_alerts": 75.0,
+          "missed_phishing": 101.66666666666667,
+          "total_alerts": 473.33333333333337
+        },
+        "pr_auc": 0.871786672908564,
+        "precision": 0.8415492957746479,
+        "recall": 0.7966666666666666,
+        "roc_auc": 0.9551941520467837
+      },
+      "name": "Frozen final 6K (5% phishing)",
+      "path": "Final Evaluation Dataset/frozen_final_test.csv",
+      "phishing_prevalence": 0.05,
+      "phishing_rows": 300,
+      "rows": 6000,
+      "sha256": "042d0219305911be2488872f47d890c24db81d5bb48e8fbb1fd1d0056da3eb45",
+      "tier_counts": [
+        {
+          "legitimate": 5190,
+          "phishing": 25,
+          "tier": "allow",
+          "total": 5215
+        },
+        {
+          "legitimate": 424,
+          "phishing": 20,
+          "tier": "secondary_review",
+          "total": 444
+        },
+        {
+          "legitimate": 41,
+          "phishing": 16,
+          "tier": "caution",
+          "total": 57
+        },
+        {
+          "legitimate": 44,
+          "phishing": 88,
+          "tier": "warning",
+          "total": 132
+        },
+        {
+          "legitimate": 1,
+          "phishing": 151,
+          "tier": "block",
+          "total": 152
+        }
+      ],
+      "v0_5_1_same_scores_metrics": {
+        "accuracy": 0.9821666666666666,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9784963073407615,
+            0.9852200132325195
+          ],
+          "false_positive_rate": [
+            0.0034009171888863482,
+            0.007090513762118157
+          ],
+          "precision": [
+            0.8422791002196575,
+            0.921045082848233
+          ],
+          "recall": [
+            0.6840604965627417,
+            0.7832884970576399
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 79,
+          "fp": 28,
+          "tn": 5672,
+          "tp": 221
+        },
+        "f1": 0.8051001821493625,
+        "false_negative_rate": 0.2633333333333333,
+        "false_positive_rate": 0.004912280701754386,
+        "per_10000": {
+          "detected_phishing": 368.33333333333337,
+          "false_alerts": 46.66666666666667,
+          "missed_phishing": 131.66666666666669,
+          "total_alerts": 415.0
+        },
+        "pr_auc": 0.871786672908564,
+        "precision": 0.8875502008032129,
+        "recall": 0.7366666666666667,
+        "roc_auc": 0.9551941520467837
+      },
+      "v0_5_2_minus_v0_5_1": {
+        "accuracy": 0.0001666666666666483,
+        "f1": 0.013392968535569039,
+        "false_negative_rate": -0.05999999999999997,
+        "false_positive_rate": 0.0029824561403508773,
+        "pr_auc": 0.0,
+        "precision": -0.04600090502856502,
+        "recall": 0.05999999999999994,
+        "roc_auc": 0.0
+      }
+    },
+    "postfreeze_10k_3pct": {
+      "cached_score_maximum_absolute_difference": 0.0,
+      "legitimate_rows": 9700,
+      "metrics": {
+        "accuracy": 0.988,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9856706937299375,
+            0.989954523860282
+          ],
+          "false_positive_rate": [
+            0.0055340017352323335,
+            0.00887693638799717
+          ],
+          "precision": [
+            0.7362222287147031,
+            0.8265565950928431
+          ],
+          "recall": [
+            0.7797738592974309,
+            0.8652993995025323
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 52,
+          "fp": 68,
+          "tn": 9632,
+          "tp": 248
+        },
+        "f1": 0.8051948051948052,
+        "false_negative_rate": 0.17333333333333334,
+        "false_positive_rate": 0.0070103092783505155,
+        "per_10000": {
+          "detected_phishing": 248.0,
+          "false_alerts": 68.0,
+          "missed_phishing": 52.0,
+          "total_alerts": 316.0
+        },
+        "pr_auc": 0.8710252686361772,
+        "precision": 0.7848101265822784,
+        "recall": 0.8266666666666667,
+        "roc_auc": 0.966078350515464
+      },
+      "name": "Post-freeze 10K (3% phishing)",
+      "path": "data/evaluation/postfreeze_10k_3pct_2026-09-01/evaluation_urls.csv",
+      "phishing_prevalence": 0.03,
+      "phishing_rows": 300,
+      "rows": 10000,
+      "sha256": "d5621a79f5b0257a2a4cdf2f56bed8550df328c4f13f6e535a91a78e4785db43",
+      "tier_counts": [
+        {
+          "legitimate": 8872,
+          "phishing": 16,
+          "tier": "allow",
+          "total": 8888
+        },
+        {
+          "legitimate": 708,
+          "phishing": 26,
+          "tier": "secondary_review",
+          "total": 734
+        },
+        {
+          "legitimate": 52,
+          "phishing": 10,
+          "tier": "caution",
+          "total": 62
+        },
+        {
+          "legitimate": 65,
+          "phishing": 93,
+          "tier": "warning",
+          "total": 158
+        },
+        {
+          "legitimate": 3,
+          "phishing": 155,
+          "tier": "block",
+          "total": 158
+        }
+      ],
+      "v0_5_1_same_scores_metrics": {
+        "accuracy": 0.9891,
+        "confidence_intervals_95": {
+          "accuracy": [
+            0.9868688476233592,
+            0.9909555251704448
+          ],
+          "false_positive_rate": [
+            0.002855608712008535,
+            0.005372211080751893
+          ],
+          "precision": [
+            0.8106875385186731,
+            0.894522073154731
+          ],
+          "recall": [
+            0.7120967390716028,
+            0.8079112960834695
+          ]
+        },
+        "confusion_matrix": {
+          "fn": 71,
+          "fp": 38,
+          "tn": 9662,
+          "tp": 229
+        },
+        "f1": 0.8077601410934744,
+        "false_negative_rate": 0.23666666666666666,
+        "false_positive_rate": 0.003917525773195876,
+        "per_10000": {
+          "detected_phishing": 229.0,
+          "false_alerts": 38.0,
+          "missed_phishing": 71.0,
+          "total_alerts": 267.0
+        },
+        "pr_auc": 0.8710252686361772,
+        "precision": 0.8576779026217228,
+        "recall": 0.7633333333333333,
+        "roc_auc": 0.966078350515464
+      },
+      "v0_5_2_minus_v0_5_1": {
+        "accuracy": -0.0010999999999999899,
+        "f1": -0.002565335898669141,
+        "false_negative_rate": -0.06333333333333332,
+        "false_positive_rate": 0.0030927835051546395,
+        "pr_auc": 0.0,
+        "precision": -0.07286777603944439,
+        "recall": 0.06333333333333335,
+        "roc_auc": 0.0
+      }
+    }
+  },
+  "evaluated_at_utc": "2026-09-01T20:02:29.878889+00:00",
+  "evaluation": "exact balanced browser extension on two frozen external cohorts",
+  "extension_version": "0.5.2",
+  "gpu_note": "GPU driver was unavailable; browser deployment uses ONNX Runtime Web/WASM, so CPU ONNX inference is the relevant artifact test.",
+  "inference_provider": "ONNX Runtime CPUExecutionProvider (deployment-faithful exported graphs)",
+  "predictions_sha256": "360a33b90957a66bdcba83a5c23be953e1f3202b0bd22c9e563ebc89797f682b",
+  "project_version": 3,
+  "thresholds": {
+    "strict_block": 0.9998490214347839,
+    "v0_5_1_warning": 0.9953077435493469,
+    "v0_5_2_warning": 0.9880644679069519
+  }
+}

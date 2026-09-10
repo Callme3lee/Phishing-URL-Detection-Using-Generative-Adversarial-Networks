@@ -1,0 +1,77 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1668327017466227,
+      "validation": {
+        "threshold": 0.426513671875,
+        "accuracy": 0.9431111111111111,
+        "precision": 0.9545247321632094,
+        "recall": 0.9305555555555556,
+        "f1": 0.9423877573984472,
+        "roc_auc": 0.981283950617284,
+        "pr_auc": 0.9840151288418215,
+        "false_positive_rate": 0.044333333333333336,
+        "confusion_matrix": {
+          "tn": 8601,
+          "fp": 399,
+          "fn": 625,
+          "tp": 8375
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.16402734953827328,
+      "validation": {
+        "threshold": 0.404296875,
+        "accuracy": 0.9437222222222222,
+        "precision": 0.9523162306036924,
+        "recall": 0.9342222222222222,
+        "f1": 0.9431824555499467,
+        "roc_auc": 0.9815676851851851,
+        "pr_auc": 0.9842076037324732,
+        "false_positive_rate": 0.04677777777777778,
+        "confusion_matrix": {
+          "tn": 8579,
+          "fp": 421,
+          "fn": 592,
+          "tp": 8408
+        }
+      }
+    }
+  ],
+  "test": {
+    "threshold": 0.404296875,
+    "accuracy": 0.9474666666666667,
+    "precision": 0.9511965582145738,
+    "recall": 0.9433333333333334,
+    "f1": 0.9472486276609988,
+    "roc_auc": 0.9834179844444444,
+    "pr_auc": 0.9859506991672516,
+    "false_positive_rate": 0.0484,
+    "confusion_matrix": {
+      "tn": 14274,
+      "fp": 726,
+      "fn": 850,
+      "tp": 14150
+    }
+  },
+  "best_epoch": 2,
+  "augmentation": {
+    "type": "none",
+    "count": 0,
+    "synthetic_tokens": null,
+    "train_fraction": 1.0
+  },
+  "initialization": {
+    "checkpoint": "artifacts/robust_augmentation/results_seed43/lsgan_quality_30/cnn/best.pt",
+    "source_epoch": 5,
+    "source_augmentation": {
+      "type": "none",
+      "count": 0,
+      "synthetic_tokens": null,
+      "train_fraction": 1.0
+    }
+  }
+}

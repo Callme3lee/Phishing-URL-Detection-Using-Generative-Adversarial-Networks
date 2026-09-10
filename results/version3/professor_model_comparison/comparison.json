@@ -1,0 +1,256 @@
+{
+  "dataset_contract": "same frozen hostname-held-out test split from the original URLs_New dataset",
+  "evaluation_dataset": "data/processed/test_manifest.csv",
+  "hybrid_checkpoints": [
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+    }
+  ],
+  "hybrid_threshold": 0.9879557490348816,
+  "important_comparability_note": "CNN/LSTM/RNN/RF/SVM were trained on the same 358,619 original real rows. HYB is evaluated on the same original test rows but was trained under its registered 363,692-row multi-source domain-adaptation condition.",
+  "models": {
+    "cnn": {
+      "display": "CNN",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9889225185696778,
+          "standard_deviation": 0.0013266472906106603
+        },
+        "f1": {
+          "mean": 0.9735565329180925,
+          "standard_deviation": 0.003126611081729954
+        },
+        "false_negative_rate": {
+          "mean": 0.027484416884668798,
+          "standard_deviation": 0.0023360968019927176
+        },
+        "false_positive_rate": {
+          "mean": 0.006725266440492102,
+          "standard_deviation": 0.0013544877950701947
+        },
+        "pr_auc": {
+          "mean": 0.9934802528886424,
+          "standard_deviation": 0.001549950515473411
+        },
+        "precision": {
+          "mean": 0.974607262328516,
+          "standard_deviation": 0.005021692526637359
+        },
+        "recall": {
+          "mean": 0.9725155831153313,
+          "standard_deviation": 0.0023360968019926973
+        },
+        "roc_auc": {
+          "mean": 0.997010913605281,
+          "standard_deviation": 0.0008214157881438544
+        }
+      },
+      "training_condition": "original real-only baseline"
+    },
+    "hybrid": {
+      "display": "HYB",
+      "ensemble_single_result": true,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9608157793170692,
+          "standard_deviation": 0.0
+        },
+        "f1": {
+          "mean": 0.896960632444848,
+          "standard_deviation": 0.0
+        },
+        "false_negative_rate": {
+          "mean": 0.1865129347931402,
+          "standard_deviation": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.00010280662074637607,
+          "standard_deviation": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.9922773453119929,
+          "standard_deviation": 0.0
+        },
+        "precision": {
+          "mean": 0.9995238095238095,
+          "standard_deviation": 0.0
+        },
+        "recall": {
+          "mean": 0.8134870652068598,
+          "standard_deviation": 0.0
+        },
+        "roc_auc": {
+          "mean": 0.9963711484160942,
+          "standard_deviation": 0.0
+        }
+      },
+      "training_condition": "hybrid CNN + 35 lexical features + class-conditional CORAL; three-seed mean-score ensemble"
+    },
+    "linear_svm": {
+      "display": "SVM",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.8974791281561681,
+          "standard_deviation": 0.0
+        },
+        "f1": {
+          "mean": 0.6835141405907067,
+          "standard_deviation": 0.0
+        },
+        "false_negative_rate": {
+          "mean": 0.47195039240383685,
+          "standard_deviation": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.004523491312840547,
+          "standard_deviation": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.8723982621338361,
+          "standard_deviation": 0.0
+        },
+        "precision": {
+          "mean": 0.9687166725915392,
+          "standard_deviation": 1.3597399555105182e-16
+        },
+        "recall": {
+          "mean": 0.5280496075961632,
+          "standard_deviation": 0.0
+        },
+        "roc_auc": {
+          "mean": 0.9297859081756683,
+          "standard_deviation": 0.0
+        }
+      },
+      "training_condition": "original real-only baseline"
+    },
+    "lstm": {
+      "display": "LSTM",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9898433849966484,
+          "standard_deviation": 0.00025371216146573137
+        },
+        "f1": {
+          "mean": 0.975627851196378,
+          "standard_deviation": 0.0005668284543728817
+        },
+        "false_negative_rate": {
+          "mean": 0.030391111972354102,
+          "standard_deviation": 0.0012114458762723943
+        },
+        "false_positive_rate": {
+          "mean": 0.004789075083102019,
+          "standard_deviation": 0.0006318287264827213
+        },
+        "pr_auc": {
+          "mean": 0.9930616405202142,
+          "standard_deviation": 0.0011070043337158503
+        },
+        "precision": {
+          "mean": 0.981726344982412,
+          "standard_deviation": 0.0023503825039651624
+        },
+        "recall": {
+          "mean": 0.969608888027646,
+          "standard_deviation": 0.0012114458762724095
+        },
+        "roc_auc": {
+          "mean": 0.9967703782200892,
+          "standard_deviation": 0.00044882208440978296
+        }
+      },
+      "training_condition": "original real-only baseline"
+    },
+    "random_forest": {
+      "display": "RF",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9495622498933556,
+          "standard_deviation": 0.00010748750984435664
+        },
+        "f1": {
+          "mean": 0.8667084684984653,
+          "standard_deviation": 0.0002186568633035134
+        },
+        "false_negative_rate": {
+          "mean": 0.21784064851597065,
+          "standard_deviation": 0.0006229144954295679
+        },
+        "false_positive_rate": {
+          "mean": 0.006031321750454063,
+          "standard_deviation": 0.0002587243218282697
+        },
+        "pr_auc": {
+          "mean": 0.9330199428194407,
+          "standard_deviation": 0.0005871804802106943
+        },
+        "precision": {
+          "mean": 0.9717533283207014,
+          "standard_deviation": 0.0011584321508850623
+        },
+        "recall": {
+          "mean": 0.7821593514840294,
+          "standard_deviation": 0.0006229144954295579
+        },
+        "roc_auc": {
+          "mean": 0.96269958493624,
+          "standard_deviation": 0.000336582872701356
+        }
+      },
+      "training_condition": "original real-only baseline"
+    },
+    "rnn": {
+      "display": "RNN",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9866271235789202,
+          "standard_deviation": 0.0017267838626711075
+        },
+        "f1": {
+          "mean": 0.9679402969038615,
+          "standard_deviation": 0.004133589521159687
+        },
+        "false_negative_rate": {
+          "mean": 0.03710880728611568,
+          "standard_deviation": 0.004235537834394805
+        },
+        "false_positive_rate": {
+          "mean": 0.007076522394708886,
+          "standard_deviation": 0.001209435164583453
+        },
+        "pr_auc": {
+          "mean": 0.9878899925733192,
+          "standard_deviation": 0.001963708844158454
+        },
+        "precision": {
+          "mean": 0.9730458264084749,
+          "standard_deviation": 0.004564147638190105
+        },
+        "recall": {
+          "mean": 0.9628911927138843,
+          "standard_deviation": 0.004235537834394841
+        },
+        "roc_auc": {
+          "mean": 0.993882826769091,
+          "standard_deviation": 0.0008001806766745254
+        }
+      },
+      "training_condition": "original real-only baseline"
+    }
+  },
+  "project_version": 3,
+  "rows": 49229
+}

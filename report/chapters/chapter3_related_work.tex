@@ -1,0 +1,358 @@
+\chapter{Related Work}
+\label{chapter:related-work}
+
+This chapter reviews research relevant to URL-only phishing detection and
+GAN-based URL generation. The review concentrates on the papers supplied for
+the project and on the design decisions that affect the present work. The
+studies are not ranked by their headline accuracy alone. Their datasets,
+preprocessing, class balance, split rules, model inputs, and evaluation
+procedures differ, so a numerical result from one paper is not automatically
+comparable with a result from another.
+
+\section{Review Scope and Comparison Method}
+
+The reviewed literature is divided into three groups. The first group studies
+URL structure and traditional machine-learning features. The second group uses
+character-level neural networks for URL classification. The third group applies
+GANs to simultaneous detection, synthetic-data augmentation, or adversarial
+evasion. Review papers were used to confirm the broader classification of
+phishing-detection methods, but the analysis gives more weight to studies that
+describe their datasets, architecture, and experimental procedure
+\citep{qasim2023review}.
+
+Each experimental paper is considered using the following questions:
+
+\begin{itemize}
+\item What information is given to the model: raw URL characters, lexical
+features, generated feature vectors, or another representation?
+\item How many URLs are used, where do they come from, and how are duplicates
+or repeated hosts handled?
+\item Are training and testing separated randomly, by time, by identity, or by
+source?
+\item What are the generator and discriminator architectures, and what purpose
+does each serve?
+\item Are generated URLs evaluated for validity, uniqueness, diversity, and
+overlap, or only through loss and classifier scores?
+\item Are accuracy, precision, recall, F1-score, ROC-AUC, FPR, and FNR reported?
+\item Does the experiment isolate the effect of synthetic augmentation from
+changes in real data, class balance, thresholds, and test data?
+\end{itemize}
+
+These questions are important because a model can obtain a strong result for
+the wrong reason. Repeated hosts may allow memorisation, URL schemes may reveal
+the source, balanced tests may hide poor warning precision in ordinary browsing,
+and thresholds chosen on the final test set can make performance appear better
+than it would be on new data.
+
+\section{URL Features and Traditional Classifiers}
+
+Kan and Nguyen Thi studied webpage classification using the URL without
+fetching the page. Their method segmented addresses and represented URL
+components, component lengths, orthographic patterns, token sequences, and
+precedence relations. The study was not specifically a phishing detector, but
+it demonstrated that the location and order of URL tokens contain useful
+information and that URL-only features can supplement other representations
+\citep{kan2005fast}. This supports the use of hostname, path, query, length,
+character, and token measurements in the lexical branch of the present hybrid
+model.
+
+Sahingoz et al. developed a phishing detector from URL data using natural
+language processing features and several machine-learning algorithms. Their
+study is important to this project because it treats phishing detection as a
+URL-text classification problem and provides a traditional baseline for later
+character-level work \citep{sahingoz2019machine}. However, later analysis of
+the dataset found many repeated hosts, illustrating why deduplication and
+identity separation can materially change reported performance
+\citep{alalyan2020robust}.
+
+Wang compared two feature-extraction procedures on 10,000 benign and 10,000
+malicious URLs. One procedure used tokenisation and vectorisation, while the
+other used selected lexical features. Logistic Regression, SVM, Random Forest,
+Gradient Boosting, and Bagging were evaluated. Token/vector features combined
+with ensemble methods produced the strongest results; Random Forest achieved
+97.35\% accuracy and 98.75\% AUC in the reported condition
+\citep{wang2022malicious}. The result supports RF and SVM baselines, but it
+comes from that paper's own balanced dataset and feature space. It cannot be
+used as a direct target for an external or low-phishing deployment test.
+
+The traditional literature therefore provides two lessons. First, carefully
+constructed lexical and token features can be highly informative. Second, the
+same feature set may not transfer when data sources or collection periods
+change. This motivates comparing lexical baselines against neural models on
+exactly the same real rows in this project.
+
+\section{Character-Level Deep Learning}
+
+Al-Alyan and Al-Ahmadi proposed PUCNN, a URL-only character CNN, and created the
+Massive URL Phishing Detection dataset. After removing duplicate URLs and
+repeated hosts, their main dataset contained 1,140,599 legitimate and 1,167,201
+phishing URLs. The CNN used a maximum length of 256 characters, an alphabet of
+69 symbols, a character embedding, one-dimensional convolution, global max
+pooling, and dense layers \citep{alalyan2020robust}.
+
+PUCNN achieved 95.78\% accuracy with a random split. More importantly, the
+authors also ordered the phishing data by collection time: older URLs were used
+for training and newer URLs for testing. Accuracy fell to 88.54\%, a decrease of
+about 7.5 percentage points. The paper also showed that a simple HTTP/HTTPS
+scheme rule could reach approximately 74\% accuracy on its collected data, so
+the scheme was removed to reduce source-related bias. These experiments are
+particularly relevant because they show that random internal evaluation can
+overstate performance when phishing patterns change over time.
+
+The character-CNN study supports the main neural input used in this project,
+but it also exposes two limitations that the present experiments must address.
+A fixed maximum length truncates some information, and even a model trained on
+more than two million URLs can experience substantial temporal distribution
+shift. A larger dataset is helpful, but size alone does not guarantee
+generalisation.
+
+\section{GAN-Based Phishing Research}
+
+GAN research in phishing has followed several different objectives. Some
+studies use the discriminator as the final detector. Some add generated URLs to
+classifier training. Others deliberately search for adversarial samples that
+evade a black-box detector. These objectives should not be treated as the same
+experiment.
+
+\subsection{PWDGAN: Black-Box Evasion}
+
+PWDGAN was designed to generate adversarial malicious examples that bypass
+black-box phishing classifiers. It used 10,017 malicious websites from
+PhishTank and 11,300 benign websites from Alexa. URLs were converted to 150
+numeric features. The generator contained dense hidden layers, while the
+discriminator learned to imitate the output of an external phishing detector
+and provide feedback to the generator \citep{bac2021pwdgan}.
+
+The study attacked SVM, Decision Tree, Random Forest, Logistic Regression, and
+MLP detectors. After 500 epochs, the reported true-positive rate for most of
+the attacked classifiers fell to approximately zero on adversarial examples.
+This is evidence that a detector can be vulnerable to synthetic feature
+perturbations. It is not evidence that the generated examples are valid,
+human-readable phishing URLs, nor does it show that adding those examples to a
+fixed classifier training set improves external real-URL detection. PWDGAN is
+therefore most useful to this project as motivation for classifier-challenge
+testing and adversarial hard-sample selection.
+
+\subsection{Conditional GAN with Joint Detection}
+
+Kamran et al. proposed a semi-supervised conditional GAN that simultaneously
+generates URLs and classifies them. The generator combines an original URL,
+class label, and noise vector. Its convolutional encoder--decoder produces a
+synthetic URL representation. The multi-headed discriminator predicts both
+real-versus-generated status and benign-versus-malicious class. Reconstruction,
+adversarial, and classification losses are combined during training
+\citep{kamran2022conditional}.
+
+The study sampled 50,000 balanced URLs of at most 200 characters, using 40,000
+for training and 10,000 for testing. The model was trained for 200 epochs. It
+reported 95.52\% accuracy, 95.08\% precision, 96.00\% sensitivity, 95.54\%
+F1-score, and 95.52\% AUC on real URL classification. On a balanced real and
+adversarial evaluation, the discriminator achieved 87.45\% accuracy and detected
+74.9\% of the adversarial examples.
+
+The conditional design is useful because generation and classification share
+class information, and reconstruction can keep generated output close to an
+input URL. At the same time, high similarity may mean the generator makes local
+variations rather than exploring broad new phishing modes. The study reports
+structural similarity, but does not provide the complete uniqueness, exact
+training-overlap, and cross-source tests required by the present project.
+
+\subsection{PDGAN: LSTM Generator and CNN Discriminator}
+
+PDGAN uses an LSTM generator and a nine-layer CNN discriminator. The generator
+learns ordered URL characters and the discriminator extracts local character
+patterns. It was evaluated using the large MUPD dataset, which after
+preprocessing contained 1,167,201 phishing and 1,140,599 legitimate URLs. The
+authors removed duplicate URLs and repeated hosts before splitting the data
+\citep{alahmadi2022pdgan}.
+
+The reported final detector achieved 97.58\% accuracy and 98.02\% precision.
+Experiments added generated phishing sets of different sizes; the paper reports
+its strongest condition after adding 50,000 synthetic URLs. The work is close
+to the objective of this project because it combines a sequence generator,
+character CNN, and defensive augmentation. It also acknowledges that some
+generated URL details have incorrect semantic information. This reinforces the
+need to inspect generated samples and to report quality separately from the
+discriminator's classification metrics.
+
+PDGAN primarily evaluates its own GAN discriminator and uses its own split.
+It does not provide a paired, multi-seed comparison across RF, SVM, LSTM, CNN,
+RNN, and a lexical--character hybrid on unchanged external tests. The present
+work extends the experimental focus rather than attempting to reproduce its
+headline result.
+
+\subsection{WGAN-GP Augmentation}
+
+Pham et al. applied WGAN-GP to character-level malicious URL generation and
+then trained LSTM and GRU classifiers with and without generated phishing URLs
+\citep{pham2021generated}. The study used malicious URL sources and two Common
+Crawl legitimate sources. It evaluated total datasets of 150,000, 300,000,
+600,000, and 1.5 million samples. The generator used one-dimensional
+convolutions and residual blocks, while the critic used Wasserstein distance
+and a gradient penalty.
+
+The reported effect depended on both dataset size and classifier. At 150,000
+samples, LSTM accuracy increased from 96.08\% to 96.47\% with augmentation. At
+600,000 samples it decreased from 97.28\% to 97.16\%, and at 1.5 million it
+decreased from 97.67\% to 97.57\%. GRU performance decreased slightly in every
+reported augmented condition. The authors concluded that generated data was
+more useful when real training data was limited.
+
+This is important evidence against assuming that augmentation must always
+improve a classifier. It supports optional real-data-size experiments, but also
+shows why the project should not change dataset size merely to find a winning
+GAN configuration.
+
+\subsection{Comparison of Basic GAN, DCGAN, WGAN, and SeqGAN}
+
+Pham, Pham, and Ta compared basic GAN, DCGAN, WGAN, and SeqGAN on a dataset
+containing two million legitimate and two million phishing URLs. One million
+phishing URLs were used for discriminator training, and a test set contained
+one million phishing and one million legitimate URLs. A second experiment
+trained GANs on balanced real data and added generated URLs to RF and LSTM
+training \citep{pham2023evaluation}.
+
+The discriminator results differed from generator-quality results. Basic GAN,
+DCGAN, WGAN, and SeqGAN obtained reported discriminator accuracies of 99.98\%,
+99.88\%, 98.99\%, and 85.05\%, respectively. However, only about half of the
+basic-GAN, DCGAN, and WGAN outputs passed the top-level-domain structural check,
+whereas SeqGAN reached 92.22\%. The paper's examples also show severe malformed
+character output from some continuous GAN variants. This demonstrates that a
+strong discriminator does not prove that its generator produces good URLs.
+
+The downstream augmentation effects were small and mixed. RF accuracy was
+90.46\% on original balanced data and ranged from 90.28\% to 90.85\% after the
+different GAN additions. LSTM accuracy was 96.45\% on original data and ranged
+from 96.16\% to 96.53\% after augmentation. SeqGAN produced the strongest
+top-level-domain validity and the largest RF reduction, while basic GAN produced
+the largest LSTM reduction. In that paper these reductions were interpreted as
+evidence of classifier deception; for defensive augmentation, the meaning is
+different and must be tested on real held-out data.
+
+One methodological caution is that the paper describes searching thresholds
+for the best accuracy on the test set. A final deployment study should instead
+select thresholds on validation or calibration data and use the test set once.
+The project follows the latter procedure.
+
+\subsection{Generative Round Network}
+
+Wanda et al. proposed the Generative Round Network, which adds stochastic
+rounding to the generative components. It used 14,000 records with an 80/20
+train--test split. The reported GRN result was 95\% accuracy, 97\% precision,
+97\% recall, and 97\% F1-score, compared with 94\% accuracy for the paper's
+standard GAN condition \citep{wanda2025deep}.
+
+The stochastic mechanism is intended to keep generator and discriminator
+training balanced. The study analyses generator and discriminator losses, but
+loss balance is only indirect evidence of URL realism and diversity. The
+dataset is relatively small compared with the million-scale URL studies, and
+the authors identify temporal datasets and further architectures as future
+work. Its results are therefore useful as evidence that alternative discrete
+operations may stabilise training, not as a direct comparison with this
+project's models.
+
+\section{Comparison of the Reviewed Studies}
+
+Table~\ref{tab:related-work-comparison} summarises the studies most closely
+related to the implemented system. Reported metrics are reproduced to describe
+each paper; they should not be read as a common leaderboard.
+
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}@{}}
+\caption{Comparison of closely related URL-detection and GAN studies.}
+\label{tab:related-work-comparison}\\
+\toprule
+Study & Model and data & Main reported result & Relevance and limitation \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable{} -- continued}\\
+\toprule
+Study & Model and data & Main reported result & Relevance and limitation \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+
+Al-Alyan and Al-Ahmadi \citep{alalyan2020robust} & Character CNN; about 2.31M deduplicated legitimate and phishing URLs. & 95.78\% random-split accuracy; 88.54\% with date split. & Strong evidence for URL characters and temporal shift; no GAN augmentation. \\
+
+Wang \citep{wang2022malicious} & RF, SVM, LR, GB, and Bagging; 20K balanced URLs; lexical and token/vector features. & RF with token/vector features: 97.35\% accuracy and 98.75\% AUC. & Supports traditional baselines; smaller balanced evaluation. \\
+
+Conditional GAN \citep{kamran2022conditional} & Convolutional conditional generator and multi-task discriminator; 50K balanced URLs. & 95.52\% real-URL accuracy; 87.45\% real/adversarial accuracy. & Joint generation and classification; limited cross-source and diversity evidence. \\
+
+PDGAN \citep{alahmadi2022pdgan} & LSTM generator and CNN discriminator; about 2.31M URLs after preprocessing. & 97.58\% accuracy and 98.02\% precision. & Closest defensive GAN design; quality analysis and paired cross-model testing remain limited. \\
+
+WGAN-GP augmentation \citep{pham2021generated} & Convolutional WGAN-GP plus LSTM and GRU; 150K to 1.5M conditions. & Small LSTM gain at 150K; mixed or negative effects at larger sizes and for GRU. & Shows that augmentation benefit depends on real-data size and classifier. \\
+
+Four-GAN evaluation \citep{pham2023evaluation} & Basic GAN, DCGAN, WGAN, and SeqGAN; 4M real URLs. & Discriminator and generator rankings differed; augmentation changes were small and mixed. & Strong motivation for separate quality tests; test-based threshold search is a limitation. \\
+
+PWDGAN \citep{bac2021pwdgan} & Dense feature-space generator and surrogate discriminator; 21,317 URLs. & Most attacked classifiers approached 0\% TPR after 500 epochs. & Demonstrates adversarial weakness; does not establish useful, valid URL-text augmentation. \\
+
+GRN \citep{wanda2025deep} & GAN with stochastic rounding; 14K URLs. & 95\% accuracy and 97\% F1-score. & Explores training balance; smaller random split and limited direct quality evidence. \\
+\end{longtable}
+\normalsize
+
+Several patterns emerge from the comparison. Large random-split datasets often
+produce strong internal results, but the temporal CNN experiment shows that
+performance can fall sharply on later phishing URLs. Generator and
+discriminator quality are separate: the best discriminator may belong to a GAN
+that produces malformed strings. Augmentation effects can also be classifier-
+and data-size-dependent. Finally, accuracy is reported more consistently than
+FPR, FNR, external precision, uniqueness, or overlap, although those measures
+are central to browser use.
+
+\section{Research Gap}
+
+The reviewed work demonstrates that URL-only models and GAN-based approaches
+are promising, but it leaves a gap between a high internal score and evidence
+that synthetic phishing URLs improve a practical detector. The main missing
+elements are:
+
+\begin{itemize}
+\item a single frozen real training dataset shared by every compared classifier;
+\item paired real-only and GAN-augmented conditions that change only the added
+synthetic phishing rows;
+\item several fixed augmentation percentages retained even when they do not
+improve performance;
+\item repeated seeds and reporting of variation rather than one favourable run;
+\item explicit generated-URL validity, uniqueness, novelty, overlap, structural
+realism, diversity, and classifier-challenge measurements;
+\item internal, identity-disjoint, source-diverse, temporal or recently
+collected, low-phishing, and long-legitimate-URL evaluations;
+\item complete reporting of precision, recall, F1-score, ROC-AUC, FPR, FNR, and
+confusion counts; and
+\item a browser decision policy whose threshold is selected without using the
+final test labels.
+\end{itemize}
+
+The project addresses this gap using a controlled experiment rather than
+assuming that every synthetic sample is beneficial. Real-only models establish
+the reference performance. GANs are trained only on phishing URLs from the
+training split. Generated candidates pass fixed quality and overlap checks,
+then the same accepted pool is supplied to the classifiers being compared.
+Validation and test sets remain real and unchanged. Results are interpreted as
+evidence of benefit, no effect, or degradation according to the measured data.
+
+The hybrid classifier adds a further comparison not covered consistently in
+the supplied GAN papers: character CNN features and lexical measurements are
+combined in one detector, but the hybrid receives the same real URL identities
+as the ordinary baselines. Weighted sampling is treated as a separate training
+condition rather than as additional data. This distinction prevents the hybrid
+from gaining hidden source access.
+
+\section{Chapter Summary}
+
+Prior research establishes that URL structure, lexical features, RF and SVM
+models, and character-level neural networks can all support phishing detection.
+GAN studies show that LSTM, convolutional, conditional, Wasserstein, sequential,
+and stochastic-rounding designs can contribute to generation or discrimination.
+They also show that GAN output may be malformed, that a
+strong discriminator does not guarantee a strong generator, and that
+augmentation may help, have no effect, or reduce performance.
+
+The main opportunity is therefore methodological: compare real-only and
+GAN-augmented classifiers under identical data and evaluation conditions, while
+measuring generated URL quality separately. Chapter 4 describes how that
+controlled methodology and the complete system were designed.

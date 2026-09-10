@@ -1,0 +1,58 @@
+{
+  "acceptance_rate": 0.9948775,
+  "accepted": {
+    "bigram_diversity": 0.00014163659269553612,
+    "mean_length": 31.34893089852771,
+    "memorization_rate": 0.0,
+    "memorized_exact": 0,
+    "repeated_template_rate": 0.0,
+    "samples": 1989755,
+    "std_length": 17.84928332186613,
+    "unique_bigrams": 8553,
+    "unique_characters": 127,
+    "unique_samples": 1989755,
+    "uniqueness": 1.0,
+    "valid_url_like": 1989755,
+    "validity": 1.0
+  },
+  "accepted_count": 1989755,
+  "accepted_csv_sha256": "f07520e89cbdd74c08efb5f8734a1fdf494b5933878467ecff61a3dcd4b5514f",
+  "checkpoint_sha256": "da725ab01813a6e62ad5ea0f1806870904ce0d54704c0b56d91ee209759cb171",
+  "filters": {
+    "encoded_real_overlap": true,
+    "exact_real_overlap": true,
+    "protected_hostname_overlap": true,
+    "template_cap": 5,
+    "template_prefix_length": 24
+  },
+  "generation_budget": 2000000,
+  "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+  "model": "relgan",
+  "project_version": 2,
+  "raw": {
+    "bigram_diversity": 0.00015026922948128136,
+    "mean_length": 31.2952915,
+    "memorization_rate": 0.000171,
+    "memorized_exact": 342,
+    "repeated_template_rate": 0.0006105,
+    "samples": 2000000,
+    "std_length": 17.892679716298165,
+    "unique_bigrams": 9105,
+    "unique_characters": 127,
+    "unique_samples": 1997677,
+    "uniqueness": 0.9988385,
+    "valid_url_like": 1992052,
+    "validity": 0.996026
+  },
+  "raw_samples_sha256": "3641f248b25d4e5c9f8dd8b27766b8411694a98068daa830b97ddae6b38e0533",
+  "rejection_reasons": {
+    "exact_real_overlap": 233,
+    "generated_duplicate": 1746,
+    "invalid::empty_url": 664,
+    "invalid::invalid_hostname": 694,
+    "invalid::invalid_idna_hostname": 4962,
+    "invalid::invalid_port": 1015,
+    "invalid::url_parse_error": 613,
+    "protected_hostname_overlap": 318
+  }
+}

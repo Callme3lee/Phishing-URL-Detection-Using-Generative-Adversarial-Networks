@@ -1,0 +1,59 @@
+{
+  "acceptance_rate": 0.98816,
+  "accepted": {
+    "bigram_diversity": 6.061402185436644e-05,
+    "mean_length": 26.118391252428758,
+    "memorization_rate": 0.0,
+    "memorized_exact": 0,
+    "repeated_template_rate": 0.0,
+    "samples": 1976320,
+    "std_length": 15.236509556071189,
+    "unique_bigrams": 3009,
+    "unique_characters": 117,
+    "unique_samples": 1976320,
+    "uniqueness": 1.0,
+    "valid_url_like": 1976320,
+    "validity": 1.0
+  },
+  "accepted_count": 1976320,
+  "accepted_csv_sha256": "19df91678a468deaf783d9f8e060578076b4dc00354d3b87dba90a75756a38a9",
+  "checkpoint_sha256": "34e47ec3e391f2298e1e22a3251635dc6595420608c4a24306ecd6258df63e91",
+  "filters": {
+    "encoded_real_overlap": true,
+    "exact_real_overlap": true,
+    "protected_hostname_overlap": true,
+    "template_cap": 5,
+    "template_prefix_length": 24
+  },
+  "generation_budget": 2000000,
+  "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+  "model": "seqgan",
+  "project_version": 2,
+  "raw": {
+    "bigram_diversity": 6.575470970852224e-05,
+    "mean_length": 26.0552275,
+    "memorization_rate": 0.0011615,
+    "memorized_exact": 2323,
+    "repeated_template_rate": 0.004302,
+    "samples": 2000000,
+    "std_length": 15.319591424814298,
+    "unique_bigrams": 3295,
+    "unique_characters": 127,
+    "unique_samples": 1983198,
+    "uniqueness": 0.991599,
+    "valid_url_like": 1999490,
+    "validity": 0.999745
+  },
+  "raw_samples_sha256": "a6cf00d84a8125313cbf7f6e8196771398a28e3835ce098515c89d1a4fd081cf",
+  "rejection_reasons": {
+    "exact_real_overlap": 1042,
+    "generated_duplicate": 16787,
+    "invalid::empty_url": 24,
+    "invalid::invalid_hostname": 5,
+    "invalid::invalid_idna_hostname": 405,
+    "invalid::invalid_port": 63,
+    "invalid::url_parse_error": 13,
+    "protected_hostname_overlap": 5252,
+    "template_cap": 89
+  }
+}

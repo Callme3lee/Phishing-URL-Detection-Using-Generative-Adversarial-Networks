@@ -1,0 +1,24 @@
+% Prepared for inclusion in the experiments and results chapter.
+\subsection{Browser User-Evaluation Metrics}
+
+Let $N$ denote the number of unique URLs evaluated by users, $R$ the number of
+false alarms explicitly reported by users, and $A$ the number of caution,
+warning, or block decisions. The user-reported false-alarm rate is
+\begin{equation}
+    \mathrm{URFAR}=\frac{R}{N}\times100.
+\end{equation}
+The overall alert rate is
+\begin{equation}
+    \mathrm{OAR}=\frac{A}{N}\times100.
+\end{equation}
+Across the current-format exports, 5,302 unique URL observations were recorded,
+users submitted 138 explicit false-alarm reports, and the extension produced
+418 caution, warning, or block decisions. Therefore, URFAR was 2.60\% and OAR
+was 7.88\%. One participant additionally confirmed 36 false alerts in
+aggregate without stored URLs; including them gives a descriptive lower-bound
+false-alarm burden of 3.28\%. URFAR is a
+lower-bound descriptive rate because users may not report every mistake. OAR
+measures the warning burden and is not a false-positive rate because some
+alerts may be correct. Feedback completeness is established through participant
+confirmation rather than by dividing reports by alerts. Older legacy exports
+without a compatible unique-URL denominator are reported separately.

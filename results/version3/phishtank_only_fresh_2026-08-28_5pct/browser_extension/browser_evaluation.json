@@ -1,0 +1,215 @@
+{
+  "browser_bundle": {
+    "inference_runtime": "ONNX Runtime CPU, matching the packaged ONNX graphs; browser WebAssembly parity is separately tested",
+    "manifest": "browser_extension_user_pilot/models/bundle_manifest.json",
+    "manifest_sha256": "4db4b0ae5c088b586c3131d8344b8e83f1b96098026e78174e00c218ab88cee2",
+    "model": "Updated HYB-MS +10% MS-HardGAN-C, three-seed mean-score ensemble",
+    "policy": "browser_extension_user_pilot/models/policy.json",
+    "policy_sha256": "84630ad06256b5a91f81e609cb1cc7ee82e9781f5f2a4cde487579a8633fa0f8",
+    "policy_version": "conservative_hyb_gan10_browser_v1",
+    "root": "browser_extension_user_pilot",
+    "verified_models": [
+      {
+        "filename": "hyb_gan10_seed42.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 42,
+        "sha256": "70da6879cb57d638b20bf8a3135ca73b2a9aa6203c5089ad93bdf73de5dcf914"
+      },
+      {
+        "filename": "hyb_gan10_seed43.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 43,
+        "sha256": "254a41b49af7b0771fa85a6af3acbf1c3a01780c532eda093c5172524b748b87"
+      },
+      {
+        "filename": "hyb_gan10_seed44.onnx",
+        "provider": "CPUExecutionProvider",
+        "seed": 44,
+        "sha256": "f6e8205385918e11b4cfdd8a9b0a0335ec13422bff0bf5bd84a26f512789aac3"
+      }
+    ]
+  },
+  "dataset": {
+    "legitimate_rows": 9500,
+    "measured_overlap": {
+      "encoded_rows": 0,
+      "hostnames": 0,
+      "urls": 0
+    },
+    "path": "data/external/2026-08-28-phishtank-only-raw-5pct-v1/external_urls.csv",
+    "phishing_prevalence": 0.05,
+    "phishing_rows": 500,
+    "rows": 10000,
+    "sha256": "b331bd254ec9141e72b24489f0a0bba89951c4d410a211caf9c2d8f7924501dd"
+  },
+  "evaluated_at_utc": "2026-08-28T17:29:03.287972+00:00",
+  "evaluation": "exact packaged browser ONNX ensemble and frozen tier policy",
+  "interpretation": {
+    "block_is_the_only_normal_mode_interruption": true,
+    "caution_is_not_a_strict_false_positive": true,
+    "limitation": "Feed labels and Tranco root proxies are not manual page-level adjudication; this is an offline external audit, not production certification.",
+    "no_training_or_threshold_change": true,
+    "warning_or_block_is_the_binary_phishing_decision": true
+  },
+  "predictions_sha256": "b7944797a137d1dbeb50e8cd84430f2d799176af9a241fc986bcb2e3968f0be7",
+  "primary_warning_or_block": {
+    "metrics": {
+      "accuracy": 0.9894,
+      "confusion_matrix": {
+        "fn": 77,
+        "fp": 29,
+        "tn": 9471,
+        "tp": 423
+      },
+      "f1": 0.8886554621848739,
+      "false_negative_rate": 0.154,
+      "false_positive_rate": 0.0030526315789473684,
+      "per_10000_urls": {
+        "detected_phishing": 423.0,
+        "false_alerts": 29.0,
+        "missed_phishing": 77.0
+      },
+      "pr_auc": 0.9207589021646173,
+      "precision": 0.9358407079646017,
+      "recall": 0.846,
+      "roc_auc": 0.9789167368421052
+    },
+    "threshold": 0.9953077435493469
+  },
+  "project_version": 3,
+  "score_summary": {
+    "maximum": 1.0,
+    "median": 0.13766208291053772,
+    "minimum": 0.00037654241896234453
+  },
+  "threshold_results": {
+    "block_or_higher": {
+      "metrics": {
+        "accuracy": 0.9748,
+        "confusion_matrix": {
+          "fn": 246,
+          "fp": 6,
+          "tn": 9494,
+          "tp": 254
+        },
+        "f1": 0.6684210526315789,
+        "false_negative_rate": 0.492,
+        "false_positive_rate": 0.0006315789473684211,
+        "per_10000_urls": {
+          "detected_phishing": 254.0,
+          "false_alerts": 6.0,
+          "missed_phishing": 246.0
+        },
+        "pr_auc": 0.9207589021646173,
+        "precision": 0.9769230769230769,
+        "recall": 0.508,
+        "roc_auc": 0.9789167368421052
+      },
+      "threshold": 0.9998490214347839
+    },
+    "caution_or_higher": {
+      "metrics": {
+        "accuracy": 0.9848,
+        "confusion_matrix": {
+          "fn": 49,
+          "fp": 103,
+          "tn": 9397,
+          "tp": 451
+        },
+        "f1": 0.855787476280835,
+        "false_negative_rate": 0.098,
+        "false_positive_rate": 0.010842105263157894,
+        "per_10000_urls": {
+          "detected_phishing": 451.0,
+          "false_alerts": 103.0,
+          "missed_phishing": 49.0
+        },
+        "pr_auc": 0.9207589021646173,
+        "precision": 0.8140794223826715,
+        "recall": 0.902,
+        "roc_auc": 0.9789167368421052
+      },
+      "threshold": 0.9707667827606201
+    },
+    "secondary_review_or_higher": {
+      "metrics": {
+        "accuracy": 0.9207,
+        "confusion_matrix": {
+          "fn": 21,
+          "fp": 772,
+          "tn": 8728,
+          "tp": 479
+        },
+        "f1": 0.5471159337521416,
+        "false_negative_rate": 0.042,
+        "false_positive_rate": 0.08126315789473684,
+        "per_10000_urls": {
+          "detected_phishing": 479.0,
+          "false_alerts": 772.0,
+          "missed_phishing": 21.0
+        },
+        "pr_auc": 0.9207589021646173,
+        "precision": 0.3828936850519584,
+        "recall": 0.958,
+        "roc_auc": 0.9789167368421052
+      },
+      "threshold": 0.6707517504692078
+    },
+    "warning_or_higher": {
+      "metrics": {
+        "accuracy": 0.9894,
+        "confusion_matrix": {
+          "fn": 77,
+          "fp": 29,
+          "tn": 9471,
+          "tp": 423
+        },
+        "f1": 0.8886554621848739,
+        "false_negative_rate": 0.154,
+        "false_positive_rate": 0.0030526315789473684,
+        "per_10000_urls": {
+          "detected_phishing": 423.0,
+          "false_alerts": 29.0,
+          "missed_phishing": 77.0
+        },
+        "pr_auc": 0.9207589021646173,
+        "precision": 0.9358407079646017,
+        "recall": 0.846,
+        "roc_auc": 0.9789167368421052
+      },
+      "threshold": 0.9953077435493469
+    }
+  },
+  "tier_counts": [
+    {
+      "legitimate": 8728,
+      "phishing": 21,
+      "tier": "allow",
+      "total": 8749
+    },
+    {
+      "legitimate": 669,
+      "phishing": 28,
+      "tier": "secondary_review",
+      "total": 697
+    },
+    {
+      "legitimate": 74,
+      "phishing": 28,
+      "tier": "caution",
+      "total": 102
+    },
+    {
+      "legitimate": 23,
+      "phishing": 169,
+      "tier": "warning",
+      "total": 192
+    },
+    {
+      "legitimate": 6,
+      "phishing": 254,
+      "tier": "block",
+      "total": 260
+    }
+  ]
+}

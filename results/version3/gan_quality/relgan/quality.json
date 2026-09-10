@@ -1,0 +1,128 @@
+{
+  "character_ngram_distances": {
+    "generated_to_nearest_generated_mean": 0.8762610057343305,
+    "generated_to_nearest_generated_p05": 0.6239772325006202,
+    "generated_to_nearest_real_mean": 0.9311952058678451,
+    "generated_to_nearest_real_p05": 0.8624951313877635,
+    "sample_rows": 3000
+  },
+  "cluster_js_distance": 0.5014144546939397,
+  "generator": "relgan",
+  "lexical_standardized_mean_difference": {
+    "maximum_absolute": 13.458809852600098,
+    "mean_absolute": 0.8338223695755005,
+    "median_absolute": 0.2174113392829895
+  },
+  "project_version": 3,
+  "rbf_mmd_squared": 0.15890812873840332,
+  "real_cluster_coverage": 0.86,
+  "real_only_classifier_challenge": {
+    "challenging_to_all_rate": 0.00015541223094257519,
+    "challenging_to_at_least_one_rate": 0.46413862771000075,
+    "majority_challenging_rate": 0.0008547672701841635,
+    "mean_classifier_phishing_vote_fraction": 0.8802134327971611,
+    "per_run": [
+      {
+        "challenging_rate": 0.0014764161939544642,
+        "model": "cnn",
+        "phishing_rate": 0.9985235838060456,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.001321003963011889,
+        "model": "cnn",
+        "phishing_rate": 0.9986789960369881,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.00046623669282772556,
+        "model": "cnn",
+        "phishing_rate": 0.9995337633071723,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.004351542466392105,
+        "model": "lstm",
+        "phishing_rate": 0.9956484575336079,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.0016318284248970393,
+        "model": "lstm",
+        "phishing_rate": 0.9983681715751029,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.005517134198461419,
+        "model": "lstm",
+        "phishing_rate": 0.9944828658015386,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.008858497163726786,
+        "model": "rnn",
+        "phishing_rate": 0.9911415028362732,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.00870308493278421,
+        "model": "rnn",
+        "phishing_rate": 0.9912969150672158,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.001165591732069314,
+        "model": "rnn",
+        "phishing_rate": 0.9988344082679307,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.35542777216566945,
+        "model": "random_forest",
+        "phishing_rate": 0.6445722278343305,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.355583184396612,
+        "model": "random_forest",
+        "phishing_rate": 0.644416815603388,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.35713730670603777,
+        "model": "random_forest",
+        "phishing_rate": 0.6428626932939623,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.2317196363353796,
+        "model": "linear_svm",
+        "phishing_rate": 0.7682803636646204,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.2317196363353796,
+        "model": "linear_svm",
+        "phishing_rate": 0.7682803636646204,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.2317196363353796,
+        "model": "linear_svm",
+        "phishing_rate": 0.7682803636646204,
+        "seed": 44
+      }
+    ],
+    "rows": 12869
+  },
+  "sample_rows_per_source": 12869,
+  "source_classifier_roc_auc": {
+    "mean": 0.9888458943539665,
+    "sd": 0.0005927305729158856,
+    "values": [
+      0.9881665189875498,
+      0.9892574594724297,
+      0.98911370460192
+    ]
+  }
+}

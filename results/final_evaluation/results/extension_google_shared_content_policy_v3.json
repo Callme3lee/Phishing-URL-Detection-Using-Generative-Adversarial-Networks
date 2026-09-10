@@ -1,0 +1,63 @@
+{
+  "evaluated_at_utc": "2026-09-07T20:00:03.307557+00:00",
+  "dataset": "../dataset/online_3pct_urls.csv",
+  "dataset_sha256": "ac4af39a76406400e9a722213cc498a03df74ca1f73f1a21419601f9f639db0a",
+  "positive_rule": "caution, warning, and block count as phishing",
+  "model_or_threshold_changed": false,
+  "old_blanket_allow": {
+    "accuracy": 0.9869,
+    "precision": 0.7788778877887789,
+    "recall": 0.7866666666666666,
+    "f1": 0.7827529021558872,
+    "roc_auc": 0.9875743986254296,
+    "pr_auc": 0.8982436227182847,
+    "false_positive_rate": 0.006907216494845361,
+    "false_negative_rate": 0.21333333333333335,
+    "specificity": 0.9930927835051546,
+    "confusion_matrix": {
+      "tn": 9633,
+      "fp": 67,
+      "fn": 64,
+      "tp": 236
+    }
+  },
+  "new_capped_shared_content_policy": {
+    "accuracy": 0.9893,
+    "precision": 0.7951070336391437,
+    "recall": 0.8666666666666667,
+    "f1": 0.8293460925039873,
+    "roc_auc": 0.9875743986254296,
+    "pr_auc": 0.8982436227182847,
+    "false_positive_rate": 0.006907216494845361,
+    "false_negative_rate": 0.13333333333333333,
+    "specificity": 0.9930927835051546,
+    "confusion_matrix": {
+      "tn": 9633,
+      "fp": 67,
+      "fn": 40,
+      "tp": 260
+    }
+  },
+  "delta_new_minus_old": {
+    "accuracy": 0.0023999999999999577,
+    "precision": 0.016229145850364834,
+    "recall": 0.08000000000000007,
+    "f1": 0.046593190348100055,
+    "roc_auc": 0.0,
+    "pr_auc": 0.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": -0.08000000000000002
+  },
+  "new_tier_counts": {
+    "allow": 9077,
+    "secondary_review": 596,
+    "caution": 109,
+    "warning": 136,
+    "block": 82
+  },
+  "new_decision_reasons": {
+    "model_policy": 9958,
+    "recognized_service": 4,
+    "reviewed_user_content": 38
+  }
+}

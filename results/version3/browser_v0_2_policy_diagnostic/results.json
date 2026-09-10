@@ -1,0 +1,121 @@
+{
+  "change_under_test": "warning becomes passive; only the existing strict block tier interrupts",
+  "extension_version": "0.2.0",
+  "interpretation_limit": "This is a post-hoc deployment-policy diagnostic on already evaluated datasets, not a new model-validation claim. It measures interruption burden, not whether passive warnings disappear.",
+  "model_and_score_thresholds_unchanged": true,
+  "model_bundle": "browser_extension/models/bundle_manifest.json",
+  "model_bundle_sha256": "4db4b0ae5c088b586c3131d8344b8e83f1b96098026e78174e00c218ab88cee2",
+  "policy": "browser_extension/models/policy.json",
+  "policy_sha256": "84630ad06256b5a91f81e609cb1cc7ee82e9781f5f2a4cde487579a8633fa0f8",
+  "project_version": 3,
+  "results": {
+    "long_url_stress": {
+      "change": {
+        "legitimate_interruptions": -22,
+        "phishing_interruptions": -55
+      },
+      "dataset": "data/external/2026-08-22-final-long-url-stress/evaluation_urls.csv",
+      "dataset_sha256": "63b9db2a61c072c6b86419e5af11374e9c3e6329f50bda478b6936f86416ac0d",
+      "new_v0_2_behavior_only_block_interrupts": {
+        "legitimate_interruptions": 0,
+        "legitimate_rows": 2000,
+        "metrics": {
+          "accuracy": 0.9509090909090909,
+          "confusion_matrix": {
+            "fn": 108,
+            "fp": 0,
+            "tn": 2000,
+            "tp": 92
+          },
+          "f1": 0.6301369863013698,
+          "false_negative_rate": 0.54,
+          "false_positive_rate": 0.0,
+          "pr_auc": 0.9172270518595292,
+          "precision": 1.0,
+          "recall": 0.46,
+          "roc_auc": 0.985375
+        },
+        "phishing_interruptions": 92,
+        "phishing_rows": 200,
+        "threshold": 0.9998490214347839
+      },
+      "old_v0_1_behavior_warning_and_block_interrupt": {
+        "legitimate_interruptions": 22,
+        "legitimate_rows": 2000,
+        "metrics": {
+          "accuracy": 0.9659090909090909,
+          "confusion_matrix": {
+            "fn": 53,
+            "fp": 22,
+            "tn": 1978,
+            "tp": 147
+          },
+          "f1": 0.7967479674796748,
+          "false_negative_rate": 0.265,
+          "false_positive_rate": 0.011,
+          "pr_auc": 0.9172270518595292,
+          "precision": 0.8698224852071006,
+          "recall": 0.735,
+          "roc_auc": 0.985375
+        },
+        "phishing_interruptions": 147,
+        "phishing_rows": 200,
+        "threshold": 0.9953077435493469
+      }
+    },
+    "primary_30k": {
+      "change": {
+        "legitimate_interruptions": -82,
+        "phishing_interruptions": -612
+      },
+      "dataset": "data/external/2026-08-22-final-confirmation-5pct/external_urls.csv",
+      "dataset_sha256": "79e3b1e60f46c3a63c31ba3f4a1b82afb5e93aa2388f8cffdfbc32befcafa84e",
+      "new_v0_2_behavior_only_block_interrupts": {
+        "legitimate_interruptions": 6,
+        "legitimate_rows": 28500,
+        "metrics": {
+          "accuracy": 0.9686,
+          "confusion_matrix": {
+            "fn": 936,
+            "fp": 6,
+            "tn": 28494,
+            "tp": 564
+          },
+          "f1": 0.5449275362318841,
+          "false_negative_rate": 0.624,
+          "false_positive_rate": 0.0002105263157894737,
+          "pr_auc": 0.912109283375712,
+          "precision": 0.9894736842105263,
+          "recall": 0.376,
+          "roc_auc": 0.9779851929824561
+        },
+        "phishing_interruptions": 564,
+        "phishing_rows": 1500,
+        "threshold": 0.9998490214347839
+      },
+      "old_v0_1_behavior_warning_and_block_interrupt": {
+        "legitimate_interruptions": 88,
+        "legitimate_rows": 28500,
+        "metrics": {
+          "accuracy": 0.9862666666666666,
+          "confusion_matrix": {
+            "fn": 324,
+            "fp": 88,
+            "tn": 28412,
+            "tp": 1176
+          },
+          "f1": 0.8509406657018813,
+          "false_negative_rate": 0.216,
+          "false_positive_rate": 0.003087719298245614,
+          "pr_auc": 0.912109283375712,
+          "precision": 0.930379746835443,
+          "recall": 0.784,
+          "roc_auc": 0.9779851929824561
+        },
+        "phishing_interruptions": 1176,
+        "phishing_rows": 1500,
+        "threshold": 0.9953077435493469
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "experiment": "primary_dns_comparison_v1",
+  "generated_on": "2026-08-15",
+  "files": {
+    "comparison.json": "42e79f2e797148130014363c78f8147b917bd670c807cff2494fe876b0351709",
+    "all_metrics.csv": "f2dffbe6bdd0f33ab27effaef89db935e0922139f70a892d6c5d54cefa2b0167",
+    "comparison_graph.png": "255eb89acaac885b6fef364b216b61cfbe89838b7a825afbb14768720fe42473",
+    "primary_dns_comparison_report.pdf": "98d392012af531ba6b190563d5435cd4e2b3d743472743048383b48b86dcb9d4"
+  },
+  "frozen_inputs": {
+    "real_only_policy.json": "bcecd556e7c84be772b203b5af2582a03193766e37e5ff03a7262e97723ffff4",
+    "frozen_dns_secondary.json": "522e2a5217b5c4039571fa2ce294bb86d62368c5361081fc1cd66e21ccefc0ce"
+  },
+  "graduation_report": {
+    "path": "../../../Documentation/latex/main.pdf",
+    "sha256": "93b4bdf59db0398749ae3a59b782855807daef6a17e384c67a5908ce2d3a467a"
+  }
+}

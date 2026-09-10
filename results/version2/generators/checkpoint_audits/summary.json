@@ -1,0 +1,37 @@
+{
+  "generators": [
+    {
+      "epoch": 1,
+      "memorization_rate": 0.0005,
+      "model": "gumbel_lsgan",
+      "repeated_template_rate": 0.0,
+      "samples": 2000,
+      "selection_score": 0.9995,
+      "uniqueness": 1.0,
+      "validity": 1.0
+    },
+    {
+      "epoch": 2,
+      "memorization_rate": 0.0005,
+      "model": "seqgan",
+      "repeated_template_rate": 0.0,
+      "samples": 2000,
+      "selection_score": 0.9995,
+      "uniqueness": 1.0,
+      "validity": 1.0
+    },
+    {
+      "epoch": 3,
+      "memorization_rate": 0.0005,
+      "model": "relgan",
+      "repeated_template_rate": 0.0,
+      "samples": 2000,
+      "selection_score": 0.9950022500000001,
+      "uniqueness": 1.0,
+      "validity": 0.9955
+    }
+  ],
+  "project_version": 2,
+  "protocol": "selected-checkpoint 2000-sample audits",
+  "warning": "RelGAN has no full two-million-sample filtered corpus yet"
+}

@@ -1,0 +1,91 @@
+{
+  "accuracy": 0.9334538584980397,
+  "best_epoch": 1,
+  "condition": "gan_20pct",
+  "confusion_matrix": {
+    "fn": 3274,
+    "fp": 2,
+    "tn": 38906,
+    "tp": 7047
+  },
+  "coral_weight": 0.01,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "domain_validation_threshold": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 1.0,
+    "validation_f1": 0.7615384615384615,
+    "validation_fpr": 0.005141388174807198,
+    "validation_precision": 0.99,
+    "validation_recall": 0.61875
+  },
+  "f1": 0.81139896373057,
+  "fair_original_threshold_metrics": {
+    "accuracy": 0.983221272014463,
+    "confusion_matrix": {
+      "fn": 590,
+      "fp": 236,
+      "tn": 38672,
+      "tp": 9731
+    },
+    "f1": 0.9592862776025236,
+    "false_negative_rate": 0.05716500339114427,
+    "false_positive_rate": 0.006065590624036188,
+    "pr_auc": 0.9857436227434294,
+    "precision": 0.9763218621450788,
+    "recall": 0.9428349966088557,
+    "roc_auc": 0.9929609601196074
+  },
+  "false_negative_rate": 0.3172173239027226,
+  "false_positive_rate": 5.1403310373188036e-05,
+  "feature_count": 35,
+  "generated_fraction": 0.2,
+  "mixed_precision": true,
+  "model": "hyb_ms",
+  "original_validation_threshold": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.791015625,
+    "validation_f1": 0.9582075809504321,
+    "validation_fpr": 0.007956661587946504,
+    "validation_precision": 0.9755233829809394,
+    "validation_recall": 0.9414957780458384
+  },
+  "pr_auc": 0.9857436227434294,
+  "precision": 0.9997162718116045,
+  "project_version": 3,
+  "real_training_rows": 363692,
+  "recall": 0.6827826760972774,
+  "robust_threshold_metrics": {
+    "accuracy": 0.9334538584980397,
+    "confusion_matrix": {
+      "fn": 3274,
+      "fp": 2,
+      "tn": 38906,
+      "tp": 7047
+    },
+    "f1": 0.81139896373057,
+    "false_negative_rate": 0.3172173239027226,
+    "false_positive_rate": 5.1403310373188036e-05,
+    "pr_auc": 0.9857436227434294,
+    "precision": 0.9997162718116045,
+    "recall": 0.6827826760972774,
+    "roc_auc": 0.9929609601196074
+  },
+  "roc_auc": 0.9929609601196074,
+  "seed": 42,
+  "selection_score": 0.9727964743665842,
+  "synthetic_coral_excluded": true,
+  "synthetic_training_rows": 90923,
+  "target_group_proportions": {
+    "0": 0.27999999999999997,
+    "1": 0.12,
+    "2": 0.24,
+    "3": 0.12,
+    "4": 0.04000000000000001,
+    "5": 0.2
+  },
+  "test_inference_seconds": 0.7605307620015083,
+  "threshold": 1.0,
+  "threshold_policy": "max original/domain validation 1%-FPR",
+  "training_rows": 454615,
+  "training_time_seconds": 54.56474493600035
+}

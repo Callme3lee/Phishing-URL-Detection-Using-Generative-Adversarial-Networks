@@ -1,0 +1,284 @@
+{
+  "artifact_hashes": {
+    "all_metrics.csv": "afbd2d5698e462a4dffdaefbf51bb9adcd76c774c7ecc420405840fe8831947a",
+    "recent_update_gan10_comparison.png": "46109dd6dc061afabe8e893436d4dc9dfa5cca4806febc7784de2ee13c747f7a",
+    "recent_update_gan10_report.pdf": "d04a2f9298fa30c6532864ea2869e672f7b34887df2d983ca1c74b61b392f5f9"
+  },
+  "claim_boundary": "internal controlled evidence only; not deployment-ready and not externally confirmed",
+  "conditions": {
+    "gan_10pct": {
+      "accuracy": {
+        "mean": 0.9363179577875117,
+        "standard_deviation": 0.004644726193699272,
+        "values": [
+          0.9387171735866905,
+          0.9392724206716433,
+          0.9309642791042013
+        ]
+      },
+      "best_epochs": [
+        1,
+        2,
+        1
+      ],
+      "f1": {
+        "mean": 0.8230508758805858,
+        "standard_deviation": 0.015290478055342529,
+        "values": [
+          0.8309699376063528,
+          0.8327575465820921,
+          0.8054251434533125
+        ]
+      },
+      "false_negative_rate": {
+        "mean": 0.3003655893105568,
+        "standard_deviation": 0.021921683065225066,
+        "values": [
+          0.28904202659419587,
+          0.28642143065126663,
+          0.3256333106862079
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 5.2186619350798456e-05,
+        "standard_deviation": 0.0,
+        "values": [
+          5.2186619350798456e-05,
+          5.2186619350798456e-05,
+          5.2186619350798456e-05
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9888514897746319,
+        "standard_deviation": 0.001243168837302605,
+        "values": [
+          0.9874526107251523,
+          0.9892719636890613,
+          0.9898298949096819
+        ]
+      },
+      "precision": {
+        "mean": 0.999722435454892,
+        "standard_deviation": 8.852189977435446e-06,
+        "values": [
+          0.9997270369864883,
+          0.9997280391623606,
+          0.9997122302158273
+        ]
+      },
+      "recall": {
+        "mean": 0.6996344106894433,
+        "standard_deviation": 0.021921683065225114,
+        "values": [
+          0.7109579734058041,
+          0.7135785693487334,
+          0.6743666893137921
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9948188461950936,
+        "standard_deviation": 0.000989136166926474,
+        "values": [
+          0.993795584338333,
+          0.9948910550756702,
+          0.9957698991712778
+        ]
+      },
+      "thresholds": [
+        0.99951171875,
+        1.0,
+        0.99951171875
+      ]
+    },
+    "real_only": {
+      "accuracy": {
+        "mean": 0.9307586320357003,
+        "standard_deviation": 0.005633228403441951,
+        "values": [
+          0.9333086556851132,
+          0.9243013140847677,
+          0.93466592633722
+        ]
+      },
+      "best_epochs": [
+        1,
+        1,
+        1
+      ],
+      "f1": {
+        "mean": 0.8045505786540271,
+        "standard_deviation": 0.019175505432625455,
+        "values": [
+          0.8132880419137544,
+          0.7825624667729931,
+          0.8178012272753341
+        ]
+      },
+      "false_negative_rate": {
+        "mean": 0.3265068426671843,
+        "standard_deviation": 0.02667642728268321,
+        "values": [
+          0.3144715131515093,
+          0.35708046200135884,
+          0.30796855284868485
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 7.827992902619767e-05,
+        "standard_deviation": 2.6093309675399228e-05,
+        "values": [
+          7.827992902619769e-05,
+          5.2186619350798456e-05,
+          0.00010437323870159691
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.989193155484218,
+        "standard_deviation": 0.0011652231874357522,
+        "values": [
+          0.9904682413133269,
+          0.9889275832309287,
+          0.9881836419083982
+        ]
+      },
+      "precision": {
+        "mean": 0.9995709650502859,
+        "standard_deviation": 0.00012948480659517197,
+        "values": [
+          0.9995754316444948,
+          0.9996981587684878,
+          0.999439304737875
+        ]
+      },
+      "recall": {
+        "mean": 0.6734931573328158,
+        "standard_deviation": 0.02667642728268319,
+        "values": [
+          0.6855284868484908,
+          0.6429195379986412,
+          0.6920314471513151
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.994848365681524,
+        "standard_deviation": 0.0007498565987309908,
+        "values": [
+          0.9956850940153876,
+          0.9946228724303434,
+          0.9942371305988409
+        ]
+      },
+      "thresholds": [
+        0.99951171875,
+        1.0,
+        0.998046875
+      ]
+    }
+  },
+  "data_contract": {
+    "gan_synthetic_rows": 40410,
+    "identical_real_rows": 367184,
+    "protected_confirmation_rows_used": 0,
+    "recent_update_rows": 3492,
+    "test_rows_removed": 602,
+    "validation_rows_removed": 994
+  },
+  "experiment": "recent_update_gan10_v1",
+  "paired_deltas": {
+    "accuracy": {
+      "gan_wins": 2,
+      "mean": 0.005559325751811395,
+      "standard_deviation": 0.009337290348937615,
+      "ties": 0,
+      "values": [
+        0.005408517901577259,
+        0.014971106586875615,
+        -0.00370164723301869
+      ]
+    },
+    "f1": {
+      "gan_wins": 2,
+      "mean": 0.01850029722655862,
+      "standard_deviation": 0.031293609017516794,
+      "ties": 0,
+      "values": [
+        0.01768189569259848,
+        0.050195079809098986,
+        -0.0123760838220216
+      ]
+    },
+    "false_negative_rate": {
+      "gan_wins": 2,
+      "mean": -0.026141253356627536,
+      "standard_deviation": 0.04416619627154946,
+      "ties": 0,
+      "values": [
+        -0.02542948655731342,
+        -0.07065903135009222,
+        0.017664757837523026
+      ]
+    },
+    "false_positive_rate": {
+      "gan_wins": 2,
+      "mean": -2.6093309675399228e-05,
+      "standard_deviation": 2.6093309675399228e-05,
+      "ties": 1,
+      "values": [
+        -2.609330967539923e-05,
+        0.0,
+        -5.2186619350798456e-05
+      ]
+    },
+    "pr_auc": {
+      "gan_wins": 2,
+      "mean": -0.0003416657095860846,
+      "standard_deviation": 0.0024054696336882064,
+      "ties": 0,
+      "values": [
+        -0.003015630588174556,
+        0.0003443804581326759,
+        0.0016462530012836263
+      ]
+    },
+    "precision": {
+      "gan_wins": 3,
+      "mean": 0.0001514704046062428,
+      "standard_deviation": 0.0001215225982271288,
+      "ties": 0,
+      "values": [
+        0.0001516053419935437,
+        2.98803938728609e-05,
+        0.0002729254779523238
+      ]
+    },
+    "recall": {
+      "gan_wins": 2,
+      "mean": 0.026141253356627498,
+      "standard_deviation": 0.04416619627154949,
+      "ties": 0,
+      "values": [
+        0.025429486557313363,
+        0.07065903135009222,
+        -0.017664757837523082
+      ]
+    },
+    "roc_auc": {
+      "gan_wins": 2,
+      "mean": -2.9519486430299818e-05,
+      "standard_deviation": 0.0017304528377494613,
+      "ties": 0,
+      "values": [
+        -0.0018895096770545905,
+        0.0002681826453267977,
+        0.0015327685724368934
+      ]
+    }
+  },
+  "project_version": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "verdict": "+10% GAN improves mean threshold-dependent internal metrics, including F1 and recall, but loses on seed 44 and does not improve mean ROC-AUC/PR-AUC; external generalization remains untested."
+}

@@ -1,0 +1,425 @@
+{
+  "calibration_dataset": "data/calibration/2026-08-11-post-hybrid/calibration_urls.csv",
+  "calibration_sha256": "08b8e50e0909eee142daaac9abdf98a70c8c769d49b8e6b1a0ddc7e1d07ba4cd",
+  "calibration_warning": "resubstitution metrics are optimistic and not test results",
+  "challenge_dataset": "data/generated/ms_hardgan_v2_final/challenge_holdout.csv",
+  "challenge_sha256": "393e0ac73bc9e806b13719ca9952286957979a83d67b9d7b926cefda4fbd5971",
+  "deployment_guard": "Strong balanced external metrics make a deployment candidate only; temporal, prevalence, latency and operational gates remain.",
+  "external_dataset": "data/external/2026-08-12-large-frozen/external_urls.csv",
+  "external_rows": 10000,
+  "external_sha256": "fdc040874608908c6f6f89523a219e044e3977f449c66d4966d48c76ed98c1b8",
+  "project_version": 3,
+  "protocol": "identical separately calibrated three-seed HYB-MS ensembles",
+  "results": {
+    "gan_10pct": {
+      "calibration_resubstitution": {
+        "accuracy": 0.955,
+        "confusion_matrix": {
+          "fn": 16,
+          "fp": 2,
+          "tn": 198,
+          "tp": 184
+        },
+        "f1": 0.9533678756476683,
+        "false_negative_rate": 0.08,
+        "false_positive_rate": 0.01,
+        "pr_auc": 0.9790134013893586,
+        "precision": 0.989247311827957,
+        "recall": 0.92,
+        "roc_auc": 0.9769
+      },
+      "checkpoints": [
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "80b45ddd8e288fc8d23208623cb32ffae1782427ccdf6780d440b7e7fba56a7a"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "fa793ce4adbfe666b948449474ed322df56bc5ff3c465897693f806e62c9b763"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "995b37d98785f7d8fe8e7c67229cfc31e1e2575ffc5861ccdbd74fc1191a5014"
+        }
+      ],
+      "external_10k": {
+        "accuracy": 0.931,
+        "confusion_matrix": {
+          "fn": 620,
+          "fp": 70,
+          "tn": 4930,
+          "tp": 4380
+        },
+        "f1": 0.926984126984127,
+        "false_negative_rate": 0.124,
+        "false_positive_rate": 0.014,
+        "pr_auc": 0.9780670126171296,
+        "precision": 0.9842696629213483,
+        "recall": 0.876,
+        "roc_auc": 0.9689107799999999
+      },
+      "internal_test": {
+        "accuracy": 0.9647159194783562,
+        "confusion_matrix": {
+          "fn": 1731,
+          "fp": 6,
+          "tn": 38902,
+          "tp": 8590
+        },
+        "f1": 0.90817782946556,
+        "false_negative_rate": 0.16771630655944192,
+        "false_positive_rate": 0.0001542099311195641,
+        "pr_auc": 0.9906581340676899,
+        "precision": 0.9993020009306655,
+        "recall": 0.8322836934405581,
+        "roc_auc": 0.995457934067836
+      },
+      "synthetic_challenge": {
+        "false_negative_rate": 0.15103356661482636,
+        "recall": 0.8489664333851736,
+        "rows": 61728
+      },
+      "threshold": 0.9890950322151184,
+      "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1%",
+      "threshold_selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9890950322151184,
+        "validation_f1": 0.9533678756476685,
+        "validation_fpr": 0.01,
+        "validation_precision": 0.989247311827957,
+        "validation_recall": 0.92
+      }
+    },
+    "gan_20pct": {
+      "calibration_resubstitution": {
+        "accuracy": 0.9375,
+        "confusion_matrix": {
+          "fn": 23,
+          "fp": 2,
+          "tn": 198,
+          "tp": 177
+        },
+        "f1": 0.9340369393139841,
+        "false_negative_rate": 0.115,
+        "false_positive_rate": 0.01,
+        "pr_auc": 0.9764433865603587,
+        "precision": 0.9888268156424581,
+        "recall": 0.885,
+        "roc_auc": 0.972025
+      },
+      "checkpoints": [
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_20pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "b85e7c44b6395ebc4d06abe4a6444dfccfbe73ecab50388dafce8e667a1c9d9f"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_20pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "7c093884fa5427de3753922646714591b928335746315bcd0e992daefe1d7274"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_20pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "cd9e2d287644e7f3336bf104e1a1d3f9f232f5ec34dc310781081b32d71facac"
+        }
+      ],
+      "external_10k": {
+        "accuracy": 0.913,
+        "confusion_matrix": {
+          "fn": 826,
+          "fp": 44,
+          "tn": 4956,
+          "tp": 4174
+        },
+        "f1": 0.9056194402256454,
+        "false_negative_rate": 0.1652,
+        "false_positive_rate": 0.0088,
+        "pr_auc": 0.9743965977358799,
+        "precision": 0.9895685158843054,
+        "recall": 0.8348,
+        "roc_auc": 0.96304688
+      },
+      "internal_test": {
+        "accuracy": 0.9602876353368949,
+        "confusion_matrix": {
+          "fn": 1947,
+          "fp": 8,
+          "tn": 38900,
+          "tp": 8374
+        },
+        "f1": 0.8954713147623375,
+        "false_negative_rate": 0.18864451119077608,
+        "false_positive_rate": 0.00020561324149275214,
+        "pr_auc": 0.9902013675583518,
+        "precision": 0.9990455738487235,
+        "recall": 0.8113554888092239,
+        "roc_auc": 0.99515192848277
+      },
+      "synthetic_challenge": {
+        "false_negative_rate": 0.14693494038361843,
+        "recall": 0.8530650596163816,
+        "rows": 61728
+      },
+      "threshold": 0.9964192509651184,
+      "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1%",
+      "threshold_selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9964192509651184,
+        "validation_f1": 0.9340369393139841,
+        "validation_fpr": 0.01,
+        "validation_precision": 0.9888268156424581,
+        "validation_recall": 0.885
+      }
+    },
+    "gan_30pct": {
+      "calibration_resubstitution": {
+        "accuracy": 0.915,
+        "confusion_matrix": {
+          "fn": 32,
+          "fp": 2,
+          "tn": 198,
+          "tp": 168
+        },
+        "f1": 0.9081081081081082,
+        "false_negative_rate": 0.16,
+        "false_positive_rate": 0.01,
+        "pr_auc": 0.971859848251814,
+        "precision": 0.9882352941176471,
+        "recall": 0.84,
+        "roc_auc": 0.9642625
+      },
+      "checkpoints": [
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_30pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "c824e86b28d7216c8a4922d03539be6586a74f45e5c3ea8c807f8939fd008ba1"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_30pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "edd6a9dbdc94c365ec715baeb33e74a1d8d54bc2b7beefa870cc280496e4f7f0"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_30pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "2228f9596cdfe242fb046f51b89df224cafa1696ff65cba3a18fb43227d4ef2a"
+        }
+      ],
+      "external_10k": {
+        "accuracy": 0.8839,
+        "confusion_matrix": {
+          "fn": 1131,
+          "fp": 30,
+          "tn": 4970,
+          "tp": 3869
+        },
+        "f1": 0.8695359029104394,
+        "false_negative_rate": 0.2262,
+        "false_positive_rate": 0.006,
+        "pr_auc": 0.9690925063163831,
+        "precision": 0.9923057194152347,
+        "recall": 0.7738,
+        "roc_auc": 0.95850332
+      },
+      "internal_test": {
+        "accuracy": 0.9499278880334762,
+        "confusion_matrix": {
+          "fn": 2461,
+          "fp": 4,
+          "tn": 38904,
+          "tp": 7860
+        },
+        "f1": 0.8644487214737421,
+        "false_negative_rate": 0.23844588702645092,
+        "false_positive_rate": 0.00010280662074637607,
+        "pr_auc": 0.9918359308534213,
+        "precision": 0.9994913530010173,
+        "recall": 0.761554112973549,
+        "roc_auc": 0.9963131472435549
+      },
+      "synthetic_challenge": {
+        "false_negative_rate": 0.15451658890616904,
+        "recall": 0.845483411093831,
+        "rows": 61728
+      },
+      "threshold": 0.9993489384651184,
+      "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1%",
+      "threshold_selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9993489384651184,
+        "validation_f1": 0.9081081081081082,
+        "validation_fpr": 0.01,
+        "validation_precision": 0.9882352941176471,
+        "validation_recall": 0.84
+      }
+    },
+    "gan_40pct": {
+      "calibration_resubstitution": {
+        "accuracy": 0.885,
+        "confusion_matrix": {
+          "fn": 44,
+          "fp": 2,
+          "tn": 198,
+          "tp": 156
+        },
+        "f1": 0.8715083798882681,
+        "false_negative_rate": 0.22,
+        "false_positive_rate": 0.01,
+        "pr_auc": 0.9683373891415421,
+        "precision": 0.9873417721518988,
+        "recall": 0.78,
+        "roc_auc": 0.96265
+      },
+      "checkpoints": [
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_40pct/hyb_ms/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "3a0ca18499e28228c031da05620989a0aad36792aa44a1302f4280a3450aa543"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_40pct/hyb_ms/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "fd5485f85919b790a69f27569700fe16e0e39310769e7e70bc02b09f88193099"
+        },
+        {
+          "checkpoint": "artifacts/experiments/fair_hybrid_gan_v1/gan_40pct/hyb_ms/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "b56376d37a310383848fa53670981821ec0f26a0e964f75a755f078e501b7aff"
+        }
+      ],
+      "external_10k": {
+        "accuracy": 0.8515,
+        "confusion_matrix": {
+          "fn": 1460,
+          "fp": 25,
+          "tn": 4975,
+          "tp": 3540
+        },
+        "f1": 0.8266199649737302,
+        "false_negative_rate": 0.292,
+        "false_positive_rate": 0.005,
+        "pr_auc": 0.9664013830752933,
+        "precision": 0.9929873772791024,
+        "recall": 0.708,
+        "roc_auc": 0.9554812599999999
+      },
+      "internal_test": {
+        "accuracy": 0.9456214832720551,
+        "confusion_matrix": {
+          "fn": 2674,
+          "fp": 3,
+          "tn": 38905,
+          "tp": 7647
+        },
+        "f1": 0.8510377830949863,
+        "false_negative_rate": 0.2590834221490166,
+        "false_positive_rate": 7.710496555978204e-05,
+        "pr_auc": 0.9914639124675535,
+        "precision": 0.9996078431372549,
+        "recall": 0.7409165778509834,
+        "roc_auc": 0.9961391511966244
+      },
+      "synthetic_challenge": {
+        "false_negative_rate": 0.14913815448418866,
+        "recall": 0.8508618455158113,
+        "rows": 61728
+      },
+      "threshold": 0.9986979365348816,
+      "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1%",
+      "threshold_selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9986979365348816,
+        "validation_f1": 0.8715083798882681,
+        "validation_fpr": 0.01,
+        "validation_precision": 0.9873417721518988,
+        "validation_recall": 0.78
+      }
+    },
+    "real_only": {
+      "calibration_resubstitution": {
+        "accuracy": 0.9425,
+        "confusion_matrix": {
+          "fn": 21,
+          "fp": 2,
+          "tn": 198,
+          "tp": 179
+        },
+        "f1": 0.9396325459317585,
+        "false_negative_rate": 0.105,
+        "false_positive_rate": 0.01,
+        "pr_auc": 0.9769074090752662,
+        "precision": 0.988950276243094,
+        "recall": 0.895,
+        "roc_auc": 0.9745250000000001
+      },
+      "checkpoints": [
+        {
+          "checkpoint": "artifacts/experiments/hybrid_cnn_coral_v1/seed_42/checkpoint.pt",
+          "seed": 42,
+          "sha256": "3b923e9521b871549949414df57072b5b0a1c49686b078c2bc86ae2d78c9f1d5"
+        },
+        {
+          "checkpoint": "artifacts/experiments/hybrid_cnn_coral_v1/seed_43/checkpoint.pt",
+          "seed": 43,
+          "sha256": "759fdd8b94f956c36652266b4ac3b81d9b351a8289544f84076b575fd0fef4a8"
+        },
+        {
+          "checkpoint": "artifacts/experiments/hybrid_cnn_coral_v1/seed_44/checkpoint.pt",
+          "seed": 44,
+          "sha256": "0d01bd9fff6227dbcfa6c3114c4a071801340cff9937525269db165c30178fe5"
+        }
+      ],
+      "external_10k": {
+        "accuracy": 0.9177,
+        "confusion_matrix": {
+          "fn": 738,
+          "fp": 85,
+          "tn": 4915,
+          "tp": 4262
+        },
+        "f1": 0.9119503584037659,
+        "false_negative_rate": 0.1476,
+        "false_positive_rate": 0.017,
+        "pr_auc": 0.9749413042300098,
+        "precision": 0.9804462847941109,
+        "recall": 0.8524,
+        "roc_auc": 0.9663143599999999
+      },
+      "internal_test": {
+        "accuracy": 0.9608157793170692,
+        "confusion_matrix": {
+          "fn": 1925,
+          "fp": 4,
+          "tn": 38904,
+          "tp": 8396
+        },
+        "f1": 0.896960632444848,
+        "false_negative_rate": 0.1865129347931402,
+        "false_positive_rate": 0.00010280662074637607,
+        "pr_auc": 0.992277345311993,
+        "precision": 0.9995238095238095,
+        "recall": 0.8134870652068598,
+        "roc_auc": 0.9963711484160942
+      },
+      "synthetic_challenge": {
+        "false_negative_rate": 0.3691355624675998,
+        "recall": 0.6308644375324002,
+        "rows": 61728
+      },
+      "threshold": 0.9879557490348816,
+      "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1%",
+      "threshold_selection": {
+        "maximum_fpr_constraint": 0.01,
+        "threshold": 0.9879557490348816,
+        "validation_f1": 0.9396325459317585,
+        "validation_fpr": 0.01,
+        "validation_precision": 0.988950276243094,
+        "validation_recall": 0.895
+      }
+    }
+  }
+}

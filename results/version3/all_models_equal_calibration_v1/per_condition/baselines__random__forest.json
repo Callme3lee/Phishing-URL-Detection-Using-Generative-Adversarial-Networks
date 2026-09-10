@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/baselines/random_forest/seed_42/model.joblib",
+      "seed": 42,
+      "sha256": "2ffbd13f640aea24b3f6531315173e63dc58fc6a93c8e0175686ea6cbe79d086"
+    },
+    {
+      "path": "artifacts/baselines/random_forest/seed_43/model.joblib",
+      "seed": 43,
+      "sha256": "beaefcf298eba1bc7a7fb6e352a7c2237520c97ce592efe7722c54bcddc16390"
+    },
+    {
+      "path": "artifacts/baselines/random_forest/seed_44/model.joblib",
+      "seed": 44,
+      "sha256": "c939ddf1ce58ad3c696eeedb337bd6661ebbb157458ee51571f81dfd717efaaa"
+    }
+  ],
+  "condition": "Real",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.54,
+      "confusion_matrix": {
+        "fn": 184,
+        "fp": 0,
+        "tn": 200,
+        "tp": 16
+      },
+      "f1": 0.14814814814814814,
+      "false_negative_rate": 0.92,
+      "false_positive_rate": 0.0,
+      "pr_auc": 0.4582644327718116,
+      "precision": 1.0,
+      "recall": 0.08,
+      "roc_auc": 0.2725125
+    },
+    "external_10k": {
+      "accuracy": 0.5226,
+      "confusion_matrix": {
+        "fn": 4771,
+        "fp": 3,
+        "tn": 4997,
+        "tp": 229
+      },
+      "f1": 0.08753822629969418,
+      "false_negative_rate": 0.9542,
+      "false_positive_rate": 0.0006,
+      "pr_auc": 0.4269274486647331,
+      "precision": 0.9870689655172413,
+      "recall": 0.0458,
+      "roc_auc": 0.24758702000000002
+    },
+    "external_30k": {
+      "accuracy": 0.7111666666666666,
+      "confusion_matrix": {
+        "fn": 8656,
+        "fp": 9,
+        "tn": 20970,
+        "tp": 365
+      },
+      "f1": 0.07770090473656201,
+      "false_negative_rate": 0.9595388537856113,
+      "false_positive_rate": 0.000429000429000429,
+      "pr_auc": 0.25423268738041926,
+      "precision": 0.9759358288770054,
+      "recall": 0.04046114621438865,
+      "roc_auc": 0.2156722154135597
+    },
+    "internal_test": {
+      "accuracy": 0.8698937618070649,
+      "confusion_matrix": {
+        "fn": 6404,
+        "fp": 1,
+        "tn": 38907,
+        "tp": 3917
+      },
+      "f1": 0.5501790856099446,
+      "false_negative_rate": 0.6204825113845558,
+      "false_positive_rate": 2.5701655186594018e-05,
+      "pr_auc": 0.9331908257607888,
+      "precision": 0.9997447677386422,
+      "recall": 0.37951748861544427,
+      "roc_auc": 0.9628181767046095
+    }
+  },
+  "format": "traditional",
+  "id": "baselines__random__forest",
+  "model": "RF",
+  "root": "artifacts/baselines/random_forest",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "ORIG baseline",
+  "threshold": 0.9997189044952393,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.9997189044952393,
+    "validation_f1": 0.14814814814814814,
+    "validation_fpr": 0.0,
+    "validation_precision": 1.0,
+    "validation_recall": 0.08
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "comparison": "independent August 24 pre-feedback-database snapshots",
+  "snapshots": {
+    "five_percent": {
+      "conditions": {
+        "gan_10pct": {
+          "accuracy": 0.9775,
+          "confidence_intervals_95": {
+            "accuracy": [
+              0.9744047368013297,
+              0.9802285447546742
+            ],
+            "false_positive_rate": [
+              0.008662826920651654,
+              0.012785495813257698
+            ],
+            "precision": [
+              0.7505623920907072,
+              0.8237404276302056
+            ],
+            "recall": [
+              0.7102363265170449,
+              0.785951503252179
+            ]
+          },
+          "confusion_matrix": {
+            "fn": 125,
+            "fp": 100,
+            "tn": 9400,
+            "tp": 375
+          },
+          "f1": 0.7692307692307693,
+          "false_negative_rate": 0.25,
+          "false_positive_rate": 0.010526315789473684,
+          "per_10000": {
+            "detected_phishing": 375.0,
+            "false_alerts": 100.0,
+            "missed_phishing": 125.0,
+            "total_alerts": 475.0
+          },
+          "pr_auc": 0.8090652795352811,
+          "precision": 0.7894736842105263,
+          "recall": 0.75,
+          "roc_auc": 0.9298104210526316
+        },
+        "real_only": {
+          "accuracy": 0.9735,
+          "confidence_intervals_95": {
+            "accuracy": [
+              0.9701655027233868,
+              0.9764708508195826
+            ],
+            "false_positive_rate": [
+              0.011344104152548686,
+              0.015996572767048956
+            ],
+            "precision": [
+              0.6987247225908639,
+              0.7761748554680397
+            ],
+            "recall": [
+              0.685294423777199,
+              0.7632593743341793
+            ]
+          },
+          "confusion_matrix": {
+            "fn": 137,
+            "fp": 128,
+            "tn": 9372,
+            "tp": 363
+          },
+          "f1": 0.7325933400605449,
+          "false_negative_rate": 0.274,
+          "false_positive_rate": 0.013473684210526317,
+          "per_10000": {
+            "detected_phishing": 363.0,
+            "false_alerts": 128.0,
+            "missed_phishing": 137.0,
+            "total_alerts": 491.0
+          },
+          "pr_auc": 0.7835162901099378,
+          "precision": 0.7393075356415478,
+          "recall": 0.726,
+          "roc_auc": 0.9311349473684211
+        }
+      },
+      "dataset": {
+        "frozen_at_utc": "2026-08-24T17:30:02.203639+00:00",
+        "legitimate_rows": 9500,
+        "overlap": {
+          "encoded_rows": 0,
+          "hostnames": 0,
+          "urls": 0
+        },
+        "path": "data/external/2026-08-24-accuracy-feedback-pretest/external_urls.csv",
+        "phishing_prevalence": 0.05,
+        "phishing_rows": 500,
+        "rows": 10000,
+        "sha256": "6801eb222c49779fb431f4c45e98e85ac984ae8a6bbd65f1c5c29abdc52cb812",
+        "source_counts": {
+          "OpenPhish current community feed": 210,
+          "PhishTank verified-online": 290,
+          "Tranco current root proxy": 9500
+        }
+      },
+      "deltas_gan_minus_real": {
+        "accuracy": 0.0040000000000000036,
+        "f1": 0.03663742917022439,
+        "false_negative_rate": -0.02400000000000002,
+        "false_positive_rate": -0.0029473684210526326,
+        "pr_auc": 0.025548989425343227,
+        "precision": 0.0501661485689785,
+        "recall": 0.02400000000000002,
+        "roc_auc": -0.0013245263157894982
+      },
+      "paired_all_rows": {
+        "discordant_rows": 128,
+        "real_only_correct_gan_wrong": 44,
+        "real_only_wrong_gan_correct": 84,
+        "two_sided_exact_mcnemar_p_value": 0.0005157836706414046
+      },
+      "paired_analysis_sha256": "eaac1cf51293c7d543eebd1444595e68cc8fc93fcf9efc9517f85d8ee1759b9f",
+      "result_sha256": "c6fd4238d3c50d72126f932dc047cb3b48751074f1ad717f8608eaa9ebdf3b99",
+      "strict_rule": {
+        "explanation": "The +10% model did not improve recall, F1 and ROC-AUC while also keeping FPR no higher than real-only. The result is kept as a valid negative or mixed finding.",
+        "heading": "STRICT AUGMENTATION RULE NOT MET",
+        "rule": "gan_10pct must exceed real_only on recall, F1 and ROC-AUC without a higher FPR",
+        "supported": false
+      }
+    },
+    "ten_percent": {
+      "conditions": {
+        "gan_10pct": {
+          "accuracy": 0.9784,
+          "confidence_intervals_95": {
+            "accuracy": [
+              0.9753616579016555,
+              0.981070932457281
+            ],
+            "false_positive_rate": [
+              0.00904414055012868,
+              0.013373119876303902
+            ],
+            "precision": [
+              0.8787710908695666,
+              0.9164886265883038
+            ],
+            "recall": [
+              0.8615970906192936,
+              0.9014716123807713
+            ]
+          },
+          "confusion_matrix": {
+            "fn": 117,
+            "fp": 99,
+            "tn": 8901,
+            "tp": 883
+          },
+          "f1": 0.8910191725529768,
+          "false_negative_rate": 0.117,
+          "false_positive_rate": 0.011,
+          "per_10000": {
+            "detected_phishing": 883.0,
+            "false_alerts": 99.0,
+            "missed_phishing": 117.0,
+            "total_alerts": 982.0
+          },
+          "pr_auc": 0.9350512000510276,
+          "precision": 0.8991853360488798,
+          "recall": 0.883,
+          "roc_auc": 0.974485
+        },
+        "real_only": {
+          "accuracy": 0.972,
+          "confidence_intervals_95": {
+            "accuracy": [
+              0.9685808907869505,
+              0.9750566147511307
+            ],
+            "false_positive_rate": [
+              0.012280213606152366,
+              0.017245123999638127
+            ],
+            "precision": [
+              0.8438979545512718,
+              0.886442602297793
+            ],
+            "recall": [
+              0.8275879764800763,
+              0.871725639063064
+            ]
+          },
+          "confusion_matrix": {
+            "fn": 149,
+            "fp": 131,
+            "tn": 8869,
+            "tp": 851
+          },
+          "f1": 0.858728557013118,
+          "false_negative_rate": 0.149,
+          "false_positive_rate": 0.014555555555555556,
+          "per_10000": {
+            "detected_phishing": 851.0,
+            "false_alerts": 131.0,
+            "missed_phishing": 149.0,
+            "total_alerts": 982.0
+          },
+          "pr_auc": 0.913356150207459,
+          "precision": 0.8665987780040734,
+          "recall": 0.851,
+          "roc_auc": 0.9703437777777777
+        }
+      },
+      "dataset": {
+        "frozen_at_utc": "2026-08-24T17:57:46.291433+00:00",
+        "legitimate_rows": 9000,
+        "overlap": {
+          "encoded_rows": 0,
+          "hostnames": 0,
+          "urls": 0
+        },
+        "path": "data/external/2026-08-24-accuracy-feedback-pretest-10pct/external_urls.csv",
+        "phishing_prevalence": 0.1,
+        "phishing_rows": 1000,
+        "rows": 10000,
+        "sha256": "cec7f6b43b3ebcbd12e345833489f603071459a551e997da749390e69d1a4ffe",
+        "source_counts": {
+          "PhishTank verified-online": 1000,
+          "Tranco current root proxy": 9000
+        }
+      },
+      "deltas_gan_minus_real": {
+        "accuracy": 0.006400000000000072,
+        "f1": 0.03229061553985879,
+        "false_negative_rate": -0.03199999999999999,
+        "false_positive_rate": -0.0035555555555555566,
+        "pr_auc": 0.021695049843568626,
+        "precision": 0.03258655804480648,
+        "recall": 0.03200000000000003,
+        "roc_auc": 0.004141222222222352
+      },
+      "paired_all_rows": {
+        "discordant_rows": 148,
+        "real_only_correct_gan_wrong": 42,
+        "real_only_wrong_gan_correct": 106,
+        "two_sided_exact_mcnemar_p_value": 1.446133044799392e-07
+      },
+      "paired_analysis_sha256": "271e9a08605dbcc8f9ff5346a3d9f985660508b483c367d440a45ac55522651e",
+      "result_sha256": "4bb2e820b737576e64a33cac3fc74503fec0337a0626adb78fb8a8c2fed6451d",
+      "strict_rule": {
+        "explanation": "The +10% model improved recall, F1 and ROC-AUC without increasing FPR on this new cohort.",
+        "heading": "AUGMENTATION BENEFIT SUPPORTED",
+        "rule": "gan_10pct must exceed real_only on recall, F1 and ROC-AUC without a higher FPR",
+        "supported": true
+      }
+    }
+  },
+  "stable_findings": [
+    "GAN improved accuracy, precision, recall, F1 and PR-AUC in both cohorts.",
+    "GAN reduced FPR and FNR in both cohorts.",
+    "ROC-AUC direction was mixed across the cohorts.",
+    "The 10% phishing cohort used different older still-online PhishTank URLs, so absolute recall differences are distribution differences rather than a prevalence effect."
+  ]
+}

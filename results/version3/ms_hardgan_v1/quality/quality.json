@@ -1,0 +1,140 @@
+{
+  "character_ngram_distances": {
+    "generated_to_nearest_generated_mean": 0.8032927911179806,
+    "generated_to_nearest_generated_p05": 0.634851628329889,
+    "generated_to_nearest_real_mean": 0.8409420368158926,
+    "generated_to_nearest_real_p05": 0.7072299781154403,
+    "sample_rows": 3000
+  },
+  "cluster_js_distance": 0.28531554780923396,
+  "frozen_ms_classifier_challenge": {
+    "challenging_to_all_rate": 0.01155,
+    "challenging_to_at_least_one_rate": 0.51965,
+    "majority_challenging_rate": 0.06625,
+    "mean_classifier_phishing_vote_fraction": 0.83159,
+    "per_run": [
+      {
+        "challenging_rate": 0.03095,
+        "model": "cnn",
+        "phishing_rate": 0.96905,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.03025,
+        "model": "cnn",
+        "phishing_rate": 0.96975,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.02945,
+        "model": "cnn",
+        "phishing_rate": 0.97055,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.06295,
+        "model": "lstm",
+        "phishing_rate": 0.93705,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.0584,
+        "model": "lstm",
+        "phishing_rate": 0.9416,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.05315,
+        "model": "lstm",
+        "phishing_rate": 0.94685,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.07995,
+        "model": "rnn",
+        "phishing_rate": 0.92005,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.068,
+        "model": "rnn",
+        "phishing_rate": 0.932,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.06305,
+        "model": "rnn",
+        "phishing_rate": 0.93695,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.22395,
+        "model": "random_forest",
+        "phishing_rate": 0.77605,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.22975,
+        "model": "random_forest",
+        "phishing_rate": 0.77025,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.2259,
+        "model": "random_forest",
+        "phishing_rate": 0.7741,
+        "seed": 44
+      },
+      {
+        "challenging_rate": 0.4568,
+        "model": "linear_svm",
+        "phishing_rate": 0.5432,
+        "seed": 42
+      },
+      {
+        "challenging_rate": 0.4568,
+        "model": "linear_svm",
+        "phishing_rate": 0.5432,
+        "seed": 43
+      },
+      {
+        "challenging_rate": 0.4568,
+        "model": "linear_svm",
+        "phishing_rate": 0.5432,
+        "seed": 44
+      }
+    ],
+    "rows": 20000
+  },
+  "generation_audit": {
+    "accepted_fraction": 0.526214,
+    "accepted_rows": 263107,
+    "augmentation_pool_rows": 210598,
+    "category_agreement": {
+      "requested_pattern_agreement": 0.28953999703542666,
+      "requested_source_agreement": 0.9811673577669922,
+      "rows": 263107
+    },
+    "held_out_challenge_rows": 52509
+  },
+  "generator": "ms_hardgan_v1",
+  "interpretation": "Novel and difficult samples are zero-day-like stress tests, not predictions of future attacks.",
+  "lexical_standardized_mean_difference": {
+    "maximum_absolute": 0.36694827675819397,
+    "mean_absolute": 0.16664381325244904,
+    "median_absolute": 0.1705377995967865
+  },
+  "project_version": 3,
+  "rbf_mmd_squared": 0.021604478359222412,
+  "real_cluster_coverage": 0.92,
+  "sample_rows_per_distribution": 20000,
+  "source_classifier_roc_auc": {
+    "mean": 0.7751314120370371,
+    "sd": 0.002787780309991683,
+    "values": [
+      0.7723150416666666,
+      0.7751895,
+      0.7778896944444444
+    ]
+  }
+}

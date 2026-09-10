@@ -1,0 +1,41 @@
+{
+  "method": "95% Wilson score intervals on fixed denominators; descriptive paired diagnostic comparison",
+  "primary_recall": {
+    "estimate": 0.7985,
+    "lower_95": 0.7803557367101479,
+    "upper_95": 0.815499786062944
+  },
+  "combined_recall": {
+    "estimate": 0.839,
+    "lower_95": 0.8222449922091818,
+    "upper_95": 0.8544552497341286
+  },
+  "absolute_recall_gain": {
+    "estimate": 0.0405,
+    "lower_95": 0.03270494331440327,
+    "upper_95": 0.05005682313706816,
+    "definition": "81 newly detected phishing URLs divided by all 2000 phishing URLs"
+  },
+  "primary_fpr": {
+    "estimate": 0.004833333333333334,
+    "lower_95": 0.003920428278641468,
+    "upper_95": 0.005957544665491718
+  },
+  "combined_fpr": {
+    "estimate": 0.007777777777777778,
+    "lower_95": 0.006595301916648763,
+    "upper_95": 0.009170303410964835
+  },
+  "absolute_fpr_increase": {
+    "estimate": 0.0029444444444444444,
+    "lower_95": 0.0022519702380962717,
+    "upper_95": 0.0038490309883324947,
+    "definition": "53 newly flagged legitimate URLs divided by all 18000 legitimate URLs"
+  },
+  "marginal_tradeoff": {
+    "additional_true_positives": 81,
+    "additional_false_positives": 53,
+    "additional_true_positives_per_additional_false_positive": 1.528301886792453
+  },
+  "interpretation": "The intervals quantify sampling uncertainty for this cohort, not temporal/source uncertainty. DNS mutability and same-snapshot collection remain larger external-validity risks."
+}

@@ -1,0 +1,41 @@
+{
+  "accuracy": 0.9580869668669324,
+  "best_epoch": 6,
+  "condition": "generated_40_percent",
+  "confusion_matrix": {
+    "fn": 9425,
+    "fp": 1144,
+    "tn": 107083,
+    "tp": 134513
+  },
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "f1": 0.962198894830022,
+  "false_positive_rate": 0.010570375229840983,
+  "generated_training_rows": 1370547,
+  "generator": "seqgan",
+  "inference_urls_per_second": 97851.39918236207,
+  "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+  "mixed_precision": true,
+  "model": "cnn",
+  "model_size_bytes": 329078,
+  "pr_auc": 0.9962790122672273,
+  "precision": 0.9915669666880441,
+  "project_version": 2,
+  "real_training_rows": 2055821,
+  "recall": 0.9345204185135266,
+  "roc_auc": 0.994583225441656,
+  "seed": 42,
+  "test_inference_seconds": 2.577019869997457,
+  "threshold": 0.69775390625,
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 0.69775390625,
+    "validation_f1": 0.9599574120036101,
+    "validation_fpr": 0.009993232782994818,
+    "validation_precision": 0.9921441740816044,
+    "validation_recall": 0.929793409595356
+  },
+  "training_time_seconds": 681.0003322649936,
+  "validation_inference_seconds": 2.535415454003669,
+  "validation_pr_auc": 0.9963152612560701
+}

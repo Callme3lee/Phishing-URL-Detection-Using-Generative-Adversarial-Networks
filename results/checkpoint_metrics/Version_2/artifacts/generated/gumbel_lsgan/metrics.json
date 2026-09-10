@@ -1,0 +1,59 @@
+{
+  "acceptance_rate": 0.990808,
+  "accepted": {
+    "bigram_diversity": 6.113187078841858e-05,
+    "mean_length": 26.763602029858458,
+    "memorization_rate": 0.0,
+    "memorized_exact": 0,
+    "repeated_template_rate": 0.0,
+    "samples": 1981616,
+    "std_length": 13.5353921988576,
+    "unique_bigrams": 3121,
+    "unique_characters": 120,
+    "unique_samples": 1981616,
+    "uniqueness": 1.0,
+    "valid_url_like": 1981616,
+    "validity": 1.0
+  },
+  "accepted_count": 1981616,
+  "accepted_csv_sha256": "caaba7ab543dfd54747f0008154c1e078e7f9c5239c19c4d831622032dcc8086",
+  "checkpoint_sha256": "57b98839d4c8c24a2a5278adddb1b4466eea802ae5d5c33b3c9f43b8d4893bc7",
+  "filters": {
+    "encoded_real_overlap": true,
+    "exact_real_overlap": true,
+    "protected_hostname_overlap": true,
+    "template_cap": 5,
+    "template_prefix_length": 24
+  },
+  "generation_budget": 2000000,
+  "master_sha256": "f934406ec02c317b6eccab8c4f4cf7ac080e8981ececa25fbca863d79239defd",
+  "model": "gumbel_lsgan",
+  "project_version": 2,
+  "raw": {
+    "bigram_diversity": 6.946840871103109e-05,
+    "mean_length": 26.7023175,
+    "memorization_rate": 0.00098,
+    "memorized_exact": 1960,
+    "repeated_template_rate": 0.0032455,
+    "samples": 2000000,
+    "std_length": 13.621165281619403,
+    "unique_bigrams": 3571,
+    "unique_characters": 127,
+    "unique_samples": 1986385,
+    "uniqueness": 0.9931925,
+    "valid_url_like": 1999461,
+    "validity": 0.9997305
+  },
+  "raw_samples_sha256": "704ffd6cec952e7db934c850aacb0ebdbad2dfed2c2d912ee9a9ba8251e5b7b1",
+  "rejection_reasons": {
+    "exact_real_overlap": 856,
+    "generated_duplicate": 13598,
+    "invalid::empty_url": 26,
+    "invalid::invalid_hostname": 5,
+    "invalid::invalid_idna_hostname": 419,
+    "invalid::invalid_port": 78,
+    "invalid::url_parse_error": 11,
+    "protected_hostname_overlap": 3338,
+    "template_cap": 53
+  }
+}

@@ -1,0 +1,4 @@
+model,raw_uniqueness,accepted_uniqueness,raw_validity,acceptance_rate,memorization_rate,repeated_template_rate
+gumbel_lsgan,0.9931925,1.0,0.9997305,0.990808,0.00098,0.0032455
+relgan,0.9988385,1.0,0.996026,0.9948775,0.000171,0.0006105
+seqgan,0.991599,1.0,0.999745,0.98816,0.0011615,0.004302

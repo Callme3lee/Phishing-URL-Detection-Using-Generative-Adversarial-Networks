@@ -1,0 +1,11 @@
+{
+  "evaluation.json": "4fa5d2f2bdebd43b0011c5acf1c2918c2b14e39381961dd247376a2e16f8c6fa",
+  "evaluation_predictions.npz": "54ec35f6831508c2ab0e09d063abbea7f3029ab0e4744b733b68e42dc625d1ef",
+  "dns_secondary_report.pdf": "0a0f35159a099cd8e1f151febe91e3d6c01889595bba87c5b33152173fbb2648",
+  "statistical_analysis.json": "383dc08bf57533edce63ded236cbd61e5af86e28adb941a31af98697adbef788",
+  "20k_dns_secondary_review.csv": "8284be20453f63af2b652663e3c505d3fa4fb7880c041eb1b02bbc8dd640c36d",
+  "20k_dns_secondary_review.report.json": "ee1ef3e96a1d681b0adea40feb2f04885ca6e93966d5f9448480b85c3aefe74c",
+  "frozen_model_sha256": "522e2a5217b5c4039571fa2ce294bb86d62368c5361081fc1cd66e21ccefc0ce",
+  "documentation_sha256": "721a03cb71a859d8a02300a47058f9a876b7d28e8a4156a3ec74ae4e32cca662",
+  "tests_passed": 14
+}

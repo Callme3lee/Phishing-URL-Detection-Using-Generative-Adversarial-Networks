@@ -1,0 +1,164 @@
+{
+  "artifacts": {
+    "fp32_threshold_tradeoff.png": "3a471a18efc9838fda6f807580429fcf89bd903616288efc4ba890f85da3b70c",
+    "updated_models_fp32_calibration_report.pdf": "a739c883da4bc0822e0d8b7b0964b920ec0635163533e092c7aa5826011172e5"
+  },
+  "conditions": {
+    "gan_10pct": {
+      "caps": {
+        "0.0025": {
+          "accuracy": 0.9366233766233766,
+          "confusion_matrix": {
+            "fn": 1413,
+            "fp": 51,
+            "tn": 20549,
+            "tp": 1087
+          },
+          "f1": 0.5975810885101704,
+          "false_negative_rate": 0.5652,
+          "false_positive_rate": 0.0024757281553398056,
+          "pr_auc": 0.9270515190732341,
+          "precision": 0.9551845342706503,
+          "projected_precision_at_1pct": 0.6395085492664511,
+          "recall": 0.4348,
+          "roc_auc": 0.9803301650485439
+        },
+        "0.005": {
+          "accuracy": 0.9731168831168832,
+          "confusion_matrix": {
+            "fn": 518,
+            "fp": 103,
+            "tn": 20497,
+            "tp": 1982
+          },
+          "f1": 0.8645583424209379,
+          "false_negative_rate": 0.2072,
+          "false_positive_rate": 0.005,
+          "pr_auc": 0.9270515190732341,
+          "precision": 0.950599520383693,
+          "projected_precision_at_1pct": 0.6156235440285758,
+          "recall": 0.7928,
+          "roc_auc": 0.9803301650485439
+        },
+        "0.01": {
+          "accuracy": 0.978008658008658,
+          "confusion_matrix": {
+            "fn": 307,
+            "fp": 201,
+            "tn": 20399,
+            "tp": 2193
+          },
+          "f1": 0.8961994278708623,
+          "false_negative_rate": 0.1228,
+          "false_positive_rate": 0.009757281553398058,
+          "pr_auc": 0.9270515190732341,
+          "precision": 0.9160401002506265,
+          "projected_precision_at_1pct": 0.47591897879656525,
+          "recall": 0.8772,
+          "roc_auc": 0.9803301650485439
+        }
+      },
+      "gate_passed": false,
+      "prediction_sha256": "0c18e01f9b3e66feaa54fff345afdb8cc260a918add2f51051830988e121777b",
+      "selected_metrics": {
+        "accuracy": 0.9366233766233766,
+        "confusion_matrix": {
+          "fn": 1413,
+          "fp": 51,
+          "tn": 20549,
+          "tp": 1087
+        },
+        "f1": 0.5975810885101704,
+        "false_negative_rate": 0.5652,
+        "false_positive_rate": 0.0024757281553398056,
+        "pr_auc": 0.9270515190732341,
+        "precision": 0.9551845342706503,
+        "recall": 0.4348,
+        "roc_auc": 0.9803301650485439
+      },
+      "selected_threshold": 0.9998487830162048
+    },
+    "real_only": {
+      "caps": {
+        "0.0025": {
+          "accuracy": 0.945974025974026,
+          "confusion_matrix": {
+            "fn": 1198,
+            "fp": 50,
+            "tn": 20550,
+            "tp": 1302
+          },
+          "f1": 0.67601246105919,
+          "false_negative_rate": 0.4792,
+          "false_positive_rate": 0.0024271844660194173,
+          "pr_auc": 0.9266333604439599,
+          "precision": 0.9630177514792899,
+          "projected_precision_at_1pct": 0.6842806190396008,
+          "recall": 0.5208,
+          "roc_auc": 0.9809811650485437
+        },
+        "0.005": {
+          "accuracy": 0.9653679653679653,
+          "confusion_matrix": {
+            "fn": 697,
+            "fp": 103,
+            "tn": 20497,
+            "tp": 1803
+          },
+          "f1": 0.8184294144348615,
+          "false_negative_rate": 0.2788,
+          "false_positive_rate": 0.005,
+          "pr_auc": 0.9266333604439599,
+          "precision": 0.9459601259181531,
+          "projected_precision_at_1pct": 0.5929945732609768,
+          "recall": 0.7212,
+          "roc_auc": 0.9809811650485437
+        },
+        "0.01": {
+          "accuracy": 0.976017316017316,
+          "confusion_matrix": {
+            "fn": 354,
+            "fp": 200,
+            "tn": 20400,
+            "tp": 2146
+          },
+          "f1": 0.8856789104416013,
+          "false_negative_rate": 0.1416,
+          "false_positive_rate": 0.009708737864077669,
+          "pr_auc": 0.9266333604439599,
+          "precision": 0.9147485080988917,
+          "projected_precision_at_1pct": 0.4717610951513005,
+          "recall": 0.8584,
+          "roc_auc": 0.9809811650485437
+        }
+      },
+      "gate_passed": false,
+      "prediction_sha256": "e1ca334547895bbcd8ce0b0fc7ea5e62d5085a5b580d4d4611ab62c01db67baf",
+      "selected_metrics": {
+        "accuracy": 0.945974025974026,
+        "confusion_matrix": {
+          "fn": 1198,
+          "fp": 50,
+          "tn": 20550,
+          "tp": 1302
+        },
+        "f1": 0.67601246105919,
+        "false_negative_rate": 0.4792,
+        "false_positive_rate": 0.0024271844660194173,
+        "pr_auc": 0.9266333604439599,
+        "precision": 0.9630177514792899,
+        "recall": 0.5208,
+        "roc_auc": 0.9809811650485437
+      },
+      "selected_threshold": 0.9994111061096191
+    }
+  },
+  "experiment": "updated_models_calibration_v1",
+  "gate": {
+    "maximum_fpr": 0.0025,
+    "minimum_recall": 0.8
+  },
+  "probabilities": "FP32 sigmoid after FP16 forward pass",
+  "project_version": 3,
+  "verdict": "Neither ensemble meets 80% recall at FPR <= 0.25%. Real-only is better at the strict cap; +10% GAN becomes better when the FPR budget is relaxed to 0.5% or 1%. FP32 scoring corrected threshold resolution but did not solve low-FPR distribution shift."
+}

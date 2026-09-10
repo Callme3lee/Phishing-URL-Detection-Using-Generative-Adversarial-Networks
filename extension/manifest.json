@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing URL Guard",
+  "version": "0.6.0",
+  "description": "Checks URL text locally, explains suspicious signals, and warns about possible phishing links.",
+  "permissions": ["storage", "tabs", "webNavigation", "offscreen"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Phishing URL Guard",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["browser_policy.js", "content/caution_banner.js"],
+    "css": ["content/caution_banner.css"],
+    "run_at": "document_start",
+    "all_frames": false
+  }],
+  "web_accessible_resources": [{
+    "resources": ["content/advisory.html", "content/advisory.css", "content/advisory.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "options_page": "demo/demo.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

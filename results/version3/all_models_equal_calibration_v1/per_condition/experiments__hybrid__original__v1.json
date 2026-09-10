@@ -1,0 +1,106 @@
+{
+  "checkpoints": [
+    {
+      "path": "artifacts/experiments/hybrid_original_v1/seed_42/checkpoint.pt",
+      "seed": 42,
+      "sha256": "71c530dc19e08bfb6ccaff29cc31e4e825bde8e7db2088d8f8044016ac3d4b8d"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_original_v1/seed_43/checkpoint.pt",
+      "seed": 43,
+      "sha256": "3631bc1982e7385dd3947fb0c754cc13f8dd056a2a50954a0136b8a1eb1292a5"
+    },
+    {
+      "path": "artifacts/experiments/hybrid_original_v1/seed_44/checkpoint.pt",
+      "seed": 44,
+      "sha256": "e8d9671d53904cfadbe381b0b9664374da860dc6028648de1d4948024bf4332e"
+    }
+  ],
+  "condition": "Real",
+  "evaluations": {
+    "calibration": {
+      "accuracy": 0.6775,
+      "confusion_matrix": {
+        "fn": 118,
+        "fp": 11,
+        "tn": 189,
+        "tp": 82
+      },
+      "f1": 0.5597269624573379,
+      "false_negative_rate": 0.59,
+      "false_positive_rate": 0.055,
+      "pr_auc": 0.771224189561944,
+      "precision": 0.8817204301075269,
+      "recall": 0.41,
+      "roc_auc": 0.7747625
+    },
+    "external_10k": {
+      "accuracy": 0.637,
+      "confusion_matrix": {
+        "fn": 3374,
+        "fp": 256,
+        "tn": 4744,
+        "tp": 1626
+      },
+      "f1": 0.47253705318221445,
+      "false_negative_rate": 0.6748,
+      "false_positive_rate": 0.0512,
+      "pr_auc": 0.7395216426323458,
+      "precision": 0.8639744952178533,
+      "recall": 0.3252,
+      "roc_auc": 0.73049346
+    },
+    "external_30k": {
+      "accuracy": 0.7647333333333334,
+      "confusion_matrix": {
+        "fn": 5955,
+        "fp": 1103,
+        "tn": 19876,
+        "tp": 3066
+      },
+      "f1": 0.4648976497346475,
+      "false_negative_rate": 0.6601263717991354,
+      "false_positive_rate": 0.05257638590971924,
+      "pr_auc": 0.5539919329075957,
+      "precision": 0.735428160230271,
+      "recall": 0.33987362820086464,
+      "roc_auc": 0.7063660463690024
+    },
+    "internal_test": {
+      "accuracy": 0.9486684677730606,
+      "confusion_matrix": {
+        "fn": 2526,
+        "fp": 1,
+        "tn": 38907,
+        "tp": 7795
+      },
+      "f1": 0.8605177457636474,
+      "false_negative_rate": 0.2447437263831024,
+      "false_positive_rate": 2.5701655186594018e-05,
+      "pr_auc": 0.9960812443465931,
+      "precision": 0.999871729091842,
+      "recall": 0.7552562736168976,
+      "roc_auc": 0.9984127080099625
+    }
+  },
+  "format": "neural",
+  "id": "experiments__hybrid__original__v1",
+  "model": "HYB",
+  "root": "artifacts/experiments/hybrid_original_v1",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "HYB-ORIG ablation",
+  "threshold": 1.0,
+  "threshold_policy": "three-seed mean score; maximum calibration F1 subject to calibration FPR <= 1.00%",
+  "threshold_selection": {
+    "maximum_fpr_constraint": 0.01,
+    "threshold": 1.0,
+    "validation_f1": 0.0,
+    "validation_fpr": 0.005,
+    "validation_precision": 0.0,
+    "validation_recall": 0.0
+  }
+}

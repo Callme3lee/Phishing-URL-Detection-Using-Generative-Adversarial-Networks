@@ -1,0 +1,59 @@
+{
+  "collection_report_sha256": "4b4ee78e6957b619a6ee4d5a28a800aab2110a3a5c172cccb5cfe6c9800fe532",
+  "confidence_intervals_95": {
+    "accuracy": [
+      0.9904050558301525,
+      0.9933087184194962
+    ],
+    "false_positive_rate": [
+      0.002565406145037691,
+      0.004478623152887754
+    ],
+    "precision": [
+      0.5273440239659118,
+      0.6942982617544099
+    ],
+    "recall": [
+      0.4534942708275301,
+      0.6132429331392731
+    ]
+  },
+  "dataset_sha256": "91fb0abf6d8665cab117551fcceb6dce224f524b702f0e381ce900ea68f84a63",
+  "evaluation_type": "one-shot post-threshold confirmation",
+  "gate": {
+    "maximum_fpr": 0.0025,
+    "minimum_recall": 0.8
+  },
+  "gate_passed": false,
+  "legitimate_rows": 14454,
+  "metrics": {
+    "accuracy": 0.991986301369863,
+    "confusion_matrix": {
+      "fn": 68,
+      "fp": 49,
+      "tn": 14405,
+      "tp": 78
+    },
+    "f1": 0.5714285714285714,
+    "false_negative_rate": 0.4657534246575342,
+    "false_positive_rate": 0.0033900650339006503,
+    "pr_auc": 0.49947174321582805,
+    "precision": 0.6141732283464567,
+    "recall": 0.5342465753424658,
+    "roc_auc": 0.8474032405117037
+  },
+  "model_id": "deployment_recovery_hyb_gan10_v1",
+  "one_shot_contract_honored": true,
+  "operational": {
+    "alerts_per_10000": 86.98630136986301,
+    "detected_phish_per_10000": 53.42465753424657,
+    "false_alerts_per_10000": 33.56164383561644,
+    "missed_phish_per_10000": 46.57534246575342
+  },
+  "phishing_prevalence": 0.01,
+  "phishing_rows": 146,
+  "project_version": 3,
+  "rows": 14600,
+  "threshold": 0.9951171875,
+  "verdict": "The predeclared gate failed on untouched confirmation. The system must not be presented as confirmed for deployment, and this cohort must not be used for further tuning."
+}

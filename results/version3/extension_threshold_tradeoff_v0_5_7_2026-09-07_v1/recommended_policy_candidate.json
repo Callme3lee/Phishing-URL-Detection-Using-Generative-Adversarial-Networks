@@ -1,0 +1,11 @@
+{
+  "status": "analysis_candidate_not_automatically_deployed",
+  "model": "HYB-MS + 10% MS-HardGAN-C, three-seed ONNX ensemble",
+  "selection_dataset": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+  "selection_rule": "minimize FNR subject to validation FPR <= 1%; tie-break by lower FPR, then higher F1, then higher threshold",
+  "recommended_warning_threshold": 0.9707667827606201,
+  "validation_fpr": 0.01,
+  "validation_fnr": 0.1224,
+  "safety_note": "Use as a recall-oriented caution/warning boundary. Do not use it as the automatic-block threshold.",
+  "existing_policy_note": "This value already exists as the v0.5.7 caution tier; no active extension file was changed by this study."
+}
