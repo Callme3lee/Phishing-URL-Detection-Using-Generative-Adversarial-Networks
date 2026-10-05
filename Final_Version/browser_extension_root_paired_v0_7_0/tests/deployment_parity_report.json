@@ -1,0 +1,81 @@
+{
+  "browser_onnx_metrics_at_portability_threshold": {
+    "accuracy": 0.9731601731601731,
+    "confusion_matrix": {
+      "fn": 517,
+      "fp": 103,
+      "tn": 20497,
+      "tp": 1983
+    },
+    "f1": 0.8648059310946359,
+    "false_negative_rate": 0.2068,
+    "false_positive_rate": 0.005,
+    "pr_auc": 0.9270590075551334,
+    "precision": 0.9506232023010547,
+    "recall": 0.7932,
+    "roc_auc": 0.9803314951456309
+  },
+  "browser_policy": "browser_extension/models/policy.json",
+  "browser_policy_sha256": "84630ad06256b5a91f81e609cb1cc7ee82e9781f5f2a4cde487579a8633fa0f8",
+  "browser_predictions": "browser_extension/tests/browser_onnx_calibration_predictions.npz",
+  "browser_predictions_sha256": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406",
+  "bundle_manifest_sha256": "4db4b0ae5c088b586c3131d8344b8e83f1b96098026e78174e00c218ab88cee2",
+  "calibration_dataset": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+  "calibration_sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c",
+  "decision_parity": {
+    "allowed_binary_changes": 2,
+    "allowed_tier_changes": 3,
+    "binary_changes": 1,
+    "browser_portability_threshold": 0.9953077435493469,
+    "source_threshold": 0.9953193664550781,
+    "tier_changes": 2
+  },
+  "interpretation": "The browser uses a numerical portability threshold derived on the same frozen calibration cohort with the same 0.50% FPR-cap rule. No reported final test was used. One row changes binary decision because FP32 WebAssembly slightly changes score ordering; browser FPR remains exactly 0.50%.",
+  "native_onnx_benchmark": {
+    "model_seconds": [
+      {
+        "seconds": 2.7131747790008376,
+        "seed": 42
+      },
+      {
+        "seconds": 2.260698035999667,
+        "seed": 43
+      },
+      {
+        "seconds": 2.274932912001532,
+        "seed": 44
+      }
+    ],
+    "provider": "CPUExecutionProvider",
+    "seconds": 7.590580386000511,
+    "urls_per_second": 3043.2455524223
+  },
+  "reference_metrics": {
+    "accuracy": 0.9731168831168832,
+    "confusion_matrix": {
+      "fn": 518,
+      "fp": 103,
+      "tn": 20497,
+      "tp": 1982
+    },
+    "f1": 0.8645583424209379,
+    "false_negative_rate": 0.2072,
+    "false_positive_rate": 0.005,
+    "pr_auc": 0.9270515190732341,
+    "precision": 0.950599520383693,
+    "recall": 0.7928,
+    "roc_auc": 0.9803301650485439
+  },
+  "reference_scores": "artifacts/results/updated_models_calibration_v1/gan_10pct/calibration_predictions.npz",
+  "reference_scores_sha256": "0c18e01f9b3e66feaa54fff345afdb8cc260a918add2f51051830988e121777b",
+  "rows": 23100,
+  "score_difference": {
+    "allowed_maximum": 0.002,
+    "maximum": 0.0009467005729675293,
+    "mean": 7.45467550586909e-05,
+    "p99": 0.0004902607179246843
+  },
+  "source_policy": "artifacts/deployment_candidates/conservative_hyb_gan10_v1/policy.json",
+  "source_policy_sha256": "c101c71f7be94f7a79afa40f60864805858e8a7c86fc5d6c1a3e30b3163662e6",
+  "status": "PASS"
+}

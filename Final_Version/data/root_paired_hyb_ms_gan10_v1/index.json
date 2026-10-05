@@ -1,0 +1,92 @@
+{
+  "comparison_control": "unchanged Version 3 browser-extension HYB-MS +10% checkpoints",
+  "condition": {
+    "added_equivalent_rows": 55262,
+    "added_root_counts": {
+      "label_0_group_0_empty": 36126,
+      "label_0_group_0_slash": 1367,
+      "label_0_group_1_empty": 2401,
+      "label_1_group_2_empty": 4069,
+      "label_1_group_2_slash": 2129,
+      "label_1_group_3_empty": 1820,
+      "label_1_group_3_slash": 527,
+      "label_1_group_4_empty": 42,
+      "label_1_group_5_empty": 4139,
+      "label_1_group_5_slash": 2642
+    },
+    "base_root_counts": {
+      "label_0_group_0_empty": 1367,
+      "label_0_group_0_slash": 36126,
+      "label_0_group_1_slash": 2401,
+      "label_1_group_2_empty": 2129,
+      "label_1_group_2_slash": 4069,
+      "label_1_group_3_empty": 527,
+      "label_1_group_3_slash": 1820,
+      "label_1_group_4_slash": 42,
+      "label_1_group_5_empty": 2642,
+      "label_1_group_5_slash": 4139
+    },
+    "condition": "gan_10pct",
+    "created_at_utc": "2026-09-22T13:44:41.699443+00:00",
+    "experiment": "root_paired_hyb_ms_gan10_v1",
+    "files": {
+      "test_labels.npy": "201dc99aa63facd37db9e5f53390532e41ea9b398f7be3c256f82ad42380d803",
+      "test_tokens.npy": "56b935222146f7dd4b1963aae25a11793eba15726c0135b042293af6b94556e1",
+      "train_groups.npy": "e7e939c8cf6a7fe6cb6aa8cdb637a9f62090f8a7bb805168c3e685f10a4a8465",
+      "train_labels.npy": "460f69febd41c64029d5ce6494cfa975999615b768910a904463633178187363",
+      "train_manifest.csv": "ccc578dc2830cf2a8b2f88b662f7b7b0576c84933602137f1d5e2493799b039a",
+      "train_psl_lexical.npy": "180163934055b9d8ca1b3cd268f7a7b5f4ce53a5f0477c81b014d3f0f7ee99f6",
+      "train_tokens.npy": "591e5cb78f653907612945cb3dfa9a48f63be9652f2d861a03872af4cc217a81",
+      "validation_labels.npy": "ca77d38a6d74ae6b2dbe62703a757c711e8c68f6ba13e0121a6bfd625d7f6009",
+      "validation_tokens.npy": "67ad3a1038edc496e1c4d5487301a27c251c184eb65bc893b95be8a27128378f"
+    },
+    "final_root_counts": {
+      "label_0_group_0_empty": 37493,
+      "label_0_group_0_slash": 37493,
+      "label_0_group_1_empty": 2401,
+      "label_0_group_1_slash": 2401,
+      "label_1_group_2_empty": 6198,
+      "label_1_group_2_slash": 6198,
+      "label_1_group_3_empty": 2347,
+      "label_1_group_3_slash": 2347,
+      "label_1_group_4_empty": 42,
+      "label_1_group_4_slash": 42,
+      "label_1_group_5_empty": 6781,
+      "label_1_group_5_slash": 6781
+    },
+    "generated_fraction": 0.1,
+    "non_root_rows_changed": 0,
+    "project_version": "Final Version",
+    "real_training_rows": 415665,
+    "root_rows_paired": 55262,
+    "sampling_note": "weighted sampler still targets exactly 10% synthetic exposure",
+    "source_experiment": "Version_3/recent_update_gan10_v1/gan_10pct",
+    "source_files": {
+      "train_groups.npy": "2b4ce2fabf3871f02fbe56029f70374a1769f01f2b6a787e1caa95f9c3d09c36",
+      "train_labels.npy": "b0bd7bb86d0d7d4ccffbc6e29b50591e0b12ada73d60ea2c2c39f20b5bd47760",
+      "train_manifest.csv": "df5e7f538a6919afea943969d7d65e2bc48f09e1c6db727e17f71ca9a55730ab",
+      "train_psl_lexical.npy": "75a467e3ecba918d3b1f98febe35fb1b3e7e7c53dd9332082496d7c29d4f4a11",
+      "train_tokens.npy": "d195526d181697b084db8a5e2c4d450aa068c89f1f03b3c0fc1052f94c65544a"
+    },
+    "source_real_training_rows": 367184,
+    "source_report_sha256": "08ef4be6e715d0596b556082092a660d0b25b3a5e93546069da260457088c447",
+    "source_synthetic_training_rows": 40410,
+    "source_training_rows": 407594,
+    "stored_generated_fraction": 0.10195611594102702,
+    "synthetic_training_rows": 47191,
+    "train_group_counts": {
+      "0": 313893,
+      "1": 7159,
+      "2": 88417,
+      "3": 6093,
+      "4": 103,
+      "5": 47191
+    },
+    "training_rows": 462856,
+    "treatment": "each root-only source row gains the opposite empty-path/root-slash representation with the same label and source group",
+    "validation_test_changed": false
+  },
+  "controlled_difference": "root-only paired representation augmentation during training",
+  "experiment": "root_paired_hyb_ms_gan10_v1",
+  "project_version": "Final Version"
+}

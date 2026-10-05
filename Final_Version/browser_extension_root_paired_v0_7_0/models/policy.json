@@ -1,0 +1,52 @@
+{
+  "ensemble_rule": "arithmetic mean of FP32 sigmoid probabilities from seeds 42/43/44",
+  "guardrails": [
+    "Thresholds were derived from the same frozen calibration cohort and registered FPR-cap method, not from final test labels.",
+    "Scores are ranking outputs, not guaranteed probabilities or percentages of trust.",
+    "The candidate greatly reduces equivalent root-path decision drift but trades approximately 1.48 percentage points of external recall.",
+    "This separate extension must not overwrite or be reported as the Version 3 v0.6.0 deployment control.",
+    "The URL model does not include DNS, reputation, TLS, redirect-chain, or page-content evidence."
+  ],
+  "maximum_characters": 128,
+  "model": "Root-paired HYB-MS +10% MS-HardGAN-C, pair-mass-preserved three-seed ensemble",
+  "policy_version": "root_paired_hyb_ms_gan10_v1",
+  "primary_binary_rule": {
+    "action": "scores at or above this value are caution-or-higher detections",
+    "calibration_fpr_cap": 0.01,
+    "threshold": 0.9899072647094727
+  },
+  "source_policy_sha256": "71162abea841f177168ee7da7d93ed96e19d4ede5f2d72b95a7e56fd827198b5",
+  "status": "ISOLATED RESEARCH EXTENSION; NOT A SILENT REPLACEMENT FOR VERSION 3",
+  "tiers": [
+    {
+      "action": "allow normally",
+      "lower_inclusive": null,
+      "name": "allow",
+      "upper_exclusive": 0.8217372298240662
+    },
+    {
+      "action": "show non-blocking review notice",
+      "lower_inclusive": 0.8217372298240662,
+      "name": "secondary_review",
+      "upper_exclusive": 0.9899072647094727
+    },
+    {
+      "action": "show passive caution",
+      "lower_inclusive": 0.9899072647094727,
+      "name": "caution",
+      "upper_exclusive": 0.9991914629936218
+    },
+    {
+      "action": "pause navigation with user override",
+      "lower_inclusive": 0.9991914629936218,
+      "name": "warning",
+      "upper_exclusive": 0.9999473690986633
+    },
+    {
+      "action": "pause navigation with explicit user override",
+      "lower_inclusive": 0.9999473690986633,
+      "name": "block",
+      "upper_exclusive": null
+    }
+  ]
+}

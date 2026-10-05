@@ -113,7 +113,7 @@ notice is displayed instead of redirecting the tab.
 
 \clearpage
 
-\section{Reviewed Services and User-Controlled Content}
+\section{Reviewed Services and Shared Content}
 
 A versioned catalogue reduces repeated false warnings on reviewed first-party
 service pages. Popularity alone does not grant trust. A rule requires HTTPS,
@@ -185,13 +185,13 @@ Participant & Context & Unique URLs & Alerts & Explicit FP & Confirmed FP & Repo
 \midrule
 Brave(S) & No intentional phishing & 218 & 36 & 0 & 36 & 0 \\
 Chrome(A)$^{*}$ & Phishing/security testing & 221 & 45 & 19 & 0 & 0 \\
-Chrome(AL) & Context unconfirmed & 250 & 45 & 15 & 0 & 0 \\
-Chrome(B) & Context unconfirmed & 702 & 55 & 10 & 0 & 0 \\
+Chrome(AL) & Normal browsing & 250 & 45 & 15 & 0 & 0 \\
+Chrome(B) & Normal browsing & 702 & 55 & 10 & 0 & 0 \\
 Chrome(Mo)$^{*}$ & Phishing/security testing & 201 & 46 & 18 & 0 & 3 \\
 Chrome(Mo2)$^{*}$ & Phishing/security testing & 301 & 54 & 20 & 0 & 4 \\
 Chrome2(M) & No intentional phishing & 202 & 21 & 10 & 0 & 0 \\
-Chromium(M) & Context unconfirmed & 276 & 30 & 10 & 0 & 0 \\
-Edge(AL) & Context unconfirmed & 2,524 & 18 & 2 & 0 & 0 \\
+Chromium(M) & Normal browsing & 276 & 30 & 10 & 0 & 0 \\
+Edge(AL) & Normal browsing & 2,524 & 18 & 2 & 0 & 0 \\
 GX(A)$^{*}$ & Phishing/security testing & 407 & 68 & 34 & 0 & 0 \\
 \midrule
 Total & & 5,302 & 418 & 138 & 36 & 7 \\
@@ -248,6 +248,53 @@ independently adjudicated in every case. The observations are therefore used
 to identify warning burden, repeated false-positive patterns, and interface
 problems. Formal model metrics remain based on the labelled frozen datasets in
 Chapter~6.
+
+\subsection{User survey}
+
+The stored Google Forms CSV export contains ten responses to a short
+Arabic-language survey conducted between 3 and 7 September 2026. Every
+respondent consented to the use of their answers in the project evaluation.
+The survey measured whether the warning interface was understandable and
+whether the extension affected ordinary browsing. It did not ask participants
+to provide a complete labelled browsing history, so its answers are usability
+evidence rather than classifier-performance metrics.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of the consented browser-extension survey ($n=10$).}
+\label{tab:browser-user-survey}
+\small
+\begin{tabular}{@{}p{0.58\textwidth}r@{}}
+\toprule
+Survey result & Response \\
+\midrule
+Warning clarity & 4.1 out of 5 \\
+Overall extension rating & 3.9 out of 5 \\
+Understood the four warning tiers & 10 (100\%) \\
+Considered the extension helpful or partly helpful & 9 (90\%) \\
+Noticed no effect on browser speed & 8 (80\%) \\
+Encountered warnings on trusted websites & 9 (90\%) \\
+Reported interruption of a required safe website at least once & 6 (60\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:browser-user-survey} shows the positive usability results and
+the two main reported problems separately. Long URLs were mentioned by eight
+respondents and login pages by five. These responses agree with the explicit
+feedback records: the warning levels were generally clear and the local
+inference caused little noticeable delay, but false warnings reduced user
+confidence. Later interface and policy work therefore focused on clearer user
+control, exact-host allow rules, repeated-event handling, and reviewed service
+pages. These changes address the reported experience but do not retroactively
+change the survey results.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{graphs/user_survey_results.pdf}
+\caption{Results of the ten-response browser-extension survey. Favourable responses and reported usability problems are shown separately.}
+\label{fig:browser-user-survey}
+\end{figure}
 
 \subsection{Reported error categories}
 

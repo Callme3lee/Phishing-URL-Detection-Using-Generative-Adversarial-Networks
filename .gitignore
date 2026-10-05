@@ -54,6 +54,10 @@ Version_2/data/raw/*.csv
 
 # Local archives and discarded material
 DIscard/
+Final_Version/artifacts/
+Final_Version/logs/
+Final_Version/releases/
+Final_Version/data/*/*/processed/
 *.zip
 *.tar
 *.tar.gz

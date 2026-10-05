@@ -21,7 +21,7 @@ from .metrics import classification_metrics, select_threshold
 from .url_data import psl_aware_lexical_features
 
 
-DATASET_ROOT = Path("Final Evaluation Dataset")
+DATASET_ROOT = Path("Browser Policy Evaluation Dataset 10K")
 COLLECTION_REPORT = DATASET_ROOT / "collection_report.json"
 DEVELOPMENT_DATASET = DATASET_ROOT / "policy_development.csv"
 FINAL_DATASET = DATASET_ROOT / "frozen_final_test.csv"

@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "policy_version": "reviewed_site_catalog_v3",
+  "policy_revision": "google_document_query_and_navigation_correction_v1",
+  "created_utc": "2026-09-06T23:30:00Z",
+  "purpose": "Reduce URL-text false warnings on reviewed first-party service pages without treating popularity as proof of safety. Ordinary Google document routes may use the existing query-stripped diagnostic only when all query names are reviewed and the query-free score is low.",
+  "popularity_snapshot": {
+    "provider": "Tranco",
+    "list_id": "XN6XN",
+    "list_generated_date": "2026-09-05",
+    "source_period": "2026-08-07 to 2026-09-05",
+    "source_url": "https://tranco-list.eu/list/XN6XN",
+    "source_csv_url": "https://tranco-list.eu/download/XN6XN/1000000",
+    "full_csv_sha256": "8ab2bff1614420a4adafcf29963c5c31363c22026454161905a43a12ba74243e",
+    "shortlist_file": "policy/tranco_XN6XN_top250.csv",
+    "shortlist_sha256": "e1df51074244cb64c8ae2d5a23cb7f907f113dcd00cd70938f5e22b6a1cceea9",
+    "shortlist_size": 250,
+    "role": "Candidate and rank metadata only. A rank never creates a quiet rule."
+  },
+  "defaults": {
+    "protocol": "https:",
+    "require_no_credentials": true,
+    "require_standard_port": true,
+    "require_ascii_hostname": true,
+    "decision": "allow",
+    "show_advisory": false,
+    "interrupt": false
+  },
+  "global_excluded_path_pattern": "(?:^|/)(?:url|redirect|redirector|out|aclk|imgres|away|external-link)(?:/|$)",
+  "reviewed_rules": [
+    {
+      "id": "google-search",
+      "registrable_domain": "google.com",
+      "tranco_rank": 1,
+      "hosts": ["google.com", "www.google.com"],
+      "allowed_path_pattern": "^/(?:$|search/?$|webhp/?$|imghp/?$|preferences/?$|advanced_search/?$)",
+      "excluded_path_pattern": "^/(?:url|redirect|aclk|imgres)(?:/|$)",
+      "review_basis": "First-party search and preference routes; outbound redirect routes excluded."
+    },
+    {
+      "id": "google-account",
+      "registrable_domain": "google.com",
+      "tranco_rank": 1,
+      "hosts": ["accounts.google.com", "myaccount.google.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Google documents accounts.google.com as its OpenID/OAuth authorization endpoint."
+    },
+    {
+      "id": "google-mail",
+      "registrable_domain": "google.com",
+      "tranco_rank": 1,
+      "hosts": ["mail.google.com"],
+      "allowed_path_pattern": "^/(?:$|mail(?:/|$))",
+      "review_basis": "First-party Gmail application routes."
+    },
+    {
+      "id": "google-workspace",
+      "registrable_domain": "google.com",
+      "tranco_rank": 1,
+      "hosts": ["docs.google.com", "drive.google.com", "sheets.google.com", "slides.google.com", "forms.google.com", "sites.google.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact first-party Google Workspace hosts. Fixed service pages may be allowed. Shared user-controlled content keeps review handling at lower scores, while High Risk and Very High Risk remain blocking in Normal mode."
+    },
+    {
+      "id": "facebook",
+      "registrable_domain": "facebook.com",
+      "tranco_rank": 4,
+      "hosts": ["facebook.com", "www.facebook.com", "m.facebook.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/(?:l.php|flx/warn|si/ajax/l/redirect)(?:/|$|\\?)",
+      "review_basis": "Exact first-party Facebook origins; known outbound link paths excluded."
+    },
+    {
+      "id": "microsoft-account",
+      "registrable_domain": "microsoft.com",
+      "tranco_rank": 5,
+      "hosts": ["account.microsoft.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Microsoft account host."
+    },
+    {
+      "id": "microsoft-login",
+      "registrable_domain": "microsoftonline.com",
+      "tranco_rank": 39,
+      "hosts": ["login.microsoftonline.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Microsoft documents login.microsoftonline.com for authorization endpoints."
+    },
+    {
+      "id": "microsoft-web",
+      "registrable_domain": "microsoft.com",
+      "tranco_rank": 5,
+      "hosts": ["microsoft.com", "www.microsoft.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact first-party Microsoft web and productivity hosts."
+    },
+    {
+      "id": "microsoft-office",
+      "registrable_domain": "office.com",
+      "tranco_rank": 20,
+      "hosts": ["office.com", "www.office.com", "outlook.office.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Microsoft Office web hosts."
+    },
+    {
+      "id": "microsoft-live",
+      "registrable_domain": "live.com",
+      "tranco_rank": 23,
+      "hosts": ["login.live.com", "outlook.live.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Microsoft Live authentication and Outlook hosts."
+    },
+    {
+      "id": "youtube",
+      "registrable_domain": "youtube.com",
+      "tranco_rank": 9,
+      "hosts": ["youtube.com", "www.youtube.com", "m.youtube.com", "studio.youtube.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/(?:redirect|attribution_link)(?:/|$)",
+      "review_basis": "Exact YouTube application hosts; outbound redirect routes excluded."
+    },
+    {
+      "id": "apple",
+      "registrable_domain": "apple.com",
+      "tranco_rank": 10,
+      "hosts": ["apple.com", "www.apple.com", "account.apple.com", "appleid.apple.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Apple and account application hosts."
+    },
+    {
+      "id": "icloud",
+      "registrable_domain": "icloud.com",
+      "tranco_rank": 53,
+      "hosts": ["icloud.com", "www.icloud.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact iCloud web origins."
+    },
+    {
+      "id": "instagram",
+      "registrable_domain": "instagram.com",
+      "tranco_rank": 11,
+      "hosts": ["instagram.com", "www.instagram.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Instagram web origins."
+    },
+    {
+      "id": "twitter",
+      "registrable_domain": "twitter.com",
+      "tranco_rank": 16,
+      "hosts": ["twitter.com", "www.twitter.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Twitter web origins."
+    },
+    {
+      "id": "x",
+      "registrable_domain": "x.com",
+      "tranco_rank": 50,
+      "hosts": ["x.com", "www.x.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact X/Twitter web origins."
+    },
+    {
+      "id": "linkedin",
+      "registrable_domain": "linkedin.com",
+      "tranco_rank": 17,
+      "hosts": ["linkedin.com", "www.linkedin.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/(?:redir|safety/go)(?:/|$)",
+      "review_basis": "Exact LinkedIn web origins; outbound redirect routes excluded."
+    },
+    {
+      "id": "amazon",
+      "registrable_domain": "amazon.com",
+      "tranco_rank": 26,
+      "hosts": ["amazon.com", "www.amazon.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/(?:gp/redirect|sspa/click)(?:/|$)",
+      "review_basis": "Exact Amazon US web origins; advertising and redirect routes excluded."
+    },
+    {
+      "id": "github",
+      "registrable_domain": "github.com",
+      "tranco_rank": 29,
+      "hosts": ["github.com", "www.github.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/login/oauth/authorize$",
+      "review_basis": "Exact GitHub application origin; authorization consent route retains model handling."
+    },
+    {
+      "id": "bing",
+      "registrable_domain": "bing.com",
+      "tranco_rank": 30,
+      "hosts": ["bing.com", "www.bing.com"],
+      "allowed_path_pattern": "^/(?:$|search/?$|images/search/?$|videos/search/?$|maps/?$)",
+      "excluded_path_pattern": "^/(?:ck/a|aclick)(?:/|$)",
+      "review_basis": "First-party Bing search routes; click redirect routes excluded."
+    },
+    {
+      "id": "wikipedia",
+      "registrable_domain": "wikipedia.org",
+      "tranco_rank": 31,
+      "hosts": ["wikipedia.org", "www.wikipedia.org", "en.wikipedia.org"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Wikipedia portals and English encyclopedia origin."
+    },
+    {
+      "id": "whatsapp",
+      "registrable_domain": "whatsapp.com",
+      "tranco_rank": 56,
+      "hosts": ["whatsapp.com", "www.whatsapp.com", "web.whatsapp.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact WhatsApp web origins."
+    },
+    {
+      "id": "yahoo",
+      "registrable_domain": "yahoo.com",
+      "tranco_rank": 60,
+      "hosts": ["yahoo.com", "www.yahoo.com", "login.yahoo.com", "mail.yahoo.com", "search.yahoo.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact Yahoo portal, authentication, mail and search origins."
+    },
+    {
+      "id": "chatgpt",
+      "registrable_domain": "chatgpt.com",
+      "tranco_rank": 76,
+      "hosts": ["chatgpt.com", "www.chatgpt.com"],
+      "allowed_path_pattern": "^/(?:$|c(?:/|$)|auth(?:/|$)|settings(?:/|$)|login/?$|signup/?$)",
+      "excluded_path_pattern": "^/(?:share|g)(?:/|$)",
+      "review_basis": "OpenAI identifies ChatGPT web domains; public shares and custom GPT routes excluded."
+    },
+    {
+      "id": "chatgpt-legacy",
+      "registrable_domain": "openai.com",
+      "tranco_rank": 85,
+      "hosts": ["chat.openai.com"],
+      "allowed_path_pattern": "^/(?:$|c(?:/|$)|auth(?:/|$)|settings(?:/|$)|login/?$|signup/?$)",
+      "excluded_path_pattern": "^/(?:share|g)(?:/|$)",
+      "review_basis": "OpenAI network guidance identifies the legacy ChatGPT web hostname; shared routes excluded."
+    },
+    {
+      "id": "openai-auth",
+      "registrable_domain": "openai.com",
+      "tranco_rank": 85,
+      "hosts": ["auth.openai.com", "auth0.openai.com", "setup.auth.openai.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "OpenAI network guidance identifies these authentication hosts."
+    },
+    {
+      "id": "openai-platform",
+      "registrable_domain": "openai.com",
+      "tranco_rank": 85,
+      "hosts": ["openai.com", "www.openai.com", "platform.openai.com"],
+      "allowed_path_pattern": "^/",
+      "review_basis": "Exact OpenAI first-party web and platform origins."
+    },
+    {
+      "id": "reddit",
+      "registrable_domain": "reddit.com",
+      "tranco_rank": 105,
+      "hosts": ["reddit.com", "www.reddit.com", "old.reddit.com"],
+      "allowed_path_pattern": "^/",
+      "excluded_path_pattern": "^/out(?:/|$)",
+      "review_basis": "Exact Reddit web origins; outbound redirect route excluded."
+    }
+  ]
+}

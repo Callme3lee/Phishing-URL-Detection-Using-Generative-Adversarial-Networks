@@ -24,10 +24,10 @@ from .url_data import canonicalize_url, encode_url, encoded_digest
 OUTPUT_ROOT = Path("data/evaluation/postfreeze_10k_3pct_2026-09-01")
 DATASET = OUTPUT_ROOT / "evaluation_urls.csv"
 REPORT = OUTPUT_ROOT / "collection_report.json"
-PHISHTANK = Path("Final Evaluation Dataset/raw/phishtank_online_valid.csv.gz")
-TRANCO = Path("Final Evaluation Dataset/raw/tranco_top1m.csv.zip")
+PHISHTANK = Path("Browser Policy Evaluation Dataset 10K/raw/phishtank_online_valid.csv.gz")
+TRANCO = Path("Browser Policy Evaluation Dataset 10K/raw/tranco_top1m.csv.zip")
 VOCABULARY = Path("data/processed/vocabulary.json")
-FINAL_DATASET_ROOT = Path("Final Evaluation Dataset")
+FINAL_DATASET_ROOT = Path("Browser Policy Evaluation Dataset 10K")
 TOTAL = 10_000
 PHISHING = 300
 LEGITIMATE = TOTAL - PHISHING

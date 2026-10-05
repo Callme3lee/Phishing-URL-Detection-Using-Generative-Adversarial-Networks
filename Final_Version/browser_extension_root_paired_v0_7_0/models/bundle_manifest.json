@@ -1,0 +1,53 @@
+{
+  "bundle_version": "root_paired_hyb_gan10_browser_v1",
+  "candidate": "Root-paired HYB-MS +10% MS-HardGAN-C, pair-mass-preserved three-seed ensemble",
+  "limitations": [
+    "This is a research browser prototype and not a production-ready security product.",
+    "The primary model uses URL text only; DNS is intentionally not included in this bundle.",
+    "Browser preprocessing must pass the committed parity fixtures before evaluation."
+  ],
+  "models": [
+    {
+      "checkpoint_path": "Final_Version/artifacts/root_paired_mass_preserved_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+      "checkpoint_sha256": "9fda08fae206707042a031e60c0c22bf94edd61a1a02c48983bd01bdd98cc774",
+      "filename": "hyb_gan10_seed42.onnx",
+      "fixture_max_abs_torch_onnx_difference": 7.748603820800781e-07,
+      "onnx_bytes": 564291,
+      "onnx_sha256": "821e913c2318eb29653f5cd5f5afddcec9fb6665dce1f5821390649518e18a18",
+      "opset": 17,
+      "seed": 42
+    },
+    {
+      "checkpoint_path": "Final_Version/artifacts/root_paired_mass_preserved_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+      "checkpoint_sha256": "9da536bda71e089e3e8366ce169c7910b14debd16cfb93d142c7f6ffb61efd9a",
+      "filename": "hyb_gan10_seed43.onnx",
+      "fixture_max_abs_torch_onnx_difference": 1.1920928955078125e-07,
+      "onnx_bytes": 564291,
+      "onnx_sha256": "ccba3d79b3908cb700d3d71b3163d71ef9bf30912e3b97d12dbbd9572e9ec903",
+      "opset": 17,
+      "seed": 43
+    },
+    {
+      "checkpoint_path": "Final_Version/artifacts/root_paired_mass_preserved_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+      "checkpoint_sha256": "a03b180ddf34b5fe271a1731f7d100038faac36999ba2f9708594ce961a55632",
+      "filename": "hyb_gan10_seed44.onnx",
+      "fixture_max_abs_torch_onnx_difference": 4.172325134277344e-07,
+      "onnx_bytes": 564291,
+      "onnx_sha256": "a9032fee2641a3ff388b815fad325877f54284620d661d21f95a806dcdbb4225",
+      "opset": 17,
+      "seed": 44
+    }
+  ],
+  "parity": {
+    "fixtures": 12,
+    "maximum_absolute_torch_onnx_difference": 7.748603820800781e-07
+  },
+  "preprocessing": {
+    "html_entities_sha256": "55bce6f71e4c28539f2cef1461b6676aade13eefe80134da02f65e223a101ae3",
+    "policy_sha256": "b8a6e01ddfdb664701a064061c2b3eb3d7bcb73989947e1b3f8d2424ef3d18db",
+    "psl_rules_sha256": "80884a5e096f478115f38804eb7ec8530ace05ab7a1bef59a7d06a67d17af18f",
+    "scaler_sha256": "7a02e7d12fcf0f4c181958060f569cbb4e92778c41db53edfd9c1f1c7998b410",
+    "vocabulary_sha256": "0e179b2c924f7e65246029d0d8b1a4d4d27a176894a80994c5cfe93514a7a1b3"
+  },
+  "project_version": "Final Version"
+}

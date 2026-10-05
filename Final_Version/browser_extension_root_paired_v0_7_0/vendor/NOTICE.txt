@@ -1,0 +1,7 @@
+ONNX Runtime Web v1.22.0
+Copyright (c) Microsoft Corporation
+Licensed under the MIT License.
+Source: https://github.com/microsoft/onnxruntime
+
+The bundled JavaScript, WebAssembly loader, and WebAssembly binary are included
+only to execute the local ONNX models in this research browser prototype.

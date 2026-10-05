@@ -17,8 +17,8 @@ DATASETS = (
     ("multisource_real_train", "Multi-source real training", Path("data/experiments/hybrid_cnn_coral_v1/processed/train_manifest.csv"), 279_412, 84_280),
     ("final_real_only_train", "Final updated real-only training", Path("data/experiments/recent_update_gan10_v1/real_only/processed/train_manifest.csv"), 281_158, 86_026),
     ("final_gan10_train", "Final 10% GAN training", Path("data/experiments/recent_update_gan10_v1/gan_10pct/processed/train_manifest.csv"), 281_158, 126_436),
-    ("policy_development", "Browser policy development", Path("Final Evaluation Dataset/policy_development.csv"), 3_800, 200),
-    ("frozen_final_6k", "Frozen final 6K evaluation", Path("Final Evaluation Dataset/frozen_final_test.csv"), 5_700, 300),
+    ("policy_development", "Browser policy development", Path("Browser Policy Evaluation Dataset 10K/policy_development.csv"), 3_800, 200),
+    ("frozen_final_6k", "Frozen final 6K evaluation", Path("Browser Policy Evaluation Dataset 10K/frozen_final_test.csv"), 5_700, 300),
     ("postfreeze_10k", "Post-freeze 10K evaluation", Path("data/evaluation/postfreeze_10k_3pct_2026-09-01/evaluation_urls.csv"), 9_700, 300),
 )
 

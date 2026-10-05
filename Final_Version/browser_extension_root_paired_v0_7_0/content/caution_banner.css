@@ -1,0 +1,36 @@
+#__phishguard-caution-frame {
+  all: initial !important;
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  top: 16px !important;
+  right: 16px !important;
+  display: block !important;
+  width: min(390px, calc(100vw - 24px)) !important;
+  height: 230px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+  background: transparent !important;
+  box-shadow: 0 20px 55px rgba(5, 24, 41, .28) !important;
+  color-scheme: light !important;
+}
+
+@media (max-width: 520px) {
+  #__phishguard-caution-frame {
+    top: 12px !important;
+    right: 12px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: 254px !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #__phishguard-caution-frame { animation: __phishguard-enter .22s ease-out !important; }
+  @keyframes __phishguard-enter {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "experiment": "v0.5.9 recall-oriented primary threshold",
+  "model_changed": false,
+  "preprocessing_changed": false,
+  "user_visible_tier_boundaries_changed": false,
+  "automatic_block_threshold_changed": false,
+  "selection": {
+    "dataset": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+    "rows": 23100,
+    "legitimate": 20600,
+    "phishing": 2500,
+    "dataset_sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c",
+    "objective": "lowest FNR subject to validation FPR <= 1%",
+    "test_labels_used_for_selection": false,
+    "threshold": 0.9707667827606201,
+    "metrics": {
+      "tp": 2194,
+      "tn": 20394,
+      "fp": 206,
+      "fn": 306,
+      "precision": 0.9141666666666667,
+      "recall": 0.8776,
+      "f1": 0.8955102040816327,
+      "fpr": 0.01,
+      "fnr": 0.1224,
+      "specificity": 0.99,
+      "accuracy": 0.9778354978354978,
+      "roc_auc": 0.9803314951456309,
+      "pr_auc": 0.927051875328687
+    }
+  },
+  "frozen_confirmation": {
+    "dataset": "data/evaluation/postfreeze_10k_3pct_2026-09-01/evaluation_urls.csv",
+    "rows": 10000,
+    "legitimate": 9700,
+    "phishing": 300,
+    "threshold_retuned_on_this_dataset": false,
+    "metrics": {
+      "tp": 258,
+      "tn": 9580,
+      "fp": 120,
+      "fn": 42,
+      "precision": 0.6825396825396826,
+      "recall": 0.86,
+      "f1": 0.7610619469026548,
+      "fpr": 0.012371134020618556,
+      "fnr": 0.14,
+      "specificity": 0.9876288659793815,
+      "accuracy": 0.9838
+    }
+  },
+  "interpretation": "The primary exported detection label now includes the existing caution tier. Navigation behavior is unchanged: only the strict block tier can interrupt in Normal mode."
+}

@@ -11,7 +11,7 @@ from .common import sha256_file
 from .url_data import encode_url, encoded_digest
 
 
-ROOT = Path("Final Evaluation Dataset")
+ROOT = Path("Browser Policy Evaluation Dataset 10K")
 
 
 def rows(path: Path) -> list[dict[str, str]]:

@@ -21,7 +21,7 @@ from .common import sha256_file, write_json
 from .url_data import PSL_EXTRACTOR, canonicalize_url, encode_url, encoded_digest
 
 
-DEFAULT_ROOT = Path("Final Evaluation Dataset")
+DEFAULT_ROOT = Path("Browser Policy Evaluation Dataset 10K")
 DEFAULT_CRAWL = "CC-MAIN-2026-34"
 USER_AGENT = "AliAlganbour-GraduationResearch/Version3 final-evaluation-collection"
 LOGIN_PATTERN = re.compile(
@@ -616,7 +616,7 @@ def main() -> None:
     login_keywords = Counter(str(row["login_keyword"]) for row in login_rows)
     report = {
         "project_version": 3,
-        "dataset_name": "Final Evaluation Dataset",
+        "dataset_name": "Browser Policy Evaluation Dataset 10K",
         "purpose": "policy development and one untouched final browser-policy evaluation",
         "collection_only": True,
         "model_inference_performed": False,

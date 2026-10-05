@@ -22,8 +22,8 @@ DATASETS = (
     {
         "key": "final_6k_5pct",
         "name": "Frozen final 6K (5% phishing)",
-        "path": Path("Final Evaluation Dataset/frozen_final_test.csv"),
-        "report": Path("Final Evaluation Dataset/collection_report.json"),
+        "path": Path("Browser Policy Evaluation Dataset 10K/frozen_final_test.csv"),
+        "report": Path("Browser Policy Evaluation Dataset 10K/collection_report.json"),
         "report_hash_path": ("splits", "frozen_final_test", "sha256"),
         "expected_rows": 6_000,
         "expected_phishing": 300,

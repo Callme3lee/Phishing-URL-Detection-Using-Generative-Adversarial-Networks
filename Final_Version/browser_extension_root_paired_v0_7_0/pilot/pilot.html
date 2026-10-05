@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Detection Activity · Phishing URL Guard</title>
+  <link rel="stylesheet" href="pilot.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <button class="language-toggle" data-language-toggle type="button">العربية</button>
+      <span class="pilot-label">LOCAL DETECTION ACTIVITY · ROOT-PAIRED v0.7.0</span>
+      <h1>Your detection activity</h1>
+      <p>Choose whether to keep local activity counts and send feedback about incorrect warnings. Nothing is uploaded automatically.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="consent-card" class="card consent-card">
+      <p class="section-label">Your choice</p>
+      <h2>Turn on local detection history?</h2>
+      <p>The protection works either way. Turning this on saves local activity counts and enables the feedback buttons.</p>
+      <ul>
+        <li>URLs are checked on this device. Ordinary visited URLs are <strong>not saved as readable text</strong>.</li>
+        <li>A private one-way identifier is kept locally so repeated checks of the same URL are counted once. It is not included in exports.</li>
+        <li>The extension saves local totals for checked URLs, results, ignored repeats, errors, and checking time.</li>
+        <li>A readable URL is saved only when you press a feedback button. Login details, query values, and page fragments are removed.</li>
+        <li>Reported paths can still contain personal information, so review an exported file before sharing it.</li>
+        <li>You choose if and when to export the results. You can pause or erase the local history at any time.</li>
+      </ul>
+      <div class="consent-actions">
+        <button id="agree" class="primary" type="button">Turn on local history</button>
+        <button id="decline" class="secondary" type="button">No thanks</button>
+      </div>
+      <p id="consent-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="dashboard" class="hidden" aria-labelledby="dashboard-title">
+      <div class="status-card">
+        <div>
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="participation-label">Local history is on</span>
+        </div>
+        <button id="pause" class="link-button" type="button">Pause history</button>
+      </div>
+
+      <section class="card">
+        <div class="card-heading">
+          <div>
+            <p class="section-label">Detection summary</p>
+            <h2 id="dashboard-title">Your activity</h2>
+          </div>
+          <span id="participant-id" class="participant-id">Activity ID</span>
+        </div>
+        <div id="legacy-notice" class="migration-notice hidden">
+          Earlier results were kept separately in the detailed JSON export. The numbers below belong to the current detection version.
+        </div>
+        <div class="stats">
+          <div><strong id="unique-urls">0</strong><span>Unique URLs checked</span></div>
+          <div><strong id="model-runs">0</strong><span>Total checks performed</span></div>
+          <div><strong id="duplicates-suppressed">0</strong><span>Repeat checks ignored</span></div>
+          <div><strong id="false-alarms">0</strong><span>Incorrect warnings reported</span></div>
+          <div><strong id="missed-phishing">0</strong><span>Missed threats reported</span></div>
+          <div><strong id="average-latency">—</strong><span>Average check time</span></div>
+        </div>
+        <div class="decision-panel">
+          <h3>Results for unique URLs checked</h3>
+          <div id="decision-counts" class="decision-counts"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <p class="section-label">Save a copy</p>
+        <h2>Export your activity</h2>
+        <p>The detailed JSON includes activity counts and only the URLs you deliberately reported. The CSV contains summary totals. Private identifiers used to ignore repeat checks are never exported.</p>
+        <div class="export-actions">
+          <button id="export-json" class="primary" type="button">Export detailed results</button>
+          <button id="export-csv" class="secondary" type="button">Export summary</button>
+        </div>
+      </section>
+
+      <section class="card danger-zone">
+        <div>
+          <h2>Erase local activity</h2>
+          <p>This permanently clears activity counts, private repeat-check data, and feedback saved by the extension.</p>
+        </div>
+        <button id="reset" class="danger" type="button">Erase activity</button>
+      </section>
+    </section>
+
+    <section class="footer-actions">
+      <button id="open-demo" class="link-button" type="button">Try the safe URL checker</button>
+      <span>Local URL protection · optional feedback · no automatic upload</span>
+    </section>
+  </main>
+
+  <script src="../localization.js"></script>
+  <script src="../pilot_store.js"></script>
+  <script src="pilot.js"></script>
+</body>
+</html>

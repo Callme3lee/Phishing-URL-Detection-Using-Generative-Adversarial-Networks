@@ -15,6 +15,7 @@ The experiments do not assume that synthetic augmentation must improve every met
 | `Version_1/` | Original 2M-dataset implementation and early GAN experiments |
 | `Version_2/` | Controlled single-dataset experiments and distribution-shift analysis |
 | `Version_3/` | Final multi-source, hybrid, GAN, calibration, and evaluation implementation |
+| `Final_Version/` | Isolated root-representation robustness experiment and v0.7.0 research extension |
 | `extension/` | Runnable Phishing URL Guard v0.6.0 with the final ONNX ensemble |
 | `results/` | Aggregated metrics, reports, and result graphs; row-level URL predictions are excluded |
 | `report/` | LaTeX source and the compiled graduation report |
@@ -42,6 +43,8 @@ The excluded files are not needed to read the results or run the packaged browse
 4. Confirm that the version is `0.6.0`.
 
 The extension performs local inference using three included ONNX models. It supports English and Arabic. Caution is advisory; High Risk and Very High Risk interrupt navigation in Normal mode. It is a research prototype, not a substitute for browser security controls.
+
+The separate [`Final_Version/browser_extension_root_paired_v0_7_0`](Final_Version/browser_extension_root_paired_v0_7_0) folder contains the root-paired v0.7.0 research candidate. It is preserved for controlled comparison and does not replace the submitted v0.6.0 extension.
 
 ## Reproduce the experiments
 

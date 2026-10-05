@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phishing URL Guard — Safe Demo</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="../localization.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Phishing URL Guard">
+        <span class="shield-mark" aria-hidden="true"><span>PG</span></span>
+        <span class="brand-copy"><strong>Phishing URL Guard</strong><small>URL risk detection</small></span>
+      </div>
+      <div class="topbar-actions"><button class="language-toggle" data-language-toggle type="button">العربية</button><div class="local-status"><span aria-hidden="true"></span>Local processing</div></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Safe test environment</div>
+      <h1>Inspect a URL without opening the website.</h1>
+      <p>The local detector checks the text and structure of the URL you enter. It never opens or contacts the destination.</p>
+      <div class="hero-badges" aria-label="Demo safeguards"><span>URL text only</span><span>Local ONNX model</span><span>No navigation</span></div>
+    </section>
+
+    <div class="workspace">
+      <section class="card scanner-card">
+        <div class="card-heading">
+          <div><span class="section-label">URL scanner</span><h2>Check a destination</h2></div>
+          <span class="prototype-badge">Offline checker</span>
+        </div>
+        <label for="url">Paste or type a full URL</label>
+        <div class="scan-row">
+          <div class="input-shell"><span class="input-icon" aria-hidden="true">↗</span><input id="url" type="text" autocomplete="off" spellcheck="false" placeholder="https://example.com/account"></div>
+          <button id="scan" type="button"><span aria-hidden="true">⌁</span><span class="button-label">Score URL</span></button>
+        </div>
+        <p class="privacy-note"><span aria-hidden="true">●</span>The URL stays on this device.</p>
+
+        <div id="result" class="result neutral" aria-live="polite">
+          <div class="result-main">
+            <div id="status-glyph" class="status-glyph" aria-hidden="true">—</div>
+            <div class="result-copy">
+              <span class="result-label">Detection result</span>
+              <strong id="tier">Waiting for a URL</strong>
+              <p id="action">Enter a URL above to view its lexical risk score.</p>
+            </div>
+            <div class="score-box"><span>URL risk score</span><strong id="score">—</strong></div>
+          </div>
+          <div class="result-footer"><span>Check status</span><strong id="latency">Ready</strong></div>
+        </div>
+      </section>
+
+      <aside class="card model-card">
+        <span class="section-label">How to read the result</span>
+        <h2>A warning, not a final verdict</h2>
+        <p class="model-intro">A high score means the URL text resembles patterns learned from phishing examples.</p>
+        <div class="signal-list">
+          <div><span class="signal-icon teal" aria-hidden="true">Aa</span><p><strong>Lexical patterns</strong><small>Length, symbols, tokens and character sequences</small></p></div>
+          <div><span class="signal-icon navy" aria-hidden="true">AI</span><p><strong>Hybrid model</strong><small>Character CNN combined with engineered URL features</small></p></div>
+          <div><span class="signal-icon amber" aria-hidden="true">!</span><p><strong>Use caution</strong><small>The checker can warn incorrectly or miss a dangerous URL</small></p></div>
+        </div>
+        <div class="not-checked"><strong>Not checked in this demo</strong><span>DNS · page content · certificates · redirects · reputation</span></div>
+      </aside>
+    </div>
+
+    <section class="card examples-card">
+      <div class="card-heading">
+        <div><span class="section-label">Built-in test cases</span><h2>Try an example safely</h2></div>
+        <p>Examples are scored as text and are never opened.</p>
+      </div>
+      <div id="examples" class="examples"></div>
+    </section>
+
+    <footer><span>Local URL checker</span><span>Root-paired research model · v0.7.0</span></footer>
+  </main>
+  <script src="../localization.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

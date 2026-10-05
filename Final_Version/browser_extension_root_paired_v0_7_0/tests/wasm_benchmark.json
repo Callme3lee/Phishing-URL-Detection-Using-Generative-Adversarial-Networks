@@ -1,0 +1,15 @@
+{
+  "measured_at_utc": "2026-10-03T08:37:18.846Z",
+  "runtime": "onnxruntime-web/WASM",
+  "model_count": 3,
+  "fixture_count": 12,
+  "initialization_milliseconds": 175.45363700000001,
+  "sequential_url_latency_milliseconds": {
+    "mean": 6.9325088333333325,
+    "p50": 6.092131999999992,
+    "p95": 15.895781999999997,
+    "maximum": 15.895781999999997
+  },
+  "maximum_seed_score_difference": 2.086162567138672e-7,
+  "note": "Node.js host benchmark of the same WebAssembly runtime; interactive Chrome timing remains device-dependent."
+}
