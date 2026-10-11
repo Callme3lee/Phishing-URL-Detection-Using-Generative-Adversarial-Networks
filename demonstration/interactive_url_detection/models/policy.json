@@ -1,0 +1,108 @@
+{
+  "ensemble_rule": "arithmetic mean of FP32 ONNX Runtime Web sigmoid outputs from seeds 42/43/44",
+  "guardrails": [
+    "Scores are ranking outputs, not guaranteed probabilities or percentages of trust.",
+    "The 20K cohort informed the diagnostic policy comparison and is not a fresh confirmation set.",
+    "The secondary_review tier does not yet contain DNS, reputation, TLS, redirect, or page-content implementation.",
+    "The recall threshold was selected on the frozen calibration cohort, not on final-test labels.",
+    "The automatic block boundary remains unchanged."
+  ],
+  "maximum_characters": 128,
+  "model": "Updated HYB-MS +10% MS-HardGAN-C, three-seed mean-score ensemble",
+  "policy_version": "recall_hyb_gan10_browser_v1",
+  "portability_calibration": {
+    "browser_predictions_sha256": "4c0b85d93db1b28d7a1b97eccfbc75cd3c2538eaaf5e42fdf8da369db9a6a406",
+    "dataset": "data/calibration/updated_models_2026-08-15_v1/calibration_urls.csv",
+    "dataset_sha256": "4f09a312a010acd82ccebcc58fc4788929501e1bd21f0b47fc5f5d4c4549a33c",
+    "no_final_test_tuning": true,
+    "operating_points": {
+      "0.001": {
+        "f1": 0.4573002754820937,
+        "fpr": 0.000970873786407767,
+        "recall": 0.2988,
+        "threshold": 0.9999727606773376
+      },
+      "0.0025": {
+        "f1": 0.5975810885101704,
+        "fpr": 0.0024757281553398056,
+        "recall": 0.4348,
+        "threshold": 0.9998490214347839
+      },
+      "0.005": {
+        "f1": 0.8648059310946358,
+        "fpr": 0.005,
+        "recall": 0.7932,
+        "threshold": 0.9953077435493469
+      },
+      "0.01": {
+        "f1": 0.8955102040816327,
+        "fpr": 0.01,
+        "recall": 0.8776,
+        "threshold": 0.9707667827606201
+      },
+      "0.05": {
+        "f1": 0.8042777117637074,
+        "fpr": 0.04961165048543689,
+        "recall": 0.9476,
+        "threshold": 0.6707517504692078
+      }
+    },
+    "primary_metrics": {
+      "accuracy": 0.9778354978354978,
+      "confusion_matrix": {
+        "fn": 306,
+        "fp": 206,
+        "tn": 20394,
+        "tp": 2194
+      },
+      "f1": 0.8955102040816327,
+      "false_negative_rate": 0.1224,
+      "false_positive_rate": 0.01,
+      "pr_auc": 0.9270590075551334,
+      "precision": 0.9141666666666667,
+      "recall": 0.8776,
+      "roc_auc": 0.9803314951456309
+    },
+    "reason": "The 1% calibration-FPR point materially lowers FNR while preserving a low FPR; selection used only the frozen calibration cohort.",
+    "threshold_rule": "maximize recall subject to the same calibration FPR cap; break ties by F1 then lower FPR"
+  },
+  "primary_binary_rule": {
+    "action": "scores at or above this value are recall-oriented caution-or-higher detections",
+    "threshold": 0.9707667827606201
+  },
+  "source_policy_sha256": "c101c71f7be94f7a79afa40f60864805858e8a7c86fc5d6c1a3e30b3163662e6",
+  "source_policy_version": "conservative_hyb_gan10_v1",
+  "status": "RECALL-ORIENTED RESEARCH TRIAL; NOT DEPLOYMENT-READY",
+  "tiers": [
+    {
+      "action": "allow normally",
+      "lower_inclusive": null,
+      "name": "allow",
+      "upper_exclusive": 0.6707517504692078
+    },
+    {
+      "action": "request independent reputation/DNS/content evidence; do not block from URL score alone",
+      "lower_inclusive": 0.6707517504692078,
+      "name": "secondary_review",
+      "upper_exclusive": 0.9707667827606201
+    },
+    {
+      "action": "show passive caution; independent evidence may escalate",
+      "lower_inclusive": 0.9707667827606201,
+      "name": "caution",
+      "upper_exclusive": 0.9953077435493469
+    },
+    {
+      "action": "show strong phishing warning",
+      "lower_inclusive": 0.9953077435493469,
+      "name": "warning",
+      "upper_exclusive": 0.9998490214347839
+    },
+    {
+      "action": "interstitial block with explicit user override",
+      "lower_inclusive": 0.9998490214347839,
+      "name": "block",
+      "upper_exclusive": null
+    }
+  ]
+}

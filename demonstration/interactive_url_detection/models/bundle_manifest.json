@@ -1,0 +1,79 @@
+{
+  "bundle_version": "hyb_gan10_browser_recall_v1",
+  "candidate": "Recall-oriented Updated HYB-MS +10% MS-HardGAN-C, three-seed mean-score ensemble",
+  "explanation_outputs": {
+    "logit": "Existing pre-sigmoid classifier output exposed for demonstration",
+    "probability_max_abs_difference_after_graph_edit": 0.0
+  },
+  "limitations": [
+    "This is a research browser prototype and not a production-ready security product.",
+    "The primary model uses URL text only; DNS is intentionally not included in this bundle.",
+    "Browser preprocessing must pass the committed parity fixtures before evaluation."
+  ],
+  "models": [
+    {
+      "checkpoint_path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_42/checkpoint.pt",
+      "checkpoint_sha256": "5f5c38392dde8eca649db2521ba0638700e7b277b5ddf970d1c28b3e4ba73064",
+      "filename": "hyb_gan10_seed42.onnx",
+      "fixture_max_abs_torch_onnx_difference": 1.7881393432617188e-07,
+      "onnx_bytes": 564387,
+      "onnx_sha256": "169329480f7c5379bbc76ecde596bc19a93d18c96700a7e2af7949de298229d7",
+      "opset": 17,
+      "outputs": [
+        "probability",
+        "logit"
+      ],
+      "seed": 42
+    },
+    {
+      "checkpoint_path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_43/checkpoint.pt",
+      "checkpoint_sha256": "aa8d8e3e1afd3a9245258ed2a4caf5a65e78cc1c3480245801bdaf2b6b3568b8",
+      "filename": "hyb_gan10_seed43.onnx",
+      "fixture_max_abs_torch_onnx_difference": 6.407499313354492e-07,
+      "onnx_bytes": 564387,
+      "onnx_sha256": "aa422eb7554eac900b34dcf76a766d1770031b4290c6b838bbed0b46734a4993",
+      "opset": 17,
+      "outputs": [
+        "probability",
+        "logit"
+      ],
+      "seed": 43
+    },
+    {
+      "checkpoint_path": "artifacts/experiments/recent_update_gan10_v1/gan_10pct/hyb_ms/seed_44/checkpoint.pt",
+      "checkpoint_sha256": "ab27961952587d80f95f03b09a5d94dada19384b6aadba5d9d78dd6a61c42dd9",
+      "filename": "hyb_gan10_seed44.onnx",
+      "fixture_max_abs_torch_onnx_difference": 4.172325134277344e-07,
+      "onnx_bytes": 564387,
+      "onnx_sha256": "c1e450e3e580a05529f58e0197b17292c0bb91ba2e3465468f4741fe13a42ab3",
+      "opset": 17,
+      "outputs": [
+        "probability",
+        "logit"
+      ],
+      "seed": 44
+    }
+  ],
+  "parity": {
+    "fixtures": 12,
+    "maximum_absolute_torch_onnx_difference": 6.407499313354492e-07
+  },
+  "portability_policy": {
+    "browser_policy_sha256": "18fc2228aa93ba8369eeaa652bb2282376c6f75e5193c4adfc08eadb6a66b454",
+    "browser_primary_threshold": 0.9707667827606201,
+    "browser_validation_fpr_cap": 0.01,
+    "final_test_tuning": false,
+    "same_calibration_cohort": true,
+    "same_selection_objective": true,
+    "source_policy_sha256": "c101c71f7be94f7a79afa40f60864805858e8a7c86fc5d6c1a3e30b3163662e6",
+    "source_primary_threshold": 0.9953193664550781
+  },
+  "preprocessing": {
+    "html_entities_sha256": "55bce6f71e4c28539f2cef1461b6676aade13eefe80134da02f65e223a101ae3",
+    "policy_sha256": "18fc2228aa93ba8369eeaa652bb2282376c6f75e5193c4adfc08eadb6a66b454",
+    "psl_rules_sha256": "80884a5e096f478115f38804eb7ec8530ace05ab7a1bef59a7d06a67d17af18f",
+    "scaler_sha256": "7a02e7d12fcf0f4c181958060f569cbb4e92778c41db53edfd9c1f1c7998b410",
+    "vocabulary_sha256": "0e179b2c924f7e65246029d0d8b1a4d4d27a176894a80994c5cfe93514a7a1b3"
+  },
+  "project_version": 3
+}

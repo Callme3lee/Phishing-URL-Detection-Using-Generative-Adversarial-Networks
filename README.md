@@ -17,6 +17,7 @@ The experiments do not assume that synthetic augmentation must improve every met
 | `Version_3/` | Final multi-source, hybrid, GAN, calibration, and evaluation implementation |
 | `Final_Version/` | Isolated root-representation robustness experiment and v0.7.0 research extension |
 | `extension/` | Runnable Phishing URL Guard v0.6.0 with the final ONNX ensemble |
+| `demonstration/` | Interactive local explanation of URL preprocessing, hybrid inference, ensemble scoring, and threshold decisions |
 | `results/` | Aggregated metrics, reports, and result graphs; row-level URL predictions are excluded |
 | `report/` | LaTeX source and the compiled graduation report |
 | `data/` | Dataset card and machine-readable artifact manifest |
@@ -45,6 +46,8 @@ The excluded files are not needed to read the results or run the packaged browse
 The extension performs local inference using three included ONNX models. It supports English and Arabic. Caution is advisory; High Risk and Very High Risk interrupt navigation in Normal mode. It is a research prototype, not a substitute for browser security controls.
 
 The separate [`Final_Version/browser_extension_root_paired_v0_7_0`](Final_Version/browser_extension_root_paired_v0_7_0) folder contains the root-paired v0.7.0 research candidate. It is preserved for controlled comparison and does not replace the submitted v0.6.0 extension.
+
+The self-contained [`demonstration/interactive_url_detection`](demonstration/interactive_url_detection) page explains the deployed three-seed HYB-MS pipeline using the real preprocessing and ONNX checkpoints. Run its `start_server.sh`, open `http://127.0.0.1:8765`, and enter a URL. The URL is processed locally and is never opened. Results appear together immediately after inference, without a staged animation or automatic scrolling.
 
 ## Reproduce the experiments
 

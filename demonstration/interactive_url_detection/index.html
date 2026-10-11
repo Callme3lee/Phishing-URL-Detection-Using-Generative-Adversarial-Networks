@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>How the Phishing URL Project Works</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=instant-20261008-2">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-brand">
+      <span class="brand-mark" aria-hidden="true"><span>PG</span></span>
+      <div class="brand-copy"><div class="eyebrow">LOCAL WEBSITE CHECK</div><strong>Phishing URL Guard</strong></div>
+      <span class="local-pill"><i></i>Processed locally</span>
+    </div>
+    <div class="hero-content">
+      <h1>What happens when a URL is entered?</h1>
+      <p>Enter a URL to calculate the full preprocessing, model score, and decision immediately.</p>
+      <div class="controls">
+        <button id="presentButton" class="secondary" type="button">Presentation mode</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="input-card">
+      <label for="urlInput">URL to explain</label>
+      <div class="input-row">
+        <input id="urlInput" type="text" spellcheck="false" value="https://accounts.example.com/verify/login?session=48291">
+        <button id="startButton" class="primary" type="button" disabled>Analyze URL</button>
+      </div>
+      <div class="examples">
+        <span>Examples:</span>
+        <button type="button" data-example="https://www.wikipedia.org/wiki/Phishing">Ordinary page</button>
+        <button type="button" data-example="https://docs.google.com/document/d/example/edit">Shared service content</button>
+        <button type="button" data-example="https://accounts.example.com/verify/login?session=48291">Suspicious pattern</button>
+        <button type="button" data-example="http://192.168.1.1/admin/login">IP address</button>
+      </div>
+      <div id="loadingStatus" class="loading-status" role="status">Preparing the local model…</div>
+    </section>
+    <section class="math-key" aria-labelledby="mathKeyTitle">
+      <h2 id="mathKeyTitle">How to read the mathematics</h2>
+      <div class="symbol-grid">
+        <div><strong>u</strong><span>the URL entered by the user</span></div>
+        <div><strong>C(u)</strong><span>the canonical form used by the model</span></div>
+        <div><strong>E</strong><span>the learned character embedding</span></div>
+        <div><strong>&#8741;</strong><span>joining two feature vectors</span></div>
+        <div><strong>&sigma;</strong><span>sigmoid: converts a model output to 0&ndash;1</span></div>
+        <div><strong>p&#772;</strong><span>the mean score from the three models</span></div>
+      </div>
+    </section>
+    <section class="url-structure" aria-labelledby="urlStructureTitle">
+      <div class="structure-heading">
+        <div><p class="section-kicker">BEFORE THE MODEL</p><h2 id="urlStructureTitle">Structure of the entered URL</h2></div>
+        <p>The hostname is grouped inside brackets. Arrows separate the remaining URL parts.</p>
+      </div>
+      <div class="structure-flow" aria-live="polite">
+        <div class="url-part"><span>Scheme</span><strong id="structureScheme">—</strong></div>
+        <b class="syntax-mark">://</b>
+        <div class="hostname-bracket">
+          <b>[</b>
+          <div class="url-part"><span>Subdomain</span><strong id="structureSubdomain">—</strong></div>
+          <i>.</i>
+          <div class="url-part domain-part"><span>Domain</span><strong id="structureDomain">—</strong></div>
+          <i>.</i>
+          <div class="url-part"><span>Suffix / TLD</span><strong id="structureSuffix">—</strong></div>
+          <b>]</b>
+        </div>
+        <div class="url-part optional-part"><span>Port</span><strong id="structurePort">—</strong></div>
+        <b class="flow-arrow">→</b>
+        <div class="url-part"><span>Path</span><strong id="structurePath">—</strong></div>
+        <b class="flow-arrow">→</b>
+        <div class="url-part"><span>Query</span><strong id="structureQuery">—</strong></div>
+        <b class="flow-arrow">→</b>
+        <div class="url-part"><span>Fragment</span><strong id="structureFragment">—</strong></div>
+      </div>
+      <div id="structureExample" class="structure-example">Enter a URL and analyze it to divide it into parts.</div>
+    </section>
+    <section class="pipeline">
+      <article class="stage" data-stage="0"><div class="stage-number">1</div><div class="stage-body">
+        <h2>Receive the URL safely</h2><p>The extension reads the address as text. It does not download the page.</p>
+        <div class="equation"><span>u</span> = raw URL text</div>
+        <div id="equationRaw" class="equation-live">Numbers will appear during this step.</div>
+        <div id="stage0Result" class="result">Waiting for a URL.</div>
+      </div></article>
+      <div class="connector"><span></span></div>
+      <article class="stage" data-stage="1"><div class="stage-number">2</div><div class="stage-body">
+        <h2>Canonicalise the address</h2><p>HTML entities and spacing are handled, the hostname is normalised, and the scheme is removed. Path, query values, and fragment remain part of the canonical model text.</p>
+        <div class="equation"><span>x</span> = C(u)</div>
+        <div id="equationCanonical" class="equation-live">Numbers will appear during this step.</div>
+        <div id="stage1Result" class="result">The normalised URL will appear here.</div>
+      </div></article>
+      <div class="connector"><span></span></div>
+      <div class="branch-grid">
+        <article class="stage branch" data-stage="2"><div class="stage-number">3A</div><div class="stage-body">
+          <h2>Character-CNN branch</h2><p>Up to 127 characters plus an end token are encoded. CNN filters of widths 3, 4, and 5 learn local spelling, symbol, and token patterns.</p>
+          <div class="equation equation-stack">
+            <span>e<sub>i</sub> = E(token<sub>i</sub>) &isin; &#8477;<sup>48</sup></span>
+            <span>h<sub>k</sub> = max ReLU(W<sub>k</sub> * e + b<sub>k</sub>), &nbsp;k &isin; {3, 4, 5}</span>
+            <span>z<sub>char</sub> = h<sub>3</sub> &#8741; h<sub>4</sub> &#8741; h<sub>5</sub> &isin; &#8477;<sup>384</sup></span>
+          </div>
+          <div id="equationChars" class="equation-live">Numbers will appear during this step.</div>
+          <div id="stage2Result" class="result mono">Character preview.</div>
+        </div></article>
+        <article class="stage branch" data-stage="3"><div class="stage-number">3B</div><div class="stage-body">
+          <h2>Lexical-feature branch</h2><p>Thirty-five full-URL measurements describe length, ratios, hostname structure, path/query complexity, entropy, encoding, and related signals.</p>
+          <div class="equation equation-stack">
+            <span>r = [r<sub>1</sub>, ..., r<sub>35</sub>]</span>
+            <span>q<sub>j</sub> = (r<sub>j</sub> &minus; median<sub>j</sub>) / IQR<sub>j</sub></span>
+            <span>z<sub>lex</sub> = MLP(q) &isin; &#8477;<sup>32</sup></span>
+          </div>
+          <div id="equationLexical" class="equation-live">Numbers will appear during this step.</div>
+          <div id="featureGrid" class="feature-grid"><span>Feature values will appear here.</span></div>
+        </div></article>
+      </div>
+      <div class="connector"><span></span></div>
+      <article class="stage" data-stage="4"><div class="stage-number">4</div><div class="stage-body">
+        <h2>Fuse both representations</h2><p>The 384-value CNN representation and 32-value lexical representation are joined into 416 values, then passed through a 128-unit fusion layer.</p>
+        <div class="math-steps focus-math">
+          <div><b>1. Concatenate both branches</b><span>z = z<sub>char</sub> &#8741; z<sub>lex</sub></span><small>z &isin; &#8477;<sup>384+32</sup> = &#8477;<sup>416</sup></small></div>
+          <div><b>2. Weighted fusion</b><span>g = W<sub>f</sub>z + b<sub>f</sub></span><small>W<sub>f</sub> &isin; &#8477;<sup>128&times;416</sup>, &nbsp;b<sub>f</sub> &isin; &#8477;<sup>128</sup></small></div>
+          <div><b>3. Non-linear representation</b><span>h = ReLU(g) = max(0,g)</span><small>h &isin; &#8477;<sup>128</sup>; dropout is disabled during inference.</small></div>
+        </div>
+        <div id="equationFusion" class="equation-live">Numbers will appear during this step.</div>
+        <div id="stage4Result" class="result">Waiting for both branches.</div>
+      </div></article>
+      <div class="connector"><span></span></div>
+      <article class="stage" data-stage="5"><div class="stage-number">5</div><div class="stage-body">
+        <h2>Score with three trained models</h2><p>Checkpoints trained with seeds 42, 43, and 44 each produce a sigmoid score. Their arithmetic mean is the ensemble score.</p>
+        <div class="math-steps focus-math">
+          <div><b>1. Produce one logit per seed</b><span>&ell;<sub>s</sub> = w<sub>s</sub><sup>T</sup>h + b<sub>s</sub></span><small>w<sub>s</sub> &isin; &#8477;<sup>128</sup>, &nbsp;s &isin; {42,43,44}</small></div>
+          <div><b>2. Convert each logit to a score</b><span>p<sub>s</sub> = &sigma;(&ell;<sub>s</sub>) = 1 / (1 + e<sup>&minus;&ell;<sub>s</sub></sup>)</span><small>0 &lt; p<sub>s</sub> &lt; 1</small></div>
+          <div><b>3. Average the independent scores</b><span>p&#772; = (p<sub>42</sub> + p<sub>43</sub> + p<sub>44</sub>) / 3</span><small>The frozen policy receives p&#772;.</small></div>
+        </div>
+        <div id="equationScores" class="equation-live">Numbers will appear during this step.</div>
+        <div class="seed-grid">
+          <div><span>Seed 42</span><small>Weighted sum w<sup>T</sup>h</small><b id="weighted42">—</b><small>Bias b</small><b id="bias42">—</b><small>ONNX logit &ell;</small><b id="logit42">—</b><small>Sigmoid score</small><strong id="seed42">—</strong></div>
+          <div><span>Seed 43</span><small>Weighted sum w<sup>T</sup>h</small><b id="weighted43">—</b><small>Bias b</small><b id="bias43">—</b><small>ONNX logit &ell;</small><b id="logit43">—</b><small>Sigmoid score</small><strong id="seed43">—</strong></div>
+          <div><span>Seed 44</span><small>Weighted sum w<sup>T</sup>h</small><b id="weighted44">—</b><small>Bias b</small><b id="bias44">—</b><small>ONNX logit &ell;</small><b id="logit44">—</b><small>Sigmoid score</small><strong id="seed44">—</strong></div>
+          <div class="mean"><span>Ensemble</span><small>Arithmetic mean</small><b>p&#772;</b><small>Final score</small><strong id="meanScore">—</strong></div>
+        </div>
+        <p class="logit-note">The demonstration copies expose the existing pre-sigmoid ONNX tensor as a second output. The weighted sum is calculated as w<sup>T</sup>h = &ell; &minus; b. This explanation does not alter the probability or classification.</p>
+      </div></article>
+      <div class="connector"><span></span></div>
+      <article class="stage" data-stage="6"><div class="stage-number">6</div><div class="stage-body">
+        <h2>Apply the frozen threshold policy</h2><p>The score is a ranking output, not a guaranteed probability. Frozen calibration thresholds convert it to allow, review, caution, warning, or block.</p>
+        <div class="equation"><span>tier</span> = T(p&#772;)</div>
+        <div id="equationThreshold" class="equation-live">Numbers will appear during this step.</div>
+        <div class="gauge-wrap"><div class="gauge"><div id="gaugeFill" class="gauge-fill"></div><div id="gaugeMarker" class="gauge-marker"></div></div><div class="gauge-labels"><span>0</span><span>0.671</span><span>0.971</span><span>0.995</span><span>0.99985</span><span>1</span></div></div>
+        <div id="stage6Result" class="result">No policy result yet.</div>
+      </div></article>
+      <div class="connector"><span></span></div>
+      <article class="stage" data-stage="7"><div class="stage-number">7</div><div class="stage-body">
+        <h2>Present a browser action</h2>
+        <div class="equation"><span>action</span> = policy(tier, service context, user choice)</div>
+        <div id="equationAction" class="equation-live">Numbers will appear during this step.</div>
+        <div id="finalDecision" class="decision neutral"><div class="decision-icon">?</div><div><strong>Waiting for analysis</strong><p>The final model-only tier will appear here.</p></div></div>
+        <p class="subtle">The real extension may additionally apply reviewed-service and user-controlled-content policy.</p>
+      </div></article>
+    </section>
+  <footer>Phishing Url Detector</footer>
+  <script src="vendor/ort.wasm.min.js?v=instant-20261008-2"></script>
+  <script src="preprocessing.js?v=instant-20261008-2"></script>
+  <script src="app.js?v=instant-20261008-2"></script>
+</body>
+</html>
