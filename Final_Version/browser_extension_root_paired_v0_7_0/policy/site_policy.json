@@ -13,7 +13,7 @@
     "source_csv_url": "https://tranco-list.eu/download/XN6XN/1000000",
     "full_csv_sha256": "8ab2bff1614420a4adafcf29963c5c31363c22026454161905a43a12ba74243e",
     "shortlist_file": "policy/tranco_XN6XN_top250.csv",
-    "shortlist_sha256": "e1df51074244cb64c8ae2d5a23cb7f907f113dcd00cd70938f5e22b6a1cceea9",
+    "shortlist_sha256": "6322e202c93258dc2ba45300453fe7dc346812ce8df75dafdb7e0f64efc9ea80",
     "shortlist_size": 250,
     "role": "Candidate and rank metadata only. A rank never creates a quiet rule."
   },
